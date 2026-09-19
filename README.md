@@ -1,7 +1,8 @@
 # Product Management Job-Search Agent
 
 ## Status
-Scaffold only. No candidate facts, job records, automation, or search integration have been configured.
+Single-source Google Docs sync is implemented. No scheduled sync, job discovery,
+career-evidence generation, applications, or outreach are enabled by this script.
 
 ## Repository layout
 - `AGENTS.md`: job-search operating contract.
@@ -13,7 +14,7 @@ Scaffold only. No candidate facts, job records, automation, or search integratio
 - `sources/current/`: tracked latest project snapshots in readable `.md` files.
 - `resumes/`: reserved for resume assets.
 - `portfolio/`: reserved for portfolio assets.
-- `scripts/sync_google_docs.py`: disabled source synchronization placeholder.
+- `scripts/sync_google_docs.py`: explicitly selected, read-only Google Doc sync.
 
 Empty asset and script directories contain `.gitkeep` files so Git preserves them.
 
@@ -25,7 +26,7 @@ TODO: Supply verified candidate facts and supporting evidence. Do not infer miss
 
 ## Data and privacy
 Job-search data files are intentionally empty, with no headers or records. TODO: Define job schemas before use.
-`data/source_sync_state.json` contains only an empty source map and schema version.
+`data/source_sync_state.json` stores source IDs, successful sync timestamps, and content hashes only.
 Store local private material under ignored `private/`, `local_private/`, or `*.local.*` paths.
 Tracked profile and asset paths are not private storage; review their contents before committing.
 
@@ -52,26 +53,26 @@ This is the intended pipeline, not an active automation. Career-evidence updates
 and downstream actions are outside this architecture change.
 
 The registry maps each logical source name to its Google Doc title, Google Drive
-file ID, related career project, and downstream evidence files. Seven logical
-sources have placeholder snapshots: `deep_enterprise`, `data_platform`,
-`forecasting_agent`, `patent_ai`, `amazon_fintech`, `amazon_ml_platform`, and
-`amazon_supply_chain`. Exact Google Doc titles, Drive IDs, and project mappings
-remain null until supplied. Placeholders are not evidence or successful exports.
+file ID, related career project, and downstream evidence files. It contains six
+user-supplied sources and evidence rules. Only `data_platform` is authorized for
+the initial test. Sheets are not supported by this command. Placeholder snapshots
+are not evidence or successful exports; Amazon sources remain unregistered.
 
-Intended future sync workflow (not implemented or enabled):
+Single-source sync workflow:
 1. Validate registered sources and unique filename-safe logical names. Identify
-   documents by Drive file ID, since titles can change. Skip incomplete entries
-   and report them as unconfigured; never guess IDs or locate documents by title.
+   documents by Drive file ID, since titles can change. Reject an incomplete or
+   unsupported selected entry; never guess IDs or locate documents by title.
 2. Authenticate with read-only access using credentials and OAuth tokens stored
    outside the repository. Never commit credentials, tokens, cookies, browser
    sessions, API keys, passwords, secrets, or `.env` files; ignore rules provide
    additional protection. Keep all authentication material outside Git, including
    any such material encountered inside source content; block and report an
    affected export rather than committing secrets.
-3. Fetch the latest version of every registered Google Doc and export it as
+3. Fetch only the explicitly selected Google Doc and use Drive's native export as
    readable Markdown (or plain text in the `.md` file), consistently normalized
    to UTF-8 with LF line endings.
-4. Compute SHA-256 over the snapshot bytes and compare it with that source's
+4. Compute SHA-256 over normalized document content, excluding the generated
+   metadata header, and compare it with that source's
    previous successful hash. A first successful fetch is new; subsequent hashes
    identify changed versus unchanged content.
 5. Atomically overwrite `sources/current/<logical_name>.md` only when content
@@ -87,22 +88,44 @@ Intended future sync workflow (not implemented or enabled):
    failure, preserve that source's previous snapshot and successful state; do not
    mark a failed attempt as a successful sync.
 
-8. Commit changed snapshots and their sync metadata only when at least one source
-   actually changed, using `Sync latest career source documents`. Stage only
-   intended sync outputs, never unrelated user changes or authentication files.
-   Timestamp-only state updates do not trigger a commit; they may remain local
-   until the next content-changing sync. This architecture commit is separate
-   from the future content-based sync commit rule.
+8. Stop for human inspection. The script never stages, commits, or pushes.
+   Future auto-commit remains disabled; if later enabled, it should commit only
+   when a source changed, using `Sync latest career source documents`.
 
-`sources/current/` is tracked. Its seven initial files contain only explicit
-placeholder notices; no Google Docs have been fetched. Sync state remains empty
-until a real successful sync, with no invented hashes or timestamps.
+`sources/current/` is tracked. Each successful initial export replaces its
+placeholder. Unchanged content leaves the snapshot and its header timestamp
+untouched, while sync state records the latest successful check. Native Markdown
+export retains supported headings, lists, and tables; complex layouts and images
+may not translate completely. Drive limits API exports to 10 MB; export failures
+are reported, never silently truncated or replaced with browser scraping.
 
-The Python placeholder exits with status 1 and an explicit not-implemented
-message. It does not read credentials, authenticate, access the network, create
-snapshots, or mutate state. No dependencies or scheduled synchronization are set
-up. Downstream paths document intended dependencies only; career-evidence updates
-are a separate future phase and are not implemented.
+## Run the authorized Data Platform test
+
+Use Python 3.10+ and an ignored local virtual environment:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r scripts/requirements-sync.txt
+.\.venv\Scripts\python.exe scripts/sync_google_docs.py --source data_platform
+```
+
+Place Desktop OAuth client credentials at
+`%LOCALAPPDATA%\pm-job-search-agent\credentials.json`. The browser consent flow
+requests `https://www.googleapis.com/auth/drive.readonly` and stores `token.json`
+in the same directory. Both paths must remain outside this repository. Optional
+`--credentials` and `--token` arguments accept other external paths. The script
+does not print token contents or client secrets. Authorization waits up to five
+minutes; rerun if it times out. Use an account with access to the selected Doc.
+
+Exit code 0 means a successful changed or unchanged sync; 1 means failure.
+Run offline regression tests without authenticating or syncing:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s scripts -p test_sync_google_docs.py -v
+```
+
+Downstream paths document dependencies only. Career-evidence updates are not
+implemented. Do not edit snapshots as a substitute for editing Google Docs.
 
 ## Future operation
 TODO: Define and authorize each workflow. No jobs will be searched, applications submitted, or people contacted by this scaffold.

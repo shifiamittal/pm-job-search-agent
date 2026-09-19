@@ -1,4 +1,11 @@
 {
   "schema_version": 1,
-  "sources": {}
+  "sources": {
+    "data_platform": {
+      "logical_name": "data_platform",
+      "google_drive_file_id": "11QBYF-j3RYKq_82bu465oumOUh3u5inSeWATLgftQqI",
+      "last_successful_sync_at": "2026-09-19T14:10:28Z",
+      "latest_content_hash": "sha256:bc5956a7a3f8c34c126ce895413a86dbcb3e4a7b4a9b7f359203958589b32cc1"
+    }
+  }
 }
