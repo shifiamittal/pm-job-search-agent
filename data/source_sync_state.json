@@ -6,6 +6,30 @@
       "google_drive_file_id": "11QBYF-j3RYKq_82bu465oumOUh3u5inSeWATLgftQqI",
       "last_successful_sync_at": "2026-09-19T14:10:28Z",
       "latest_content_hash": "sha256:bc5956a7a3f8c34c126ce895413a86dbcb3e4a7b4a9b7f359203958589b32cc1"
+    },
+    "deep_enterprise": {
+      "logical_name": "deep_enterprise",
+      "google_drive_file_id": "1UxvPfz4zS5x4HWYBPc4Lgh67C7zQ0x2rBeb8m4NchAU",
+      "last_successful_sync_at": "2026-09-19T14:11:15Z",
+      "latest_content_hash": "sha256:35c2de80596329825abbddfdaad1e2a48a64f9ca26350f619dd41bd3a89d7551"
+    },
+    "forecasting_agent": {
+      "logical_name": "forecasting_agent",
+      "google_drive_file_id": "19-COg8J9CWO10fwIjglT1bnOAiay_EytziwFm5L0SJE",
+      "last_successful_sync_at": "2026-09-19T14:11:19Z",
+      "latest_content_hash": "sha256:a889b427592639ac9fba13837d36bbce865b02e97302a2976418c4b01ecdd6a4"
+    },
+    "keystone_hershey": {
+      "logical_name": "keystone_hershey",
+      "google_drive_file_id": "1HsRQ3fNMs1clfNQvSwFYkjlkxSZCUSTWDg8Ca2LJuI4",
+      "last_successful_sync_at": "2026-09-19T14:11:22Z",
+      "latest_content_hash": "sha256:6f5b2b9174f42d6ffb607179d1bd745a96cd80d01f0ce332f0ce6a4a48c314f2"
+    },
+    "interview_questions": {
+      "logical_name": "interview_questions",
+      "google_drive_file_id": "127byQsokGrAynlcVM11QGFxw54Xt0AbjIbKMkhnxIdY",
+      "last_successful_sync_at": "2026-09-19T14:11:45Z",
+      "latest_content_hash": "sha256:f2dca516e92726984b21f1032282e846016a709aefdf40df4a7930d83871e280"
     }
   }
 }
