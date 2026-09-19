@@ -10,7 +10,7 @@ Scaffold only. No candidate facts, job records, automation, or search integratio
 - `prompts/`: discovery, classification, application, and outreach prompt placeholders.
 - `data/`: empty job-search files and metadata-only source sync state.
 - `sources/source_registry.yaml`: Google Doc identities and downstream dependencies.
-- `sources/current/`: ignored local directory for latest plain-text snapshots only.
+- `sources/current/`: tracked latest project snapshots in readable `.md` files.
 - `resumes/`: reserved for resume assets.
 - `portfolio/`: reserved for portfolio assets.
 - `scripts/sync_google_docs.py`: disabled source synchronization placeholder.
@@ -30,30 +30,55 @@ Store local private material under ignored `private/`, `local_private/`, or `*.l
 Tracked profile and asset paths are not private storage; review their contents before committing.
 
 ## Living Google Docs sources
-Google Drive is the source of truth for detailed project documents. Keep editing
-the original Google Docs; manual uploads and versioned document copies are not
-part of this architecture. Local snapshots are disposable caches, and downstream
-career evidence is derived material. No sources or candidate facts are populated.
+Google Docs remain the authoring source of truth for detailed project documents.
+Edit the original Google Doc, never its snapshot as a substitute. Complete latest
+exports will be committed to this private repository so Codex can read the full
+project context. Git maintains revision history automatically; no manual uploads,
+versioned filenames, or timestamped document copies are required.
+
+```text
+Google Docs
+↓
+automated sync
+↓
+sources/current/*.md
+↓
+career_evidence.md (profile/career_evidence.md)
+↓
+job classification / resume / application system
+```
+
+This is the intended pipeline, not an active automation. Career-evidence updates
+and downstream actions are outside this architecture change.
 
 The registry maps each logical source name to its Google Doc title, Google Drive
-file ID, related career project, and downstream evidence files. A commented entry
-template documents the fields without inventing real source details. Registry
-metadata is tracked, so keep titles and project labels suitable for Git.
+file ID, related career project, and downstream evidence files. Seven logical
+sources have placeholder snapshots: `deep_enterprise`, `data_platform`,
+`forecasting_agent`, `patent_ai`, `amazon_fintech`, `amazon_ml_platform`, and
+`amazon_supply_chain`. Exact Google Doc titles, Drive IDs, and project mappings
+remain null until supplied. Placeholders are not evidence or successful exports.
 
 Intended future sync workflow (not implemented or enabled):
 1. Validate registered sources and unique filename-safe logical names. Identify
-   documents by Drive file ID, since titles can change.
+   documents by Drive file ID, since titles can change. Skip incomplete entries
+   and report them as unconfigured; never guess IDs or locate documents by title.
 2. Authenticate with read-only access using credentials and OAuth tokens stored
    outside the repository. Never commit credentials, tokens, cookies, browser
-   state, secrets, or `.env` files; ignore rules provide additional protection.
+   sessions, API keys, passwords, secrets, or `.env` files; ignore rules provide
+   additional protection. Keep all authentication material outside Git, including
+   any such material encountered inside source content; block and report an
+   affected export rather than committing secrets.
 3. Fetch the latest version of every registered Google Doc and export it as
-   consistently normalized UTF-8 plain text.
+   readable Markdown (or plain text in the `.md` file), consistently normalized
+   to UTF-8 with LF line endings.
 4. Compute SHA-256 over the snapshot bytes and compare it with that source's
    previous successful hash. A first successful fetch is new; subsequent hashes
    identify changed versus unchanged content.
-5. Atomically overwrite `sources/current/<logical_name>.txt`. Keep only the latest
-   snapshot per source, with no timestamped copies or raw document Git history.
-6. After each successful snapshot write, update that source's state with its
+5. Atomically overwrite `sources/current/<logical_name>.md` only when content
+   changed. Leave unchanged snapshots untouched. Keep only the latest snapshot
+   at each path; Git holds prior revisions.
+6. After each successful source sync, including unchanged content, update its
+   state with its
    logical name (map key), `google_drive_file_id`, `last_successful_sync_at`
    (UTC ISO 8601), and `latest_content_hash` (`sha256:<hex>`). This state records
    the latest success timestamp and hash; it must never contain document bodies,
@@ -62,9 +87,16 @@ Intended future sync workflow (not implemented or enabled):
    failure, preserve that source's previous snapshot and successful state; do not
    mark a failed attempt as a successful sync.
 
-`sources/current/` is entirely ignored and is created locally in this scaffold.
-Git does not preserve empty ignored directories, so a future sync implementation
-must create it on fresh clones. Do not force-add snapshots to Git.
+8. Commit changed snapshots and their sync metadata only when at least one source
+   actually changed, using `Sync latest career source documents`. Stage only
+   intended sync outputs, never unrelated user changes or authentication files.
+   Timestamp-only state updates do not trigger a commit; they may remain local
+   until the next content-changing sync. This architecture commit is separate
+   from the future content-based sync commit rule.
+
+`sources/current/` is tracked. Its seven initial files contain only explicit
+placeholder notices; no Google Docs have been fetched. Sync state remains empty
+until a real successful sync, with no invented hashes or timestamps.
 
 The Python placeholder exits with status 1 and an explicit not-implemented
 message. It does not read credentials, authenticate, access the network, create

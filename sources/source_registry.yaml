@@ -1,20 +1,48 @@
-# Living Google Docs registry. No sources are registered yet.
-# Google Drive remains authoritative; snapshots are disposable local caches.
-# Do not put credentials, tokens, document contents, or secret URLs here.
+# Google Docs are the authoring source of truth; latest snapshots are Git-tracked.
+# Placeholder metadata only. Exact titles, Drive IDs, and project mappings await user input.
+# Never store authentication material here. Missing IDs must not be guessed.
+# Downstream paths describe dependencies, not authorization to update evidence.
 schema_version: 1
-sources: []
-
-# Entry template (uncomment only after user-approved details are supplied):
-# sources:
-#   - logical_name: null
-#     google_doc_title: null
-#     google_drive_file_id: null
-#     related_career_project: null
-#     downstream_evidence_files: []
-#
-# logical_name: unique, stable filename-safe identifier (letters, digits,
-# underscores, or hyphens only); used as sources/current/<logical_name>.txt.
-# google_doc_title: human-readable title; file ID is the lookup identity.
-# related_career_project: user-provided project identifier or name.
-# downstream_evidence_files: repository-relative evidence file paths;
-# declarative dependencies only, never automatic write authorization.
+sources:
+  - logical_name: deep_enterprise
+    google_doc_title: null
+    google_drive_file_id: null
+    related_career_project: null
+    downstream_evidence_files:
+      - profile/career_evidence.md
+  - logical_name: data_platform
+    google_doc_title: null
+    google_drive_file_id: null
+    related_career_project: null
+    downstream_evidence_files:
+      - profile/career_evidence.md
+  - logical_name: forecasting_agent
+    google_doc_title: null
+    google_drive_file_id: null
+    related_career_project: null
+    downstream_evidence_files:
+      - profile/career_evidence.md
+  - logical_name: patent_ai
+    google_doc_title: null
+    google_drive_file_id: null
+    related_career_project: null
+    downstream_evidence_files:
+      - profile/career_evidence.md
+  - logical_name: amazon_fintech
+    google_doc_title: null
+    google_drive_file_id: null
+    related_career_project: null
+    downstream_evidence_files:
+      - profile/career_evidence.md
+  - logical_name: amazon_ml_platform
+    google_doc_title: null
+    google_drive_file_id: null
+    related_career_project: null
+    downstream_evidence_files:
+      - profile/career_evidence.md
+  - logical_name: amazon_supply_chain
+    google_doc_title: null
+    google_drive_file_id: null
+    related_career_project: null
+    downstream_evidence_files:
+      - profile/career_evidence.md

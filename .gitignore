@@ -9,6 +9,11 @@ credentials/
 .credentials/
 secrets/
 .secrets/
+api_keys/
+api_keys.*
+api-key.*
+passwords/
+passwords.*
 credentials*.json
 credentials*.yaml
 credentials*.yml
@@ -50,7 +55,6 @@ auth.json
 playwright/.auth/
 
 # Local private data (tracked scaffold files remain visible)
-/sources/current/
 private/
 local_private/
 .private/
