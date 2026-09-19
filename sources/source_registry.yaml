@@ -1,48 +1,83 @@
-# Google Docs are the authoring source of truth; latest snapshots are Git-tracked.
-# Placeholder metadata only. Exact titles, Drive IDs, and project mappings await user input.
-# Never store authentication material here. Missing IDs must not be guessed.
-# Downstream paths describe dependencies, not authorization to update evidence.
+# Google Drive remains the authoring source of truth; latest snapshots are Git-tracked.
+# Never store credentials, OAuth tokens, cookies, browser state, or secrets here.
+# Feed paths describe dependencies, not authorization to update career evidence.
 schema_version: 1
+drive_folder_url: https://drive.google.com/drive/folders/1iHWtbapMJqoULOYiKdfJZseHQubscDsh
+
+general_rules:
+  - Google Drive remains the authoring source of truth.
+  - Do not register Companies process and conversations or generic interview-preparation/reference documents as career evidence sources at this time.
+  - Do not register unrelated old Drive files discovered through broad search.
+  - Do not invent Amazon source files; specific Amazon sources will be provided later.
+  - Do not update profile/career_evidence.md yet.
+  - Do not run job discovery.
+
 sources:
   - logical_name: deep_enterprise
-    google_doc_title: null
-    google_drive_file_id: null
-    related_career_project: null
-    downstream_evidence_files:
+    title: Deep Enterprise Product Strategy
+    type: google_doc
+    drive_id: 1UxvPfz4zS5x4HWYBPc4Lgh67C7zQ0x2rBeb8m4NchAU
+    output: sources/current/deep_enterprise.md
+    project: Keystone Deep Enterprise
+    evidence_tier: authoritative
+    feeds:
       - profile/career_evidence.md
+
   - logical_name: data_platform
-    google_doc_title: null
-    google_drive_file_id: null
-    related_career_project: null
-    downstream_evidence_files:
+    title: Data Platform Product Strategy
+    type: google_doc
+    drive_id: 11QBYF-j3RYKq_82bu465oumOUh3u5inSeWATLgftQqI
+    output: sources/current/data_platform.md
+    project: Keystone Data Platform
+    evidence_tier: authoritative
+    feeds:
       - profile/career_evidence.md
+
   - logical_name: forecasting_agent
-    google_doc_title: null
-    google_drive_file_id: null
-    related_career_project: null
-    downstream_evidence_files:
+    title: Forecasting Agent - Complete System Design
+    type: google_doc
+    drive_id: 19-COg8J9CWO10fwIjglT1bnOAiay_EytziwFm5L0SJE
+    output: sources/current/forecasting_agent.md
+    project: Keystone Forecasting Agent
+    evidence_tier: authoritative
+    feeds:
       - profile/career_evidence.md
+
+  - logical_name: keystone_hershey
+    title: Keystone Hershey's Experience
+    type: google_doc
+    drive_id: 1HsRQ3fNMs1clfNQvSwFYkjlkxSZCUSTWDg8Ca2LJuI4
+    output: sources/current/keystone_hershey.md
+    project: Keystone Enterprise Deployment / Customer Experience
+    evidence_tier: authoritative
+    feeds:
+      - profile/career_evidence.md
+
   - logical_name: patent_ai
-    google_doc_title: null
-    google_drive_file_id: null
-    related_career_project: null
-    downstream_evidence_files:
+    title: Patent_AI_Experiment_Dashboard_Canonical
+    type: google_sheet
+    drive_id: 1QmnrE_eeLQUerJJ6SNaEjw7gnQxTXbvtHrcyCmvnTrg
+    output: sources/current/patent_ai.md
+    project: Patent AI
+    evidence_tier: authoritative
+    feeds:
       - profile/career_evidence.md
-  - logical_name: amazon_fintech
-    google_doc_title: null
-    google_drive_file_id: null
-    related_career_project: null
-    downstream_evidence_files:
+
+  - logical_name: interview_questions
+    title: Interview Questions
+    type: google_doc
+    drive_id: 127byQsokGrAynlcVM11QGFxw54Xt0AbjIbKMkhnxIdY
+    output: sources/current/interview_questions.md
+    project: Cross-project career evidence / prior Keystone experience
+    evidence_tier: supplemental
+    feeds:
       - profile/career_evidence.md
-  - logical_name: amazon_ml_platform
-    google_doc_title: null
-    google_drive_file_id: null
-    related_career_project: null
-    downstream_evidence_files:
-      - profile/career_evidence.md
-  - logical_name: amazon_supply_chain
-    google_doc_title: null
-    google_drive_file_id: null
-    related_career_project: null
-    downstream_evidence_files:
-      - profile/career_evidence.md
+    evidence_rules:
+      - Interview Questions contains a mixture of real experience, interview framing, and potentially hypothetical/preparatory material.
+      - Do not automatically treat every statement in it as confirmed experience.
+      - Claims clearly written as first-person descriptions of completed work may be extracted as candidate evidence.
+      - Claims that appear hypothetical, aspirational, suggested, educational, or framed as "how I would..." must NOT be treated as completed experience.
+      - Evidence found only in Interview Questions should initially be marked SUPPORTED or NEEDS_CONFIRMATION unless it is unambiguously a factual description of completed work.
+      - If the same claim appears in an authoritative project source, the authoritative source takes precedence.
+      - If Interview Questions conflicts with an authoritative source, flag the conflict rather than resolving it.
+      - This document is especially valuable for surfacing older Keystone work that has not yet been consolidated into dedicated project documents.
