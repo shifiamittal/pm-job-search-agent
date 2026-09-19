@@ -1,0 +1,5 @@
+timestamp_utc,event,count,notes
+2026-09-19T15:28:49+00:00,calibration_discovery,30,Diverse first calibration; official employer/ATS postings checked for active apply paths; stale/closed results excluded; no applications or outreach.
+2026-09-19T15:28:49+00:00,classification,30,"Six weighted scores, primary gap, hard-X flag, lane, resume and portfolio recommendations; unpublished pay neutral at 3."
+2026-09-19T15:28:49+00:00,review_queue,28,All Apply Now and Apply + Bridge plus five Build Toward; two Skip roles excluded.
+2026-09-19T15:28:49+00:00,stale_result_exclusions,6,"Search-indexed results with closed/404 individual postings were excluded: Snapdocs, Foxglove, Harvey, Sierra and two Walmart requisitions. No unverified job retained."

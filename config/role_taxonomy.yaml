@@ -1,5 +1,78 @@
-# Role taxonomy placeholder.
-# TODO: Define Product Management role families.
-# TODO: Define title aliases, seniority levels, and specializations.
-# TODO: Define inclusion and exclusion rules.
-{}
+sectors:
+  - Big Tech
+  - AI-native
+  - Enterprise Software
+  - Data / Developer Infrastructure
+  - Banking
+  - Fintech
+  - Payments
+  - Insurance
+  - Healthcare
+  - Retail / Commerce
+  - Travel
+  - Marketplace / Consumer
+  - Cybersecurity
+  - Telecom / Media
+  - Industrial
+  - Supply Chain / Logistics
+  - Energy
+  - Real Estate
+  - Education
+  - Other
+
+role_clusters:
+  - AI / Agents / Evals
+  - Data / ML Platform
+  - Enterprise / Developer Platform
+  - Fintech / Payments / Credit
+  - Marketplace / Supply Chain / Operations
+  - Growth / Monetization / Consumer
+  - Search / Retrieval / Knowledge
+  - Security / Risk
+  - Generic Principal / Staff Product
+  - Other
+
+ai_classification:
+  - AI-heavy
+  - AI-adjacent
+  - Non-AI
+
+normalized_levels:
+  - Principal / Staff-equivalent
+  - Lead / Group-equivalent
+  - Senior PM conditional
+  - Director conditional
+  - PM conditional
+  - Below target
+  - Unclear
+
+primary_gap:
+  NONE: Demonstrated experience already meets the substantive requirement.
+  K: Relevant foundation exists; conceptual or technical learning is needed.
+  V: Experience exists but market or domain vocabulary needs strengthening.
+  E: Capability is plausible but resume, portfolio, or interview proof is weak.
+  X: A substantial hard requirement needs direct experience not evidenced today.
+
+application_lanes:
+  - APPLY NOW
+  - APPLY + BRIDGE
+  - BUILD TOWARD
+  - SKIP
+
+resume_variants:
+  - Data / ML Platform
+  - AI Evals / Quality
+  - Agents / 0→1 Platform
+  - Fintech / Payments
+  - Enterprise Platform
+  - Growth / Consumer
+  - General Principal PM
+
+portfolio_artifacts:
+  - Enterprise Data Platform
+  - Forecasting Agent / Agent Evaluation
+  - Patent AI Search / Retrieval Evaluation
+  - Amazon Financial Services
+  - Amazon ML Platform
+  - Amazon Supply Chain / Optimization
+  - Deep Enterprise

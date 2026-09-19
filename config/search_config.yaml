@@ -1,7 +1,44 @@
-# Search configuration placeholder. No search is enabled.
-# TODO: Define target role titles and seniority.
-# TODO: Define locations, remote preferences, and work authorization constraints.
-# TODO: Define industries, company preferences, and exclusions.
-# TODO: Define compensation preferences and approved sources.
-# TODO: Define discovery limits and review cadence.
-{}
+calibration:
+  min_live_jobs: 25
+  max_live_jobs: 40
+  sample_intent: diverse_sectors_levels_locations_and_fit
+  recurring_monitoring_enabled: false
+
+geography:
+  united_states:
+    primary: [Seattle, Bellevue, Redmond]
+    exploration: [San Francisco Bay Area, New York, Remote US, Other US when strong]
+    permanent_relocation_willingness: TBD
+  india:
+    preferred: [Bengaluru, Hyderabad]
+    exploration: [Other India only when unusually strong]
+    work_authorization: TBD
+  us_work_authorization: permanent_resident_no_sponsorship_required
+
+titles:
+  primary:
+    - Principal Product Manager
+    - Principal Product Manager-Technical
+    - Principal PM-T
+    - Staff Product Manager
+    - Lead Product Manager
+    - Product Lead
+    - Group Product Manager
+  conditional:
+    - Senior Product Manager
+    - Director Product Management
+    - Product Manager
+  conditional_rule: Retain only when scope, compensation, company title convention, or responsibilities appear Principal / Staff-equivalent; avoid unnecessary down-leveling.
+
+sector_scope: all_sectors_in_role_taxonomy
+ai_scope: [AI-heavy, AI-adjacent, Non-AI]
+search_lanes: [Big Tech, Mature Technology, Financial Services, Enterprise Software, Late-stage Startup, AI-native]
+
+discovery_sources_by_priority:
+  - Official company careers pages
+  - Official ATS (Greenhouse, Ashby, Lever, Workday, SmartRecruiters)
+  - Search engine discovery
+  - Public LinkedIn job pages where accessible
+verification: Verify each retained role against an active employer or official ATS page whenever reasonably possible; record unverified status honestly.
+deduplication: Company plus requisition ID; otherwise normalized company plus role plus location.
+output_files: [data/jobs_raw.jsonl, data/jobs_master.csv, data/review_queue.csv, data/discovery_log.csv]
