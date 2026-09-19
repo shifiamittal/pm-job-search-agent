@@ -17,6 +17,9 @@ service-account*.json
 service_account*.json
 token.json
 tokens.json
+token*.json
+oauth*.json
+.config/gcloud/
 *.pem
 *.key
 *.p12
@@ -47,6 +50,7 @@ auth.json
 playwright/.auth/
 
 # Local private data (tracked scaffold files remain visible)
+/sources/current/
 private/
 local_private/
 .private/
