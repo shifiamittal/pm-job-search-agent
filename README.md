@@ -1,7 +1,7 @@
 # Product Management Job-Search Agent
 
 ## Status
-Single-source Google Docs sync is implemented. No scheduled sync, job discovery,
+Single-source Google Docs and Google Sheets sync is implemented. No scheduled sync, job discovery,
 career-evidence generation, applications, or outreach are enabled by this script.
 
 ## Repository layout
@@ -14,7 +14,8 @@ career-evidence generation, applications, or outreach are enabled by this script
 - `sources/current/`: tracked latest project snapshots in readable `.md` files.
 - `resumes/`: reserved for resume assets.
 - `portfolio/`: reserved for portfolio assets.
-- `scripts/sync_google_docs.py`: explicitly selected, read-only Google Doc sync.
+- `scripts/sync_google_docs.py`: explicitly selected, read-only Google Doc/Sheet sync.
+- `scripts/sync_google_sheets.py`: workbook-to-Markdown conversion for Sheets.
 
 Empty asset and script directories contain `.gitkeep` files so Git preserves them.
 
@@ -54,8 +55,8 @@ and downstream actions are outside this architecture change.
 
 The registry maps each logical source name to its Google Doc title, Google Drive
 file ID, related career project, and downstream evidence files. It contains six
-user-supplied sources and evidence rules. Only `data_platform` is authorized for
-the initial test. Sheets are not supported by this command. Placeholder snapshots
+user-supplied sources and evidence rules. Each run selects exactly one source.
+Google Docs and Sheets are supported. Placeholder snapshots
 are not evidence or successful exports; Amazon sources remain unregistered.
 
 Single-source sync workflow:
@@ -121,11 +122,32 @@ Exit code 0 means a successful changed or unchanged sync; 1 means failure.
 Run offline regression tests without authenticating or syncing:
 
 ```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s scripts -p test_sync_google_docs.py -v
+.\.venv\Scripts\python.exe -m unittest discover -s scripts -p 'test_sync_google*.py' -v
 ```
 
 Downstream paths document dependencies only. Career-evidence updates are not
 implemented. Do not edit snapshots as a substitute for editing Google Docs.
+
+## Google Sheets synchronization
+
+Run `scripts/sync_google_docs.py --source patent_ai` with the same virtual-environment
+Python and OAuth token. No separate credentials or additional OAuth scopes are
+needed. Drive exports the spreadsheet as XLSX in memory; openpyxl reads all visible
+worksheets and cached formula values. The intermediate workbook is never saved.
+
+Each tab gets its own heading and used cell range. Empty outer regions are omitted;
+original row numbers, column letters, header rows, zero values, dates, versions,
+notes, and percentage units are retained. Narrow tabs become Markdown tables.
+Wide, long-text, or sparse tabs become cell-addressed rows without dropping populated
+columns. Hidden tabs are excluded; hidden rows/columns within visible tabs are retained.
+
+Merged ranges are described, not visually merged. Styling, charts, images, threaded
+discussions, and custom display formatting are not reproduced. Numeric values are
+kept rather than rounded to display precision; dates use ISO format. If a formula
+lacks a cached value, its formula is retained with a warning rather than silently
+exporting a blank. Cell notes are retained when present in the Drive workbook export.
+Normalized Markdown content feeds the existing SHA-256/state/change-detection logic.
+The script does not commit or push; those remain explicit repository actions.
 
 ## Future operation
 TODO: Define and authorize each workflow. No jobs will be searched, applications submitted, or people contacted by this scaffold.

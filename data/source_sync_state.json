@@ -30,6 +30,12 @@
       "google_drive_file_id": "127byQsokGrAynlcVM11QGFxw54Xt0AbjIbKMkhnxIdY",
       "last_successful_sync_at": "2026-09-19T14:11:45Z",
       "latest_content_hash": "sha256:f2dca516e92726984b21f1032282e846016a709aefdf40df4a7930d83871e280"
+    },
+    "patent_ai": {
+      "logical_name": "patent_ai",
+      "google_drive_file_id": "1QmnrE_eeLQUerJJ6SNaEjw7gnQxTXbvtHrcyCmvnTrg",
+      "last_successful_sync_at": "2026-09-19T14:18:44Z",
+      "latest_content_hash": "sha256:38345c2b8a0b7d2cc638905828b32ce44e9431714a5b6a007faf803f872a4220"
     }
   }
 }

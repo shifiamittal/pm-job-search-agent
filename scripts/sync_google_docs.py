@@ -1,4 +1,4 @@
-"""Sync one registered Google Doc using read-only OAuth; never commit or push.
+"""Sync one registered Google Doc or Sheet using read-only OAuth; never commit or push.
 
 Usage: python scripts/sync_google_docs.py --source data_platform
 Install dependencies: python -m pip install -r scripts/requirements-sync.txt
@@ -62,8 +62,8 @@ def load_source(root, name):
             raise SyncError(f"Source is missing required registry field: {key}.")
     if not re.fullmatch(r"[A-Za-z0-9_-]+", name):
         raise SyncError("Invalid logical source name.")
-    if source["type"] != "google_doc":
-        raise SyncError("Only google_doc sources are supported by this sync command.")
+    if source["type"] not in {"google_doc", "google_sheet"}:
+        raise SyncError("Only google_doc and google_sheet sources are supported.")
     output = (root / source["output"]).resolve()
     if not output.is_relative_to((root / "sources/current").resolve()) or output.suffix != ".md":
         raise SyncError("Snapshot output must be a Markdown file under sources/current/.")
@@ -193,7 +193,12 @@ def main():
         print(f"Authentication: successful ({auth_result}; read-only Google Drive)", flush=True)
         from google.auth.transport.requests import AuthorizedSession
         with AuthorizedSession(creds) as session:
-            content = fetch_markdown(session, source)
+            if source["type"] == "google_sheet":
+                from sync_google_sheets import fetch_sheet_markdown
+                content, sheet_report = fetch_sheet_markdown(session, source, check_response, SyncError)
+                print(json.dumps({"worksheets": sheet_report}, indent=2, ensure_ascii=True))
+            else:
+                content = fetch_markdown(session, source)
         timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
         content_hash, status = save_snapshot(source, output, state_path, state, content, timestamp)
         print(json.dumps({"source": args.source, "title": source["title"], "output": str(output),
