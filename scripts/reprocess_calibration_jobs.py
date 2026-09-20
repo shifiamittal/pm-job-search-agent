@@ -75,7 +75,7 @@ def migrate_job(old, annotation, now):
         "work_arrangement": old.get("work_arrangement", old.get("remote_or_hybrid", "Not exposed")),
         "compensation": compensation, "currency": currency,
         "sector": old["sector"], "role_domain": annotation["domain"],
-        "domain_fit": annotation["fit"], "domain_requirement_strength": annotation["strength"],
+        "domain_fit": {"DIRECT": "Direct", "ADJACENT": "Adjacent", "BRIDGEABLE": "Bridgeable", "NICHE / FAR": "Niche / Far"}.get(annotation["fit"], annotation["fit"]), "domain_requirement_strength": annotation["strength"],
         "domain_transfer_rationale": annotation["fit"] + ": " + annotation["transfer"],
         "technology_orientation": annotation["technology"], "role_cluster": old["role_cluster"],
         "role_mandate": annotation["mandate"],

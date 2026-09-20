@@ -24,7 +24,7 @@ TABS = ["Dashboard", "Jobs Master", "Apply Now", "Apply Now + Bridge", "Build To
         "Skills Synthesis", "Calibration Feedback"]
 JOB_COLUMNS = [
     ("Company", "company"), ("Company Brief", "company_brief"),
-    ("Role Title", "role_title"), ("Level", "exact_level"),
+    ("Role Title", "role_title"),
     ("Posting Date", "posting_date"), ("Location", "location"),
     ("Work Arrangement", "work_arrangement"), ("Compensation", "compensation"),
     ("Sector", "sector"), ("Role Domain", "role_domain"),
@@ -40,7 +40,7 @@ JOB_COLUMNS = [
     ("Bridge Timing", "bridge_timing"),
     ("Strategic Skill Overlap", "strategic_skill_overlap"),
     ("Skill-Build Priority", "skill_build_priority"),
-    ("Application Posture", "application_posture"), ("System Lane", "application_lane"),
+    ("System Lane", "application_lane"),
     ("Why Apply / Why Skip", "decision_rationale"),
     ("Resume Variant", "recommended_resume_variant"),
     ("Portfolio Artifact", "recommended_portfolio_artifact"),
@@ -200,8 +200,7 @@ def dashboard_rows(jobs, skills, latest_new_count):
     counts = Counter(job["application_lane"] for job in live)
     technology = Counter(job["technology_orientation"] for job in live)
     domains = Counter(job["domain_fit"] for job in live)
-    rows = [["Section", "Item", "Value", "Job URL / Detail"]]
-    for label, number in [
+    metrics = [
         ("Total live jobs", len(live)), ("New jobs from latest run", latest_new_count),
         ("Apply Now", counts["Apply Now"]), ("Apply Now + Bridge", counts["Apply Now + Bridge"]),
         ("Build Toward", counts["Build Toward"]), ("Skip", counts["Skip"]),
@@ -209,19 +208,18 @@ def dashboard_rows(jobs, skills, latest_new_count):
         ("Remote US", sum(job["country"] == "US" and "Remote" in job["work_arrangement"] for job in live)),
         ("Bengaluru", sum("Bengaluru" in job["location"] for job in live)),
         ("Hyderabad", sum("Hyderabad" in job["location"] for job in live)),
-    ]:
-        rows.append(["Overview", label, number, ""])
-    queue = review_queue(jobs)
-    for lane in ("Apply Now", "Apply Now + Bridge"):
-        for job in [item for item in queue if item["application_lane"] == lane][:8]:
-            rows.append(["Top " + lane, job["company"], job["role_title"], job["canonical_url"]])
-    for orientation in ("GenAI / Agentic AI", "Classical ML / Data Science", "Data / Infrastructure", "Non-AI", "Mixed"):
-        rows.append(["Technology orientation", orientation, technology[orientation], ""])
-    for fit in ("DIRECT", "ADJACENT", "BRIDGEABLE", "NICHE / FAR"):
-        rows.append(["Domain fit", fit, domains[fit], ""])
-    for skill in skills:
-        if skill["recommended_action"] == "Build Now":
-            rows.append(["Build-Now skill theme", skill["skill"], skill["role_count"], skill["rationale"]])
+    ]
+    orientations = [(name, technology[name]) for name in
+                    ("GenAI / Agentic AI", "Classical ML / Data Science", "Data / Infrastructure", "Non-AI", "Mixed")]
+    fits = [(name, domains[name]) for name in ("Direct", "Adjacent", "Bridgeable", "Niche / Far")]
+    build_skills = [(skill["skill"], skill["role_count"]) for skill in skills
+                    if skill["recommended_action"] == "Build Now"][:10]
+    rows = [["Metric", "Count", "", "Technology orientation", "Count", "Domain fit", "Count", "Build-Now skill theme", "Roles"]]
+    for index, (label, number) in enumerate(metrics):
+        orientation = orientations[index] if index < len(orientations) else ("", "")
+        fit = fits[index] if index < len(fits) else ("", "")
+        skill = build_skills[index] if index < len(build_skills) else ("", "")
+        rows.append([label, number, "", *orientation, *fit, *skill])
     return rows
 
 
@@ -262,7 +260,7 @@ def _format_requests(sheet_id, title, row_count, col_count, first_creation=False
     for index in range(col_count):
         width = 270 if index in (1, 15, 16, 18, 21, 22, 28) else 190
         if title == "Dashboard":
-            width = [190, 260, 300, 350][index]
+            width = [270, 100, 32, 270, 100, 190, 100, 320, 100][index]
         requests.append({"updateDimensionProperties": {
             "range": {"sheetId": sheet_id, "dimension": "COLUMNS", "startIndex": index, "endIndex": index + 1},
             "properties": {"pixelSize": width}, "fields": "pixelSize"}})
@@ -309,8 +307,18 @@ def build_update_requests(existing_sheets, rows_by_tab):
                          "endRowIndex": row_count, "startColumnIndex": 0, "endColumnIndex": col_count},
                          "rows": [{"values": [_cell(value) for value in row]} for row in rows],
                          "fields": "userEnteredValue"}})
+        lane_rules = []
+        if title == "Jobs Master":
+            lanes = {"Apply Now", "Apply Now + Bridge", "Build Toward", "Skip"}
+            for index, rule in enumerate(current.get("conditionalFormats", [])):
+                condition = rule.get("booleanRule", {}).get("condition", {})
+                values = condition.get("values", [])
+                if condition.get("type") == "TEXT_EQ" and values and values[0].get("userEnteredValue") in lanes:
+                    lane_rules.append(index)
+            for index in reversed(lane_rules):
+                requests.append({"deleteConditionalFormatRule": {"sheetId": sheet_id, "index": index}})
         requests.extend(_format_requests(sheet_id, title, row_count, len(rows[0]),
-                                         first_creation=not current.get("conditionalFormats")))
+                                         first_creation=title == "Jobs Master" and (bool(lane_rules) or not current.get("conditionalFormats"))))
     return requests
 
 

@@ -36,7 +36,7 @@ technology_orientation:
   - Data / Infrastructure
   - Non-AI
   - Mixed
-domain_fit: [DIRECT, ADJACENT, BRIDGEABLE, NICHE / FAR]
+domain_fit: [Direct, Adjacent, Bridgeable, Niche / Far]
 domain_requirement_strength: [Required, Strongly Preferred, Preferred, Not Material]
 primary_gap: [No Material Gap, Knowledge Gap, Vocabulary Gap, Evidence Gap, Experience Gap]
 gap_gating: [Non-gating, Soft, Hard]

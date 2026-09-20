@@ -10,7 +10,7 @@ Keep `role_domain` (business/product context), `technology_orientation` (what te
 
 ## Transfer, evidence, and gap
 
-Assess `domain_fit` as DIRECT, ADJACENT, BRIDGEABLE, or NICHE / FAR. Explain transfer in one specific sentence. Cite relevant experiences by project name in `candidate_relevant_evidence`; detailed designs and prototypes count as capability evidence without implying unverified production scale or personal coding. Respect unresolved conflicts. Explain the precise missing proof, knowledge, or direct experience in `gap_rationale`.
+Assess `domain_fit` as Direct, Adjacent, Bridgeable, or Niche / Far. Explain transfer in one specific sentence. Cite relevant experiences by project name in `candidate_relevant_evidence`; detailed designs and prototypes count as capability evidence without implying unverified production scale or personal coding. Respect unresolved conflicts. Explain the precise missing proof, knowledge, or direct experience in `gap_rationale`.
 
 Choose one full-text `primary_gap`: No Material Gap, Knowledge Gap, Vocabulary Gap, Evidence Gap, or Experience Gap. A resume wording change alone is not a Vocabulary Gap. A preferred qualification or unfamiliar tool name alone is not an Experience Gap. Mark `gap_gating` Non-gating, Soft, or Hard based on the actual hiring screen, not the gap label. An Experience Gap does not itself force Skip.
 

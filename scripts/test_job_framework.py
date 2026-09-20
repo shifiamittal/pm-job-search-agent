@@ -64,7 +64,7 @@ class FrameworkTests(unittest.TestCase):
 
     def test_taxonomy_and_no_old_scoring_schema(self):
         values = taxonomy()
-        self.assertEqual(len(self.jobs), 30)
+        self.assertGreaterEqual(len(self.jobs), 30)
         self.assertEqual(values["application_lanes"], ["Apply Now", "Apply Now + Bridge", "Build Toward", "Skip"])
         self.assertNotIn("K", values["primary_gap"])
         self.assertNotIn("AI-heavy", values["technology_orientation"])
@@ -99,7 +99,10 @@ class FrameworkTests(unittest.TestCase):
         by_name = {row["skill"]: row for row in rows}
         self.assertGreaterEqual(by_name["AI Evaluation Systems"]["role_count"], 2)
         self.assertEqual(by_name["AI Evaluation Systems"]["recommended_action"], "Build Now")
-        self.assertNotIn("PM People Management", by_name)  # Only Skip jobs tagged it.
+        self.assertEqual(by_name["PM People Management"]["recommended_action"], "Do Not Build")
+        self.assertEqual(by_name["PM People Management"]["role_count"], sum(
+            "PM People Management" in job.get("skill_tags", []) for job in self.jobs
+            if job["status"] == "Live" and job["application_lane"] != "Skip"))
         self.assertTrue(all(row["role_count"] >= 1 for row in rows))
 
     def test_row_serialization_and_feedback_preservation(self):
@@ -108,12 +111,19 @@ class FrameworkTests(unittest.TestCase):
         rows = serialize_job_rows(self.jobs, feedback)
         self.assertEqual(rows[0][0], "Company")
         self.assertNotIn("Priority Score", rows[0])
-        self.assertEqual(rows[1][rows[0].index("Level")], self.jobs[0]["exact_level"])
+        self.assertNotIn("Level", rows[0])
+        self.assertNotIn("Application Posture", rows[0])
+        self.assertEqual(rows[1][rows[0].index("Role Title")], self.jobs[0]["role_title"])
         self.assertEqual(rows[1][rows[0].index("User Notes")], "Keep this note")
         self.assertEqual(rows[1][rows[0].index("Job ID")], self.jobs[0]["job_id"])
         feedback_rows = serialize_feedback_rows(self.jobs, feedback)
         self.assertEqual(parse_feedback(feedback_rows)[self.jobs[0]["job_id"]]["User Override"], "Apply Now")
-        self.assertEqual(len(tab_rows(self.jobs, synthesize_skills(self.jobs), feedback, 0)), 7)
+        tabs = tab_rows(self.jobs, synthesize_skills(self.jobs), feedback, 0)
+        self.assertEqual(len(tabs), 7)
+        self.assertEqual(len(tabs["Dashboard"]), 11)
+        for title in ("Jobs Master", "Apply Now", "Apply Now + Bridge", "Build Toward"):
+            self.assertNotIn("Level", tabs[title][0])
+            self.assertNotIn("Application Posture", tabs[title][0])
 
     def test_merge_preserves_job_id_and_discovery_state(self):
         existing = [copy.deepcopy(self.jobs[0])]
@@ -134,7 +144,7 @@ class FrameworkTests(unittest.TestCase):
             self.assertFalse(result["dashboard_synced"])
             self.assertIn("simulated failure", result["dashboard_error"])
             with (root / "data/jobs_master.csv").open(encoding="utf-8") as stream:
-                self.assertEqual(len(list(csv.DictReader(stream))), 30)
+                self.assertEqual(len(list(csv.DictReader(stream))), len(self.jobs))
 
     def test_create_once_and_update_same_spreadsheet(self):
         with tempfile.TemporaryDirectory() as temp:

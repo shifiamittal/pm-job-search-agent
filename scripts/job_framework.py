@@ -55,6 +55,8 @@ SKILL_CATALOG = {
     "AI Evaluation Systems": ("Moderate", "High", "Build Now", "Deepen golden datasets, graders, judge calibration, regression gates and measurable reliability across agent products."),
     "Agent Orchestration and Reliability": ("Moderate", "High", "Build Now", "Extend existing Forecasting Agent designs into repeatable production-grade tool use, observability, safety and failure recovery stories."),
     "Developer-Facing AI APIs": ("Emerging", "High", "Build Now", "Build hands-on API/primitives fluency to widen access to senior agent-platform roles."),
+    "AI Platform Fundamentals": ("Moderate", "High", "Build Now", "Extend enterprise and ML platform evidence into model serving, agent runtimes, evaluation integration and platform economics."),
+    "AI Reliability / Observability / Quality": ("Moderate", "High", "Build Now", "Practice tracing, failure analysis, safety controls and quality monitoring for production-oriented AI products."),
     "RAG and Retrieval Quality": ("Moderate", "High", "Build Now", "Package Patent AI and agent retrieval work; deepen recall/ranking tradeoffs and reproducible evaluation."),
     "Hands-On AI Prototyping": ("Moderate", "High", "Build Now", "Show concrete Python/LLM API prototypes without claiming unverified production implementation."),
     "Enterprise Data Platform Architecture": ("Strong", "High", "Maintain / Package Better", "Keystone Data Platform already supports reusable data contracts, quality, lineage and enterprise integrations."),
