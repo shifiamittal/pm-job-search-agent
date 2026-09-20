@@ -16,6 +16,7 @@ from job_framework import (LEGACY_SCORE_FIELDS, ROOT, load_canonical_jobs,
                            taxonomy, validate_job, validate_jobs)
 from reprocess_calibration_jobs import annotations, migrate_job
 from sync_job_dashboard import (FEEDBACK_HEADERS, JOB_COLUMNS, TABS, DashboardError,
+                                collect_live_feedback, normalize_legacy_review,
                                 parse_feedback, serialize_feedback_rows,
                                 serialize_job_rows, sync_dashboard, tab_rows)
 
@@ -47,10 +48,8 @@ class FakeSession:
                                 "gridProperties": {"rowCount": 100, "columnCount": 45}},
                  "conditionalFormats": [{"rule": "already exists"}] if title == "Jobs Master" and self.updates else []}
                 for index, title in enumerate(TABS)]})
-        if method == "GET" and "Calibration Feedback" in url:
-            row = ["Test Co", "Test Role", "Apply Now", "Strong Match", "No Material Gap",
-                   "No Build Needed", "Interested", "Apply Now", "Keep this note", "10514206"]
-            return FakeResponse({"values": [FEEDBACK_HEADERS, row]})
+        if method == "GET" and "values:batchGet" in url:
+            return FakeResponse({"valueRanges": [{"values": []} for _ in range(5)]})
         if method == "POST" and url.endswith(":batchUpdate"):
             self.updates.append(kwargs["json"])
             return FakeResponse({})
@@ -99,31 +98,44 @@ class FrameworkTests(unittest.TestCase):
         by_name = {row["skill"]: row for row in rows}
         self.assertGreaterEqual(by_name["AI Evaluation Systems"]["role_count"], 2)
         self.assertEqual(by_name["AI Evaluation Systems"]["recommended_action"], "Build Now")
-        self.assertEqual(by_name["PM People Management"]["recommended_action"], "Do Not Build")
-        self.assertEqual(by_name["PM People Management"]["role_count"], sum(
-            "PM People Management" in job.get("skill_tags", []) for job in self.jobs
-            if job["status"] == "Live" and job["application_lane"] != "Skip"))
+        self.assertNotIn("PM People Management", by_name)
+        self.assertTrue(any("PM People Management" in job.get("skill_tags", [])
+                            for job in self.jobs if job["application_lane"] == "Skip"))
         self.assertTrue(all(row["role_count"] >= 1 for row in rows))
 
     def test_row_serialization_and_feedback_preservation(self):
-        feedback = {self.jobs[0]["job_id"]: {"User Review": "Interested", "User Notes": "Keep this note",
-                                                "User Override": "Apply Now"}}
+        feedback = {self.jobs[0]["job_id"]: {"my_decision": "Apply", "my_notes": "Keep this note",
+                                                "stage": "Discovered", "user_override": "Apply Now"}}
         rows = serialize_job_rows(self.jobs, feedback)
+        self.assertEqual(len(rows[0]), 16)
+        self.assertEqual([name for name, _ in JOB_COLUMNS], rows[0])
         self.assertEqual(rows[0][0], "Company")
         self.assertNotIn("Priority Score", rows[0])
         self.assertNotIn("Level", rows[0])
         self.assertNotIn("Application Posture", rows[0])
         self.assertEqual(rows[1][rows[0].index("Role Title")], self.jobs[0]["role_title"])
-        self.assertEqual(rows[1][rows[0].index("User Notes")], "Keep this note")
-        self.assertEqual(rows[1][rows[0].index("Job ID")], self.jobs[0]["job_id"])
+        self.assertEqual(rows[1][rows[0].index("My Notes")], "Keep this note")
+        self.assertEqual(rows[1][rows[0].index("My Decision")], "Apply")
+        self.assertEqual(rows[1][rows[0].index("Job URL")], self.jobs[0]["canonical_url"])
         feedback_rows = serialize_feedback_rows(self.jobs, feedback)
         self.assertEqual(parse_feedback(feedback_rows)[self.jobs[0]["job_id"]]["User Override"], "Apply Now")
         tabs = tab_rows(self.jobs, synthesize_skills(self.jobs), feedback, 0)
         self.assertEqual(len(tabs), 7)
         self.assertEqual(len(tabs["Dashboard"]), 11)
         for title in ("Jobs Master", "Apply Now", "Apply Now + Bridge", "Build Toward"):
-            self.assertNotIn("Level", tabs[title][0])
-            self.assertNotIn("Application Posture", tabs[title][0])
+            self.assertEqual(tabs[title][0], rows[0])
+
+    def test_legacy_feedback_from_lane_tab_survives(self):
+        job = self.jobs[0]
+        legacy = "Do not apply. The direct requirement is too niche."
+        self.assertEqual(normalize_legacy_review(legacy),
+                         ("Do Not Apply", "The direct requirement is too niche."))
+        values = {"Jobs Master": [["Job ID", "User Review"], [job["job_id"], ""]],
+                  "Apply Now": [["Job ID", "User Review"], [job["job_id"], legacy]]}
+        feedback = collect_live_feedback(values, [job])
+        self.assertEqual(feedback[job["job_id"]]["my_decision"], "Do Not Apply")
+        self.assertEqual(feedback[job["job_id"]]["my_notes"], "The direct requirement is too niche.")
+        self.assertEqual(feedback[job["job_id"]]["legacy_review"], legacy)
 
     def test_merge_preserves_job_id_and_discovery_state(self):
         existing = [copy.deepcopy(self.jobs[0])]
@@ -166,8 +178,13 @@ class FrameworkTests(unittest.TestCase):
             second_jobs = next(request["updateCells"] for request in api.updates[1]["requests"]
                                if "updateCells" in request and request["updateCells"]["range"]["sheetId"] == 2)
             header = [cell["userEnteredValue"]["stringValue"] for cell in second_jobs["rows"][0]["values"]]
-            note = second_jobs["rows"][1]["values"][header.index("User Notes")]["userEnteredValue"]["stringValue"]
-            self.assertEqual(note, "Keep this note")
+            note = second_jobs["rows"][1]["values"][header.index("My Notes")]["userEnteredValue"]["stringValue"]
+            self.assertEqual(note, self.jobs[0]["my_notes"])
+            self.assertEqual(len(header), 16)
+            dropdowns = [item["setDataValidation"] for item in api.updates[1]["requests"]
+                         if "setDataValidation" in item and item["setDataValidation"].get("rule")]
+            self.assertTrue(any([v["userEnteredValue"] for v in item["rule"]["condition"]["values"]] ==
+                                ["Apply", "Maybe", "Do Not Apply", "Needs Review"] for item in dropdowns))
             self.assertTrue(all("updateCells" not in item or item["updateCells"]["range"]["sheetId"] <= 7
                                 for item in api.updates[1]["requests"]))
 

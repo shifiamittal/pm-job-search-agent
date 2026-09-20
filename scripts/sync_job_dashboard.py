@@ -11,6 +11,7 @@ import argparse
 import csv
 import json
 import os
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -23,34 +24,17 @@ API = "https://sheets.googleapis.com/v4/spreadsheets"
 TABS = ["Dashboard", "Jobs Master", "Apply Now", "Apply Now + Bridge", "Build Toward",
         "Skills Synthesis", "Calibration Feedback"]
 JOB_COLUMNS = [
-    ("Company", "company"), ("Company Brief", "company_brief"),
-    ("Role Title", "role_title"),
+    ("Company", "company"), ("Role Title", "role_title"),
     ("Posting Date", "posting_date"), ("Location", "location"),
-    ("Work Arrangement", "work_arrangement"), ("Compensation", "compensation"),
-    ("Sector", "sector"), ("Role Domain", "role_domain"),
-    ("Domain Fit", "domain_fit"), ("Domain Requirement Strength", "domain_requirement_strength"),
-    ("Domain Transfer Rationale", "domain_transfer_rationale"),
-    ("Technology Orientation", "technology_orientation"), ("Role Cluster", "role_cluster"),
-    ("What This Person Is Expected To Do", "role_mandate"),
-    ("Key Functional Requirements", "key_functional_requirements"),
-    ("Hard Prerequisites", "hard_prerequisites"),
-    ("My Relevant Evidence", "candidate_relevant_evidence"),
-    ("Primary Gap", "primary_gap"), ("Gap Gating", "gap_gating"),
-    ("Gap Rationale", "gap_rationale"), ("Bridge Action", "bridge_action"),
-    ("Bridge Timing", "bridge_timing"),
-    ("Strategic Skill Overlap", "strategic_skill_overlap"),
-    ("Skill-Build Priority", "skill_build_priority"),
-    ("System Lane", "application_lane"),
-    ("Why Apply / Why Skip", "decision_rationale"),
-    ("Resume Variant", "recommended_resume_variant"),
-    ("Portfolio Artifact", "recommended_portfolio_artifact"),
-    ("Application Status", "application_status"),
-    ("Outreach Status", "outreach_status"),
-    ("User Review", "user_review"), ("User Notes", "user_notes"),
-    ("Job URL", "canonical_url"), ("Last Verified", "last_verified_at"),
-    ("Job ID", "job_id"), ("Status", "status"),
-    ("Posting Date Source", "posting_date_source"),
-    ("Posting Date Confidence", "posting_date_confidence"),
+    ("Compensation", "compensation"), ("Industry / Sector", "sector"),
+    ("Technology / Product Focus", "technology_product_focus"),
+    ("Functional Requirements", "key_functional_requirements"),
+    ("My Relevant Experience", "candidate_relevant_evidence"),
+    ("Key Gaps / Risks", "key_gaps_risks"),
+    ("System Recommendation", "application_lane"),
+    ("My Decision", "my_decision"), ("My Notes", "my_notes"),
+    ("Stage", "stage"), ("Job URL", "canonical_url"),
+    ("Last Verified", "last_verified_at"),
 ]
 SKILL_COLUMNS = [
     ("Skill / Capability", "skill"), ("# Roles Requiring It", "role_count"),
@@ -59,8 +43,10 @@ SKILL_COLUMNS = [
     ("Strategic Leverage", "strategic_leverage"),
     ("Recommended Action", "recommended_action"), ("Rationale", "rationale"),
 ]
-FEEDBACK_HEADERS = ["Company", "Role", "System Lane", "Application Posture", "Primary Gap",
-                    "Skill-Build Priority", "User Review", "User Override", "User Notes", "Job ID"]
+FEEDBACK_HEADERS = ["Company", "Role", "System Recommendation", "My Decision", "My Notes",
+                    "Stage", "User Override", "Job URL", "Job ID"]
+DECISIONS = ["Apply", "Maybe", "Do Not Apply", "Needs Review"]
+STAGES = ["Discovered", "Resume Prep", "Ready to Apply", "Applied", "Interviewing", "Closed"]
 
 
 class DashboardError(Exception):
@@ -168,10 +154,10 @@ def serialize_job_rows(jobs, feedback=None):
     rows = [header]
     for job in jobs:
         remembered = feedback.get(job["job_id"], {})
-        rows.append([str(remembered.get("User Review", "") or job.get("user_review", ""))
-                     if key == "user_review" else
-                     str(remembered.get("User Notes", "") or job.get("user_notes", ""))
-                     if key == "user_notes" else str(job.get(key, ""))
+        rows.append([str(remembered.get(key, job.get(key, "")))
+                     if key not in {"application_lane", "my_decision", "my_notes", "stage"} else
+                     str("Skip" if key == "application_lane" and job[key] == "Build Toward" else
+                         remembered.get(key, job.get(key, "")))
                      for _, key in JOB_COLUMNS])
     return rows
 
@@ -181,18 +167,109 @@ def serialize_feedback_rows(jobs, previous=None):
     rows = [FEEDBACK_HEADERS]
     for job in jobs:
         retained = previous.get(job["job_id"], {})
-        rows.append([job["company"], job["role_title"], job["application_lane"],
-                     job["application_posture"], job["primary_gap"], job["skill_build_priority"],
-                     retained.get("User Review", "") or job.get("user_review", ""),
-                     retained.get("User Override", ""),
-                     retained.get("User Notes", "") or job.get("user_notes", ""), job["job_id"]])
+        rows.append([job["company"], job["role_title"],
+                     "Skip" if job["application_lane"] == "Build Toward" else job["application_lane"],
+                     retained.get("my_decision", job.get("my_decision", "")),
+                     retained.get("my_notes", job.get("my_notes", "")),
+                     retained.get("stage", job.get("stage", "Discovered")),
+                     retained.get("user_override", job.get("user_override", "")),
+                     job["canonical_url"], job["job_id"]])
     return rows
 
 
 def parse_feedback(values):
+    """Parse the current feedback tab; legacy cells are handled during migration."""
     if not values or values[0] != FEEDBACK_HEADERS:
         return {}
-    return {row[9]: dict(zip(FEEDBACK_HEADERS, row)) for row in values[1:] if len(row) >= 10 and row[9]}
+    return {row[8]: dict(zip(FEEDBACK_HEADERS, row)) for row in values[1:] if len(row) >= 9 and row[8]}
+
+
+def normalize_legacy_review(value):
+    """Retain a user's wording while separating an explicit decision from notes."""
+    raw = value.strip()
+    if not raw:
+        return "", ""
+    for pattern, decision in ((r"^do not apply\b[. :,-]*", "Do Not Apply"),
+                              (r"^apply\b[. :,-]*", "Apply"),
+                              (r"^maybe\b[. :,-]*", "Maybe"),
+                              (r"^not sure\b[. :,-]*", "Needs Review")):
+        match = re.match(pattern, raw, re.I)
+        if match:
+            return decision, raw[match.end():].strip()
+    return "Needs Review", raw
+
+
+def collect_live_feedback(values_by_tab, jobs):
+    """Read decisions/notes from every review surface before rewriting tabs."""
+    by_url = {job["canonical_url"].rstrip("/"): job["job_id"] for job in jobs}
+    by_id = {job["job_id"]: job for job in jobs}
+    feedback = {}
+    for tab in ("Jobs Master", "Apply Now", "Apply Now + Bridge", "Build Toward", "Calibration Feedback"):
+        values = values_by_tab.get(tab, [])
+        if not values:
+            continue
+        header = values[0]
+        if "Job ID" not in header and "Job URL" not in header:
+            raise DashboardError(f"Cannot preserve feedback on {tab}: no stable Job ID or URL column")
+        for row in values[1:]:
+            cells = dict(zip(header, row))
+            job_id = cells.get("Job ID") or by_url.get(cells.get("Job URL", "").rstrip("/"))
+            if not job_id or job_id not in by_id:
+                continue
+            target = feedback.setdefault(job_id, {})
+            decision = cells.get("My Decision", "").strip()
+            note = cells.get("My Notes", "").strip()
+            if not decision and cells.get("User Review", ""):
+                decision, legacy_note = normalize_legacy_review(cells["User Review"])
+                note = "\n".join(part for part in (note, legacy_note) if part)
+                target.setdefault("legacy_review", cells["User Review"])
+            if not note and cells.get("User Notes", ""):
+                note = cells["User Notes"].strip()
+            if decision:
+                if decision not in DECISIONS:
+                    raise DashboardError(f"Invalid My Decision for {job_id} on {tab}: {decision}")
+                if target.get("my_decision") and target["my_decision"] != decision:
+                    raise DashboardError(f"Conflicting My Decision values for {job_id}; resolve them in the Sheet")
+                target["my_decision"] = decision
+            if note and note not in target.get("my_notes", "").split("\n\n"):
+                target["my_notes"] = "\n\n".join(part for part in (target.get("my_notes", ""), note) if part)
+            stage = cells.get("Stage", "").strip()
+            if stage:
+                if stage not in STAGES:
+                    raise DashboardError(f"Invalid Stage for {job_id} on {tab}: {stage}")
+                if target.get("stage") and target["stage"] != stage:
+                    raise DashboardError(f"Conflicting Stage values for {job_id}; resolve them in the Sheet")
+                target["stage"] = stage
+            override = cells.get("User Override", "").strip()
+            if override:
+                target["user_override"] = override
+    return feedback
+
+
+def apply_feedback_to_jobs(jobs, feedback, root=ROOT):
+    """Persist user authority locally before any full-sheet rewrite."""
+    changed = False
+    for job in jobs:
+        values = feedback.get(job["job_id"], {})
+        for key in ("my_decision", "stage", "user_override"):
+            if values.get(key) and values[key] != job.get(key, ""):
+                job[key] = values[key]
+                changed = True
+        note = values.get("my_notes", "")
+        if note and note not in job.get("my_notes", ""):
+            job["my_notes"] = "\n\n".join(part for part in (job.get("my_notes", ""), note) if part)
+            changed = True
+        if values.get("legacy_review") and not job.get("user_review"):
+            job["user_review"] = values["legacy_review"]
+            changed = True
+    if changed:
+        from job_framework import MASTER_FIELDS, REVIEW_FIELDS, _atomic_text, _csv_text
+        validate_jobs(jobs, root)
+        data = root / "data"
+        _atomic_text(data / "jobs_raw.jsonl", "".join(json.dumps(job, ensure_ascii=False) + "\n" for job in jobs))
+        _atomic_text(data / "jobs_master.csv", _csv_text(MASTER_FIELDS, jobs))
+        _atomic_text(data / "review_queue.csv", _csv_text(REVIEW_FIELDS, review_queue(jobs)))
+    return changed
 
 
 def dashboard_rows(jobs, skills, latest_new_count):
@@ -258,27 +335,31 @@ def _format_requests(sheet_id, title, row_count, col_count, first_creation=False
     if title != "Dashboard":
         requests.append({"setBasicFilter": {"filter": {"range": {**extent, "endRowIndex": max(2, row_count)}}}})
     for index in range(col_count):
-        width = 270 if index in (1, 15, 16, 18, 21, 22, 28) else 190
+        width = ([190, 330, 125, 250, 205, 160, 350, 520, 420, 460, 195, 150,
+                  420, 150, 330, 190][index] if title in ("Jobs Master", "Apply Now", "Apply Now + Bridge", "Build Toward")
+                 else 190)
         if title == "Dashboard":
             width = [270, 100, 32, 270, 100, 190, 100, 320, 100][index]
         requests.append({"updateDimensionProperties": {
             "range": {"sheetId": sheet_id, "dimension": "COLUMNS", "startIndex": index, "endIndex": index + 1},
             "properties": {"pixelSize": width}, "fields": "pixelSize"}})
-    if title == "Calibration Feedback":
-        for index, options in ((6, ["Review", "Interested", "Not Interested", "Hold", "Applied"]),
-                               (7, ["Apply Now", "Apply Now + Bridge", "Build Toward", "Skip"])):
+    if title in ("Jobs Master", "Apply Now", "Apply Now + Bridge", "Build Toward", "Calibration Feedback"):
+        requests.append({"setDataValidation": {"range": {"sheetId": sheet_id, "startRowIndex": 1,
+                                                     "endRowIndex": row_count, "startColumnIndex": 0,
+                                                     "endColumnIndex": col_count}}})
+        positions = ((11, DECISIONS), (13, STAGES)) if title != "Calibration Feedback" else ((3, DECISIONS), (5, STAGES))
+        for index, options in positions:
             requests.append({"setDataValidation": {"range": {"sheetId": sheet_id, "startRowIndex": 1,
                                                               "endRowIndex": row_count, "startColumnIndex": index,
                                                               "endColumnIndex": index + 1},
                                                     "rule": {"condition": {"type": "ONE_OF_LIST", "values": [
                                                         {"userEnteredValue": option} for option in options]},
-                                                             "strict": False, "showCustomUi": True}}})
+                                                             "strict": True, "showCustomUi": True}}})
     if title == "Jobs Master" and first_creation:
-        lane_index = [name for name, _ in JOB_COLUMNS].index("System Lane")
+        lane_index = [name for name, _ in JOB_COLUMNS].index("System Recommendation")
         for lane, color in [
             ("Apply Now", (0.83, 0.94, 0.83)),
             ("Apply Now + Bridge", (0.97, 0.93, 0.77)),
-            ("Build Toward", (0.87, 0.89, 0.99)),
             ("Skip", (0.93, 0.93, 0.93)),
         ]:
             requests.append({"addConditionalFormatRule": {"index": 0, "rule": {
@@ -299,14 +380,9 @@ def build_update_requests(existing_sheets, rows_by_tab):
         sheet_id = current["sheetId"]
         current_grid = current.get("gridProperties", {})
         row_count = max(current_grid.get("rowCount", 0), len(rows) + 10, 50)
-        col_count = max(current_grid.get("columnCount", 0), len(rows[0]))
-        requests.append({"updateSheetProperties": {"properties": {"sheetId": sheet_id,
-                           "gridProperties": {"rowCount": row_count, "columnCount": col_count, "frozenRowCount": 1}},
-                           "fields": "gridProperties.rowCount,gridProperties.columnCount,gridProperties.frozenRowCount"}})
-        requests.append({"updateCells": {"range": {"sheetId": sheet_id, "startRowIndex": 0,
-                         "endRowIndex": row_count, "startColumnIndex": 0, "endColumnIndex": col_count},
-                         "rows": [{"values": [_cell(value) for value in row]} for row in rows],
-                         "fields": "userEnteredValue"}})
+        col_count = len(rows[0])
+        if current.get("basicFilter"):
+            requests.append({"clearBasicFilter": {"sheetId": sheet_id}})
         lane_rules = []
         if title == "Jobs Master":
             lanes = {"Apply Now", "Apply Now + Bridge", "Build Toward", "Skip"}
@@ -317,6 +393,13 @@ def build_update_requests(existing_sheets, rows_by_tab):
                     lane_rules.append(index)
             for index in reversed(lane_rules):
                 requests.append({"deleteConditionalFormatRule": {"sheetId": sheet_id, "index": index}})
+        requests.append({"updateSheetProperties": {"properties": {"sheetId": sheet_id,
+                           "gridProperties": {"rowCount": row_count, "columnCount": col_count, "frozenRowCount": 1}},
+                           "fields": "gridProperties.rowCount,gridProperties.columnCount,gridProperties.frozenRowCount"}})
+        requests.append({"updateCells": {"range": {"sheetId": sheet_id, "startRowIndex": 0,
+                         "endRowIndex": row_count, "startColumnIndex": 0, "endColumnIndex": col_count},
+                         "rows": [{"values": [_cell(value) for value in row]} for row in rows],
+                         "fields": "userEnteredValue"}})
         requests.extend(_format_requests(sheet_id, title, row_count, len(rows[0]),
                                          first_creation=title == "Jobs Master" and (bool(lane_rules) or not current.get("conditionalFormats"))))
     return requests
@@ -350,19 +433,25 @@ def sync_dashboard(root=ROOT, session=None, credentials_path=None, token_path=No
         write_config(root, config)  # Persist identity before any content update; reruns cannot create a duplicate.
         created = True
     metadata = api_json(session, "GET", f"{API}/{spreadsheet_id}", "metadata",
-                        params={"fields": "spreadsheetId,spreadsheetUrl,properties.title,sheets.properties,sheets.conditionalFormats"})
+                        params={"fields": "spreadsheetId,spreadsheetUrl,properties.title,sheets.properties,sheets.conditionalFormats,sheets.basicFilter"})
     if metadata.get("spreadsheetId") != spreadsheet_id:
         raise DashboardError("Configured spreadsheet ID did not match Google response")
     existing = {sheet["properties"]["title"]: {**sheet["properties"],
-                "conditionalFormats": sheet.get("conditionalFormats", [])} for sheet in metadata.get("sheets", [])}
+                "conditionalFormats": sheet.get("conditionalFormats", []),
+                "basicFilter": sheet.get("basicFilter")} for sheet in metadata.get("sheets", [])}
     missing = [title for title in TABS if title not in existing]
     if missing:
         raise DashboardError("Existing dashboard is missing tabs: " + ", ".join(missing))
     feedback = {}
     if not created:
-        read = api_json(session, "GET", f"{API}/{spreadsheet_id}/values/'Calibration Feedback'!A:J",
-                        "read calibration feedback")
-        feedback = parse_feedback(read.get("values", []))
+        feedback_tabs = ("Jobs Master", "Apply Now", "Apply Now + Bridge", "Build Toward", "Calibration Feedback")
+        ranges = [f"'{title}'!A1:AM{min(existing[title].get('gridProperties', {}).get('rowCount', 200), 500)}"
+                  for title in feedback_tabs]
+        read = api_json(session, "GET", f"{API}/{spreadsheet_id}/values:batchGet",
+                        "read all user feedback", params={"ranges": ranges, "valueRenderOption": "FORMATTED_VALUE"})
+        feedback = collect_live_feedback({title: block.get("values", []) for title, block in
+                                          zip(feedback_tabs, read.get("valueRanges", []))}, jobs)
+        apply_feedback_to_jobs(jobs, feedback, root)
     rows = tab_rows(jobs, skills, feedback, latest_new_count)
     requests = build_update_requests(existing, rows)
     # One Sheets batchUpdate validates and applies the complete dashboard update atomically.

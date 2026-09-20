@@ -30,7 +30,8 @@ MASTER_FIELDS = [
     "decision_rationale", "recommended_resume_variant",
     "recommended_portfolio_artifact", "canonical_url", "source", "status",
     "discovered_at", "last_verified_at", "application_status", "outreach_status",
-    "user_review", "user_notes",
+    "user_review", "user_notes", "technology_product_focus", "key_gaps_risks",
+    "my_decision", "my_notes", "stage",
 ]
 LEGACY_SCORE_FIELDS = {
     "experience_fit_score", "interview_probability_score", "level_fit_score",
@@ -44,7 +45,8 @@ REVIEW_FIELDS = [
     "gap_gating", "bridge_action", "bridge_timing", "skill_build_priority",
     "decision_rationale", "recommended_resume_variant",
     "recommended_portfolio_artifact", "canonical_url", "last_verified_at",
-    "user_review", "user_notes",
+    "user_review", "user_notes", "technology_product_focus", "key_gaps_risks",
+    "my_decision", "my_notes", "stage",
 ]
 SKILL_FIELDS = [
     "skill", "role_count", "example_companies", "example_roles",
@@ -105,6 +107,14 @@ def validate_job(job, values=None):
         raise ValueError("Invalid live status")
     if job["status"] == "Closed" and job["application_lane"] != "Skip":
         raise ValueError("Closed jobs cannot be in an application lane")
+    if job["my_decision"] not in {"", "Apply", "Maybe", "Do Not Apply", "Needs Review"}:
+        raise ValueError("My Decision must be a user choice or blank")
+    if job["stage"] not in {"Discovered", "Resume Prep", "Ready to Apply", "Applied", "Interviewing", "Closed"}:
+        raise ValueError("Invalid workflow stage")
+    if job["status"] == "Closed" and job["stage"] != "Closed":
+        raise ValueError("Closed jobs must have Closed workflow stage")
+    if not 1 <= len([tag for tag in job["technology_product_focus"].split(" / ") if tag]) <= 6:
+        raise ValueError("Technology / Product Focus must be concise")
     if job["application_lane"] == "Build Toward" and not (
         job["skill_build_priority"] == "Build Now" and job["strategic_skill_overlap"] == "High"
     ):
