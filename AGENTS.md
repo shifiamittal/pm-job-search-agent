@@ -97,7 +97,7 @@ India:
 - Remote India
 - other unusually strong opportunities
 
-Do not silently reject roles based on location; classify location fit instead.
+Do not silently reject roles based on location; describe location friction in the decision rationale.
 
 # 6. Industry scope
 
@@ -137,33 +137,11 @@ Assign one primary cluster:
 - Generic Principal / Staff Product
 - Other
 
-Also classify:
-- AI-heavy
-- AI-adjacent
-- Non-AI
+Classify technology orientation separately as GenAI / Agentic AI, Classical ML / Data Science, Data / Infrastructure, Non-AI, or Mixed. Keep business domain distinct from technology and role cluster.
 
 # 8. Gap taxonomy
 
-Use:
-
-NONE
-Candidate already demonstrates the requirement strongly.
-
-K — Knowledge gap
-Relevant foundation exists but concept/technical knowledge needs strengthening.
-
-V — Vocabulary gap
-Underlying experience exists but candidate is not expressing it using the market's terminology.
-
-E — Evidence gap
-Candidate likely has capability but resume/portfolio/interview proof is weak.
-
-X — Experience gap
-Role genuinely requires substantial prior experience candidate does not possess.
-
-Important:
-Exact technology-name mismatch is NOT automatically an X gap.
-Evaluate transferable experience.
+Use full text: No Material Gap, Knowledge Gap, Vocabulary Gap, Evidence Gap, or Experience Gap. Record whether the gap is Non-gating, Soft, or Hard, and explain exactly what is missing. Exact tool mismatch and preferred qualifications are not automatically experience gaps. Evaluate transferable experience and distinguish direct evidence from inference.
 
 # 9. Classification principles
 
@@ -173,7 +151,7 @@ Evaluate:
 - actual scope, not title alone
 - hard prerequisites vs preferred qualifications
 - transferable experience
-- likely interview probability
+- credible screening prerequisites
 - compensation
 - geography
 - career capital
@@ -183,49 +161,19 @@ Do not favor famous employers automatically.
 Do not favor AI roles automatically.
 Do not penalize banking, insurance, healthcare, retail, or other non-tech industries.
 
-# 10. Scoring
+# 10. Explicit reasoning
 
-Score each 1-5:
-
-Experience Fit — 25%
-Interview Probability — 20%
-Level Fit — 15%
-Compensation Fit — 15%
-Career Capital — 15%
-Location Fit — 10%
-
-Convert to 0-100.
-
-If compensation is unpublished, mark compensation confidence as low / unknown rather than inventing a number.
+Do not calculate numeric job-fit or priority scores. Capture exact JD facts before interpreting the mandate, functional requirements, domain fit and strength, evidence, gap, timing, strategic skill overlap, and decision. If compensation or posting date is unpublished, say so rather than estimating it. Display the exact company title and level without shorthand. Use [classification rubric](config/classification_rubric.md) and [taxonomy](config/role_taxonomy.yaml) for the current allowed values.
 
 # 11. Application lanes
 
-APPLY NOW
-- strong current evidence
-- correct level
-- no major X gap
-- viable geography/economics
-- candidate could credibly interview now
+Apply Now: credible fit, no meaningful pre-interview capability work.
 
-APPLY + BRIDGE
-- attractive role
-- strong adjacent evidence
-- main gap is K, V, or E
-- bridge is realistic during interview preparation
+Apply Now + Bridge: **apply immediately**, with interview preparation or strategic AI skill-building in parallel. Learnable domain knowledge usually does not delay an application.
 
-BUILD TOWARD
-- strategically interesting
-- meaningful X gap exists
-- current interview probability materially lower
+Build Toward: use sparingly only when present credibility is materially insufficient and a recurring, strategically useful capability is worth building.
 
-SKIP
-- unnecessary down-level
-- major hard-domain mismatch
-- weak economics
-- impractical geography
-- weak career value
-- stale/closed job
-- role is not meaningfully Product Management
+Skip: unnecessary down-level, weak economics/location, stale role, non-PM job, or a hard niche mismatch with little strategic leverage. An Experience Gap alone does not force Skip.
 
 # 12. Job verification
 
@@ -267,7 +215,10 @@ Discovery may update:
 - jobs_raw.jsonl
 - jobs_master.csv
 - review_queue.csv
+- skills_synthesis.csv
 - discovery_log.csv
+
+After a successful canonical write, update the same configured Google Sheet. A Sheet failure leaves local data intact and is reported separately.
 
 Never delete historical job records silently.
 Mark closed/stale instead.
@@ -318,10 +269,11 @@ Every discovery/classification run should:
 4. deduplicate
 5. normalize
 6. classify
-7. score
-8. update persistent data
-9. generate review queue
-10. summarize only new/high-priority changes
+7. explain domain transfer, gap, strategic skill and application posture without scores
+8. update persistent local data
+9. generate review queue and skills synthesis
+10. sync the persistent Google Sheet after successful local writes; report a sync failure without discarding local data
+11. summarize only new/high-priority changes
 
 Do not produce long prose reports unless requested.
 
@@ -334,8 +286,9 @@ CURRENTLY ENABLED:
 - job verification
 - job normalization
 - job classification
-- scoring
+- explicit domain/gap/skill classification
 - review-queue generation
+- skills synthesis and persistent dashboard synchronization
 
 CURRENTLY DISABLED:
 - application submission

@@ -19,7 +19,6 @@ sectors:
   - Real Estate
   - Education
   - Other
-
 role_clusters:
   - AI / Agents / Evals
   - Data / ML Platform
@@ -31,34 +30,21 @@ role_clusters:
   - Security / Risk
   - Generic Principal / Staff Product
   - Other
-
-ai_classification:
-  - AI-heavy
-  - AI-adjacent
+technology_orientation:
+  - GenAI / Agentic AI
+  - Classical ML / Data Science
+  - Data / Infrastructure
   - Non-AI
-
-normalized_levels:
-  - Principal / Staff-equivalent
-  - Lead / Group-equivalent
-  - Senior PM conditional
-  - Director conditional
-  - PM conditional
-  - Below target
-  - Unclear
-
-primary_gap:
-  NONE: Demonstrated experience already meets the substantive requirement.
-  K: Relevant foundation exists; conceptual or technical learning is needed.
-  V: Experience exists but market or domain vocabulary needs strengthening.
-  E: Capability is plausible but resume, portfolio, or interview proof is weak.
-  X: A substantial hard requirement needs direct experience not evidenced today.
-
-application_lanes:
-  - APPLY NOW
-  - APPLY + BRIDGE
-  - BUILD TOWARD
-  - SKIP
-
+  - Mixed
+domain_fit: [DIRECT, ADJACENT, BRIDGEABLE, NICHE / FAR]
+domain_requirement_strength: [Required, Strongly Preferred, Preferred, Not Material]
+primary_gap: [No Material Gap, Knowledge Gap, Vocabulary Gap, Evidence Gap, Experience Gap]
+gap_gating: [Non-gating, Soft, Hard]
+bridge_timing: [Before Application, Before Recruiter Screen, Before Interview, Interview Triggered, Ongoing Strategic Build, Not Required]
+strategic_skill_overlap: [High, Medium, Low]
+skill_build_priority: [Build Now, Interview Triggered, Do Not Build, No Build Needed]
+application_posture: [Strong Match, Credible Match, Stretch, Skip]
+application_lanes: [Apply Now, Apply Now + Bridge, Build Toward, Skip]
 resume_variants:
   - Data / ML Platform
   - AI Evals / Quality
@@ -67,7 +53,6 @@ resume_variants:
   - Enterprise Platform
   - Growth / Consumer
   - General Principal PM
-
 portfolio_artifacts:
   - Enterprise Data Platform
   - Forecasting Agent / Agent Evaluation

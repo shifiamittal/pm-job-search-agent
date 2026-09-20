@@ -1,9 +1,7 @@
 calibration:
-  min_live_jobs: 25
-  max_live_jobs: 40
-  sample_intent: diverse_sectors_levels_locations_and_fit
+  source: existing_jobs_only
   recurring_monitoring_enabled: false
-
+  full_market_scan_enabled: false
 geography:
   united_states:
     primary: [Seattle, Bellevue, Redmond]
@@ -14,31 +12,20 @@ geography:
     exploration: [Other India only when unusually strong]
     work_authorization: TBD
   us_work_authorization: permanent_resident_no_sponsorship_required
-
 titles:
-  primary:
-    - Principal Product Manager
-    - Principal Product Manager-Technical
-    - Principal PM-T
-    - Staff Product Manager
-    - Lead Product Manager
-    - Product Lead
-    - Group Product Manager
-  conditional:
-    - Senior Product Manager
-    - Director Product Management
-    - Product Manager
-  conditional_rule: Retain only when scope, compensation, company title convention, or responsibilities appear Principal / Staff-equivalent; avoid unnecessary down-leveling.
-
+  primary: [Principal Product Manager, Principal Product Manager-Technical, Principal PM-T, Staff Product Manager, Lead Product Manager, Product Lead, Group Product Manager]
+  conditional: [Senior Product Manager, Director Product Management, Product Manager]
+  conditional_rule: Retain only where scope, company ladder, responsibility or published economics substantiate Principal/Staff-equivalent opportunity.
 sector_scope: all_sectors_in_role_taxonomy
-ai_scope: [AI-heavy, AI-adjacent, Non-AI]
+technology_scope: all_orientations_in_role_taxonomy
 search_lanes: [Big Tech, Mature Technology, Financial Services, Enterprise Software, Late-stage Startup, AI-native]
-
 discovery_sources_by_priority:
   - Official company careers pages
   - Official ATS (Greenhouse, Ashby, Lever, Workday, SmartRecruiters)
   - Search engine discovery
   - Public LinkedIn job pages where accessible
-verification: Verify each retained role against an active employer or official ATS page whenever reasonably possible; record unverified status honestly.
+verification: Recheck official employer or ATS posting; preserve closed historical records rather than silently replacing them.
 deduplication: Company plus requisition ID; otherwise normalized company plus role plus location.
-output_files: [data/jobs_raw.jsonl, data/jobs_master.csv, data/review_queue.csv, data/discovery_log.csv]
+post_success_workflow: [write_canonical_jobs, generate_review_queue, generate_skills_synthesis, sync_persistent_google_sheet]
+sheet_sync_failure: Preserve successful local data; report dashboard failure separately; allow manual rerun.
+output_files: [data/jobs_raw.jsonl, data/jobs_master.csv, data/review_queue.csv, data/skills_synthesis.csv, data/discovery_log.csv]

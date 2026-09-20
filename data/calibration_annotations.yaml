@@ -1,0 +1,722 @@
+# Curated interpretation of the same 30 official JDs in the first calibration.
+# Facts were rechecked on 2026-09-20. No new roles are introduced here.
+"10514206":
+  brief: AWS sells cloud services; this Core Services team commercializes the agent-evaluation capabilities used by developers building reliable AI applications.
+  title: Principal Product Manager Technical, AWS Applied AI Solutions - Core Services
+  level: Principal Product Manager Technical
+  domain: Enterprise AI agent evaluation platform
+  fit: ADJACENT
+  strength: Required
+  transfer: Agent evaluation at AWS extends Shifia's Forecasting Agent and Patent AI work into a developer service and commercial GTM context.
+  technology: GenAI / Agentic AI
+  mandate: Own evaluation products in production and define new agent-quality capabilities. Decide product strategy, quality methods, roadmap and GTM to drive developer adoption and revenue.
+  functions: [Define agent correctness and safety evaluation methods, Build automated evaluation pipelines and regression tests, Design human review and quality benchmarking workflows, Integrate evaluation signals with identity and observability, Drive POC-to-production adoption and product GTM]
+  hard: 7+ years technical product management and experience launching technical products/businesses.
+  evidence: Forecasting Agent / Agent Evaluation; Patent AI retrieval evaluation; Deep Enterprise platform launch.
+  gap: Evidence Gap
+  gating: Soft
+  gap_detail: Evaluation design is evidenced, but a developer-facing AWS service P&L and large-scale commercial evaluation adoption are not established.
+  bridge: Package golden datasets, graders, regression gates and adoption evidence; strengthen developer-platform positioning.
+  timing: Ongoing Strategic Build
+  overlap: High
+  build: Build Now
+  posture: Strong Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; direct agent-evaluation capability and Principal scope outweigh a bridgeable service-commercialization evidence gap.
+  skills: [AI Evaluation Systems, Agent Orchestration and Reliability, Developer-Facing AI APIs]
+"10487511":
+  brief: Amazon Customer Service runs self-service help across shopping journeys; this team owns the AI-native destination and customer-intelligence primitives used across support surfaces.
+  title: Principal Product Manager- Tech , Amazon Customer Service
+  level: Principal Product Manager- Tech
+  domain: AI-native customer service and support experience
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Consumer experience at Amazon and enterprise agent workflows transfer to support journeys, personalization and LLM quality.
+  technology: GenAI / Agentic AI
+  mandate: Set the multi-year vision for an AI-native support front door used across Amazon. Choose platform primitives and resolution-quality measures while coordinating delivery across customer-service teams.
+  functions: [Own an AI-native support destination roadmap, Shape customer memory and context primitives, Define LLM accuracy latency and UX evaluations, Integrate agentic automation with human service journeys, Drive cross-surface customer-experience standards]
+  hard: Principal-level technical PM and customer-facing product delivery; no dedicated support-domain tenure stated as a screen.
+  evidence: Amazon consumer products; Forecasting Agent; Deep Enterprise customer workflows.
+  gap: Evidence Gap
+  gating: Non-gating
+  gap_detail: Current evidence shows agents and customer products, but not ownership of Amazon-scale support resolution or customer-service LLM metrics.
+  bridge: Prepare concrete agent evaluation and customer-journey stories while applying.
+  timing: Before Interview
+  overlap: High
+  build: Build Now
+  posture: Strong Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; Amazon technical-PM history and agent experience support a credible Principal interview.
+  skills: [AI Evaluation Systems, Agent Orchestration and Reliability, Hands-On AI Prototyping]
+"10439720":
+  brief: Prime Video is Amazon's streaming service; this role shapes the viewing and commerce experience across devices and markets.
+  title: Principal Product Manager - Tech, PV Commerce, Prime Video Commerce
+  level: Principal Product Manager - Tech
+  domain: Streaming entertainment commerce and viewer experience
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Amazon consumer and monetization product work transfers to viewer conversion, cross-device experience and commercial tradeoffs.
+  technology: Non-AI
+  mandate: Own the product vision and roadmap for a Prime Video customer experience. Decide customer requirements and launch tradeoffs across devices, content and commerce partners.
+  functions: [Research viewer experience across devices, Define a digital-video product roadmap and metrics, Write detailed customer-facing product requirements, Coordinate science engineering design and content teams, Launch improvements across video customer journeys]
+  hard: 8+ years technical product/program management and 4+ years end-to-end product delivery.
+  evidence: Amazon consumer financing/onboarding and growth; Amazon seller recommendations; cross-functional launches.
+  gap: No Material Gap
+  gating: Non-gating
+  gap_detail: Streaming domain context is new, but the JD does not require prior entertainment tenure.
+  bridge: Tailor existing Amazon consumer product outcomes to cross-device commerce and viewer experience.
+  timing: Not Required
+  overlap: Low
+  build: No Build Needed
+  posture: Credible Match
+  lane: Apply Now
+  decision: Apply now; the technical consumer-product mandate is transferable at Principal level without a material screen.
+  skills: [Classical ML Productization]
+"10487601":
+  brief: Amazon's Featured Merchant Algorithm selects the offer shown in the Buy Box; the team owns ranking models and the global offer-selection experience.
+  title: Principal Product Manager - Tech, Featured Merchant Algorithm
+  level: Principal Product Manager - Tech
+  domain: Marketplace offer ranking and merchant selection
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Amazon seller recommendations and ML platform work transfer to merchant ranking, customer value and model-product tradeoffs.
+  technology: Classical ML / Data Science
+  mandate: Guide the algorithm and customer-facing offer selection on Amazon buying surfaces. Balance merchant fairness, customer value, financial impact and scalable technical design.
+  functions: [Shape offer-ranking and Buy Box strategy, Weigh price availability delivery and trust signals, Quantify customer and financial impact of model changes, Coordinate applied-science and engineering launches, Define extensible offer-selection frameworks]
+  hard: Senior technical PM and data-driven marketplace product delivery; dedicated Featured Merchant tenure is not stated as a screen.
+  evidence: Amazon seller recommendations; Amazon ML Platform; Amazon Supply Chain / Optimization.
+  gap: Evidence Gap
+  gating: Non-gating
+  gap_detail: Specific Buy Box ownership is not evidenced, but marketplace models and seller experience are adjacent.
+  bridge: Present seller-ranking and model tradeoffs in marketplace terms; verify India work authorization before application.
+  timing: Before Application
+  overlap: Medium
+  build: No Build Needed
+  posture: Credible Match
+  lane: Apply Now
+  decision: Apply if India eligibility is confirmed; marketplace and ML evidence support Principal scope without a new capability build.
+  skills: [Classical ML Productization]
+"R-575564":
+  brief: Wells Fargo's Credit Services builds banking decision capabilities; this role owns foundational real-time credit eligibility and data-orchestration products.
+  title: Senior Lead Product Manager
+  level: Senior Lead Product Manager
+  domain: Credit eligibility and real-time decisioning
+  fit: DIRECT
+  strength: Required
+  transfer: Amazon Financial Services directly covers lending, bureau data and credit-decisioning products.
+  technology: Non-AI
+  mandate: Own a foundational credit-decisioning product area. Turn eligibility and data needs into resilient APIs, orchestration and an executable enterprise roadmap.
+  functions: [Own real-time credit decision orchestration, Translate eligibility needs into APIs and data movement, Decompose complex requirements into platform capabilities, Balance resilience controls and speed to market, Lead discovery and executive decisions across banking teams]
+  hard: 7+ years product management or equivalent complex product/change leadership.
+  evidence: Amazon Financial Services credit decisioning, bureau integration and consumer financing.
+  gap: No Material Gap
+  gating: Non-gating
+  gap_detail: Direct credit-domain experience meets the substance; bank-specific terminology does not change capability fit.
+  bridge: Reframe resume around credit eligibility, bureau integration and real-time decisioning.
+  timing: Not Required
+  overlap: Medium
+  build: No Build Needed
+  posture: Strong Match
+  lane: Apply Now
+  decision: Apply now; direct credit product evidence and broad Senior Lead ownership outweigh non-Seattle location friction.
+  skills: [Financial Risk Decisioning]
+"R-553892":
+  brief: Wells Fargo Global Payments & Liquidity offers commercial payments and treasury products; the role modernizes liquidity offerings and related operating processes.
+  title: Lead Product Manager - Liquidity Transformation & Strategy
+  level: Lead Product Manager
+  domain: Treasury liquidity and transaction-banking modernization
+  fit: BRIDGEABLE
+  strength: Preferred
+  transfer: Financial-services platform and regulated-process experience transfer, while liquidity-product mechanics are new.
+  technology: Non-AI
+  mandate: Simplify and transform a transaction-banking portfolio. Align product, technology, risk, finance and sales around a new operating model and client capabilities.
+  functions: [Simplify transaction-banking and liquidity products, Design transition of operating processes, Translate modernization into business requirements, Align product risk finance sales and engineering, Shape client-facing treasury capability roadmaps]
+  hard: 5+ years PM/product development/strategic planning or equivalent change delivery; treasury expertise is not a stated required screen.
+  evidence: Amazon Financial Services; Keystone Data Platform enterprise transformation.
+  gap: Knowledge Gap
+  gating: Non-gating
+  gap_detail: Liquidity structures and transaction-banking operating language need preparation; core PM and regulated-platform work transfer.
+  bridge: Learn liquidity and treasury-management workflows if a recruiter screen is scheduled.
+  timing: Interview Triggered
+  overlap: Low
+  build: Interview Triggered
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; learnable liquidity specifics should not defer a senior banking-platform opportunity.
+  skills: [Role-Specific Regulated Workflows, Financial Risk Decisioning]
+"R-575654":
+  brief: Wells Fargo's Global Treasury Management helps commercial clients collect and reconcile payments; the role owns its paper-receivables portfolio and modernization.
+  title: 'Senior Lead Product Manager: Paper Receivables'
+  level: Senior Lead Product Manager
+  domain: Commercial paper receivables and digital migration
+  fit: BRIDGEABLE
+  strength: Preferred
+  transfer: Amazon financial products and enterprise modernization transfer to regulated receivables, but paper-payment operations are new.
+  technology: Non-AI
+  mandate: Run the financial and product performance of paper receivables. Decide digital-migration, pricing, lifecycle and platform investments while preserving commercial-client continuity.
+  functions: [Own paper-receivables portfolio roadmap, Track revenue pricing profitability and service performance, Lead paper-to-electronic migration, Define investment cases and product risk controls, Improve commercial payment processing and reconciliation]
+  hard: 7+ years product/change leadership; deep receivables or transaction-banking expertise is listed as Desired.
+  evidence: Amazon Financial Services; Keystone enterprise platform modernization.
+  gap: Knowledge Gap
+  gating: Non-gating
+  gap_detail: Paper payment operations and receivables product economics are unfamiliar, but the JD places that depth under desired qualifications.
+  bridge: Learn lockbox, deposit, reconciliation and migration vocabulary only if an interview advances.
+  timing: Interview Triggered
+  overlap: Low
+  build: Interview Triggered
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; Senior Lead IC portfolio scope is valuable and preferred domain depth can be bridged in interviews.
+  skills: [Role-Specific Regulated Workflows]
+"23749240":
+  brief: Travelers is a property-and-casualty insurer; this director role runs a state-product portfolio's growth, profitability and pricing decisions.
+  title: Director, Product Management (California State Team)
+  level: Director, Product Management
+  domain: State P&C insurance pricing and profitability
+  fit: NICHE / FAR
+  strength: Required
+  transfer: Financial-services product leadership transfers generally, but state P&C rating, actuarial economics and direct team management do not.
+  technology: Non-AI
+  mandate: Own the California state-product plan and profitability. Direct rating, underwriting and pricing decisions with a product team and actuarial partners.
+  functions: [Manage state product growth and profitability, Set P&C pricing and rate plans, Analyze underwriting performance, Coordinate actuarial and regulatory decisions, Lead product team execution]
+  hard: Direct P&C state product/rating expertise and people-management scope are central to the role.
+  evidence: Amazon Financial Services; cross-functional leadership at Keystone and Amazon; no evidenced formal PM reports.
+  gap: Experience Gap
+  gating: Hard
+  gap_detail: State P&C pricing/actuarial ownership and formal product-team management are not evidenced.
+  bridge: Do not build an actuarial specialty for this isolated opportunity.
+  timing: Not Required
+  overlap: Low
+  build: Do Not Build
+  posture: Skip
+  lane: Skip
+  decision: Skip; hard P&C actuarial and management requirements, Hartford location and lower published range do not support the target path.
+  skills: [PM People Management]
+"fa5d826d-18e1-4ce1-b103-204a5701a701":
+  brief: Socure provides identity verification and fraud intelligence; this Principal role owns Account Intelligence products for bank-account status and ownership verification.
+  title: Principal Product Manager
+  level: Principal Product Manager
+  domain: Bank-account verification and identity intelligence
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Credit eligibility, financial risk decisions and ML platform work transfer strongly, though dedicated identity-product tenure is not evidenced.
+  technology: Classical ML / Data Science
+  mandate: Own Account Intelligence strategy and commercialization. Decide account-status and ownership verification products across payment instruments, customer workflows, pricing and adoption.
+  functions: [Define bank-account status and ownership verification roadmap, Expand to additional payment instruments and consortium data, Lead customer discovery through launch and scale, Specify data-intensive platform/API capabilities, Own adoption pricing costs revenue and profitability]
+  hard: 10+ years PM and relevant payments, account verification, fraud, identity or adjacent financial-services experience.
+  evidence: Amazon Financial Services credit decisioning; Amazon ML Platform; Keystone Data Platform.
+  gap: Evidence Gap
+  gating: Soft
+  gap_detail: Credit-risk and data-platform evidence is clear; direct bank-account verification and consortium-data commercialization outcomes need a sharper story.
+  bridge: Lead with financial decisioning, bureau data and platform commercialization, without claiming direct account-verification ownership.
+  timing: Before Interview
+  overlap: Medium
+  build: No Build Needed
+  posture: Strong Match
+  lane: Apply Now
+  decision: Apply now; Seattle Principal scope and adjacent financial-risk ML evidence support a credible interview.
+  skills: [Financial Risk Decisioning, Classical ML Productization]
+"6630580":
+  brief: Adyen operates a global payments platform; this Group role leads credit and data products as well as a team of product managers.
+  title: Group Product Manager, Credit and Data Platform
+  level: Group Product Manager
+  domain: Credit and data platform for global payments
+  fit: DIRECT
+  strength: Required
+  transfer: Credit and data-platform work is direct, but the specific PM people-management requirement is not evidenced.
+  technology: Data / Infrastructure
+  mandate: Set credit/data platform strategy and align multiple PM-owned workstreams. Own product outcomes while managing and developing a PM team.
+  functions: [Define credit product and data-platform roadmap, Align payment data with credit decisions, Coordinate platform integration across teams, Measure portfolio commercial outcomes, Manage and develop product managers]
+  hard: Three-plus years credit product experience and direct management of at least three PMs.
+  evidence: Amazon Financial Services; Keystone Data Platform; formal PM people management not established.
+  gap: Experience Gap
+  gating: Hard
+  gap_detail: Required direct management of three or more PMs is not supported by the current career evidence.
+  bridge: Do not represent cross-functional influence as formal direct-report management; revisit if management evidence is confirmed.
+  timing: Not Required
+  overlap: Low
+  build: Do Not Build
+  posture: Skip
+  lane: Skip
+  decision: Skip for now; direct PM-management prerequisite is a hard screen despite otherwise strong credit/data fit.
+  skills: [PM People Management, Enterprise Data Platform Architecture]
+"4694576005":
+  brief: Flex builds a financial operating platform; this Principal role owns its payment movement and fraud product infrastructure.
+  title: Principal Product Manager, Payments
+  level: Principal Product Manager
+  domain: Payment rails, fraud controls and money movement
+  fit: BRIDGEABLE
+  strength: Required
+  transfer: Financial products and risk workflows transfer, but dedicated payment rails and PM-manager experience are not shown.
+  technology: Non-AI
+  mandate: Own payment flows and infrastructure reliability for Flex's financial product. Guide rail, fraud and partner tradeoffs while coaching other PMs.
+  functions: [Define payment rails and orchestration, Manage payout and transaction failure paths, Own fraud control tradeoffs, Lead partner-integrated payment launches, Coach PM delivery across payment surfaces]
+  hard: Three-plus years direct payments/fraud work and player-coach PM management.
+  evidence: Amazon Financial Services credit products; Keystone enterprise integrations; no direct rail or formal PM-management evidence.
+  gap: Experience Gap
+  gating: Hard
+  gap_detail: Direct payments-rail tenure and people-management experience are material JD screens, not vocabulary gaps.
+  bridge: Do not invest proactively in specialized rails or claim management experience not established.
+  timing: Not Required
+  overlap: Low
+  build: Do Not Build
+  posture: Skip
+  lane: Skip
+  decision: Skip for current calibration; strong economics do not override two hard prerequisites outside the best-evidenced path.
+  skills: [PM People Management, Role-Specific Regulated Workflows]
+"fbca55c0-c7a1-4ed2-aed3-fe26a9255bb2":
+  brief: Latitude is an early-stage global money-movement platform using payment and blockchain rails; the first product hire would own its technical roadmap with founders.
+  title: Technical Product Lead
+  level: Technical Product Lead
+  domain: Cross-border payment infrastructure and settlement
+  fit: BRIDGEABLE
+  strength: Required
+  transfer: Amazon financial products and API/platform work transfer, though direct rails, FX or crypto ownership is not documented.
+  technology: Data / Infrastructure
+  mandate: Be the first product hire accountable for corridors, rails, integrations and public APIs. Decide what to build with founders while converting regulatory and partner constraints into product choices.
+  functions: [Own cross-border payment roadmap, Specify APIs ledgering and reconciliation, Integrate banks and financial partners, Translate regulation into product architecture, Prioritize payout and collection flows]
+  hard: Senior technical PM, API-first product and startup fluency plus expertise in at least one of payments, FX, crypto, treasury, identity or fraud.
+  evidence: Amazon Financial Services; Keystone Data Platform APIs and regulated deployments; startup product leadership at Keystone.
+  gap: Experience Gap
+  gating: Soft
+  gap_detail: Required core-domain expertise may be screened strictly; credit-risk work is adjacent but direct payment rails/FX/crypto is not evidenced.
+  bridge: Test whether financial-risk experience qualifies as core-domain expertise; prepare API and reconciliation tradeoffs only if screened.
+  timing: Before Recruiter Screen
+  overlap: Low
+  build: Interview Triggered
+  posture: Stretch
+  lane: Apply Now + Bridge
+  decision: Apply immediately as a high-ownership stretch; verify domain interpretation before spending time on rail-specific study.
+  skills: [Role-Specific Regulated Workflows, Enterprise Data Platform Architecture]
+"f7225fae-2203-4332-8ea4-8569c7e371d1":
+  brief: Vanta automates trust and compliance workflows; its data platform supports evidence collection and product analytics at scale.
+  title: Staff Product Manager, Data Platform
+  level: Staff Product Manager
+  domain: Security/compliance data platform
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Data-platform capability is direct from Keystone, while trust/compliance is the adjacent business domain.
+  technology: Data / Infrastructure
+  mandate: Own the platform that fetches, stores and makes customer/third-party data queryable for Vanta products. Sequence foundational investments against feature needs, stability and adoption.
+  functions: [Roadmap customer and third-party data ingestion and storage, Balance platform stability against feature delivery, Support integrations and compliance evidence products, Improve scalability and queryability, Measure platform adoption and enablement across teams]
+  hard: 6+ years supporting platform teams and prior 0-to-1 platform building; security background is not a hard screen.
+  evidence: Keystone Data Platform; Amazon ML Platform; Deep Enterprise cloud architecture.
+  gap: No Material Gap
+  gating: Non-gating
+  gap_detail: Security/compliance terms are new, but functional platform ownership is already strongly evidenced.
+  bridge: Tailor Keystone data contracts, governance and adoption examples; no capability build required.
+  timing: Not Required
+  overlap: High
+  build: No Build Needed
+  posture: Strong Match
+  lane: Apply Now
+  decision: Apply now; Staff data-platform functional fit and remote-US setup are compelling.
+  skills: [Enterprise Data Platform Architecture]
+"81b94a4e-53d3-40d5-9c04-af57bd01961c":
+  brief: Confluent commercializes streaming data infrastructure; this Staff role shapes real-time analytics and developer-facing query products.
+  title: Staff Product Manager, Real Time Data Analytics Platform
+  level: Staff Product Manager
+  domain: Real-time streaming analytics
+  fit: ADJACENT
+  strength: Required
+  transfer: Keystone data architecture and Amazon ML platform leadership transfer to streaming analytics, but engine-level query depth is thinner.
+  technology: Data / Infrastructure
+  mandate: Set direction for real-time analytics capabilities and developer experience. Balance low-latency query behavior, scalability and platform adoption with engineering teams.
+  functions: [Shape real-time analytics product roadmap, Define streaming query use cases, Evaluate latency and materialized-view tradeoffs, Improve developer APIs and adoption, Coordinate platform performance and reliability decisions]
+  hard: 8+ years PM/technical roles, 5+ years infrastructure or data products from concept to launch, and deep familiarity with real-time analytics, database internals or streaming platform architecture.
+  evidence: Keystone Data Platform event streams and data contracts; Amazon ML Platform model lifecycle.
+  gap: Knowledge Gap
+  gating: Soft
+  gap_detail: Kafka/Flink, materialized views, streaming-query performance and distributed database tradeoffs need deeper technical preparation.
+  bridge: Learn the streaming architecture only if a recruiter screen or interview advances.
+  timing: Interview Triggered
+  overlap: Medium
+  build: Interview Triggered
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; platform PM evidence is credible and specialized streaming depth can be prepared if interest materializes.
+  skills: [Enterprise Data Platform Architecture, Specialist Database Internals]
+"4712069006":
+  brief: Couchbase sells an operational database platform; this Principal role owns the mobile, edge and synchronization product portfolio.
+  title: Principal Product Manager
+  level: Principal Product Manager
+  domain: Mobile and edge database infrastructure
+  fit: NICHE / FAR
+  strength: Required
+  transfer: Enterprise data-platform experience transfers generally, but building client-side applications and sync systems personally is not evidenced.
+  technology: Data / Infrastructure
+  mandate: Improve execution, release quality and developer experience for mature mobile/edge database products. Make technically grounded decisions about client-side sync and on-device AI support.
+  functions: [Roadmap mobile embedded database products, Improve client-side sync and release quality, Validate developer features hands-on, Define edge and on-device data tradeoffs, Resolve customer escalations across database products]
+  hard: 8+ years PM plus 3+ years hands-on production software development and client-side application architecture.
+  evidence: Keystone Data Platform and Amazon ML Platform PM leadership; no evidenced three-year production client-application engineering tenure.
+  gap: Experience Gap
+  gating: Hard
+  gap_detail: The JD explicitly requires three-plus years writing or architecting production software and mobile/edge client systems.
+  bridge: Do not claim PM collaboration as personal software-development tenure; do not build a niche mobile database career track for this role.
+  timing: Not Required
+  overlap: Low
+  build: Do Not Build
+  posture: Skip
+  lane: Skip
+  decision: Skip; the hard hands-on mobile database engineering requirement has low leverage for the desired AI-PM direction.
+  skills: [Specialist Database Internals]
+"JB0074880":
+  brief: ServiceNow supplies enterprise workflow software; this Staff role develops AI/LLM product evaluation methods for its platform.
+  title: Staff Technical Product Manager – AI/LLM expertise + AI Evaluation Science
+  level: Staff Technical Product Manager
+  domain: Enterprise AI evaluation and LLM quality
+  fit: DIRECT
+  strength: Required
+  transfer: Forecasting Agent and Patent AI evaluation directly cover quality rubrics, retrieval metrics and human judgment loops.
+  technology: GenAI / Agentic AI
+  mandate: Set product direction for AI evaluation science in enterprise workflows. Define repeatable measurement, feedback and quality gates that let teams ship trustworthy LLM features.
+  functions: [Define LLM evaluation datasets and quality criteria, Compare model and agent outcomes, Connect human judgments to regression gates, Translate evaluation research into product requirements, Monitor quality across enterprise workflows]
+  hard: Staff technical PM and AI/LLM evaluation experience; India work authorization remains unknown independently of JD fit.
+  evidence: Forecasting Agent / Agent Evaluation; Patent AI Search / Retrieval Evaluation; Deep Enterprise.
+  gap: Evidence Gap
+  gating: Non-gating
+  gap_detail: Existing evaluation work is strong, but a compact story connecting grader design, benchmark governance and production regression use would improve proof.
+  bridge: Deepen and package golden datasets, graders, judge calibration and regression gates; confirm India eligibility.
+  timing: Ongoing Strategic Build
+  overlap: High
+  build: Build Now
+  posture: Strong Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately if India eligibility is confirmed; strong evaluation evidence and Staff scope merit concurrent strategic depth-building.
+  skills: [AI Evaluation Systems, Agent Orchestration and Reliability]
+"R-2538197":
+  brief: Walmart operates a large retail supply chain; this Principal role builds products for inventory planning and forecasting decisions.
+  title: (USA) Principal, Product Manager
+  level: Principal, Product Manager
+  domain: Supply-chain inventory planning
+  fit: DIRECT
+  strength: Preferred
+  transfer: Amazon Supply Chain and Keystone forecasting directly cover inventory planning, optimization and planner workflows.
+  technology: Classical ML / Data Science
+  mandate: Improve how retail inventory is planned and allocated. Define forecasting and safety-stock product decisions that balance availability, cost and operational adoption.
+  functions: [Build inventory forecasting products, Define safety-stock and availability decisions, Integrate planning data and operational workflows, Measure forecast and inventory outcomes, Coordinate planners data science and engineering]
+  hard: Bachelor's in a relevant field plus 9 years PM, or 11 years PM/related experience; Walmart-specific tenure is not required.
+  evidence: Amazon Supply Chain / Optimization; Forecasting Agent; Keystone Hershey enterprise planning.
+  gap: No Material Gap
+  gating: Non-gating
+  gap_detail: Direct supply-chain and forecasting evidence meets the substantive mandate; Bentonville location is a separate constraint.
+  bridge: Lead with documented Amazon supply-chain and forecasting outcomes; clarify on-site expectations early.
+  timing: Not Required
+  overlap: Medium
+  build: No Build Needed
+  posture: Strong Match
+  lane: Apply Now
+  decision: Apply now for calibration; direct domain and Principal scope justify exploration despite Bentonville location friction.
+  skills: [Supply-Chain Forecasting and Optimization, Classical ML Productization]
+"R-2409416":
+  brief: Walmart's retail platform serves shoppers across digital and store channels; this Principal role owns the core recommendation experience.
+  title: Principal, Product Manager - Core Recommendations
+  level: Principal, Product Manager
+  domain: Retail recommendations and personalization
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Amazon seller recommendations, ML platform and consumer engagement work transfer to relevance and personalization at retail scale.
+  technology: Classical ML / Data Science
+  mandate: Improve recommendations used by Walmart shoppers. Set the product roadmap for model quality and customer outcomes across discovery surfaces.
+  functions: [Define recommendation product strategy, Improve ranking relevance and personalization, Partner with ML science on experimentation, Measure engagement and conversion outcomes, Integrate recommendations into shopping surfaces]
+  hard: Principal product leadership with ML/recommendation product fluency; exact retail-recommender tenure is not established as a hard screen.
+  evidence: Amazon seller recommendations; Amazon ML Platform; Amazon consumer engagement.
+  gap: Evidence Gap
+  gating: Soft
+  gap_detail: Seller recommendations and experimentation exist, but direct ownership of shopper recommendation rankers at Walmart scale is not explicit.
+  bridge: Prepare concrete recommender metrics, offline/online tradeoffs and customer-impact stories while applying.
+  timing: Before Interview
+  overlap: Medium
+  build: No Build Needed
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; direct Amazon marketplace/ML experience supports a Principal interview despite location and evidence packaging needs.
+  skills: [Classical ML Productization, RAG and Retrieval Quality]
+"8734135002":
+  brief: OpenTable connects diners and restaurants; this Principal role develops AI/ML tools that improve restaurant revenue.
+  title: Principal Product Manager - Restaurant Product
+  level: Principal Product Manager
+  domain: Restaurant revenue optimization
+  fit: BRIDGEABLE
+  strength: Preferred
+  transfer: Forecasting, optimization and 0-to-1 ML products transfer to restaurant revenue decisions; hospitality economics are new.
+  technology: Classical ML / Data Science
+  mandate: Create and launch AI/ML products that help restaurants earn more. Choose monetization opportunities, experiments and a product strategy across restaurant workflows.
+  functions: [Define restaurant revenue-optimization roadmap, Launch 0-to-1 AI/ML products, Identify pricing or yield opportunities through data, Prototype and experiment with restaurant partners, Measure business impact of shipped capabilities]
+  hard: 10+ years PM, shipped AI/ML products and 0-to-1 ownership; restaurant and yield-management background are preferred.
+  evidence: Forecasting Agent; Amazon ML Platform; Amazon Supply Chain / Optimization; Deep Enterprise 0-to-1 launch.
+  gap: Knowledge Gap
+  gating: Non-gating
+  gap_detail: Restaurant revenue and yield-management mechanics are new but explicitly preferred rather than required.
+  bridge: Learn restaurant unit economics and revenue-management vocabulary if an interview advances.
+  timing: Interview Triggered
+  overlap: Low
+  build: Interview Triggered
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; AI/ML and 0-to-1 evidence satisfy the hard requirements without hospitality tenure.
+  skills: [Classical ML Productization, Role-Specific Regulated Workflows]
+"4233299e-f003-4745-8fc0-6622abff1749":
+  brief: Constructor builds retail product search and discovery software; this Staff role owns relevance, ranking and search-driven business outcomes.
+  title: Staff Product Manager, Product Discovery Engine
+  level: Staff Product Manager
+  domain: Retail search, discovery and ranking
+  fit: ADJACENT
+  strength: Required
+  transfer: Patent AI retrieval/evaluation and Amazon seller recommendations transfer to ranking quality, though retail-search production scale is less direct.
+  technology: Classical ML / Data Science
+  mandate: Own search-quality strategy, then grow into product-discovery engine leadership. Improve recall, ranking and customer conversion through measurable model and system changes.
+  functions: [Lead search relevance and recall strategy, Define query understanding and personalization, Tie ranking quality to conversion and GMV, Build search evaluation frameworks, Productize ML and LLM-assisted retrieval improvements]
+  hard: Extensive senior PM experience in search/discovery/ML/NLP and deep search-pipeline fluency.
+  evidence: Patent AI Search / Retrieval Evaluation; Amazon seller recommendations; Forecasting Agent RAG.
+  gap: Evidence Gap
+  gating: Soft
+  gap_detail: Retrieval and ranking evaluation is demonstrated, but large-scale production retail search ownership is not explicit.
+  bridge: Package Patent AI controlled experiments and Amazon recommendations; deepen query/recall/reranking stories.
+  timing: Ongoing Strategic Build
+  overlap: High
+  build: Build Now
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; strong retrieval and ML adjacency supports Staff scope while reusable search-evaluation depth grows.
+  skills: [RAG and Retrieval Quality, AI Evaluation Systems, Classical ML Productization]
+"3dd3085b-471c-4416-a782-9c9fccf7e32f":
+  brief: Headway helps mental-health providers participate in insurance and run their practices; Principal PMs own complex product domains across this marketplace.
+  title: Principal Product Manager
+  level: Principal Product Manager
+  domain: Insurance-enabled mental-health marketplace
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Financial-services transactions, consumer journeys and enterprise platform work transfer to provider/patient workflows, while payer specifics are new.
+  technology: Mixed
+  mandate: Lead a significant Headway product domain end to end. Decide platform and marketplace investments that improve access, practice operations and insurance-enabled care.
+  functions: [Define provider or patient product strategy, Improve insurance and payment workflows, Connect platform foundations to marketplace growth, Prioritize AI-enabled product opportunities, Measure adoption and access outcomes]
+  hard: Principal-level product ownership and executive influence; dedicated clinical product tenure is not stated as a hard screen.
+  evidence: Amazon Financial Services; Deep Enterprise; Keystone Data Platform; Amazon consumer products.
+  gap: Knowledge Gap
+  gating: Non-gating
+  gap_detail: Mental-health payer/provider operations need context; existing regulated and marketplace products transfer.
+  bridge: Learn credentialing, claims and provider workflow fundamentals if an interview is scheduled.
+  timing: Interview Triggered
+  overlap: Low
+  build: Interview Triggered
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; high-scope remote/Seattle opportunity justifies interviewing while learning healthcare details on demand.
+  skills: [Role-Specific Regulated Workflows, Enterprise Data Platform Architecture]
+"67be8703-070b-459d-8c5c-191a1478f803":
+  brief: R37 Lab within R1 RCM builds AI tools for health-system revenue cycles; this Principal role owns products automating medical coding and billing.
+  title: Principal Product Manager
+  level: Principal Product Manager
+  domain: Healthcare revenue-cycle management
+  fit: BRIDGEABLE
+  strength: Required
+  transfer: Enterprise agent automation and regulated decision workflows transfer to coding and billing, though direct RCM experience is absent.
+  technology: GenAI / Agentic AI
+  mandate: Own AI-enabled RCM product strategy across clinical documentation and financial workflows. Decide which automation and decision-support capabilities improve coding, denials and collections at scale.
+  functions: [Translate medical records into coding workflows, Define AI-enabled billing and denial products, Measure revenue-cycle automation outcomes, Set agent decision-support roadmap, Coordinate healthcare clients with AI research and engineering]
+  hard: 10+ years enterprise product management, proven production AI/ML productization and deep healthcare experience; RCM specifically is strongly preferred.
+  evidence: Forecasting Agent; Deep Enterprise; Amazon Financial Services regulated workflows.
+  gap: Experience Gap
+  gating: Hard
+  gap_detail: The JD requires deep healthcare experience, which current candidate evidence does not establish; RCM specifics are additionally preferred.
+  bridge: Test whether transferable regulated enterprise AI work can overcome the healthcare screen; prepare RCM concepts only if the process advances.
+  timing: Before Recruiter Screen
+  overlap: Low
+  build: Interview Triggered
+  posture: Stretch
+  lane: Apply Now + Bridge
+  decision: Apply opportunistically as a high-upside AI-product stretch, while recognizing a real hard healthcare-domain screen and avoiding a niche study track.
+  skills: [Agent Orchestration and Reliability, Role-Specific Regulated Workflows]
+"0762f803-07d5-4946-bd06-decbece48fdc":
+  brief: Included Health offers care navigation and clinical services; this Staff PM role owns application foundations for expert care workflows.
+  title: Staff Product Manager - Care Application Platform
+  level: Staff Product Manager
+  domain: Care application platform and expert workflows
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Enterprise expert-user workflows and high-stakes regulated decisions transfer to care applications even without direct clinical tenure.
+  technology: Mixed
+  mandate: Build the application platform used by care teams. Prioritize reliable tools and AI-assisted workflows that improve expert decisions and operational delivery.
+  functions: [Define care application platform roadmap, Improve expert-user workflow efficiency, Integrate AI-enabled decision support, Establish reliability and data-quality requirements, Measure clinician and operations adoption]
+  hard: 5+ years PM and complex expert/high-stakes workflows; direct healthcare experience may be substituted by another high-stakes domain.
+  evidence: Deep Enterprise planner workflows; Amazon Financial Services regulated products; Keystone Data Platform.
+  gap: Knowledge Gap
+  gating: Non-gating
+  gap_detail: Clinical vocabulary and care delivery context are new; the JD accepts adjacent high-stakes expert workflow experience.
+  bridge: Translate enterprise planner/financial expert workflows into care-team analogs; learn care terminology if interviewed.
+  timing: Interview Triggered
+  overlap: Low
+  build: Interview Triggered
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; Staff platform ownership and high-stakes workflow transfer satisfy the stated alternative.
+  skills: [Enterprise Data Platform Architecture, Role-Specific Regulated Workflows]
+"4ffc91f2-542c-4b06-8276-1843276a8f00":
+  brief: Clarify Health sells care-economics analytics software; this Senior PM role owns components, quality gates and release execution in Meridian.
+  title: Senior Product Manager
+  level: Senior Product Manager
+  domain: Healthcare analytics component delivery
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Data quality, analytics and product delivery transfer, but component-level ownership is below established Principal scope.
+  technology: Data / Infrastructure
+  mandate: Deliver and maintain defined Meridian components. Prototype, validate, release and triage defects so analytics features stay dependable for health-system users.
+  functions: [Prototype healthcare analytics components, Validate data metrics and release quality, Write component specifications, Manage defect triage and regression gates, Partner with clinical informatics on data tradeoffs]
+  hard: 5+ years product/analytics experience and technical prototyping; healthcare background is strongly preferred.
+  evidence: Keystone Data Platform; Amazon ML Platform; product quality leadership.
+  gap: No Material Gap
+  gating: Non-gating
+  gap_detail: Skills are adequate; the issue is role level and narrow component ownership rather than missing capability.
+  bridge: No build; reserve attention for Principal/Staff-scale roles.
+  timing: Not Required
+  overlap: Low
+  build: No Build Needed
+  posture: Skip
+  lane: Skip
+  decision: Skip; component-level Senior scope and published economics are an unnecessary down-level from current Principal ownership.
+  skills: [Enterprise Data Platform Architecture]
+"7a8fba25-fe2f-4b23-a224-ac48e943725d":
+  brief: interface.ai builds conversational agents for financial institutions; this Principal role owns the shared AI platform used by its product teams.
+  title: Principal Product Manager – AI Platform
+  level: Principal Product Manager
+  domain: Financial-services agent platform
+  fit: ADJACENT
+  strength: Required
+  transfer: Forecasting Agent, Deep Enterprise and Amazon financial products combine agent-platform and regulated-customer evidence.
+  technology: GenAI / Agentic AI
+  mandate: Set the platform roadmap that powers the company's production agents. Decide reusable orchestration, evaluation and reliability investments while mentoring PMs and scaling customer use.
+  functions: [Define agent platform architecture and roadmap, Improve multi-agent orchestration and quality, Build evaluation and reliability workflows, Scale shared APIs across product teams, Balance real-time latency with financial-customer trust]
+  hard: 8+ years PM including 3+ at Staff/Principal level; confirm how company counts current Principal tenure.
+  evidence: Forecasting Agent; Deep Enterprise; Amazon Financial Services; Patent AI evaluation.
+  gap: Evidence Gap
+  gating: Soft
+  gap_detail: Strategic platform fit is strong, but three-plus years formal Staff/Principal title tenure and production voice-agent scope are not fully evidenced.
+  bridge: Package end-to-end agent platform and eval tradeoffs; clarify tenure screen and SF on-site feasibility.
+  timing: Ongoing Strategic Build
+  overlap: High
+  build: Build Now
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately; aligned agent and fintech platform scope warrants pursuit despite tenure and location questions.
+  skills: [Agent Orchestration and Reliability, AI Evaluation Systems, Hands-On AI Prototyping]
+"product-manager-api-agents-san-francisco":
+  brief: OpenAI's API platform lets developers build with its models; this PM role shapes agent primitives and developer infrastructure.
+  title: Product Manager, API Agents
+  level: Product Manager
+  domain: Developer-facing AI agent APIs
+  fit: ADJACENT
+  strength: Required
+  transfer: Forecasting Agent design and Keystone platform APIs transfer, while external developer-agent product scale is less evidenced.
+  technology: GenAI / Agentic AI
+  mandate: Define how developers build production agents on the API. Prioritize primitives, SDK/API experiences and model-related capabilities that improve reliability and user outcomes.
+  functions: [Define agent API and SDK primitives, Study developer agent-building needs, Turn research capabilities into platform features, Balance safety reliability and usability, Scale developer integration from prototype to production]
+  hard: 5+ years PM and proven developer-facing API products; company title ladder is not published here.
+  evidence: Forecasting Agent; Keystone Data Platform APIs; Deep Enterprise platform strategy; hands-on Python/LLM prototyping.
+  gap: Evidence Gap
+  gating: Soft
+  gap_detail: Agent systems are designed and prototyped, but a broadly adopted external developer API under direct PM ownership is not established.
+  bridge: Build a small developer-facing agent API prototype and strengthen the production primitives, eval and reliability story.
+  timing: Ongoing Strategic Build
+  overlap: High
+  build: Build Now
+  posture: Stretch
+  lane: Apply Now + Bridge
+  decision: Apply immediately; the role's broad API-agent ownership and pay support a senior-equivalent stretch while developer-platform evidence is strengthened.
+  skills: [Developer-Facing AI APIs, Agent Orchestration and Reliability, AI Evaluation Systems, Hands-On AI Prototyping]
+"5153924008":
+  brief: Anthropic supplies AI models through enterprise APIs and cloud partners; this PM role owns Google-focused multi-cloud platform growth.
+  title: Product Manager, Multi-Cloud Growth - Google
+  level: Product Manager
+  domain: Enterprise AI cloud-channel growth
+  fit: ADJACENT
+  strength: Required
+  transfer: Amazon cloud and enterprise platform work transfers, but direct hyperscaler partnership ownership and channel P&L are not established.
+  technology: GenAI / Agentic AI
+  mandate: Grow the enterprise AI platform through a hyperscaler partnership. Set API integration and commercial priorities across partner, developer and enterprise customer needs.
+  functions: [Define enterprise API and cloud integration roadmap, Manage hyperscaler partner product dependencies, Improve authentication rate limits and compliance, Drive channel revenue or margin outcomes, Translate enterprise developer needs into APIs]
+  hard: Shipped with a hyperscaler as partner and owned revenue, margin or channel P&L.
+  evidence: Amazon technical PM; Deep Enterprise cloud deployments; Keystone Data Platform APIs.
+  gap: Experience Gap
+  gating: Hard
+  gap_detail: External hyperscaler-partner product ownership and direct channel P&L are not confirmed in current evidence.
+  bridge: Do not manufacture partnership ownership; test whether Amazon and Keystone commercial evidence satisfies the screen.
+  timing: Before Recruiter Screen
+  overlap: Low
+  build: Do Not Build
+  posture: Stretch
+  lane: Apply Now + Bridge
+  decision: Apply opportunistically because enterprise AI upside is high, but disclose the hard partner/P&L uncertainty and avoid a niche preparation track.
+  skills: [Developer-Facing AI APIs]
+"3e40be54-5d36-4cbc-88f2-eed63a09f545":
+  brief: Assured builds insurance-claims software for large carriers; this Staff role owns product capabilities that automate and improve claims decisions.
+  title: Staff Product Manager
+  level: Staff Product Manager
+  domain: Insurance claims automation
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Claims differ from lending, but ML-supported risk decisions, regulated workflows, human review and enterprise automation transfer strongly.
+  technology: Classical ML / Data Science
+  mandate: Make claims-processing software more accurate and efficient for insurers. Prioritize product workflows and automation across customer needs, risk decisions and carrier operations.
+  functions: [Own insurer-software product strategy and roadmap, Lead discovery through delivery and scale, Use customer research and metrics to improve claims experiences, Coordinate engineering design and GTM execution, Translate technical decisions for internal and external stakeholders]
+  hard: Proven full-lifecycle product leadership and technical fluency; no dedicated insurance tenure stated as a hard screen.
+  evidence: Amazon Financial Services; Amazon ML Platform; Deep Enterprise human-review workflows.
+  gap: Knowledge Gap
+  gating: Non-gating
+  gap_detail: Insurance claim lifecycle terminology is new, but risk decisions and enterprise workflows already have credible evidence.
+  bridge: Prepare claims lifecycle and carrier operations concepts when an interview is scheduled; confirm US remote eligibility.
+  timing: Interview Triggered
+  overlap: Low
+  build: Interview Triggered
+  posture: Strong Match
+  lane: Apply Now
+  decision: Apply now; adjacent decisioning and automation evidence is sufficient without pre-application insurance study.
+  skills: [Classical ML Productization, Role-Specific Regulated Workflows]
+"ffcfb7c0-7ca2-4fa1-a91d-0f0f236bb2b9":
+  brief: Nirvana uses telematics and AI models for commercial insurance; this role owns core data foundations supporting pricing, risk and the policy lifecycle.
+  title: Senior Product Manager
+  level: Senior Product Manager
+  domain: Commercial-insurance pricing and risk data platform
+  fit: ADJACENT
+  strength: Preferred
+  transfer: Keystone and Amazon data/ML platforms transfer to risk-data foundations; commercial-insurance pricing requires new context.
+  technology: Mixed
+  mandate: Own core platforms and data systems that support insurance pricing, risk and AI decisions. Choose foundational investments across the policy lifecycle and measure business adoption.
+  functions: [Define telematics data foundations, Support pricing and risk model product workflows, Connect platform data to policy-lifecycle decisions, Prioritize reusable AI/data infrastructure, Ship 0-to-1 platform capabilities]
+  hard: 4–7 years PM or equivalent; no actuarial or commercial-insurance tenure stated as mandatory.
+  evidence: Keystone Data Platform; Amazon ML Platform; Amazon Financial Services.
+  gap: Knowledge Gap
+  gating: Soft
+  gap_detail: Commercial-insurance pricing context is new; title, listed 4–7 years and on-site/remote wording leave seniority and work-mode fit uncertain.
+  bridge: Validate Principal-equivalent scope and Seattle remote eligibility with recruiter; learn pricing workflow details if interviewed.
+  timing: Before Recruiter Screen
+  overlap: Low
+  build: Interview Triggered
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately as a conditional opportunity; platform ownership may offset the Senior title, but confirm level and remote terms early.
+  skills: [Enterprise Data Platform Architecture, Classical ML Productization]
+"50191019-226e-4274-915f-e9e2da68cfa3":
+  brief: Steadily offers landlord insurance through a digital product; this Principal role owns billing and policy-service workflows.
+  title: Principal Product Manager
+  level: Principal Product Manager
+  domain: Property-insurance billing and policy servicing
+  fit: BRIDGEABLE
+  strength: Preferred
+  transfer: Regulated financial product operations transfer to policy billing, but endorsements and renewals are specific to insurance.
+  technology: Non-AI
+  mandate: Improve the end-to-end insurance policy experience after purchase. Decide billing, renewal, endorsement and cancellation workflows and their operational tradeoffs.
+  functions: [Design policy billing workflows, Improve renewal and endorsement journeys, Handle cancellation and servicing processes, Prioritize operational automation and reliability, Measure customer and business policy outcomes]
+  hard: Principal product ownership; insurance operations experience should be clarified rather than assumed as a mandatory screen.
+  evidence: Amazon Financial Services; Deep Enterprise regulated enterprise workflows.
+  gap: Knowledge Gap
+  gating: Soft
+  gap_detail: Policy servicing concepts are learnable, while Austin on-site expectations may create separate location friction.
+  bridge: Confirm location flexibility and learn policy lifecycle concepts if an interview advances.
+  timing: Interview Triggered
+  overlap: Low
+  build: Interview Triggered
+  posture: Credible Match
+  lane: Apply Now + Bridge
+  decision: Apply immediately if Austin is a viable exploration option; domain study can wait until interview interest.
+  skills: [Role-Specific Regulated Workflows]

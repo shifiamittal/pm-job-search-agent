@@ -1,32 +1,35 @@
 # Product Management Job-Search Agent
 
 ## Status
-Single-source Google Docs and Google Sheets sync is implemented. No scheduled sync, job discovery,
-career-evidence generation, applications, or outreach are enabled by this script.
+The first 30-role calibration is stored locally with narrative classification and a persistent Google Sheets dashboard. No recurring discovery, applications, outreach, or automatic candidate-evidence editing is enabled. Google Docs and the Patent AI Sheet remain the authoring sources for career evidence and use a separate read-only source-sync token.
 
 ## Repository layout
 - `AGENTS.md`: job-search operating contract.
-- `config/`: search preferences, role taxonomy, and classification rubric placeholders.
-- `profile/`: candidate profile, career evidence, and application answer placeholders.
-- `prompts/`: discovery, classification, application, and outreach prompt placeholders.
-- `data/`: empty job-search files and metadata-only source sync state.
+- `config/`: search scope, calibrated taxonomy/rubric, and persistent dashboard ID.
+- `profile/`: approved candidate evidence and preferences.
+- `prompts/`: future workflow prompts; applications and outreach are disabled.
+- `data/`: canonical calibration jobs, review queue, skills synthesis, annotations, discovery log, and source sync state.
 - `sources/source_registry.yaml`: Google Doc identities and downstream dependencies.
 - `sources/current/`: tracked latest project snapshots in readable `.md` files.
 - `resumes/`: reserved for resume assets.
 - `portfolio/`: reserved for portfolio assets.
 - `scripts/sync_google_docs.py`: explicitly selected, read-only Google Doc/Sheet sync.
 - `scripts/sync_google_sheets.py`: workbook-to-Markdown conversion for Sheets.
+- `scripts/reprocess_calibration_jobs.py`: reprocesses only the registered calibration job IDs.
+- `scripts/finalize_discovery.py`: future successful discovery finalization and automatic dashboard sync.
+- `scripts/sync_job_dashboard.py`: create once/update the persistent human-review spreadsheet.
 
-Empty asset and script directories contain `.gitkeep` files so Git preserves them.
+Empty asset directories contain `.gitkeep` files so Git preserves them.
 
-## Configuration
-TODO: Supply user-approved search preferences, role definitions, and classification criteria.
+## Classification and local data
+The current rules are [classification rubric](config/classification_rubric.md), [taxonomy](config/role_taxonomy.yaml), [search scope](config/search_config.yaml), and confirmed [job preferences](profile/job_preferences.md). Exact JD facts, business domain, technology orientation, role cluster, candidate evidence, gap gating, bridge timing, strategic learning, posture, and action are separate fields. No numeric fit or priority score drives a lane. `Apply Now + Bridge` means apply immediately and prepare while awaiting an interview; the repository does not submit applications.
+
+`data/jobs_raw.jsonl` is the canonical structured record. `data/jobs_master.csv` is a flat export; `data/review_queue.csv` excludes Skip/closed roles; `data/skills_synthesis.csv` counts normalized capabilities in live non-Skip roles. The Git files remain authoritative for the agent. `data/calibration_annotations.yaml` records the first 30 JD interpretations and candidate evidence mapping. Reprocessing preserves job IDs and original discovery timestamps. `data/calibration_lane_changes.csv` records the one-time change from the original calibration.
 
 ## Candidate information
-TODO: Supply verified candidate facts and supporting evidence. Do not infer missing facts.
+Use the verified candidate profile, career evidence, conflicts, job preferences, and approved master resume. Do not infer missing facts or change those files during discovery.
 
 ## Data and privacy
-Job-search data files are intentionally empty, with no headers or records. TODO: Define job schemas before use.
 `data/source_sync_state.json` stores source IDs, successful sync timestamps, and content hashes only.
 Store local private material under ignored `private/`, `local_private/`, or `*.local.*` paths.
 Tracked profile and asset paths are not private storage; review their contents before committing.
@@ -149,5 +152,27 @@ exporting a blank. Cell notes are retained when present in the Drive workbook ex
 Normalized Markdown content feeds the existing SHA-256/state/change-detection logic.
 The script does not commit or push; those remain explicit repository actions.
 
-## Future operation
-TODO: Define and authorize each workflow. No jobs will be searched, applications submitted, or people contacted by this scaffold.
+## Persistent job dashboard
+
+The spreadsheet named **Shifia PM Job Search Dashboard** is created once. Its ID and URL are stored in `config/google_sheets.yaml`. Each later sync updates that same spreadsheet and its Dashboard, Jobs Master, Apply Now, Apply Now + Bridge, Build Toward, Skills Synthesis, and Calibration Feedback tabs. The Sheet is a review projection, not the machine-readable source of truth. User Review/Override/Notes on the feedback tab are retained by job ID on subsequent sheet syncs; overrides do not automatically retrain classification or modify the local canonical record.
+
+The dashboard writer requests only `spreadsheets` edit and `drive.file` OAuth scopes. It reuses the Desktop OAuth **client credentials**, but stores its own `%LOCALAPPDATA%\pm-job-search-agent\dashboard_token.json`, outside Git. It never changes or broadens the existing `%LOCALAPPDATA%\pm-job-search-agent\token.json` with `drive.readonly` scope. Enable Google Sheets API and Google Drive API for the existing OAuth client project, authorize the separate dashboard token in the local browser, and use an account that can create the spreadsheet. Never commit either token, credentials, cookies, browser state or secrets.
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r scripts/requirements-sync.txt
+.\.venv\Scripts\python.exe scripts/sync_job_dashboard.py
+```
+
+The manual command above is safe to rerun: a populated spreadsheet ID is updated, never recreated. A future successful discovery/classification job should pass canonical JSONL through the single finalizer:
+
+```powershell
+.\.venv\Scripts\python.exe scripts/finalize_discovery.py --input path\to\classified_jobs.jsonl
+```
+
+This entrypoint merges by stable job ID, validates the narrative schema, writes local jobs/review/skills files, then calls the Sheet sync. If the Sheet request fails, local data remains saved and the failure is reported; rerun `scripts/sync_job_dashboard.py`. The finalizer performs no web search itself. No recurring discovery is scheduled.
+
+Offline verification:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s scripts -p 'test_*.py' -v
+```
