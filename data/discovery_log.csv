@@ -6,3 +6,4 @@ timestamp_utc,event,count,notes
 2026-09-19T18:51:51+00:00,calibrated_discovery_finalized,30,Local canonical data written; 0 new jobs. Dashboard sync follows separately.
 2026-09-19T19:24:42+00:00,calibrated_discovery_finalized,30,Local canonical data written; 0 new jobs. Dashboard sync follows separately.
 2026-09-20T14:55:09+00:00,calibrated_discovery_finalized,149,119 new verified jobs; 30 prior jobs retained and official URLs rechecked; persistent Google Sheet updated in place.
+2026-09-21T08:59:04+00:00,calibrated_discovery_finalized,279,Local canonical data written; 130 new jobs. Dashboard sync follows separately.

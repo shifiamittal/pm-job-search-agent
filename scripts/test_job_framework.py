@@ -139,11 +139,17 @@ class FrameworkTests(unittest.TestCase):
 
     def test_merge_preserves_job_id_and_discovery_state(self):
         existing = [copy.deepcopy(self.jobs[0])]
-        update = dict(existing[0], role_mandate="Updated mandate", discovered_at="", user_notes="")
+        existing[0].update(my_decision="Apply", my_notes="Reviewed personally", stage="Resume Prep")
+        update = dict(existing[0], role_mandate="Updated mandate", discovered_at="", user_notes="",
+                      my_decision="Do Not Apply", my_notes="Stale automated note", stage="Discovered")
         merged, count = merge_jobs(existing, [update])
         self.assertEqual(count, 0)
         self.assertEqual(merged[0]["job_id"], existing[0]["job_id"])
         self.assertEqual(merged[0]["discovered_at"], existing[0]["discovered_at"])
+        self.assertEqual(merged[0]["role_mandate"], "Updated mandate")
+        self.assertEqual(merged[0]["my_decision"], "Apply")
+        self.assertEqual(merged[0]["my_notes"], "Reviewed personally")
+        self.assertEqual(merged[0]["stage"], "Resume Prep")
 
     def test_local_data_survives_dashboard_failure(self):
         with tempfile.TemporaryDirectory() as temp:

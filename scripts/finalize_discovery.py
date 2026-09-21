@@ -31,6 +31,11 @@ def merge_jobs(existing, updates):
                       "outreach_status", "user_review", "user_notes", "calibration_origin"):
             if not incoming.get(field) and old.get(field):
                 merged[field] = old[field]
+        # Discovery may refresh job facts, but these three columns belong to the
+        # person reviewing the role. Even a nonblank incoming value is stale.
+        for field in ("my_decision", "my_notes", "stage"):
+            if field in old:
+                merged[field] = old[field]
         by_id[job_id] = merged
     return list(by_id.values()), new_count
 
