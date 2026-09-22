@@ -10,12 +10,7 @@ import requests
 
 from .models import canonicalize_url, stable_job_id, utc_now_iso, validate_raw_jobs
 
-class CrawlError(RuntimeError):
-    """A failed crawl with its original request and extraction telemetry."""
-
-    def __init__(self, telemetry):
-        super().__init__(telemetry["errors"][-1])
-        self.telemetry = telemetry
+from .errors import CrawlError
 
 
 GREENHOUSE_API = "https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs"

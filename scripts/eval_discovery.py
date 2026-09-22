@@ -103,6 +103,14 @@ def write_reports(result: dict, output_dir: Path) -> None:
             writer.writerow({"company": company, **metrics, "recall": metrics["found"] / reference if reference else ""})
 
 
+def validate_latest_crawls(telemetry: list[dict]) -> None:
+    """A later success on one board must not hide a failed crawl of another."""
+    latest = {row["source_key"]: row for row in telemetry}
+    failed = [key for key, row in latest.items() if row["status"] != "success" or not row.get("outputs_written")]
+    if not latest or failed:
+        raise ValueError(f"Latest crawl did not succeed for {', '.join(failed) or 'any source'}; retained outputs are not a current benchmark")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--reference", default=str(ROOT / "data/evals/discovery_reference.jsonl"))
@@ -115,8 +123,7 @@ def main() -> int:
         # Do not silently evaluate a retained snapshot after a failed latest crawl.
         if Path(args.discovered).resolve() == (ROOT / "data/discovery/raw_pm_candidates.jsonl").resolve():
             telemetry = load_jsonl(ROOT / "data/discovery/crawl_runs.jsonl")
-            if not telemetry or telemetry[-1]["status"] != "success":
-                raise ValueError("Latest crawl did not succeed; retained outputs are not a current benchmark")
+            validate_latest_crawls(telemetry)
     except (OSError, ValueError) as exc:
         print(f"Evaluation input error: {exc}")
         return 2

@@ -166,7 +166,7 @@ class DiscoveryRobustnessTests(unittest.TestCase):
             evaluate([row, row], [])
 
     def test_approved_reference_exactly_nineteen(self):
-        rows = load_jsonl(ROOT / "data/evals/discovery_reference.jsonl")
+        rows = [row for row in load_jsonl(ROOT / "data/evals/discovery_reference.jsonl") if row["company"] == "Anthropic"]
         self.assertEqual(len(rows), 19)
         self.assertEqual(len({row["external_job_id"] for row in rows}), 19)
         self.assertNotIn("5179891008", {row["external_job_id"] for row in rows})

@@ -12,3 +12,11 @@ sources:
     board_token: anthropic
     careers_url: https://job-boards.greenhouse.io/anthropic
     notes: First deterministic discovery source used to validate the pipeline and eval harness.
+  openai:
+    company: OpenAI
+    enabled: true
+    priority: tier_1
+    adapter: ashby
+    board_token: openai
+    careers_url: https://jobs.ashbyhq.com/openai
+    notes: Public Ashby posting API; full published board in one response.

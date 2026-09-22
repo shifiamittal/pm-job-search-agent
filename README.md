@@ -180,15 +180,16 @@ Offline verification:
 ## Raw job discovery (v1)
 Discovery is now separated from downstream fit/classification. `config/job_sources.yaml`
 defines job sources (distinct from `sources/source_registry.yaml`, which is candidate
-evidence). `scripts/discover_jobs.py` currently implements deterministic Greenhouse
+evidence). `scripts/discover_jobs.py` implements deterministic Greenhouse and Ashby
 retrieval and writes all raw jobs plus a high-recall PM-candidate subset under
 `data/discovery/`. Each source crawl appends telemetry to
 `data/discovery/crawl_runs.jsonl`.
 
-Run the first source:
+Run one selected source per invocation:
 
 ```bash
 python scripts/discover_jobs.py --source anthropic
+python scripts/discover_jobs.py --source openai
 ```
 
 Curate a separate reference set in `data/evals/discovery_reference.jsonl`, then run:
@@ -201,3 +202,9 @@ The eval emits Google-Sheets-friendly CSV reports in `data/evals/latest/`. We ar
 intentionally not adding an eval dashboard tab until the metrics/failure workflow
 stabilize; the existing dashboard can be extended later without coupling discovery
 to presentation logic.
+
+Each crawl refreshes only the selected source in the latest combined exports;
+other source records retain their original retrieval timestamps. Run-specific
+snapshots remain source-only. Evaluation checks each source's latest crawl status
+and reports both companies separately. See [Ashby integration](docs/discovery_ashby.md)
+and the [OpenAI live report](docs/discovery_openai_live_report.md).

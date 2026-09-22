@@ -23,3 +23,10 @@ Outputs in `data/evals/latest/`:
 
 The CSVs are intentionally Google-Sheets-friendly. V1 does not add another dashboard
 tab until the metric definitions and workflow stabilize.
+
+The approved benchmark contains 19 Anthropic and 10 OpenAI roles. OpenAI reference
+URLs remain the exact supplied official careers URLs; Ashby discovery URLs can
+differ because company + external job ID takes precedence in matching. The default
+input combines the latest saved source snapshots, which may have different retrieval
+times. Default evaluation blocks if any source's latest recorded crawl failed.
+No additional discovered role is automatically approved into the benchmark.

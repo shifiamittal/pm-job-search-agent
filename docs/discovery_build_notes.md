@@ -34,12 +34,14 @@ python scripts/eval_discovery.py
 
 ## Persistence and failure behavior
 Successful runs also retain immutable snapshots in `data/discovery/runs/<run_id>/`.
-The top-level files are the latest successful snapshot, not a historical job ledger.
+The top-level files combine each source's latest successful snapshot, not a historical job ledger.
 Failed retrievals preserve that snapshot and append original error telemetry. The
 default evaluator rejects a failed latest crawl instead of silently using old data.
 Each JSONL write is atomic; the three latest export files are not a transactional
 bundle. A persistence failure is recorded as failed and must be resolved before eval.
-V1 accepts one enabled source per run; multi-source state merging is deferred.
+One enabled source is accepted per run. A selected source replaces only its own
+records in the latest exports; other sources and historical run snapshots remain.
+See [Ashby integration](discovery_ashby.md) for the second source.
 
 Raw records contain only the reviewed fields. PM title decisions are reproducible
 from the filter, with every excluded title retained in raw_all_jobs. Existing
