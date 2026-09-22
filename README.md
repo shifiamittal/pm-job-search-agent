@@ -176,3 +176,28 @@ Offline verification:
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s scripts -p 'test_*.py' -v
 ```
+
+## Raw job discovery (v1)
+Discovery is now separated from downstream fit/classification. `config/job_sources.yaml`
+defines job sources (distinct from `sources/source_registry.yaml`, which is candidate
+evidence). `scripts/discover_jobs.py` currently implements deterministic Greenhouse
+retrieval and writes all raw jobs plus a high-recall PM-candidate subset under
+`data/discovery/`. Each source crawl appends telemetry to
+`data/discovery/crawl_runs.jsonl`.
+
+Run the first source:
+
+```bash
+python scripts/discover_jobs.py --source anthropic
+```
+
+Curate a separate reference set in `data/evals/discovery_reference.jsonl`, then run:
+
+```bash
+python scripts/eval_discovery.py
+```
+
+The eval emits Google-Sheets-friendly CSV reports in `data/evals/latest/`. We are
+intentionally not adding an eval dashboard tab until the metrics/failure workflow
+stabilize; the existing dashboard can be extended later without coupling discovery
+to presentation logic.

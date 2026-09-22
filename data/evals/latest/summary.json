@@ -1,0 +1,18 @@
+{
+  "reference_count": 19,
+  "discovered_count": 19,
+  "found_count": 19,
+  "missed_count": 0,
+  "extra_count": 0,
+  "known_positive_recall": 1.0,
+  "missed": [],
+  "extras": [],
+  "per_company": {
+    "Anthropic": {
+      "reference": 19,
+      "discovered": 19,
+      "found": 19,
+      "missed": 0
+    }
+  }
+}

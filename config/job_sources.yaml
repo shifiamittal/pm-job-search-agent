@@ -1,0 +1,14 @@
+schema_version: 1
+
+# Sources this repository is explicitly responsible for crawling for job discovery.
+# This is intentionally separate from sources/source_registry.yaml, which contains
+# candidate-evidence documents used later for fit/classification.
+sources:
+  anthropic:
+    company: Anthropic
+    enabled: true
+    priority: tier_1
+    adapter: greenhouse
+    board_token: anthropic
+    careers_url: https://job-boards.greenhouse.io/anthropic
+    notes: First deterministic discovery source used to validate the pipeline and eval harness.
