@@ -1,0 +1,986 @@
+[
+  {
+    "requisition": "200052288",
+    "position_id": "1970393556982604",
+    "checked_at": "2026-09-23T08:47:38.660938+00:00",
+    "detail": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/api/pcsx/position_details?domain=microsoft.com&position_id=1970393556982604&hl=en",
+      "payload": {
+        "status": 200,
+        "error": {
+          "message": "",
+          "body": ""
+        },
+        "data": {
+          "id": 1970393556982604,
+          "displayJobId": "200052288",
+          "name": "Principal Product Manager",
+          "locations": [
+            "United States, California, Mountain View",
+            "United States, Washington, Redmond"
+          ],
+          "standardizedLocations": [
+            "Mountain View, CA, US",
+            "Redmond, WA, US"
+          ],
+          "postedTs": 1790138612,
+          "stars": 0,
+          "department": "Product Management",
+          "creationTs": 1787857291,
+          "jobDescription": "<b>Overview</b><br><div>The PowerPoint Product Group builds an app that millions of people open every day to create, collaborate and present their ideas to their audiences. <span>We are in the middle of the biggest transformation in our history: rebuilding PowerPoint and storytelling for the AI and agentic era to empower everyone to drive real change.</span>\u00a0</div><div>\u00a0</div><div>We are looking for a <strong>Principal Product Manager</strong> to own a strategic portfolio within the PowerPoint product. You will decide what gets built and why, define what quality means for your area, and stay accountable for whether customers love what ships. This is a product builder\u2019s job, with you being directly involved in creating prototypes, driving customer conversations, evaluating what we are planning to ship, and delivering the best experience to our users.</div><div>\u00a0</div><div>Microsoft\u2019s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.</div><br><br><b>Responsibilities</b><br><ul><li><span>Set the strategy for your area and make the calls on scope and sequencing. You will write the vision and plans and make sure everyone building against them understands what they are and why they matter.\u00a0</span></li><li><span>Build a first-hand understanding of who you are building for and what is genuinely hard in their day. You will stay close to customer conversations, feedback, and telemetry every week, and be able to state the problem you are solving in plain language. Part of the craft is telling the difference between a problem that is interesting and one urgent enough that someone will change how they work. </span></li><li><span>Turn product vision into a roadmap and product requirements. You will write the framing memos and specifications that let the team move fast, prioritize the backlog, and adapt as evidence arrives. </span></li><li><span>Frame a hypothesis before the work starts, instrument what ships, and let the result change the plan. Your area should get measurably better week over week, and you should be able to say by how much.\u00a0</span></li><li><span>You will design the evaluation approach that reflects what the product should do for a customer, covering helpfulness, accuracy, safety, and voice, and partner with engineering and data &amp; applied sciences to run it and act on what it shows. </span></li><li><span>Use AI in your own practice. Work with agents and prototype your ideas quickly to validate some of your assumptions and run experiments.</span></li><li><span>Bring marketing, sales, and support in at the start of the cycle instead of the end. Know what competitors have shipped and how it landed, and be able to tell the one story about this product that only we can tell.\u00a0</span></li></ul><br><br><b>Qualifications</b><br><p><strong>Required Qualifications:</strong></p><ul><li>Bachelor's Degree AND 8+ years experience in product management or software development.\u00a0<ul><li>OR equivalent experience.\u00a0</li></ul></li></ul><p><strong>Preferred Qualifications:</strong></p><ul><li>Bachelor's Degree AND 12+ years experience in product management or software development.\u00a0<ul><li>OR equivalent experience.\u00a0</li></ul></li><li>A track record of products you personally shipped, told through the customer outcomes they produced.\u00a0</li><li>Experience owning a product area\u2019s direction, including the decisions you made and what you learned from them.\u00a0</li><li>Demonstrated product judgment \u2014 what\u2019s important in a product experience and why \u2014 and product system thinking \u2014 how a product experience is realized across its surfaces and platforms.\u00a0</li><li>Fluency with product data, including user funnels, retention, and experimentation, and the ability to work in it directly.\u00a0</li><li>Working knowledge of modern AI systems, including how quality gets evaluated and where these systems fail.\u00a0</li><li>Prototyping ability, in design tools or in code, used to make ideas concrete early.\u00a0</li><li>Direct work with enterprise customers on adoption, feedback, and evaluation datasets.</li></ul> <br><br><p>Product Management IC5 - The typical base pay range for this role across the U.S. is USD $142,800 - $274,800 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $188,000 - $304,200 per year. </p><p></p> <p>Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here:<br><a href=\"https://careers.microsoft.com/us/en/us-corporate-pay\">https://careers.microsoft.com/us/en/us-corporate-pay</a></p><br><p>This position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.</p><br><hr><br><p>Microsoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about <a href=\"https://careers.microsoft.com/v2/global/en/accessibility.html\"><b><u>requesting accommodations.</u></b></a></p> ",
+          "location": "United States, California, Mountain View",
+          "isHot": 0,
+          "workLocationOption": "onsite",
+          "locationFlexibility": null,
+          "atsJobId": "200052288",
+          "positionUrl": "/careers/job/1970393556982604",
+          "publicUrl": "https://apply.careers.microsoft.com/careers/job/1970393556982604",
+          "efcustomTextWorkSite": [
+            "3 days / week in-office"
+          ],
+          "efcustomTextRequiredTravel": [
+            "Less than 25%"
+          ],
+          "efcustomTextCurrentProfession": [
+            "Product Management"
+          ],
+          "efcustomTextTaDisciplineName": [
+            "Product Management"
+          ],
+          "efcustomTextRoletype": [
+            "Individual Contributor"
+          ],
+          "efcustomTextEmploymentType": [
+            "Full-Time"
+          ],
+          "jdHighlight": [],
+          "positionExtraDetails": {
+            "videos": [
+              {
+                "url": "https://www.youtube-nocookie.com/embed/3zVUrcGVTrw",
+                "title": "Our mission",
+                "description": "220,000 employees empowering 8,000,000,000 people on the planet. To make every small business more productive and every large business more competitiv..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/DddJhta9kJU",
+                "title": "100% Empowered by Employees",
+                "description": "Behind the technology, you\u2019ll find leaders and innovators, and movers and shakers. This is Microsoft. Move your career into the future with us: https:..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/UTLflQWya8w",
+                "title": "One Day, One Microsoft",
+                "description": "This short film, created entirely of user generated content, celebrates the hopes, challenges and dreams of the individuals that make up Microsoft, an..."
+              }
+            ],
+            "blogs": [
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+                "title": "The yield imperative: Turning AI infrastructure into useful intelligence",
+                "description": "As we enter the next era, what will be the defining measure of our progress? Every industry has a word that shapes how it thinks. For pilots, it\u2019s safety. For insurers, it\u2019s risk. For the semiconductor industry, it\u2019s yield. Yield does not ask how elegant the solution is, how many years it took or what... The post  The yield imperative: Turning AI infrastructure into useful intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-SEMICON-Hero.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/",
+                "title": "Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation",
+                "description": "Throughout this past fiscal year, customers across every industry and segment moved from AI experimentation to deploying AI for real-world business outcomes. They unlocked innovation and created new opportunities for growth. We saw the emergence of Frontier Firms as they moved beyond efficiency gains to focus on human ambition and embed AI at the core... The post  Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Q426-Hero-Final-7_27-1024x579.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+                "title": "Rethinking security for the age of AI",
+                "description": "Editor\u2019s note: Updates with additional details on the model\u2019s crash score. Why security needs a new cyber stack \u2014 Introducing Project Perception The physics of cybersecurity are changing. Autonomous systems can now reason, adapt and operate continuously. At the same time, the cost of offense is falling, while the volume, velocity and complexity of what... The post  Rethinking security for the age of AI  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Project-Perception-Final-Hero-7_27-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/",
+                "title": "Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery",
+                "description": "Today, we\u2019re excited to share a long-term commitment to the Department of Energy\u2019s (DOE) Genesis Mission, backed by a $60 million investment designed to accelerate AI for science and the breakthroughs it can deliver for the country. This deepened commitment includes Microsoft\u2019s new Scientific Partnership Advancing Research &amp; Knowledge coordination hub and program office, otherwise... The post  Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/GettyImages-1413606459-1024x540.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+                "title": "Microsoft expands Azure AI and HPC infrastructure with AMD",
+                "description": "AI workloads are scaling faster than any single infrastructure approach can support \u2014 with more models, new agent-driven workloads and surging compute demand driving the need for greater specialization across the stack. To meet this need, Microsoft continues to evolve Azure\u2019s infrastructure, including expanding its AI fleet with AMD\u2019s most advanced AI and high-performance computing... The post  Microsoft expands Azure AI and HPC infrastructure with AMD  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Azure-AMD-Hero-1024x576.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/06/the-latest-in-our-company-transformation/",
+                "title": "The latest in our company transformation",
+                "description": "Amy Coleman, EVP and Chief People Officer, shared the following communication with employees today. When I stepped into this role, I promised to communicate more openly with you and share the \u201cwhy\u201d behind our decisions. Today we are eliminating around 4,800 roles, about 2.1% of our global workforce, as we focus our people, investments, and... The post  The latest in our company transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/03/MicrosoftLogo_social-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+                "title": "Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence",
+                "description": "The pace of AI adoption is moving incredibly fast. Customers have moved well beyond experimentation and understand the importance of adopting AI to transform their business. They are now concentrating on delivering measurable business outcomes and demonstrating a return on their AI investments, while ensuring their intelligence is amplified and their IP is protected. Today... The post  Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/official-microsoft-blog-header-1024x683.jpeg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+                "title": "Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth",
+                "description": "As demand for cloud and AI services continues to grow, datacenters are becoming more essential than ever. Communities also want to better understand how this infrastructure affects local resources, particularly water. At Microsoft, water stewardship has been a priority since our first datacenter builds in the early 2000s and remains a core part of our... The post  Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Water-Efficiency-Hero-Featured-Image-1024x682.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/",
+                "title": "Rethinking cloud operations with agentic observability",
+                "description": "Cloud operations are entering a new era as AI-driven and autonomous agents become a larger part of modern software systems. As software becomes increasingly agentic, the challenge is no longer just managing greater scale and complexity. Operators must also contend with systems that evolve faster, act more autonomously and interact across an expanding network of... The post  Rethinking cloud operations with agentic observability  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Hero-6_23-Post-1024x683.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
+                "title": "Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos",
+                "description": "Today, Microsoft is announcing one of the largest single capacity additions in our history. In Pecos, Texas, we will build a new datacenter campus, expanding our global datacenter capacity by approximately 2 gigawatts (GW) to meet strong and sustained customer demand for AI and cloud services across industries and regions. Beyond the technology, this is... The post  Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/image-1024x590.png"
+              }
+            ],
+            "perks": [
+              {
+                "title": "Flexibility",
+                "description": "Balance what matters\u2014your work, your life, and your team\u2014through trust, autonomy, and shared accountability",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075555::flexibility+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Growth",
+                "description": "Stretch your skills, expand your impact, and grow with support that meets you where you are",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075637::growth+perk",
+                "imageAlt": null,
+                "icon": "mdiLaptop",
+                "isFavicon": null
+              },
+              {
+                "title": "Wellbeing",
+                "description": "Support for your body, mind, and financial future\u2014so you can stay energized and do your best work",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075686::wellbeing+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Community PCS",
+                "description": "Find your people, build your network, and feel supported every step of the way",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075742::community+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              }
+            ],
+            "pymww": {
+              "people": [],
+              "count": 0
+            },
+            "customContent": []
+          },
+          "positionUserActions": {
+            "isSaved": false,
+            "applyAction": {
+              "status": "log_in"
+            }
+          }
+        },
+        "metadata": null
+      }
+    },
+    "page": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556982604",
+      "unavailable_signals": [
+        "u&#39;ve reached the 10-application limit. To apply for additional roles, withdraw applications you no longer wish to pursue from your Action Center until your active total falls below 10.&#34;, &#34;condition&#34;: &#34;{{ application[&#39;status&#39;]==&#39;active&#39; and application_p",
+        "ssageWithoutPosition&#34;: null}, &#34;APPLICATIONRejected&#34;: {&#34;message&#34;: &#34;We&#39;re no longer considering your application for {{position_title}}.&#34;, &#34;enabled&#34;: true, &#34;categoryTitle&#34;: &#34;Application Updates&#34;, &#34;type&#34;: &#34;read_only&#34;, &#"
+      ],
+      "title": [
+        "Principal Product Manager | Microsoft Careers"
+      ]
+    }
+  },
+  {
+    "requisition": "200057176",
+    "position_id": "1970393557004133",
+    "checked_at": "2026-09-23T08:47:59.737965+00:00",
+    "detail": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/api/pcsx/position_details?domain=microsoft.com&position_id=1970393557004133&hl=en",
+      "payload": {
+        "status": 200,
+        "error": {
+          "message": "",
+          "body": ""
+        },
+        "data": {
+          "id": 1970393557004133,
+          "displayJobId": "200057176",
+          "name": "Senior Product Manager",
+          "locations": [
+            "United States, Washington, Redmond"
+          ],
+          "standardizedLocations": [
+            "Redmond, WA, US"
+          ],
+          "postedTs": 1790118753,
+          "stars": 0,
+          "department": "Product Management",
+          "creationTs": 1789926261,
+          "jobDescription": "<b>Overview</b><br><p><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">We build Microsoft Purview capabilities that help customers protect data, govern AI, investigate security risks, and drive secure AI adoption.<br><br>Microsoft\u2019s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.<br><br><br></span></p><br><br><b>Responsibilities</b><br><ul><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Define and drive product strategy, roadmap priorities, and investment decisions aligned with customer needs, business objectives, and organizational goals.</span></li><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Lead complex, cross-functional initiatives by aligning engineering and partner teams around clear priorities, outcomes, dependencies, and execution plans.\u00a0</span></li><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Represent the voice of the customer by leveraging customer feedback, market insights, competitive analysis, and data to inform product direction and prioritization. </span></li><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Establish success metrics, monitor product and business outcomes, and drive data-informed decisions to maximize customer and organizational impact.</span></li><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Influence across teams and leadership through clear communication, sound judgment, and operational excellence, while fostering a culture of accountability, collaboration, and continuous improvement.<br><br></span></li></ul><br><br><b>Qualifications</b><br><ul><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Bachelor's Degree AND 5+ years experience in product/service/program management or software development OR equivalent experience.\u00a0</span></li></ul><p><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Preferrered Qualification:</span></p><ul><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Customer Impact First: Deliver measurable customer value and improve customer satisfaction through every release and engagement.\u00a0</span></li><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">*AI &amp; Security Leadership: Advance Microsoft Security priorities by enabling secure AI adoption, strong data governance, and risk reduction. </span></li><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">*Execution Excellence: Drive clarity, accountability, and predictable delivery with high operational rigor. </span></li><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">*One Microsoft Collaboration: Partner effectively across engineering, design, GTM, support, and field teams to achieve shared outcomes.<br><br><br><strong>Other Requirements</strong>:</span></li></ul><ul><li><span style=\"font-size: 12.0pt; font-family: Aptos, sans-serif;\">Ability to meet Microsoft, customer and/or government security screening requirements are required for this role. These requirements include, but are not limited to the following specialized security screenings: <strong>Microsoft Cloud Background Check</strong>:<br>- This position will be required to pass the Microsoft background and Microsoft Cloud background check upon hire/transfer and every two years thereafter.<br><br><br><br><br></span></li></ul> <br><br><p>Product Management IC4 - The typical base pay range for this role across the U.S. is USD $119,800 - $234,700 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $160,200 - $261,000 per year. </p><p></p> <p>Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here:<br><a href=\"https://careers.microsoft.com/us/en/us-corporate-pay\">https://careers.microsoft.com/us/en/us-corporate-pay</a></p><br><p>This position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.</p><br><hr><br><p>Microsoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about <a href=\"https://careers.microsoft.com/v2/global/en/accessibility.html\"><b><u>requesting accommodations.</u></b></a></p> ",
+          "location": "United States, Washington, Redmond",
+          "isHot": 0,
+          "workLocationOption": "onsite",
+          "locationFlexibility": null,
+          "atsJobId": "200057176",
+          "positionUrl": "/careers/job/1970393557004133",
+          "publicUrl": "https://apply.careers.microsoft.com/careers/job/1970393557004133",
+          "efcustomTextWorkSite": [
+            "3 days / week in-office"
+          ],
+          "efcustomTextRequiredTravel": [
+            "Less than 25%"
+          ],
+          "efcustomTextCurrentProfession": [
+            "Product Management"
+          ],
+          "efcustomTextTaDisciplineName": [
+            "Product Management"
+          ],
+          "efcustomTextRoletype": [
+            "Individual Contributor"
+          ],
+          "efcustomTextEmploymentType": [
+            "Full-Time"
+          ],
+          "jdHighlight": [],
+          "positionExtraDetails": {
+            "videos": [
+              {
+                "url": "https://www.youtube-nocookie.com/embed/3zVUrcGVTrw",
+                "title": "Our mission",
+                "description": "220,000 employees empowering 8,000,000,000 people on the planet. To make every small business more productive and every large business more competitiv..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/DddJhta9kJU",
+                "title": "100% Empowered by Employees",
+                "description": "Behind the technology, you\u2019ll find leaders and innovators, and movers and shakers. This is Microsoft. Move your career into the future with us: https:..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/UTLflQWya8w",
+                "title": "One Day, One Microsoft",
+                "description": "This short film, created entirely of user generated content, celebrates the hopes, challenges and dreams of the individuals that make up Microsoft, an..."
+              }
+            ],
+            "blogs": [
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+                "title": "The yield imperative: Turning AI infrastructure into useful intelligence",
+                "description": "As we enter the next era, what will be the defining measure of our progress? Every industry has a word that shapes how it thinks. For pilots, it\u2019s safety. For insurers, it\u2019s risk. For the semiconductor industry, it\u2019s yield. Yield does not ask how elegant the solution is, how many years it took or what... The post  The yield imperative: Turning AI infrastructure into useful intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-SEMICON-Hero.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/",
+                "title": "Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation",
+                "description": "Throughout this past fiscal year, customers across every industry and segment moved from AI experimentation to deploying AI for real-world business outcomes. They unlocked innovation and created new opportunities for growth. We saw the emergence of Frontier Firms as they moved beyond efficiency gains to focus on human ambition and embed AI at the core... The post  Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Q426-Hero-Final-7_27-1024x579.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+                "title": "Rethinking security for the age of AI",
+                "description": "Editor\u2019s note: Updates with additional details on the model\u2019s crash score. Why security needs a new cyber stack \u2014 Introducing Project Perception The physics of cybersecurity are changing. Autonomous systems can now reason, adapt and operate continuously. At the same time, the cost of offense is falling, while the volume, velocity and complexity of what... The post  Rethinking security for the age of AI  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Project-Perception-Final-Hero-7_27-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/",
+                "title": "Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery",
+                "description": "Today, we\u2019re excited to share a long-term commitment to the Department of Energy\u2019s (DOE) Genesis Mission, backed by a $60 million investment designed to accelerate AI for science and the breakthroughs it can deliver for the country. This deepened commitment includes Microsoft\u2019s new Scientific Partnership Advancing Research &amp; Knowledge coordination hub and program office, otherwise... The post  Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/GettyImages-1413606459-1024x540.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+                "title": "Microsoft expands Azure AI and HPC infrastructure with AMD",
+                "description": "AI workloads are scaling faster than any single infrastructure approach can support \u2014 with more models, new agent-driven workloads and surging compute demand driving the need for greater specialization across the stack. To meet this need, Microsoft continues to evolve Azure\u2019s infrastructure, including expanding its AI fleet with AMD\u2019s most advanced AI and high-performance computing... The post  Microsoft expands Azure AI and HPC infrastructure with AMD  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Azure-AMD-Hero-1024x576.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/06/the-latest-in-our-company-transformation/",
+                "title": "The latest in our company transformation",
+                "description": "Amy Coleman, EVP and Chief People Officer, shared the following communication with employees today. When I stepped into this role, I promised to communicate more openly with you and share the \u201cwhy\u201d behind our decisions. Today we are eliminating around 4,800 roles, about 2.1% of our global workforce, as we focus our people, investments, and... The post  The latest in our company transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/03/MicrosoftLogo_social-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+                "title": "Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence",
+                "description": "The pace of AI adoption is moving incredibly fast. Customers have moved well beyond experimentation and understand the importance of adopting AI to transform their business. They are now concentrating on delivering measurable business outcomes and demonstrating a return on their AI investments, while ensuring their intelligence is amplified and their IP is protected. Today... The post  Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/official-microsoft-blog-header-1024x683.jpeg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+                "title": "Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth",
+                "description": "As demand for cloud and AI services continues to grow, datacenters are becoming more essential than ever. Communities also want to better understand how this infrastructure affects local resources, particularly water. At Microsoft, water stewardship has been a priority since our first datacenter builds in the early 2000s and remains a core part of our... The post  Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Water-Efficiency-Hero-Featured-Image-1024x682.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/",
+                "title": "Rethinking cloud operations with agentic observability",
+                "description": "Cloud operations are entering a new era as AI-driven and autonomous agents become a larger part of modern software systems. As software becomes increasingly agentic, the challenge is no longer just managing greater scale and complexity. Operators must also contend with systems that evolve faster, act more autonomously and interact across an expanding network of... The post  Rethinking cloud operations with agentic observability  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Hero-6_23-Post-1024x683.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
+                "title": "Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos",
+                "description": "Today, Microsoft is announcing one of the largest single capacity additions in our history. In Pecos, Texas, we will build a new datacenter campus, expanding our global datacenter capacity by approximately 2 gigawatts (GW) to meet strong and sustained customer demand for AI and cloud services across industries and regions. Beyond the technology, this is... The post  Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/image-1024x590.png"
+              }
+            ],
+            "perks": [
+              {
+                "title": "Flexibility",
+                "description": "Balance what matters\u2014your work, your life, and your team\u2014through trust, autonomy, and shared accountability",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075555::flexibility+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Growth",
+                "description": "Stretch your skills, expand your impact, and grow with support that meets you where you are",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075637::growth+perk",
+                "imageAlt": null,
+                "icon": "mdiLaptop",
+                "isFavicon": null
+              },
+              {
+                "title": "Wellbeing",
+                "description": "Support for your body, mind, and financial future\u2014so you can stay energized and do your best work",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075686::wellbeing+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Community PCS",
+                "description": "Find your people, build your network, and feel supported every step of the way",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075742::community+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              }
+            ],
+            "pymww": {
+              "people": [],
+              "count": 0
+            },
+            "customContent": []
+          },
+          "positionUserActions": {
+            "isSaved": false,
+            "applyAction": {
+              "status": "log_in"
+            }
+          }
+        },
+        "metadata": null
+      }
+    },
+    "page": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393557004133",
+      "unavailable_signals": [
+        "u&#39;ve reached the 10-application limit. To apply for additional roles, withdraw applications you no longer wish to pursue from your Action Center until your active total falls below 10.&#34;, &#34;condition&#34;: &#34;{{ application[&#39;status&#39;]==&#39;active&#39; and application_p",
+        "ssageWithoutPosition&#34;: null}, &#34;APPLICATIONRejected&#34;: {&#34;message&#34;: &#34;We&#39;re no longer considering your application for {{position_title}}.&#34;, &#34;enabled&#34;: true, &#34;categoryTitle&#34;: &#34;Application Updates&#34;, &#34;type&#34;: &#34;read_only&#34;, &#"
+      ],
+      "title": [
+        "Senior Product Manager | Microsoft Careers"
+      ]
+    }
+  },
+  {
+    "requisition": "200056147",
+    "position_id": "1970393556999868",
+    "checked_at": "2026-09-23T08:48:22.922510+00:00",
+    "detail": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/api/pcsx/position_details?domain=microsoft.com&position_id=1970393556999868&hl=en",
+      "payload": {
+        "status": 200,
+        "error": {
+          "message": "",
+          "body": ""
+        },
+        "data": {
+          "id": 1970393556999868,
+          "displayJobId": "200056147",
+          "name": "Principal Product Manager",
+          "locations": [
+            "United States, Washington, Redmond"
+          ],
+          "standardizedLocations": [
+            "Redmond, WA, US"
+          ],
+          "postedTs": 1790111468,
+          "stars": 0,
+          "department": "Product Management",
+          "creationTs": 1789573463,
+          "jobDescription": "<b>Overview</b><br><div dir=\"ltr\"><p>Search Platform is the retrieval and grounding foundation for Microsoft 365 Copilot and agents. Our shared services turn Microsoft 365 knowledge into trusted, permission-aware evidence through indexing, retrieval and ranking, and grounding. Product teams across Microsoft consume them through Microsoft Graph and Work IQ, and relevance teams ship quality on top of them. Every Copilot answer, search result, and agent action is only as good as the evidence behind it, so our job is to make every quality gain land faster, cheaper, and everywhere, and to prove it with data everyone trusts.\u00a0</p><p><span>We are looking for a Principal Product Manager on the Enterprise Search and Grounding Platform team to drive strategy and execution to deliver Copilot and Agents quality gains.\u00a0</span>\u00a0<br><br>This position is based in Redmond, Washington and requires the employee be in the office a minimum of 3 days per week.</p><p>Microsoft\u2019s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.</p></div><br><br><b>Responsibilities</b><br><div dir=\"ltr\"><p>The strategy\u00a0</p><ul><li><p>Define the vision, multi-year roadmap, and success metrics for the Developer Experience pillar, anchored on the Search Platform north star: one trusted platform, tuned by scenario, with recall-forward, low-latency retrieval for agents.\u00a0</p></li><li><p>Own product definition for the developer-facing API surface, including the next major version of our core retrieval API and the Work IQ and Retrieval API integration patterns, with a bias toward stable, scenario-agnostic contracts that outlive any single experience.\u00a0</p></li><li><p>Decide what the platform should offer as a shared capability and what stays with individual agent teams, and drive the consolidation of bespoke integrations onto supported patterns.\u00a0</p></li></ul><p>Make the platform easy to build on\u00a0</p><ul><li><p>Design the onboarding path for a new agent team, from first call to production: reference integrations, documentation, samples, and self-serve tooling that remove the need for a bespoke engagement.\u00a0</p></li><li><p>Treat debuggability as a product requirement. Specify the observability, tracing, and diagnostics developers need to understand why a query returned what it did and to fix issues without escalating to the platform team.\u00a0</p></li><li><p>Translate agent needs into platform requirements for recall, latency budgets, and evidence formats, working with the Quality Improvements and Frontier Platform Innovation pillars so that recall-forward retrieval tuned for agents ships as part of the core platform.\u00a0</p></li></ul><p>Lead across the organization\u00a0</p><ul><li><p>Author crisp specs, requirements documents, and program plans; drive execution across multiple engineering teams and owners; and communicate status, risks, and trade-offs clearly to leadership.\u00a0</p></li><li><p>Represent Search Platform developer experience with senior stakeholders across Microsoft 365 Copilot, Microsoft Graph, Work IQ, and partner organizations, landing decisions and aligning roadmaps.\u00a0</p></li><li><p>Raise the bar for platform product management on the team by mentoring PMs and modeling data-driven, customer-obsessed decision making.\u00a0</p></li></ul></div><br><br><b>Qualifications</b><br><p><strong>Required Qualifications:</strong></p><ul><li>Bachelor's Degree AND 8+ years experience in product/service/program management or software development\u00a0<ul><li>OR equivalent experience.</li></ul></li></ul><p><strong>Other Requirements:</strong><br>Ability to meet Microsoft, customer and/or government security screening requirements are required for this role. These requirements include but are not limited to the following specialized security screenings:<br>\u00a0<br><strong>Microsoft Cloud Background Check:</strong> This position will be required to pass the Microsoft Cloud background check upon hire/transfer and every two years thereafter.</p><p><strong>Preferred Qualifications:</strong></p><ul><li>Significant experience shipping developer-facing platforms, APIs, or SDKs consumed by other engineering teams, including ownership of API design, versioning, and deprecation decisions.\u00a0</li><li>Demonstrated ability to define a platform strategy and land it across organizational boundaries, influencing senior engineering and product leaders without direct authority.\u00a0</li><li>Technical depth: comfortable with distributed systems and the trade-offs among latency, throughput, and cost, and able to engage credibly with senior engineers in design reviews.\u00a0</li><li>Track record of turning customer and developer feedback into prioritized roadmaps and measurable outcomes.\u00a0</li><li>Communicate with clear, narratives and actionable specifications to executive-level audience.</li><li>Experience with search, information retrieval, retrieval-augmented generation, grounding, or LLM-based agent platforms.\u00a0</li><li>Experience serving both first-party and third-party developers, including documentation, onboarding, and developer support models.\u00a0</li><li>Familiarity with Microsoft 365, Microsoft Graph, or other enterprise data platforms with permission-aware access.\u00a0</li><li>Experience defining observability and diagnostics as a product surface, or operating platform scorecards and metrics.\u00a0</li><li>Prior experience as a software engineer.\u00a0</li></ul><p>#CAP #Copilot</p> <br><br><p>Product Management IC5 - The typical base pay range for this role across the U.S. is USD $142,800 - $274,800 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $188,000 - $304,200 per year. </p><p></p> <p>Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here:<br><a href=\"https://careers.microsoft.com/us/en/us-corporate-pay\">https://careers.microsoft.com/us/en/us-corporate-pay</a></p><br><p>This position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.</p><br><hr><br><p>Microsoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about <a href=\"https://careers.microsoft.com/v2/global/en/accessibility.html\"><b><u>requesting accommodations.</u></b></a></p> ",
+          "location": "United States, Washington, Redmond",
+          "isHot": 0,
+          "workLocationOption": "onsite",
+          "locationFlexibility": null,
+          "atsJobId": "200056147",
+          "positionUrl": "/careers/job/1970393556999868",
+          "publicUrl": "https://apply.careers.microsoft.com/careers/job/1970393556999868",
+          "efcustomTextWorkSite": [
+            "3 days / week in-office"
+          ],
+          "efcustomTextRequiredTravel": [
+            "Less than 25%"
+          ],
+          "efcustomTextCurrentProfession": [
+            "Product Management"
+          ],
+          "efcustomTextTaDisciplineName": [
+            "Product Management"
+          ],
+          "efcustomTextRoletype": [
+            "Individual Contributor"
+          ],
+          "efcustomTextEmploymentType": [
+            "Full-Time"
+          ],
+          "jdHighlight": [],
+          "positionExtraDetails": {
+            "videos": [
+              {
+                "url": "https://www.youtube-nocookie.com/embed/3zVUrcGVTrw",
+                "title": "Our mission",
+                "description": "220,000 employees empowering 8,000,000,000 people on the planet. To make every small business more productive and every large business more competitiv..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/DddJhta9kJU",
+                "title": "100% Empowered by Employees",
+                "description": "Behind the technology, you\u2019ll find leaders and innovators, and movers and shakers. This is Microsoft. Move your career into the future with us: https:..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/UTLflQWya8w",
+                "title": "One Day, One Microsoft",
+                "description": "This short film, created entirely of user generated content, celebrates the hopes, challenges and dreams of the individuals that make up Microsoft, an..."
+              }
+            ],
+            "blogs": [
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+                "title": "The yield imperative: Turning AI infrastructure into useful intelligence",
+                "description": "As we enter the next era, what will be the defining measure of our progress? Every industry has a word that shapes how it thinks. For pilots, it\u2019s safety. For insurers, it\u2019s risk. For the semiconductor industry, it\u2019s yield. Yield does not ask how elegant the solution is, how many years it took or what... The post  The yield imperative: Turning AI infrastructure into useful intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-SEMICON-Hero.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/",
+                "title": "Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation",
+                "description": "Throughout this past fiscal year, customers across every industry and segment moved from AI experimentation to deploying AI for real-world business outcomes. They unlocked innovation and created new opportunities for growth. We saw the emergence of Frontier Firms as they moved beyond efficiency gains to focus on human ambition and embed AI at the core... The post  Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Q426-Hero-Final-7_27-1024x579.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+                "title": "Rethinking security for the age of AI",
+                "description": "Editor\u2019s note: Updates with additional details on the model\u2019s crash score. Why security needs a new cyber stack \u2014 Introducing Project Perception The physics of cybersecurity are changing. Autonomous systems can now reason, adapt and operate continuously. At the same time, the cost of offense is falling, while the volume, velocity and complexity of what... The post  Rethinking security for the age of AI  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Project-Perception-Final-Hero-7_27-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/",
+                "title": "Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery",
+                "description": "Today, we\u2019re excited to share a long-term commitment to the Department of Energy\u2019s (DOE) Genesis Mission, backed by a $60 million investment designed to accelerate AI for science and the breakthroughs it can deliver for the country. This deepened commitment includes Microsoft\u2019s new Scientific Partnership Advancing Research &amp; Knowledge coordination hub and program office, otherwise... The post  Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/GettyImages-1413606459-1024x540.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+                "title": "Microsoft expands Azure AI and HPC infrastructure with AMD",
+                "description": "AI workloads are scaling faster than any single infrastructure approach can support \u2014 with more models, new agent-driven workloads and surging compute demand driving the need for greater specialization across the stack. To meet this need, Microsoft continues to evolve Azure\u2019s infrastructure, including expanding its AI fleet with AMD\u2019s most advanced AI and high-performance computing... The post  Microsoft expands Azure AI and HPC infrastructure with AMD  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Azure-AMD-Hero-1024x576.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/06/the-latest-in-our-company-transformation/",
+                "title": "The latest in our company transformation",
+                "description": "Amy Coleman, EVP and Chief People Officer, shared the following communication with employees today. When I stepped into this role, I promised to communicate more openly with you and share the \u201cwhy\u201d behind our decisions. Today we are eliminating around 4,800 roles, about 2.1% of our global workforce, as we focus our people, investments, and... The post  The latest in our company transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/03/MicrosoftLogo_social-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+                "title": "Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence",
+                "description": "The pace of AI adoption is moving incredibly fast. Customers have moved well beyond experimentation and understand the importance of adopting AI to transform their business. They are now concentrating on delivering measurable business outcomes and demonstrating a return on their AI investments, while ensuring their intelligence is amplified and their IP is protected. Today... The post  Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/official-microsoft-blog-header-1024x683.jpeg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+                "title": "Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth",
+                "description": "As demand for cloud and AI services continues to grow, datacenters are becoming more essential than ever. Communities also want to better understand how this infrastructure affects local resources, particularly water. At Microsoft, water stewardship has been a priority since our first datacenter builds in the early 2000s and remains a core part of our... The post  Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Water-Efficiency-Hero-Featured-Image-1024x682.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/",
+                "title": "Rethinking cloud operations with agentic observability",
+                "description": "Cloud operations are entering a new era as AI-driven and autonomous agents become a larger part of modern software systems. As software becomes increasingly agentic, the challenge is no longer just managing greater scale and complexity. Operators must also contend with systems that evolve faster, act more autonomously and interact across an expanding network of... The post  Rethinking cloud operations with agentic observability  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Hero-6_23-Post-1024x683.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
+                "title": "Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos",
+                "description": "Today, Microsoft is announcing one of the largest single capacity additions in our history. In Pecos, Texas, we will build a new datacenter campus, expanding our global datacenter capacity by approximately 2 gigawatts (GW) to meet strong and sustained customer demand for AI and cloud services across industries and regions. Beyond the technology, this is... The post  Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/image-1024x590.png"
+              }
+            ],
+            "perks": [
+              {
+                "title": "Flexibility",
+                "description": "Balance what matters\u2014your work, your life, and your team\u2014through trust, autonomy, and shared accountability",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075555::flexibility+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Growth",
+                "description": "Stretch your skills, expand your impact, and grow with support that meets you where you are",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075637::growth+perk",
+                "imageAlt": null,
+                "icon": "mdiLaptop",
+                "isFavicon": null
+              },
+              {
+                "title": "Wellbeing",
+                "description": "Support for your body, mind, and financial future\u2014so you can stay energized and do your best work",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075686::wellbeing+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Community PCS",
+                "description": "Find your people, build your network, and feel supported every step of the way",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075742::community+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              }
+            ],
+            "pymww": {
+              "people": [],
+              "count": 0
+            },
+            "customContent": []
+          },
+          "positionUserActions": {
+            "isSaved": false,
+            "applyAction": {
+              "status": "log_in"
+            }
+          }
+        },
+        "metadata": null
+      }
+    },
+    "page": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556999868",
+      "unavailable_signals": [
+        "u&#39;ve reached the 10-application limit. To apply for additional roles, withdraw applications you no longer wish to pursue from your Action Center until your active total falls below 10.&#34;, &#34;condition&#34;: &#34;{{ application[&#39;status&#39;]==&#39;active&#39; and application_p",
+        "ssageWithoutPosition&#34;: null}, &#34;APPLICATIONRejected&#34;: {&#34;message&#34;: &#34;We&#39;re no longer considering your application for {{position_title}}.&#34;, &#34;enabled&#34;: true, &#34;categoryTitle&#34;: &#34;Application Updates&#34;, &#34;type&#34;: &#34;read_only&#34;, &#"
+      ],
+      "title": [
+        "Principal Product Manager | Microsoft Careers"
+      ]
+    }
+  },
+  {
+    "requisition": "200055645",
+    "position_id": "1970393556998398",
+    "checked_at": "2026-09-23T08:48:46.873596+00:00",
+    "detail": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/api/pcsx/position_details?domain=microsoft.com&position_id=1970393556998398&hl=en",
+      "payload": {
+        "status": 200,
+        "error": {
+          "message": "",
+          "body": ""
+        },
+        "data": {
+          "id": 1970393556998398,
+          "displayJobId": "200055645",
+          "name": "Principal Product Manager- Copilot",
+          "locations": [
+            "United States, Washington, Redmond",
+            "United States, California, Mountain View"
+          ],
+          "standardizedLocations": [
+            "Redmond, WA, US",
+            "Mountain View, CA, US"
+          ],
+          "postedTs": 1790104179,
+          "stars": 0,
+          "department": "Product Management",
+          "creationTs": 1789392956,
+          "jobDescription": "<b>Overview</b><br><div dir=\"ltr\"><p><span>The Copilot Platform team is building the foundational capabilities that power the next generation of AI experiences across Microsoft 365 Copilot. Our mission is to create a secure, reliable, and scalable platform that enables teams across Microsoft to rapidly build and deliver high-quality Copilot experiences for customers.</span></p><p>We are looking for a\u00a0<strong>Principal Product Manager</strong> to lead the vision and strategy for Agentic Engineering across Microsoft 365 Copilot and BizChat.</p><p>AI is fundamentally changing how software is built and operated. Our ambition is to go beyond using AI to make individual engineering tasks faster. We want to <strong>reimagine the software development lifecycle (SDLC)</strong> around collaboration between engineers and AI agents.</p><p>In this role, you will define the strategy for how agentic capabilities transform the engineering lifecycle, from planning and design through development, testing, deployment, monitoring, and production operations. You will partner closely with engineering and product leaders to turn this vision into scalable platforms, workflows, and practices that improve engineering velocity, quality, reliability, and developer experience.</p><p>Microsoft\u2019s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.</p></div><br><br><b>Responsibilities</b><br><div dir=\"ltr\"><ul><li><p>Define the <strong>vision and strategy for Agentic Engineering</strong> across the end-to-end software development lifecycle.</p></li><li><p>Identify the highest-value opportunities for AI agents to improve how engineers design, build, test, deploy, monitor, and operate software.</p></li><li><p>Develop a\u00a0product strategy and roadmap for moving from AI-assisted development toward increasingly agent-native engineering workflows.</p></li><li><p>Partner with engineering teams to create reusable agentic capabilities, platforms, and patterns that can scale across a large engineering organization.</p></li><li><p>Establish success metrics that measure improvements in engineering productivity, quality, reliability, cycle time, and developer experience.</p></li><li><p>Drive adoption of new agentic engineering practices and help teams evolve the way they build and operate software.</p></li><li><p>Bring together related investments across teams into a cohesive strategy while enabling teams to innovate within their domains.</p></li><li><p>Influence senior product and engineering leaders and drive alignment across organizational boundaries.</p></li><li><p>Stay at the forefront of advances in AI agents and software engineering and translate emerging capabilities into meaningful engineering transformation.</p></li></ul></div><br><br><b>Qualifications</b><br><p><strong>Required Qualifications:</strong></p><ul><li>Bachelor's Degree AND 8+ years experience in product/service/program management or software development<ul><li>OR equivalent experience.\u00a0</li></ul></li></ul><p><strong>Other Requirements:</strong><br>Ability to meet Microsoft, customer and/or government security screening requirements are required for this role. These requirements include but are not limited to the following specialized security screenings:<br>\u00a0<br><strong>Microsoft Cloud Background Check:</strong> This position will be required to pass the Microsoft Cloud background check upon hire/transfer and every two years thereafter.</p><p><strong>Preferred Qualifications:</strong></p><ul><li>Experience in product management, software engineering, technical program management, or equivalent roles delivering technically complex products or platforms.</li><li>Demonstrated ability to define product vision and strategy in ambiguous and rapidly evolving areas.</li><li>Solid understanding of software development practices, developer workflows, and the software development lifecycle.</li><li>Experience working with AI, developer platforms, engineering systems, or large-scale cloud services.</li><li>Demonstrated ability to lead complex initiatives across multiple engineering teams and organizational boundaries.</li><li>Solid analytical skills with experience defining measurable product and business outcomes.</li><li>Excellent written and verbal communication skills with the ability to influence both technical teams and senior leaders.</li><li>Experience with generative AI, AI agents, AI-powered developer tools, or developer productivity platforms.</li><li>Experience building platforms, tools, or workflows used by large engineering organizations.</li><li>Understanding of AI evaluation, agent orchestration, human-in-the-loop systems, or autonomous workflows.</li><li>Experience with large-scale distributed systems, DevOps, reliability, or production engineering.</li></ul><p>#CAP #Copilot</p> <br><br><p>Product Management IC5 - The typical base pay range for this role across the U.S. is USD $142,800 - $274,800 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $188,000 - $304,200 per year. </p><p></p> <p>Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here:<br><a href=\"https://careers.microsoft.com/us/en/us-corporate-pay\">https://careers.microsoft.com/us/en/us-corporate-pay</a></p><br><p>This position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.</p><br><hr><br><p>Microsoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about <a href=\"https://careers.microsoft.com/v2/global/en/accessibility.html\"><b><u>requesting accommodations.</u></b></a></p> ",
+          "location": "United States, Washington, Redmond",
+          "isHot": 0,
+          "workLocationOption": "onsite",
+          "locationFlexibility": null,
+          "atsJobId": "200055645",
+          "positionUrl": "/careers/job/1970393556998398",
+          "publicUrl": "https://apply.careers.microsoft.com/careers/job/1970393556998398",
+          "efcustomTextWorkSite": [
+            "3 days / week in-office"
+          ],
+          "efcustomTextRequiredTravel": [
+            "Less than 25%"
+          ],
+          "efcustomTextCurrentProfession": [
+            "Product Management"
+          ],
+          "efcustomTextTaDisciplineName": [
+            "Product Management"
+          ],
+          "efcustomTextRoletype": [
+            "Individual Contributor"
+          ],
+          "efcustomTextEmploymentType": [
+            "Full-Time"
+          ],
+          "jdHighlight": [],
+          "positionExtraDetails": {
+            "videos": [
+              {
+                "url": "https://www.youtube-nocookie.com/embed/3zVUrcGVTrw",
+                "title": "Our mission",
+                "description": "220,000 employees empowering 8,000,000,000 people on the planet. To make every small business more productive and every large business more competitiv..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/DddJhta9kJU",
+                "title": "100% Empowered by Employees",
+                "description": "Behind the technology, you\u2019ll find leaders and innovators, and movers and shakers. This is Microsoft. Move your career into the future with us: https:..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/UTLflQWya8w",
+                "title": "One Day, One Microsoft",
+                "description": "This short film, created entirely of user generated content, celebrates the hopes, challenges and dreams of the individuals that make up Microsoft, an..."
+              }
+            ],
+            "blogs": [
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+                "title": "The yield imperative: Turning AI infrastructure into useful intelligence",
+                "description": "As we enter the next era, what will be the defining measure of our progress? Every industry has a word that shapes how it thinks. For pilots, it\u2019s safety. For insurers, it\u2019s risk. For the semiconductor industry, it\u2019s yield. Yield does not ask how elegant the solution is, how many years it took or what... The post  The yield imperative: Turning AI infrastructure into useful intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-SEMICON-Hero.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/",
+                "title": "Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation",
+                "description": "Throughout this past fiscal year, customers across every industry and segment moved from AI experimentation to deploying AI for real-world business outcomes. They unlocked innovation and created new opportunities for growth. We saw the emergence of Frontier Firms as they moved beyond efficiency gains to focus on human ambition and embed AI at the core... The post  Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Q426-Hero-Final-7_27-1024x579.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+                "title": "Rethinking security for the age of AI",
+                "description": "Editor\u2019s note: Updates with additional details on the model\u2019s crash score. Why security needs a new cyber stack \u2014 Introducing Project Perception The physics of cybersecurity are changing. Autonomous systems can now reason, adapt and operate continuously. At the same time, the cost of offense is falling, while the volume, velocity and complexity of what... The post  Rethinking security for the age of AI  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Project-Perception-Final-Hero-7_27-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/",
+                "title": "Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery",
+                "description": "Today, we\u2019re excited to share a long-term commitment to the Department of Energy\u2019s (DOE) Genesis Mission, backed by a $60 million investment designed to accelerate AI for science and the breakthroughs it can deliver for the country. This deepened commitment includes Microsoft\u2019s new Scientific Partnership Advancing Research &amp; Knowledge coordination hub and program office, otherwise... The post  Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/GettyImages-1413606459-1024x540.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+                "title": "Microsoft expands Azure AI and HPC infrastructure with AMD",
+                "description": "AI workloads are scaling faster than any single infrastructure approach can support \u2014 with more models, new agent-driven workloads and surging compute demand driving the need for greater specialization across the stack. To meet this need, Microsoft continues to evolve Azure\u2019s infrastructure, including expanding its AI fleet with AMD\u2019s most advanced AI and high-performance computing... The post  Microsoft expands Azure AI and HPC infrastructure with AMD  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Azure-AMD-Hero-1024x576.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/06/the-latest-in-our-company-transformation/",
+                "title": "The latest in our company transformation",
+                "description": "Amy Coleman, EVP and Chief People Officer, shared the following communication with employees today. When I stepped into this role, I promised to communicate more openly with you and share the \u201cwhy\u201d behind our decisions. Today we are eliminating around 4,800 roles, about 2.1% of our global workforce, as we focus our people, investments, and... The post  The latest in our company transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/03/MicrosoftLogo_social-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+                "title": "Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence",
+                "description": "The pace of AI adoption is moving incredibly fast. Customers have moved well beyond experimentation and understand the importance of adopting AI to transform their business. They are now concentrating on delivering measurable business outcomes and demonstrating a return on their AI investments, while ensuring their intelligence is amplified and their IP is protected. Today... The post  Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/official-microsoft-blog-header-1024x683.jpeg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+                "title": "Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth",
+                "description": "As demand for cloud and AI services continues to grow, datacenters are becoming more essential than ever. Communities also want to better understand how this infrastructure affects local resources, particularly water. At Microsoft, water stewardship has been a priority since our first datacenter builds in the early 2000s and remains a core part of our... The post  Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Water-Efficiency-Hero-Featured-Image-1024x682.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/",
+                "title": "Rethinking cloud operations with agentic observability",
+                "description": "Cloud operations are entering a new era as AI-driven and autonomous agents become a larger part of modern software systems. As software becomes increasingly agentic, the challenge is no longer just managing greater scale and complexity. Operators must also contend with systems that evolve faster, act more autonomously and interact across an expanding network of... The post  Rethinking cloud operations with agentic observability  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Hero-6_23-Post-1024x683.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
+                "title": "Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos",
+                "description": "Today, Microsoft is announcing one of the largest single capacity additions in our history. In Pecos, Texas, we will build a new datacenter campus, expanding our global datacenter capacity by approximately 2 gigawatts (GW) to meet strong and sustained customer demand for AI and cloud services across industries and regions. Beyond the technology, this is... The post  Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/image-1024x590.png"
+              }
+            ],
+            "perks": [
+              {
+                "title": "Flexibility",
+                "description": "Balance what matters\u2014your work, your life, and your team\u2014through trust, autonomy, and shared accountability",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075555::flexibility+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Growth",
+                "description": "Stretch your skills, expand your impact, and grow with support that meets you where you are",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075637::growth+perk",
+                "imageAlt": null,
+                "icon": "mdiLaptop",
+                "isFavicon": null
+              },
+              {
+                "title": "Wellbeing",
+                "description": "Support for your body, mind, and financial future\u2014so you can stay energized and do your best work",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075686::wellbeing+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Community PCS",
+                "description": "Find your people, build your network, and feel supported every step of the way",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075742::community+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              }
+            ],
+            "pymww": {
+              "people": [],
+              "count": 0
+            },
+            "customContent": []
+          },
+          "positionUserActions": {
+            "isSaved": false,
+            "applyAction": {
+              "status": "log_in"
+            }
+          }
+        },
+        "metadata": null
+      }
+    },
+    "page": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556998398",
+      "unavailable_signals": [
+        "u&#39;ve reached the 10-application limit. To apply for additional roles, withdraw applications you no longer wish to pursue from your Action Center until your active total falls below 10.&#34;, &#34;condition&#34;: &#34;{{ application[&#39;status&#39;]==&#39;active&#39; and application_p",
+        "ssageWithoutPosition&#34;: null}, &#34;APPLICATIONRejected&#34;: {&#34;message&#34;: &#34;We&#39;re no longer considering your application for {{position_title}}.&#34;, &#34;enabled&#34;: true, &#34;categoryTitle&#34;: &#34;Application Updates&#34;, &#34;type&#34;: &#34;read_only&#34;, &#"
+      ],
+      "title": [
+        "Principal Product Manager- Copilot | Microsoft Careers"
+      ]
+    }
+  },
+  {
+    "requisition": "200044401",
+    "position_id": "1970393556940372",
+    "checked_at": "2026-09-23T08:49:09.868742+00:00",
+    "detail": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/api/pcsx/position_details?domain=microsoft.com&position_id=1970393556940372&hl=en",
+      "payload": {
+        "status": 200,
+        "error": {
+          "message": "",
+          "body": ""
+        },
+        "data": {
+          "id": 1970393556940372,
+          "displayJobId": "200044401",
+          "name": "Principal Product Manager",
+          "locations": [
+            "United States, Washington, Redmond"
+          ],
+          "standardizedLocations": [
+            "Redmond, WA, US"
+          ],
+          "postedTs": 1790094574,
+          "stars": 0,
+          "department": "Product Management",
+          "creationTs": 1784307919,
+          "jobDescription": "<b>Overview</b><br><div dir=\"ltr\"><p>The Microsoft 365 Core Platform team is hiring a <strong>Principal Product Manager </strong>for its Fleet &amp; Capacity team, the group that puts the right infrastructure in the right places at the right time for every Microsoft 365 workload. The team plans, delivers, and operates the fleet behind Microsoft 365, and it directs billions of dollars in capacity investment each year. This is a broad role for a builder who wants to move across the charter and take on the biggest open problems rather than hold a single fixed area.\u00a0</p><p>The work spans demand forecasting, capacity investment planning, platform and hardware strategy, supply and demand balancing, capacity delivery, live fleet operations, and decommissioning. AI growth is reshaping all of it. Demand is larger and less predictable than it has ever been, hardware choices carry more weight, and the cost of getting capacity wrong scales with the fleet. You will help the team decide where to invest, when to build, what to run it on, and how to keep the fleet healthy and efficient as it grows.\u00a0</p><p>This is an AI-first product management role. You will use agents, automation, and AI-driven analysis alongside standard PM tools to read telemetry, model tradeoffs, prototype solutions, and reach decisions faster. You will translate hard technical and financial tradeoffs into terms leaders can act on, and you will help move the team toward AI-forward ways of working, including evaluation sets and agent-based workflows built into how the work gets done.\u00a0</p><p>You will partner closely with engineering leaders, architects, data scientists, finance, and supply chain across Microsoft. The role carries broad visibility and influence, and it depends on strong product sense, technical depth, data fluency, and clear judgment under uncertainty.\u00a0<br><br><span style=\"font-size: 11.0pt; font-family: Aptos, sans-serif;\">This position is based in Redmond, Washington and requires the employee be in the office a minimum of 3 days per week.</span></p><p>Microsoft's mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.\u00a0</p></div><br><br><b>Responsibilities</b><br><div dir=\"ltr\"><ul><li><p>Shape the strategy for the capacity and fleet work that matters most across Microsoft 365, and turn that direction into a roadmap teams can execute.\u00a0</p></li><li><p>Take on high-impact problems across the charter, including capacity planning, supply and demand balancing, fleet health, platform transitions, and decommissioning, and drive them to a result.\u00a0</p></li><li><p>Use AI-driven analysis of demand signals, telemetry, and operational data to forecast more accurately, catch capacity and reliability issues early, and fix them at the root.\u00a0</p></li><li><p>Use agents, automation, and AI Ops to analyze data, coordinate work, and act on what you learn.\u00a0</p></li><li><p>Model capacity and hardware tradeoffs with AI prototyping and scenario testing before committing investment, paired with solid product, engineering, and financial judgment.\u00a0</p></li><li><p>Weigh cost, performance, and reliability against each other, and prioritize multi-year capacity investments with partners across engineering, finance, and supply chain.\u00a0</p></li><li><p>Advance platform and hardware transition strategy, and help the fleet run more efficiently as workloads grow.\u00a0</p></li><li><p>Set success metrics, OKRs (Objectives and Key Results), and KPIs (key performance indicators), and shape investment priorities with leadership.\u00a0</p></li><li><p>Explain complex technical and financial tradeoffs to executives in a way that leads to decisions.\u00a0</p></li><li><p>Mentor other product managers and move the team toward better, AI-forward ways of working.\u00a0</p></li></ul></div><br><br><b>Qualifications</b><br><p><strong>Required Qualifications:</strong></p><div><ul><li>Bachelor's Degree AND 8+ years experience in product/service/program management or software development<ul><li>OR equivalent experience.</li></ul></li></ul></div><div><p>\u00a0</p><p><strong>Other Requirements:</strong></p><p>Ability to meet Microsoft, customer and/or government security screening requirements are required for this role. These requirements include but are not limited to the following specialized security screenings:</p><ul><li>Microsoft Cloud Background Check: This position will be required to pass the Microsoft Cloud background check upon hire/transfer and every two years thereafter.</li></ul></div><div><strong>Preferred Qualifications:</strong><div><ul><li>Bachelor's Degree AND 12+ years experience in product/service/program management or software development<ul><li>OR equivalent experience.</li></ul></li><li>4+ years experience taking a product, feature, or experience to market (e.g., design, addressing product market fit, and launch, internal tool/framework).</li><li>6+ years experience improving product metrics for a product, feature, or experience in a market (e.g., growing customer base, expanding customer usage, avoiding customer churn).</li><li>6+ years experience disrupting a market for a product, feature, or experience (e.g., competitive disruption, taking the place of an established competing product).</li><li>Experience taking on ambiguous, high-stakes work and driving it from strategy through execution across organizations. \u00a0</li><li>Experience leading large-scale cloud infrastructure, capacity planning, or distributed systems work, with grasp of hyperscale service delivery. \u00a0</li><li>AI fluency, including using AI agents, automation, and prototyping to speed up analysis, decisions, and product work. \u00a0</li><li>Experience using telemetry, demand signals, and operational data to guide platform and investment decisions. \u00a0</li><li>Systems-level problem solving and clear communication, with the ability to influence senior leaders and align stakeholders across organizations.\u00a0</li></ul><div dir=\"ltr\">#M365Core, #M365CorePlatform, #M365FleetCapacity</div></div></div> <br><br><p>Product Management IC5 - The typical base pay range for this role across the U.S. is USD $142,800 - $274,800 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $188,000 - $304,200 per year. </p><p></p> <p>Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here:<br><a href=\"https://careers.microsoft.com/us/en/us-corporate-pay\">https://careers.microsoft.com/us/en/us-corporate-pay</a></p><br><p>This position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.</p><br><hr><br><p>Microsoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about <a href=\"https://careers.microsoft.com/v2/global/en/accessibility.html\"><b><u>requesting accommodations.</u></b></a></p> ",
+          "location": "United States, Washington, Redmond",
+          "isHot": 0,
+          "workLocationOption": "onsite",
+          "locationFlexibility": null,
+          "atsJobId": "200044401",
+          "positionUrl": "/careers/job/1970393556940372",
+          "publicUrl": "https://apply.careers.microsoft.com/careers/job/1970393556940372",
+          "efcustomTextWorkSite": [
+            "3 days / week in-office"
+          ],
+          "efcustomTextRequiredTravel": [
+            "Less than 25%"
+          ],
+          "efcustomTextCurrentProfession": [
+            "Product Management"
+          ],
+          "efcustomTextTaDisciplineName": [
+            "Product Management"
+          ],
+          "efcustomTextRoletype": [
+            "Individual Contributor"
+          ],
+          "efcustomTextEmploymentType": [
+            "Full-Time"
+          ],
+          "jdHighlight": [],
+          "positionExtraDetails": {
+            "videos": [
+              {
+                "url": "https://www.youtube-nocookie.com/embed/3zVUrcGVTrw",
+                "title": "Our mission",
+                "description": "220,000 employees empowering 8,000,000,000 people on the planet. To make every small business more productive and every large business more competitiv..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/DddJhta9kJU",
+                "title": "100% Empowered by Employees",
+                "description": "Behind the technology, you\u2019ll find leaders and innovators, and movers and shakers. This is Microsoft. Move your career into the future with us: https:..."
+              },
+              {
+                "url": "https://www.youtube-nocookie.com/embed/UTLflQWya8w",
+                "title": "One Day, One Microsoft",
+                "description": "This short film, created entirely of user generated content, celebrates the hopes, challenges and dreams of the individuals that make up Microsoft, an..."
+              }
+            ],
+            "blogs": [
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+                "title": "The yield imperative: Turning AI infrastructure into useful intelligence",
+                "description": "As we enter the next era, what will be the defining measure of our progress? Every industry has a word that shapes how it thinks. For pilots, it\u2019s safety. For insurers, it\u2019s risk. For the semiconductor industry, it\u2019s yield. Yield does not ask how elegant the solution is, how many years it took or what... The post  The yield imperative: Turning AI infrastructure into useful intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-SEMICON-Hero.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/",
+                "title": "Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation",
+                "description": "Throughout this past fiscal year, customers across every industry and segment moved from AI experimentation to deploying AI for real-world business outcomes. They unlocked innovation and created new opportunities for growth. We saw the emergence of Frontier Firms as they moved beyond efficiency gains to focus on human ambition and embed AI at the core... The post  Looking back on Microsoft\u2019s FY26: From AI experimentation to Frontier Transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Q426-Hero-Final-7_27-1024x579.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+                "title": "Rethinking security for the age of AI",
+                "description": "Editor\u2019s note: Updates with additional details on the model\u2019s crash score. Why security needs a new cyber stack \u2014 Introducing Project Perception The physics of cybersecurity are changing. Autonomous systems can now reason, adapt and operate continuously. At the same time, the cost of offense is falling, while the volume, velocity and complexity of what... The post  Rethinking security for the age of AI  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Project-Perception-Final-Hero-7_27-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/",
+                "title": "Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery",
+                "description": "Today, we\u2019re excited to share a long-term commitment to the Department of Energy\u2019s (DOE) Genesis Mission, backed by a $60 million investment designed to accelerate AI for science and the breakthroughs it can deliver for the country. This deepened commitment includes Microsoft\u2019s new Scientific Partnership Advancing Research &amp; Knowledge coordination hub and program office, otherwise... The post  Powering America\u2019s Genesis Mission: Microsoft\u2019s commitment to scientific discovery  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/GettyImages-1413606459-1024x540.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+                "title": "Microsoft expands Azure AI and HPC infrastructure with AMD",
+                "description": "AI workloads are scaling faster than any single infrastructure approach can support \u2014 with more models, new agent-driven workloads and surging compute demand driving the need for greater specialization across the stack. To meet this need, Microsoft continues to evolve Azure\u2019s infrastructure, including expanding its AI fleet with AMD\u2019s most advanced AI and high-performance computing... The post  Microsoft expands Azure AI and HPC infrastructure with AMD  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/OMB-Azure-AMD-Hero-1024x576.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/06/the-latest-in-our-company-transformation/",
+                "title": "The latest in our company transformation",
+                "description": "Amy Coleman, EVP and Chief People Officer, shared the following communication with employees today. When I stepped into this role, I promised to communicate more openly with you and share the \u201cwhy\u201d behind our decisions. Today we are eliminating around 4,800 roles, about 2.1% of our global workforce, as we focus our people, investments, and... The post  The latest in our company transformation  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/03/MicrosoftLogo_social-1024x576.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+                "title": "Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence",
+                "description": "The pace of AI adoption is moving incredibly fast. Customers have moved well beyond experimentation and understand the importance of adopting AI to transform their business. They are now concentrating on delivering measurable business outcomes and demonstrating a return on their AI investments, while ensuring their intelligence is amplified and their IP is protected. Today... The post  Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/07/official-microsoft-blog-header-1024x683.jpeg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+                "title": "Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth",
+                "description": "As demand for cloud and AI services continues to grow, datacenters are becoming more essential than ever. Communities also want to better understand how this infrastructure affects local resources, particularly water. At Microsoft, water stewardship has been a priority since our first datacenter builds in the early 2000s and remains a core part of our... The post  Inside Microsoft\u2019s two-decade push to cut water intensity while scaling for growth  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Water-Efficiency-Hero-Featured-Image-1024x682.png"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/",
+                "title": "Rethinking cloud operations with agentic observability",
+                "description": "Cloud operations are entering a new era as AI-driven and autonomous agents become a larger part of modern software systems. As software becomes increasingly agentic, the challenge is no longer just managing greater scale and complexity. Operators must also contend with systems that evolve faster, act more autonomously and interact across an expanding network of... The post  Rethinking cloud operations with agentic observability  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Hero-6_23-Post-1024x683.jpg"
+              },
+              {
+                "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
+                "title": "Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos",
+                "description": "Today, Microsoft is announcing one of the largest single capacity additions in our history. In Pecos, Texas, we will build a new datacenter campus, expanding our global datacenter capacity by approximately 2 gigawatts (GW) to meet strong and sustained customer demand for AI and cloud services across industries and regions. Beyond the technology, this is... The post  Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos  appeared first on  The Official Microsoft Blog .",
+                "image": "https://blogs.microsoft.com/wp-content/uploads/2026/06/image-1024x590.png"
+              }
+            ],
+            "perks": [
+              {
+                "title": "Flexibility",
+                "description": "Balance what matters\u2014your work, your life, and your team\u2014through trust, autonomy, and shared accountability",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075555::flexibility+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Growth",
+                "description": "Stretch your skills, expand your impact, and grow with support that meets you where you are",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075637::growth+perk",
+                "imageAlt": null,
+                "icon": "mdiLaptop",
+                "isFavicon": null
+              },
+              {
+                "title": "Wellbeing",
+                "description": "Support for your body, mind, and financial future\u2014so you can stay energized and do your best work",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075686::wellbeing+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              },
+              {
+                "title": "Community PCS",
+                "description": "Find your people, build your network, and feel supported every step of the way",
+                "image": "https://static.vscdn.net/images/careers/demo/microsoft/1761075742::community+perk",
+                "imageAlt": null,
+                "icon": null,
+                "isFavicon": null
+              }
+            ],
+            "pymww": {
+              "people": [],
+              "count": 0
+            },
+            "customContent": []
+          },
+          "positionUserActions": {
+            "isSaved": false,
+            "applyAction": {
+              "status": "log_in"
+            }
+          }
+        },
+        "metadata": null
+      }
+    },
+    "page": {
+      "http_status": 200,
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556940372",
+      "unavailable_signals": [
+        "u&#39;ve reached the 10-application limit. To apply for additional roles, withdraw applications you no longer wish to pursue from your Action Center until your active total falls below 10.&#34;, &#34;condition&#34;: &#34;{{ application[&#39;status&#39;]==&#39;active&#39; and application_p",
+        "ssageWithoutPosition&#34;: null}, &#34;APPLICATIONRejected&#34;: {&#34;message&#34;: &#34;We&#39;re no longer considering your application for {{position_title}}.&#34;, &#34;enabled&#34;: true, &#34;categoryTitle&#34;: &#34;Application Updates&#34;, &#34;type&#34;: &#34;read_only&#34;, &#"
+      ],
+      "title": [
+        "Principal Product Manager | Microsoft Careers"
+      ]
+    }
+  }
+]

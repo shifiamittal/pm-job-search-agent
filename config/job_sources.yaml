@@ -20,3 +20,10 @@ sources:
     board_token: openai
     careers_url: https://jobs.ashbyhq.com/openai
     notes: Public Ashby posting API; full published board in one response.
+  microsoft:
+    company: Microsoft
+    enabled: true
+    priority: tier_1
+    adapter: microsoft
+    careers_url: https://apply.careers.microsoft.com/careers
+    notes: Official Product Management profession facet; United States or India in any source location. Entire facet retained in raw outputs.

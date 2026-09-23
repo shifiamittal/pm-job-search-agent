@@ -180,7 +180,7 @@ Offline verification:
 ## Raw job discovery (v1)
 Discovery is now separated from downstream fit/classification. `config/job_sources.yaml`
 defines job sources (distinct from `sources/source_registry.yaml`, which is candidate
-evidence). `scripts/discover_jobs.py` implements deterministic Greenhouse and Ashby
+evidence). `scripts/discover_jobs.py` implements deterministic Greenhouse, Ashby, and Microsoft
 retrieval and writes all raw jobs plus a high-recall PM-candidate subset under
 `data/discovery/`. Each source crawl appends telemetry to
 `data/discovery/crawl_runs.jsonl`.
@@ -190,6 +190,7 @@ Run one selected source per invocation:
 ```bash
 python scripts/discover_jobs.py --source anthropic
 python scripts/discover_jobs.py --source openai
+python scripts/discover_jobs.py --source microsoft
 ```
 
 Curate a separate reference set in `data/evals/discovery_reference.jsonl`, then run:
@@ -206,5 +207,10 @@ to presentation logic.
 Each crawl refreshes only the selected source in the latest combined exports;
 other source records retain their original retrieval timestamps. Run-specific
 snapshots remain source-only. Evaluation checks each source's latest crawl status
-and reports both companies separately. See [Ashby integration](docs/discovery_ashby.md)
+and reports each company separately. See [Ashby integration](docs/discovery_ashby.md)
 and the [OpenAI live report](docs/discovery_openai_live_report.md).
+
+Microsoft enumerates its official Product Management facet and retains US/India
+candidates after detail availability verification and internship exclusion.
+Unavailable and uncertain jobs remain in raw diagnostics. See [Microsoft discovery](docs/discovery_microsoft.md)
+for pagination, drift reconciliation, retry behavior and benchmark separation.

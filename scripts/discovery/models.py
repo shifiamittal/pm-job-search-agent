@@ -60,9 +60,10 @@ def validate_raw_job(job: dict) -> None:
     missing = [field for field in RAW_JOB_FIELDS if field not in job]
     if missing:
         raise ValueError(f"Missing raw job fields: {', '.join(missing)}")
-    if set(job) - set(RAW_JOB_FIELDS):
+    optional = {"availability_status", "availability_checked_at", "availability_reason", "employment_type"}
+    if set(job) - set(RAW_JOB_FIELDS) - optional:
         raise ValueError("Raw jobs must contain only source facts/provenance")
-    if any(not isinstance(job[field], str) for field in RAW_JOB_FIELDS):
+    if any(not isinstance(job[field], str) for field in job):
         raise ValueError("Raw job fields must be strings")
     for field in ("job_id", "company", "title", "canonical_url", "source_key", "source_type", "retrieved_at"):
         if not str(job.get(field, "")).strip():
@@ -73,7 +74,7 @@ def validate_raw_job(job: dict) -> None:
         raise ValueError("Raw job_id does not match source identity")
     if datetime.fromisoformat(job["retrieved_at"]).tzinfo is None:
         raise ValueError("retrieved_at must include a timezone")
-    if job["source_type"] not in {"greenhouse", "ashby", "lever", "custom", "web_search"}:
+    if job["source_type"] not in {"greenhouse", "ashby", "microsoft", "lever", "custom", "web_search"}:
         raise ValueError(f"Unsupported source_type: {job['source_type']}")
 
 

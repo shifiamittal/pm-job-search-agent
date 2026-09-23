@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run raw job discovery for configured sources.
 
-Greenhouse and Ashby use deterministic retrieval. Each invocation crawls one
+Greenhouse, Ashby and Microsoft use deterministic retrieval. Each invocation crawls one
 source and preserves the other sources in the latest combined exports.
 """
 
@@ -20,9 +20,18 @@ if str(ROOT / "scripts") not in sys.path:
 from discovery.filters import pm_candidate_decision
 from discovery.greenhouse import fetch_greenhouse_jobs
 from discovery.ashby import fetch_ashby_jobs
+from discovery.microsoft import fetch_microsoft_jobs, in_target_geography, is_internship
 from discovery.errors import CrawlError
 from discovery.models import utc_now_iso, validate_raw_jobs
 from discovery.io import append_jsonl, atomic_jsonl, load_job_sources, write_csv
+
+
+def retain_candidate(job: dict) -> bool:
+    """Apply Microsoft's explicit country scope after raw facet retrieval."""
+    return (pm_candidate_decision(job["title"])[0]
+            and (job["source_type"] != "microsoft" or (in_target_geography(job)
+                 and job.get("availability_status") == "available"
+                 and not is_internship(job["title"], job.get("employment_type", "")))))
 
 
 def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
@@ -41,11 +50,12 @@ def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
     telemetry = None
     jobs, candidates, failures = [], [], []
     try:
-        adapters = {"greenhouse": fetch_greenhouse_jobs, "ashby": fetch_ashby_jobs}
+        adapters = {"greenhouse": fetch_greenhouse_jobs, "ashby": fetch_ashby_jobs,
+                    "microsoft": fetch_microsoft_jobs}
         if source.get("adapter") not in adapters:
             raise ValueError(f"Unsupported adapter: {source.get('adapter')}")
         jobs, telemetry = adapters[source["adapter"]](key, source)
-        candidates = [job for job in jobs if pm_candidate_decision(job["title"])[0]]
+        candidates = [job for job in jobs if retain_candidate(job)]
         telemetry["pm_candidates"] = len(candidates)
         # Preserve successful snapshots even when the next board removes a job.
         # A failed retrieval never replaces the previous successful snapshot.
@@ -56,7 +66,7 @@ def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
             previous = [json.loads(line) for line in previous_path.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
         combined = [job for job in previous if job["source_key"] != key] + jobs
         validate_raw_jobs(combined)
-        combined_candidates = [job for job in combined if pm_candidate_decision(job["title"])[0]]
+        combined_candidates = [job for job in combined if retain_candidate(job)]
         for destination, raw_rows, pm_rows in (
             (output / "runs" / run_id, jobs, candidates),
             (output, combined, combined_candidates),
