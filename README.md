@@ -214,3 +214,18 @@ Microsoft enumerates its official Product Management facet and retains US/India
 candidates after detail availability verification and internship exclusion.
 Unavailable and uncertain jobs remain in raw diagnostics. See [Microsoft discovery](docs/discovery_microsoft.md)
 for pagination, drift reconciliation, retry behavior and benchmark separation.
+
+## Source detection benchmark
+
+Inspect careers URLs without crawling job boards or adding source adapters:
+
+```bash
+python scripts/detect_sources.py --benchmark data/evals/source_detection/target_company_source_map_v1.csv
+```
+
+The detector uses public URL, redirect, page, job-link, metadata and linked-script
+evidence. Expected labels are evaluation-only. Results, mismatches, metrics and
+request audits are written under `data/evals/source_detection/latest/`.
+Blocked or inconclusive sources remain unresolved; a custom/native front end does
+not prove the absence of a third-party ATS. See the
+[source detection review](docs/source_detection_v1.md) for results and limitations.

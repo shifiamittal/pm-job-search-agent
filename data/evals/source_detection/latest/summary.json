@@ -1,0 +1,198 @@
+{
+  "total_companies": 25,
+  "high_confidence_source_type_accuracy": {
+    "numerator": 14,
+    "denominator": 20,
+    "rate": 0.7
+  },
+  "overall_source_type_agreement": {
+    "numerator": 17,
+    "denominator": 25,
+    "rate": 0.68
+  },
+  "identifier_accuracy": {
+    "numerator": 11,
+    "denominator": 11,
+    "rate": 1.0
+  },
+  "identifier_exact_accuracy": {
+    "numerator": 9,
+    "denominator": 11,
+    "rate": 0.8181818181818182
+  },
+  "identifier_not_comparable": [
+    "OpenAI",
+    "Google",
+    "Meta",
+    "Amazon",
+    "Apple",
+    "Stripe",
+    "Databricks",
+    "Uber",
+    "Dropbox",
+    "Salesforce",
+    "Atlassian",
+    "Rippling",
+    "Perplexity",
+    "xAI"
+  ],
+  "unknown_rate": {
+    "numerator": 8,
+    "denominator": 25,
+    "rate": 0.32
+  },
+  "adapter_coverage": {
+    "numerator": 10,
+    "denominator": 25,
+    "rate": 0.4
+  },
+  "identifier_ready_coverage": {
+    "numerator": 9,
+    "denominator": 25,
+    "rate": 0.36
+  },
+  "supported_family_missing_identifier": [
+    "Stripe"
+  ],
+  "unsupported_by_type": {
+    "company_native_custom": [
+      "Google",
+      "Meta",
+      "Amazon",
+      "Apple",
+      "Atlassian"
+    ],
+    "unknown": [
+      "OpenAI",
+      "Databricks",
+      "Uber",
+      "Dropbox",
+      "Salesforce",
+      "Rippling",
+      "Perplexity",
+      "xAI"
+    ],
+    "workday": [
+      "Adobe",
+      "NVIDIA"
+    ]
+  },
+  "detected_distribution": {
+    "microsoft_custom": 1,
+    "unknown": 8,
+    "greenhouse": 6,
+    "company_native_custom": 5,
+    "ashby": 3,
+    "workday": 2
+  },
+  "proposed_benchmark_corrections": [],
+  "metric_notes": [
+    "Types normalized by explicit spelling aliases only.",
+    "Workday partial tenant/site component matches count as compatible; exact accuracy also reported.",
+    "Blank detector identifiers are NOT_COMPARABLE, never identifier successes.",
+    "MATCH means type agreement and no comparable identifier conflict; review_needed captures unverified identifiers.",
+    "Adapter coverage measures implemented families; identifier-ready coverage additionally requires a verified identifier. Neither is a live job-discovery success rate.",
+    "Custom/native is a verified front end with unresolved underlying ATS, not proof no third-party ATS exists."
+  ],
+  "benchmark_sha256": "c08158276fe77b66af7266b6f554fa906adc8cf812c709ff96363109b83ca057",
+  "benchmark_path": "data\\evals\\source_detection\\target_company_source_map_v1.csv",
+  "request_count": 98,
+  "http_attempt_count": 98,
+  "request_errors": [
+    {
+      "company": "OpenAI",
+      "url": "https://openai.com/careers/",
+      "final_url": "https://openai.com/careers/",
+      "status": 403,
+      "redirects": [],
+      "attempts": [
+        403
+      ],
+      "truncated": false,
+      "body_sha256": "723427e5c29aaf4224947379a807312d8c3181fa800e020c63ec772fd867274b",
+      "inspected_characters": 9725
+    },
+    {
+      "company": "Uber",
+      "url": "https://www.uber.com/global/en/careers/list/",
+      "final_url": "https://www.uber.com/global/en/careers/list/",
+      "status": 406,
+      "redirects": [],
+      "attempts": [
+        406
+      ],
+      "truncated": false,
+      "body_sha256": "e41e45f8e465e3f5edf3f9074174cdce0c3729088aa43cf6fef154ab069c0f7d",
+      "inspected_characters": 14
+    },
+    {
+      "company": "Dropbox",
+      "url": "https://jobs.dropbox.com/",
+      "final_url": "https://www.dropbox.jobs/",
+      "status": 403,
+      "redirects": [
+        "https://jobs.dropbox.com/"
+      ],
+      "attempts": [
+        403
+      ],
+      "truncated": false,
+      "body_sha256": "45e3066d772efeaf166c6af423f152d97c3bd30d14e991dc2336bb2c93b9a34a",
+      "inspected_characters": 5450
+    },
+    {
+      "company": "Salesforce",
+      "url": "https://c.salesforce.com/digital/@sfdc-www-emu/page-builder-miaw-ui/v1-stable/page-builder-miaw-ui.js",
+      "final_url": "https://c.salesforce.com/digital/@sfdc-www-emu/page-builder-miaw-ui/v1-stable/page-builder-miaw-ui.js",
+      "status": 403,
+      "redirects": [],
+      "attempts": [
+        403
+      ],
+      "truncated": false,
+      "body_sha256": "987858eee8e4ad462caf0bc4f0d7fbb5f55e6b18cc7cf36dded854e48c3dc4df",
+      "inspected_characters": 504
+    },
+    {
+      "company": "Atlassian",
+      "url": "https://atl-global.stg.atlassian.com/js/atl-global.min.js",
+      "final_url": "https://atl-global.stg.atlassian.com/js/atl-global.min.js",
+      "status": 404,
+      "redirects": [],
+      "attempts": [
+        404
+      ],
+      "truncated": false,
+      "body_sha256": "c745c384f36bc1055730bdb7bd7b9114dd5ad1970f1a85e6a85ce0233d3e0f1f",
+      "inspected_characters": 19046
+    },
+    {
+      "company": "Perplexity",
+      "url": "https://www.perplexity.ai/careers",
+      "final_url": "https://www.perplexity.ai/careers",
+      "status": 403,
+      "redirects": [],
+      "attempts": [
+        403
+      ],
+      "truncated": false,
+      "body_sha256": "8708f57fcd473169a6419dad58824ae8fcc9cea30b93cdbc608d09e21cc39f36",
+      "inspected_characters": 5493
+    },
+    {
+      "company": "xAI",
+      "url": "https://x.ai/careers",
+      "final_url": "https://x.ai/careers",
+      "status": 403,
+      "redirects": [],
+      "attempts": [
+        403
+      ],
+      "truncated": false,
+      "body_sha256": "218018a112b4d7fc482c1e66c6cd5a7f2e6a7172629a10cf0f4b0eca8ec2caf5",
+      "inspected_characters": 5502
+    }
+  ],
+  "capture_started_at": "2026-09-23T11:09:56.561867+00:00",
+  "capture_completed_at": "2026-09-23T11:10:58.360829+00:00"
+}

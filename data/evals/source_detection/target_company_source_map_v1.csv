@@ -1,0 +1,26 @@
+company,careers_url,source_type,source_identifier,adapter_available_now,confidence,notes
+Microsoft,https://apply.careers.microsoft.com/careers,Microsoft custom careers API,microsoft.com / pcsx,Yes,High,Already implemented and benchmarked
+OpenAI,https://openai.com/careers/,Ashby,openai,Yes,High,Official OpenAI careers links to Ashby postings; adapter implemented
+Anthropic,https://www.anthropic.com/careers,Greenhouse,anthropic,Yes,High,Official Greenhouse board verified; adapter implemented
+Google,https://www.google.com/about/careers/applications/jobs/results/,Company-native/custom,google careers,No,High,Official Google careers application site uses its own jobs surface
+Meta,https://www.metacareers.com/jobs/,Company-native/custom,Meta Careers,No,Medium,Official Meta Careers surface; backend not frozen in benchmark yet
+Amazon,https://www.amazon.jobs/,Company-native/custom,amazon.jobs,No,High,Official Amazon Jobs surface
+Apple,https://jobs.apple.com/,Company-native/custom,jobs.apple.com,No,High,Official Apple Jobs search/detail surface
+Stripe,https://stripe.com/jobs,Greenhouse,stripe,Yes,Medium,Current evidence maps Stripe to Greenhouse; verify board token during detector benchmark
+Databricks,https://www.databricks.com/company/careers,Greenhouse,databricks,Yes,Medium,Current evidence maps Databricks to Greenhouse; verify board token during detector benchmark
+Airbnb,https://careers.airbnb.com/positions/,Greenhouse,airbnb,Yes,High,User-approved correction: official job page embeds https://boards.greenhouse.io/embed/job_board/js?for=airbnb
+Uber,https://www.uber.com/global/en/careers/list/,Company-native/custom,Uber Careers,No,High,Official Uber careers job URLs use Uber's own careers domain
+Dropbox,https://jobs.dropbox.com/,Company-native/custom,Dropbox Jobs,No,High,Official Dropbox jobs site has its own listing surface
+Notion,https://www.notion.so/careers,Ashby,notion,Yes,High,Current individual jobs verified on jobs.ashbyhq.com/notion
+Figma,https://www.figma.com/careers/,Greenhouse,figma,Yes,High,Current Greenhouse job URLs for Figma verified
+Snowflake,https://careers.snowflake.com/,Ashby,snowflake,Yes,High,User-approved correction: official careers search links to jobs.ashbyhq.com/snowflake postings
+Salesforce,https://careers.salesforce.com/en/jobs/,Company-native/custom,Salesforce Careers,No,High,Official Salesforce careers site exposes its own paginated jobs surface
+Adobe,https://careers.adobe.com/,Workday,adobe,No,High,Current Adobe job detail pages verified on adobe.wd5.myworkdayjobs.com
+Atlassian,https://www.atlassian.com/company/careers/all-jobs,Company-native/custom,Atlassian Careers,No,Medium,Official Atlassian careers surface; backend/provider should be verified by detector work
+Cloudflare,https://www.cloudflare.com/careers/jobs/,Greenhouse,cloudflare,Yes,High,Current Cloudflare Greenhouse job pages verified
+Ramp,https://ramp.com/careers,Ashby,ramp,Yes,High,Current Ramp individual jobs verified on jobs.ashbyhq.com/ramp
+Rippling,https://www.rippling.com/careers,Rippling ATS,rippling,No,High,Current jobs use ats.rippling.com; Rippling has its own ATS API family
+Perplexity,https://www.perplexity.ai/careers,Ashby,perplexity,Yes,High,Current Perplexity individual jobs verified on jobs.ashbyhq.com/perplexity
+Scale AI,https://scale.com/careers,Greenhouse,scaleai,Yes,High,Current/recent Scale AI job URLs use job-boards.greenhouse.io/scaleai
+xAI,https://x.ai/careers,Company-native/custom,xAI Careers,No,Low,Official careers surface known; backend/source family needs direct verification
+NVIDIA,https://www.nvidia.com/en-us/about-nvidia/careers/,Workday,NVIDIAExternalCareerSite,No,High,Current NVIDIA jobs verified on nvidia.wd5.myworkdayjobs.com
