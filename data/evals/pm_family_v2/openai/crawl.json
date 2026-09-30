@@ -1,0 +1,16 @@
+{
+  "source_key": "openai",
+  "company": "OpenAI",
+  "source_type": "ashby",
+  "adapter": "ashby",
+  "source_url": "https://jobs.ashbyhq.com/openai",
+  "started_at": "2026-09-30T15:55:56.112253+00:00",
+  "completed_at": "2026-09-30T15:55:57.101419+00:00",
+  "request_count": 1,
+  "http_status": 200,
+  "jobs_seen": 835,
+  "jobs_extracted": 835,
+  "pm_candidates": 12,
+  "errors": [],
+  "status": "success"
+}

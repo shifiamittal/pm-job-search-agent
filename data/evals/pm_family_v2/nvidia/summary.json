@@ -1,0 +1,20 @@
+{
+  "company": "NVIDIA",
+  "benchmark_size": 35,
+  "status": "failed",
+  "started_at": "2026-09-30T15:55:56.120029+00:00",
+  "completed_at": "2026-09-30T15:56:09.616818+00:00",
+  "source_errors": [
+    "ValueError: Invalid Workday externalPath"
+  ],
+  "detail_failures": [],
+  "raw_jobs": null,
+  "pm_candidates": null,
+  "benchmark_matches": null,
+  "recall": null,
+  "extras": null,
+  "missing_ids": null,
+  "duplicate_ids": null,
+  "listing_rows_seen": 240,
+  "pagination_complete": false
+}

@@ -27,3 +27,36 @@ sources:
     adapter: microsoft
     careers_url: https://apply.careers.microsoft.com/careers
     notes: Official Product Management profession facet; United States or India in any source location. Entire facet retained in raw outputs.
+  adobe:
+    company: Adobe
+    enabled: true
+    adapter: workday
+    tenant: adobe
+    site: external_experienced
+    careers_url: https://careers.adobe.com/us/en/search-results
+    workday_url: https://adobe.wd5.myworkdayjobs.com/external_experienced
+    applied_facets:
+      locationCountry: [bc33aa3152ec42d4995f4791a106ed09, c4f78be1a8f14da0ab49ce1162348a5e]
+    notes: All Workday jobs in US/India; no keyword or PM-family restriction.
+  nvidia:
+    company: NVIDIA
+    enabled: true
+    adapter: workday
+    tenant: nvidia
+    site: NVIDIAExternalCareerSite
+    careers_url: https://jobs.nvidia.com/careers
+    workday_url: https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite
+    applied_facets:
+      locationHierarchy1: [2fcb99c455831013ea52fb338f2932d8, 2fcb99c455831013ea52b82135ba3266]
+    notes: All Workday jobs in US/India; no keyword or PM-family restriction.
+  crowdstrike:
+    company: CrowdStrike
+    enabled: true
+    adapter: workday
+    tenant: crowdstrike
+    site: crowdstrikecareers
+    careers_url: https://www.crowdstrike.com/en-us/careers/
+    workday_url: https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers
+    applied_facets:
+      locationCountry: [bc33aa3152ec42d4995f4791a106ed09, c4f78be1a8f14da0ab49ce1162348a5e]
+    notes: All Workday jobs in US/India; no keyword or PM-family restriction.

@@ -1,0 +1,19 @@
+{
+  "company": "OpenAI",
+  "benchmark_size": 10,
+  "status": "success",
+  "started_at": "2026-09-30T15:55:56.112253+00:00",
+  "completed_at": "2026-09-30T15:55:57.101419+00:00",
+  "source_errors": [],
+  "detail_failures": [],
+  "raw_jobs": 835,
+  "pm_candidates": 12,
+  "benchmark_matches": 10,
+  "recall": 1.0,
+  "extras": 2,
+  "missing_ids": [],
+  "missing_requisition_ids": [],
+  "duplicate_ids": 0,
+  "source_duplicate_ids": 0,
+  "retries": 0
+}

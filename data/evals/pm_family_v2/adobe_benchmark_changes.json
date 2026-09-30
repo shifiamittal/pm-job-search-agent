@@ -1,0 +1,75 @@
+{
+  "removed_ids": [
+    "R171808",
+    "R171889"
+  ],
+  "additions": [
+    {
+      "job_id": "R168909",
+      "verified": true,
+      "title": "Senior Product Manager,  Chief Accounting Office",
+      "location": "San Jose | Lehi",
+      "detail_url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Product-Manager---Chief-Accounting-Office_R168909-1",
+      "canonical_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/Senior-Product-Manager---Chief-Accounting-Office_R168909-1",
+      "retrieved_at": "2026-09-30T15:56:22.794801+00:00",
+      "country": "United States of America",
+      "canApply": true,
+      "configured_source_discovered": true,
+      "filter_rule": "included_pm_signal:\\bproduct\\s+manager\\b"
+    },
+    {
+      "job_id": "R169439",
+      "verified": true,
+      "title": "Internal Product Manager 3 - Sales Performance Management",
+      "location": "Bangalore",
+      "detail_url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Product-Manager-3_R169439",
+      "canonical_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Bangalore/Product-Manager-3_R169439",
+      "retrieved_at": "2026-09-30T15:56:23.852699+00:00",
+      "country": "India",
+      "canApply": true,
+      "configured_source_discovered": true,
+      "filter_rule": "included_pm_signal:\\bproduct\\s+manager\\b"
+    },
+    {
+      "job_id": "R169992",
+      "verified": true,
+      "title": "Principal Product Manager - Order to Cash Platform (SAP BRIM)",
+      "location": "San Jose",
+      "detail_url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Product-Manager---Order-to-Cash-Platform--SAP-BRIM-_R169992",
+      "canonical_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/Senior-Product-Manager---Order-to-Cash-Platform--SAP-BRIM-_R169992",
+      "retrieved_at": "2026-09-30T15:56:24.952292+00:00",
+      "country": "United States of America",
+      "canApply": true,
+      "configured_source_discovered": true,
+      "filter_rule": "included_pm_signal:\\bproduct\\s+manager\\b"
+    },
+    {
+      "job_id": "R170043",
+      "verified": true,
+      "title": "Product Manager - International Strategy & Product Management",
+      "location": "San Jose | San Francisco",
+      "detail_url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Product-Manager_R170043-1",
+      "canonical_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/Senior-Product-Manager_R170043-1",
+      "retrieved_at": "2026-09-30T15:56:26.166773+00:00",
+      "country": "United States of America",
+      "canApply": true,
+      "configured_source_discovered": true,
+      "filter_rule": "included_pm_signal:\\bproduct\\s+manager\\b"
+    },
+    {
+      "job_id": "R171158",
+      "verified": true,
+      "title": "Internal Product Manager 5",
+      "location": "San Jose",
+      "detail_url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Internal-Product-Manager-5_R171158",
+      "canonical_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/Internal-Product-Manager-5_R171158",
+      "retrieved_at": "2026-09-30T15:56:27.336313+00:00",
+      "country": "United States of America",
+      "canApply": true,
+      "configured_source_discovered": true,
+      "filter_rule": "included_pm_signal:\\bproduct\\s+manager\\b"
+    }
+  ],
+  "original_reference_sha256": "6bdb82c429e4101543bb803b8ca6a5a0307b500858901984952c7d2dfcf7c592",
+  "revised_reference_sha256": "2dd641c4e4712c3c7a2c4508c932aa3b5dd1235254869d1087926584a2cdc002"
+}

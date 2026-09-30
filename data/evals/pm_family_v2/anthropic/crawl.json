@@ -1,0 +1,16 @@
+{
+  "source_key": "anthropic",
+  "company": "Anthropic",
+  "source_type": "greenhouse",
+  "adapter": "greenhouse",
+  "source_url": "https://job-boards.greenhouse.io/anthropic",
+  "started_at": "2026-09-30T15:55:56.105792+00:00",
+  "completed_at": "2026-09-30T15:55:58.109386+00:00",
+  "request_count": 1,
+  "http_status": 200,
+  "jobs_seen": 638,
+  "jobs_extracted": 638,
+  "pm_candidates": 17,
+  "errors": [],
+  "status": "success"
+}

@@ -1,0 +1,19 @@
+{
+  "company": "Adobe",
+  "benchmark_size": 41,
+  "status": "success",
+  "started_at": "2026-09-30T15:58:49.770911+00:00",
+  "completed_at": "2026-09-30T16:04:53.225976+00:00",
+  "source_errors": [],
+  "detail_failures": [],
+  "raw_jobs": 463,
+  "pm_candidates": 41,
+  "benchmark_matches": 41,
+  "recall": 1.0,
+  "extras": 0,
+  "missing_ids": [],
+  "missing_requisition_ids": [],
+  "duplicate_ids": 0,
+  "source_duplicate_ids": 0,
+  "retries": 0
+}

@@ -1,0 +1,47 @@
+{
+  "source_key": "nvidia",
+  "company": "NVIDIA",
+  "source_type": "workday",
+  "adapter": "workday",
+  "source_url": "https://jobs.nvidia.com/careers",
+  "started_at": "2026-09-30T15:55:56.120029+00:00",
+  "completed_at": "2026-09-30T15:56:09.616818+00:00",
+  "request_count": 13,
+  "http_status": 200,
+  "jobs_seen": 240,
+  "jobs_extracted": 0,
+  "pm_candidates": 0,
+  "errors": [
+    "ValueError: Invalid Workday externalPath"
+  ],
+  "status": "failed",
+  "retries": 0,
+  "request_errors": [],
+  "source_failures": [
+    "ValueError: Invalid Workday externalPath"
+  ],
+  "detail_failures": [],
+  "passes": [
+    {
+      "pages": 13,
+      "rows": 260,
+      "unique": 240,
+      "duplicate_paths": 0,
+      "stop_reason": "",
+      "source_count": 1623
+    }
+  ],
+  "source_count": 1623,
+  "duplicate_listing_paths": 0,
+  "duplicate_job_ids": 0,
+  "pagination_complete": false,
+  "query": {
+    "searchText": "",
+    "appliedFacets": {
+      "locationHierarchy1": [
+        "2fcb99c455831013ea52fb338f2932d8",
+        "2fcb99c455831013ea52b82135ba3266"
+      ]
+    }
+  }
+}

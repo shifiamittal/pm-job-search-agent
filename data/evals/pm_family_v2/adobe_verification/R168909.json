@@ -1,0 +1,88 @@
+{
+  "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Product-Manager---Chief-Accounting-Office_R168909-1",
+  "retrieved_at": "2026-09-30T15:56:22.794801+00:00",
+  "http_status": 200,
+  "response": {
+    "jobPostingInfo": {
+      "id": "688ddd4f2bc41000b9627fce04180000",
+      "title": "Senior Product Manager,  Chief Accounting Office",
+      "jobDescription": "<ul><li><p><b>The Opportunity\u00a0 </b></p><p>Adobe is seeking a Senior IT Product &amp; Delivery Manager to lead the strategy, delivery, and continuous evolution of our SAP S/4HANA Core Finance platform. This is a high-impact, AI-intensive leadership role at the intersection of enterprise finance technology and innovative artificial intelligence. You will drive the end-to-end product lifecycle for General Ledger, Accounts Payable/Receivable, FICA, Treasury, and adjacent finance systems\u2014while embedding AI and machine learning capabilities to transform how Adobe&#39;s finance organization operates.</p><p></p><p>You will collaborate with partners from the finance sector, data scientists, engineering teams, and C-suite customers to deliver intelligent automation, predictive analytics, and self-healing finance workflows. This role requires deep hands-on expertise in SAP S/4HANA. It also demands an entrepreneurial approach to apply the latest advances in generative AI, agentic workflows, and large language models (LLMs) within a world-class finance ecosystem.</p><p></p><p><b>What You&#39;ll Do</b></p></li><li>S/4HANA Product Management Ownership</li><li>Serve as the primary product owner for S/4HANA Finance components including the General Ledger (Universal Journal), Payables and Receivables, FICA with Contract Accounts and Collections/Dispute Management, Treasury &amp; Cash Management, Revenue Recognition, Revenue Accounting, Fixed Assets, and Cost Center/Profit Center Accounting.</li><li>Drive configuration, extension build, and integration architecture decisions in collaboration with solution architects and SAP Basis teams.</li><li>Manage integration touchpoints with Kyriba, Blackline, Databricks, GEP, and custom microservices\u2014ensuring data integrity and real-time financial visibility.</li><li><p>\u2022 Change agent \u2014 proven track record driving organizational adoption of exciting technologies, including managing change management workstreams.</p><p>\u2022 Collaborative builder \u2014 skilled at cultivating trusted relationships with finance business owners, SAP, cloud vendors, and internal engineering.</p><p></p><p></p><p><b>Collaborator Engagement &amp; Delivery Leadership</b></p><p>\u2022 Partner closely with the Director of Global Accounting and Treasury leadership to align technology investments with finance transformation goals.</p><p>\u2022 Write detailed product requirements, AI model cards, functional specs, and user stories consumed by engineering and design teams.</p><p>\u2022 Drive agile ceremonies\u2014sprint planning, backlog grooming, reviews\u2014while maintaining a clear line-of-sight from AI experiments to production deployments.</p><p>\u2022 Build executive-ready arguments quantifying return on investment, time-to-value, and risk for AI-enabled initiatives.</p><p>\u2022 Coordinate a cross-functional pod of engineers, QA specialists, finance SMEs, and data engineers.</p><p>Product Strategy &amp; Technology-Informed Roadmap</p><p>\u2022 Own and evolve the multi-year product roadmap for S/4HANA\u2019s central finance module, prioritizing AI-first capabilities alongside foundational ERP improvements.</p><p>\u2022 Define and champion an AI integration strategy spanning generative AI copilots, intelligent document processing, anomaly detection, and predictive close.</p><p>\u2022 Find opportunities to embed SAP Business AI, Joule, and third-party LLMs (e.g., Azure OpenAI, Google Vertex AI) into core finance workflows.</p><p>\u2022 Conduct competitive analysis and stay current on SAP release cycles, AI advancements, and FinTech trends to continuously sharpen the roadmap.</p><p></p><p><b>AI Feature Delivery &amp; Innovation</b></p><p></p><p>\u2022 Lead delivery of AI-powered capabilities including automated GL account coding and journal entry validation, intelligent AP/AR matching and dispute resolution, natural language querying of financial data via LLM-powered interfaces, predictive cash flow forecasting and working capital optimization, real-time anomaly detection and fraud prevention using ML pipelines.</p><p>\u2022 Partner with Adobe&#39;s AI/ML engineering teams and data scientists to design model training datasets, evaluate model performance, and define feedback loops for continuous improvement.</p><p>\u2022 Collaborate with SAP and cloud hyper scalers (AWS, Azure, GCP) to leverage embedded AI services within the S/4HANA digital platform.</p><p>\u2022 Define responsible AI guardrails, bias mitigation frameworks, and explainable standards for all AI models embedded in finance workflows.</p><p>What you need to succeed</p><p>\u2022 8&#43; years of experience in enterprise finance IT, with at least 7 years of hands on SAP S/4HANA or ECC Finance implementations.</p><p>\u2022 Demonstrable experience delivering AI/ML-powered features within ERP or finance platforms (e.g., intelligent automation, NLP interfaces, predictive analytics).</p><p>\u2022 Expert-level knowledge of S/4HANA Finance modules: GL (Universal Journal), AP, AR, FICA, RAR, Treasury, Asset Accounting.</p><p>\u2022 Proven product management or IT delivery leadership track record\u2014driving complex, multi-stakeholder programs from concept to production.</p><p>\u2022 Strong grasp of GAAP, IFRS 15, ASC 606, and subscription business financial models.</p><p>\u2022 Experience in a high-growth SaaS or technology company with subscription revenue models and solid understanding of SAP Order to Cash processes.</p><p>\u2022 Experience integrating SAP S/4HANA analytics (Databricks, SAP Analytics Cloud), procurement (Ariba or GEP or Coupa), and cloud data platforms.</p><p></p><p><b>Preferred Qualifications</b></p><p>\u2022 Experience with SAP BTP (Business Technology Platform), SAP Build, or SAP Extension Suite for custom AI development.</p><p>\u2022 Familiarity with timely engineering, RAG (Retrieval Augmented Generation), and agentic AI frameworks (e.g., LangChain, AutoGen) applied to enterprise data.</p><p>\u2022 Knowledge of AI governance frameworks, responsible AI principles, and GDPR/CCPA compliance for finance data managed by automated systems.</p><p>\u2022 Hands-on familiarity with at least one AI/ML toolchain: Azure OpenAI Service, Google\u2019s Vertex AI platform, AWS SageMaker, SAP AI Core, or equivalent.</p><p>\u2022 SAP S/4HANA Finance certification or SAP Activate methodology training.</p><p></p><p><b>Leadership &amp; Soft Skills</b></p><p>\u2022 Visionary communicator \u2014 able to translate AI/ML concepts and technical architecture to Senior Leadership, Controller, and Board-level audiences.</p><p>\u2022 Strategic operator \u2014 comfortable navigating ambiguity, building consensus, and accelerating decisions in a matrixed environment.</p><p>\u2022 Talent multiplier \u2014 experience mentoring finance technologists and encouraging a culture of continuous learning and AI literacy.</p></li></ul><br /><p><b>About Adobe</b></p><p>Adobe empowers everyone to create through innovative platforms and tools that unleash creativity, productivity and personalized customer experiences. Adobe\u2019s industry-leading offerings including Adobe Acrobat Studio, Adobe Express, Adobe Firefly, Creative Cloud, Adobe Experience Platform, Adobe Experience Manager, and GenStudio enable people and businesses to turn ideas into impact, powered by AI and driven by human ingenuity.</p><br /><p>Our 30,000&#43; employees worldwide are creating the future and raising the bar as we drive the next decade of growth. We\u2019re on a mission to hire the very best and believe in creating a company culture where all employees are empowered to make an impact. At Adobe, we believe that great ideas can come from anywhere in the organization. The next big idea could be yours.\u00a0</p><p><b><br />Let\u2019s Adobe together</b></p><p>At Adobe, we believe in creating a company culture where all employees are empowered to make an impact. Learn more about Adobe life, including our <a target=\"_blank\" href=\"https://www.adobe.com/adobe-for-all.html#:~:text&#61;and%20culture.-,Our%20company%20values.,-As%20we%20look\"><span style=\"color:#0875e1\"><u>values and culture</u></span></a>, <a target=\"_blank\" href=\"https://www.adobe.com/corporate-responsibility.html\"><span style=\"color:#0875e1\"><u>focus on people, purpose and community</u></span></a>, <a target=\"_blank\" href=\"https://www.adobe.com/diversity.html\"><span style=\"color:#0875e1\"><u>Adobe for All</u></span></a>, comprehensive <a target=\"_blank\" href=\"https://benefits.adobe.com/\"><span style=\"color:#0875e1\"><u>benefits programs</u></span></a>, the <a target=\"_blank\" href=\"https://blog.adobe.com/\"><span style=\"color:#0875e1\"><u>stories we tell</u></span></a>, the <a target=\"_blank\" href=\"https://blog.adobe.com/en/topics/customer-stories\"><span style=\"color:#0875e1\"><u>customers</u></span></a> we serve, and how you can help us advance our mission of empowering everyone to create.</p><br /><p>Adobe is proud to be an <a target=\"_blank\" href=\"https://www.eeoc.gov/sites/default/files/2023-06/22-088_EEOC_KnowYourRights6.12ScreenRdr.pdf\"><span style=\"color:#0875e1\"><u>Equal Employment Opportunity</u></span></a> employer. We do not discriminate based on gender, race or color, ethnicity or national origin, age, disability, religion, sexual orientation, gender identity or expression, veteran status, or any other protected characteristic. <a target=\"_blank\" href=\"https://www.adobe.com/content/dam/cc/en/careers/pdfs/executed-eeo.pdf\"><span style=\"color:#0875e1\"><u>Learn more.</u></span></a></p><br /><p>Adobe aims to make our Careers website and recruiting process accessible to any and all users. If you have a disability or special need that requires accommodation to navigate our website or complete the application process, email <a target=\"_blank\" href=\"mailto:accommodations&#64;adobe.com\"><span style=\"color:#0875e1\"><u>accommodations&#64;adobe.com</u></span></a>.</p><br /><p><b>AI Use Guidelines for Interviews:</b><br />Our interviews are designed to reflect your own skills and thinking. The use of AI or recording tools during live interviews is not permitted unless explicitly invited by the interviewer or approved in advance as part of a reasonable accommodation. If these tools are used inappropriately or in a way that misrepresents your work, your application may not move forward in the process.</p><br /><p>At Adobe, we empower employees to innovate with AI \u2014 and we look for candidates eager to do the same. As part of the hiring experience, we provide clear guidance on where AI is encouraged during the process and where it\u2019s restricted during live interviews. See how we think about <a target=\"_blank\" href=\"https://careers.adobe.com/us/en/ai-and-your-hiring-experience\"><span style=\"color:#0875e1\"><u>AI in the hiring experience</u></span></a>.</p><p>\u00a0</p><p><b>Expected Pay Range:</b></p>Our compensation reflects the cost of labor across several\u202f U.S. geographic markets, and we pay differently based on those defined markets. The U.S. pay range for this position\u202fis $111,700 - $215,750 annually. Pay\u202fwithin this range varies by work location\u202fand may also depend on job-related knowledge, skills,\u202fand experience. Your recruiter can share more about the specific salary range for the job location during the hiring process.&amp;#xa;&amp;#xa;In California, the pay range for this position is $149,000 - $215,750&amp;#xa;<p style=\"text-align:inherit\"></p><p style=\"text-align:left\">At Adobe, for sales roles starting salaries are expressed as total target compensation (TTC &#61; base &#43; commission), and short-term incentives are in the form of sales commission plans.\u00a0 Non-sales roles starting salaries are expressed as base salary and short-term incentives are in the form of the Annual Incentive Plan (AIP).</p><p style=\"text-align:inherit\"></p><p style=\"text-align:left\">In addition, certain roles may be eligible for long-term incentives in the form of a new hire equity award.</p><br /><p style=\"text-align:left !important\"><b><u>State-Specific Notices:</u></b></p><br /><p style=\"text-align:left !important\"><b><u>California</u>:</b></p><p style=\"text-align:left !important\"><b>Fair Chance Ordinances</b></p><p style=\"text-align:left !important\">Adobe will consider qualified applicants with arrest or conviction records for employment in accordance with state and local laws and \u201cfair chance\u201d ordinances.</p><br /><p style=\"text-align:left !important\"><b><u>Colorado:</u></b></p><p style=\"text-align:left !important\"><b>Application Window Notice</b></p><p style=\"text-align:inherit\"></p><p style=\"text-align:left\">If this role is open to hiring in Colorado (as listed on the job posting), the application window will remain open until at least the date and time stated above in Pacific Time, in compliance with Colorado pay transparency regulations. If this role does not have Colorado listed as a hiring location, no specific application window applies, and the posting may close at any time based on hiring needs.</p><p style=\"text-align:inherit\"></p><p style=\"text-align:left\"><u><b>Massachusetts:</b></u></p><p style=\"text-align:left\"><b>Massachusetts Legal Notice</b></p><p style=\"text-align:left\">It is unlawful in Massachusetts to require or administer a lie detector test as a condition of employment or continued employment. An employer who violates this law shall be subject to criminal penalties and civil liability.</p>",
+      "location": "San Jose",
+      "additionalLocations": [
+        "Lehi"
+      ],
+      "postedOn": "Posted Yesterday",
+      "startDate": "2026-09-29",
+      "timeType": "Full time",
+      "jobReqId": "R168909",
+      "jobPostingId": "Senior-Product-Manager---Chief-Accounting-Office_R168909-1",
+      "jobPostingSiteId": "external_experienced",
+      "country": {
+        "descriptor": "United States of America",
+        "id": "bc33aa3152ec42d4995f4791a106ed09"
+      },
+      "canApply": true,
+      "posted": true,
+      "includeResumeParsing": true,
+      "jobRequisitionLocation": {
+        "descriptor": "San Jose",
+        "country": {
+          "descriptor": "United States of America",
+          "id": "bc33aa3152ec42d4995f4791a106ed09",
+          "alpha2Code": "US"
+        }
+      },
+      "externalUrl": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/Senior-Product-Manager---Chief-Accounting-Office_R168909-1",
+      "questionnaireId": "305a1163be7301e3aac47092b201be8a"
+    },
+    "hiringOrganization": {
+      "name": "ADUS-Adobe Inc.",
+      "url": ""
+    },
+    "similarJobs": [
+      {
+        "title": "Senior Manager, IT SOX Compliance",
+        "externalPath": "/job/San-Jose/Senior-Manager--IT-SOX-Compliance_R171373",
+        "timeType": "Full time",
+        "locationsText": "2 Locations",
+        "postedOn": "Posted 12 Days Ago",
+        "startDate": "2026-09-18"
+      },
+      {
+        "title": "Senior Manager, Accounting",
+        "externalPath": "/job/San-Jose/Senior-Manager--Accounting_R171503",
+        "timeType": "Full time",
+        "locationsText": "2 Locations",
+        "postedOn": "Posted 12 Days Ago",
+        "startDate": "2026-09-18",
+        "timeLeftToApply": "30+ days left to apply",
+        "jobPostingEndDateAsText": "End Date: December 4, 2026"
+      },
+      {
+        "title": "Senior Product Manager, Frame.io",
+        "externalPath": "/job/San-Jose/Senior-Product-Manager--Frameio_R171116",
+        "timeType": "Full time",
+        "locationsText": "3 Locations",
+        "postedOn": "Posted 12 Days Ago",
+        "startDate": "2026-09-18"
+      },
+      {
+        "title": "Senior Product Manager, AI Brand Visibility",
+        "externalPath": "/job/San-Jose/Senior-Product-Manager--AI-Brand-Visibility_R170560",
+        "timeType": "Full time",
+        "locationsText": "2 Locations",
+        "postedOn": "Posted 12 Days Ago",
+        "startDate": "2026-09-18"
+      },
+      {
+        "title": "Senior Manager, External Reporting and Equity Accounting",
+        "externalPath": "/job/San-Jose/Senior-Manager--External-Reporting-and-Equity-Accounting_R170371-1",
+        "timeType": "Full time",
+        "locationsText": "San Jose",
+        "postedOn": "Posted 12 Days Ago",
+        "startDate": "2026-09-18"
+      }
+    ],
+    "userAuthenticated": false
+  }
+}

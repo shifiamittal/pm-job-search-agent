@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run raw job discovery for configured sources.
 
-Greenhouse, Ashby and Microsoft use deterministic retrieval. Each invocation crawls one
+Greenhouse, Ashby, Microsoft and Workday use deterministic retrieval. Each invocation crawls one
 source and preserves the other sources in the latest combined exports.
 """
 
@@ -20,6 +20,7 @@ if str(ROOT / "scripts") not in sys.path:
 from discovery.filters import pm_candidate_decision
 from discovery.greenhouse import fetch_greenhouse_jobs
 from discovery.ashby import fetch_ashby_jobs
+from discovery.workday import fetch_workday_jobs
 from discovery.microsoft import fetch_microsoft_jobs, in_target_geography, is_internship
 from discovery.errors import CrawlError
 from discovery.models import utc_now_iso, validate_raw_jobs
@@ -51,7 +52,7 @@ def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
     jobs, candidates, failures = [], [], []
     try:
         adapters = {"greenhouse": fetch_greenhouse_jobs, "ashby": fetch_ashby_jobs,
-                    "microsoft": fetch_microsoft_jobs}
+                    "microsoft": fetch_microsoft_jobs, "workday": fetch_workday_jobs}
         if source.get("adapter") not in adapters:
             raise ValueError(f"Unsupported adapter: {source.get('adapter')}")
         jobs, telemetry = adapters[source["adapter"]](key, source)

@@ -1,0 +1,22 @@
+{
+  "company": "CrowdStrike",
+  "raw_jobs": 221,
+  "pm_candidates": 11,
+  "benchmark_count": 10,
+  "benchmark_matches": 10,
+  "benchmark_recall": 1.0,
+  "raw_benchmark_matches": 10,
+  "extra_pm_candidates": 1,
+  "missing_benchmark_ids": [],
+  "duplicate_job_ids": 0,
+  "duplicate_listing_paths": 0,
+  "pagination_complete": true,
+  "source_failures": [],
+  "detail_failures": [],
+  "reference_path": "C:\\Users\\shifi\\Downloads\\crowdstrike_pm_candidate_review.xlsx",
+  "reference_sheet": "Likely PM",
+  "reference_sha256": "9815c5d484c2fc2114f3c562ebc6af28c54ef7cf8d50d96a6ef7d183ab44df72",
+  "crawl_started_at": "2026-09-30T13:44:50.272565+00:00",
+  "crawl_completed_at": "2026-09-30T13:45:43.431524+00:00",
+  "extras_are_unreviewed": true
+}

@@ -1,0 +1,54 @@
+{
+  "source_key": "crowdstrike",
+  "company": "CrowdStrike",
+  "source_type": "workday",
+  "adapter": "workday",
+  "source_url": "https://www.crowdstrike.com/en-us/careers/",
+  "started_at": "2026-09-30T13:44:50.272565+00:00",
+  "completed_at": "2026-09-30T13:45:43.431524+00:00",
+  "request_count": 247,
+  "http_status": 200,
+  "jobs_seen": 221,
+  "jobs_extracted": 221,
+  "pm_candidates": 11,
+  "errors": [],
+  "status": "success",
+  "retries": 0,
+  "request_errors": [],
+  "source_failures": [],
+  "detail_failures": [],
+  "passes": [
+    {
+      "pages": 12,
+      "rows": 221,
+      "unique": 221,
+      "duplicate_paths": 0,
+      "stop_reason": "count_and_repeated_probe",
+      "source_count": 221,
+      "terminal_probe_rows": 20
+    },
+    {
+      "pages": 12,
+      "rows": 221,
+      "unique": 221,
+      "duplicate_paths": 0,
+      "stop_reason": "count_and_repeated_probe",
+      "source_count": 221,
+      "terminal_probe_rows": 20
+    }
+  ],
+  "source_count": 221,
+  "duplicate_listing_paths": 0,
+  "duplicate_job_ids": 0,
+  "pagination_complete": true,
+  "query": {
+    "searchText": "",
+    "appliedFacets": {
+      "locationCountry": [
+        "bc33aa3152ec42d4995f4791a106ed09",
+        "c4f78be1a8f14da0ab49ce1162348a5e"
+      ]
+    }
+  },
+  "repeated_pass_consistent": true
+}

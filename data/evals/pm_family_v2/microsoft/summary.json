@@ -1,0 +1,65 @@
+{
+  "company": "Microsoft",
+  "benchmark_size": 63,
+  "status": "success",
+  "started_at": "2026-09-30T15:55:56.114783+00:00",
+  "completed_at": "2026-09-30T16:03:43.099250+00:00",
+  "source_errors": [
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 0,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:55:56.114783+00:00",
+      "http_status": 429,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=&location=&start=0&filter_profession=product+management"
+    }
+  ],
+  "detail_failures": [],
+  "raw_jobs": 82,
+  "pm_candidates": 70,
+  "benchmark_matches": 49,
+  "recall": 0.7777777777777778,
+  "extras": 21,
+  "missing_ids": [
+    "1970393556859707",
+    "1970393556971845",
+    "1970393556939407",
+    "1970393556995531",
+    "1970393556960709",
+    "1970393556875687",
+    "1970393557000257",
+    "1970393556924396",
+    "1970393556944421",
+    "1970393556995633",
+    "1970393556998551",
+    "1970393556978354",
+    "1970393556986887",
+    "1970393556941507"
+  ],
+  "missing_requisition_ids": [
+    "200035179",
+    "200049390",
+    "200044192",
+    "200055495",
+    "200048258",
+    "200040513",
+    "200056377",
+    "200042335",
+    "200045393",
+    "200055557",
+    "200055734",
+    "200050160",
+    "200053485",
+    "200044665"
+  ],
+  "duplicate_ids": 0,
+  "source_duplicate_ids": 0,
+  "retries": 1,
+  "unrecovered_source_failures": 0
+}

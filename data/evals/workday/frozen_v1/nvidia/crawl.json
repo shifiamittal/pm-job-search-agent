@@ -1,0 +1,54 @@
+{
+  "source_key": "nvidia",
+  "company": "NVIDIA",
+  "source_type": "workday",
+  "adapter": "workday",
+  "source_url": "https://jobs.nvidia.com/careers",
+  "started_at": "2026-09-30T13:44:52.676162+00:00",
+  "completed_at": "2026-09-30T13:51:22.759289+00:00",
+  "request_count": 1790,
+  "http_status": 200,
+  "jobs_seen": 1624,
+  "jobs_extracted": 1624,
+  "pm_candidates": 36,
+  "errors": [],
+  "status": "success",
+  "retries": 0,
+  "request_errors": [],
+  "source_failures": [],
+  "detail_failures": [],
+  "passes": [
+    {
+      "pages": 82,
+      "rows": 1624,
+      "unique": 1624,
+      "duplicate_paths": 0,
+      "stop_reason": "count_and_repeated_probe",
+      "source_count": 1624,
+      "terminal_probe_rows": 20
+    },
+    {
+      "pages": 82,
+      "rows": 1624,
+      "unique": 1624,
+      "duplicate_paths": 0,
+      "stop_reason": "count_and_repeated_probe",
+      "source_count": 1624,
+      "terminal_probe_rows": 20
+    }
+  ],
+  "source_count": 1624,
+  "duplicate_listing_paths": 0,
+  "duplicate_job_ids": 0,
+  "pagination_complete": true,
+  "query": {
+    "searchText": "",
+    "appliedFacets": {
+      "locationHierarchy1": [
+        "2fcb99c455831013ea52fb338f2932d8",
+        "2fcb99c455831013ea52b82135ba3266"
+      ]
+    }
+  },
+  "repeated_pass_consistent": true
+}

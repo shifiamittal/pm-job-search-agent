@@ -180,7 +180,7 @@ Offline verification:
 ## Raw job discovery (v1)
 Discovery is now separated from downstream fit/classification. `config/job_sources.yaml`
 defines job sources (distinct from `sources/source_registry.yaml`, which is candidate
-evidence). `scripts/discover_jobs.py` implements deterministic Greenhouse, Ashby, and Microsoft
+evidence). `scripts/discover_jobs.py` implements deterministic Greenhouse, Ashby, Microsoft, and Workday
 retrieval and writes all raw jobs plus a high-recall PM-candidate subset under
 `data/discovery/`. Each source crawl appends telemetry to
 `data/discovery/crawl_runs.jsonl`.
@@ -214,6 +214,12 @@ Microsoft enumerates its official Product Management facet and retains US/India
 candidates after detail availability verification and internship exclusion.
 Unavailable and uncertain jobs remain in raw diagnostics. See [Microsoft discovery](docs/discovery_microsoft.md)
 for pagination, drift reconciliation, retry behavior and benchmark separation.
+
+Workday uses one configurable CXS adapter with two-pass enumeration and complete
+detail retrieval. The Adobe, NVIDIA, and CrowdStrike configurations fetch every
+US/India job before applying the unchanged broad PM title filter. See
+[Workday discovery](docs/discovery_workday.md) and the
+[Workday live evaluation](docs/discovery_workday_live_report.md).
 
 ## Source detection benchmark
 

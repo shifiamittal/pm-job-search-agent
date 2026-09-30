@@ -1,0 +1,54 @@
+{
+  "source_key": "adobe",
+  "company": "Adobe",
+  "source_type": "workday",
+  "adapter": "workday",
+  "source_url": "https://careers.adobe.com/us/en/search-results",
+  "started_at": "2026-09-30T15:58:49.770911+00:00",
+  "completed_at": "2026-09-30T16:04:53.225976+00:00",
+  "request_count": 513,
+  "http_status": 200,
+  "jobs_seen": 463,
+  "jobs_extracted": 463,
+  "pm_candidates": 41,
+  "errors": [],
+  "status": "success",
+  "retries": 0,
+  "request_errors": [],
+  "source_failures": [],
+  "detail_failures": [],
+  "passes": [
+    {
+      "pages": 24,
+      "rows": 463,
+      "unique": 463,
+      "duplicate_paths": 0,
+      "stop_reason": "count_and_repeated_probe",
+      "source_count": 463,
+      "terminal_probe_rows": 20
+    },
+    {
+      "pages": 24,
+      "rows": 463,
+      "unique": 463,
+      "duplicate_paths": 0,
+      "stop_reason": "count_and_repeated_probe",
+      "source_count": 463,
+      "terminal_probe_rows": 20
+    }
+  ],
+  "source_count": 463,
+  "duplicate_listing_paths": 0,
+  "duplicate_job_ids": 0,
+  "pagination_complete": true,
+  "query": {
+    "searchText": "",
+    "appliedFacets": {
+      "locationCountry": [
+        "bc33aa3152ec42d4995f4791a106ed09",
+        "c4f78be1a8f14da0ab49ce1162348a5e"
+      ]
+    }
+  },
+  "repeated_pass_consistent": true
+}

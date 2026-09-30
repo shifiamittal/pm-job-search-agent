@@ -1,0 +1,25 @@
+{
+  "company": "Anthropic",
+  "benchmark_size": 19,
+  "status": "success",
+  "started_at": "2026-09-30T15:55:56.105792+00:00",
+  "completed_at": "2026-09-30T15:55:58.109386+00:00",
+  "source_errors": [],
+  "detail_failures": [],
+  "raw_jobs": 638,
+  "pm_candidates": 17,
+  "benchmark_matches": 17,
+  "recall": 0.8947368421052632,
+  "extras": 0,
+  "missing_ids": [
+    "5407337008",
+    "5406106008"
+  ],
+  "missing_requisition_ids": [
+    "5407337008",
+    "5406106008"
+  ],
+  "duplicate_ids": 0,
+  "source_duplicate_ids": 0,
+  "retries": 0
+}

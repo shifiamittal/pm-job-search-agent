@@ -1,0 +1,25 @@
+{
+  "company": "Adobe",
+  "raw_jobs": 463,
+  "pm_candidates": 41,
+  "benchmark_count": 38,
+  "benchmark_matches": 36,
+  "benchmark_recall": 0.9473684210526315,
+  "raw_benchmark_matches": 38,
+  "extra_pm_candidates": 5,
+  "missing_benchmark_ids": [
+    "R171808",
+    "R171889"
+  ],
+  "duplicate_job_ids": 0,
+  "duplicate_listing_paths": 0,
+  "pagination_complete": true,
+  "source_failures": [],
+  "detail_failures": [],
+  "reference_path": "C:\\Users\\shifi\\OneDrive\\Documents\\ChatGPT\\pm-job-search-agent\\data\\evals\\workday\\adobe_product_management_snapshot.jsonl",
+  "reference_sheet": null,
+  "reference_sha256": "73d0f07b6dca914a6a6defb153043b95fe60f431db7b644e5090fae7c038ccd5",
+  "crawl_started_at": "2026-09-30T13:44:53.287691+00:00",
+  "crawl_completed_at": "2026-09-30T13:46:34.747527+00:00",
+  "extras_are_unreviewed": true
+}

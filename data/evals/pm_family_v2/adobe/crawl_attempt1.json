@@ -1,0 +1,327 @@
+{
+  "source_key": "adobe",
+  "company": "Adobe",
+  "source_type": "workday",
+  "adapter": "workday",
+  "source_url": "https://careers.adobe.com/us/en/search-results",
+  "started_at": "2026-09-30T15:55:56.118827+00:00",
+  "completed_at": "2026-09-30T15:58:02.393853+00:00",
+  "request_count": 556,
+  "http_status": 200,
+  "jobs_seen": 463,
+  "jobs_extracted": 457,
+  "pm_candidates": 0,
+  "errors": [
+    "ValueError: 6 Workday detail failures; incomplete output withheld"
+  ],
+  "status": "failed",
+  "retries": 43,
+  "request_errors": [
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Lead-Financial-Analyst_R171870",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Lead-Financial-Analyst_R171870"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Machine-Learning-Engineer_R172085",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Machine-Learning-Engineer_R172085"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Principal---Business-Process-Optimization_R172036-1",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Principal---Business-Process-Optimization_R172036-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Machine-Learning-Engineer_R171670",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Machine-Learning-Engineer_R171670"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Software-Development-Engineer_R171796",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Software-Development-Engineer_R171796"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Machine-Learning-Engineer_R172085",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Machine-Learning-Engineer_R172085"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Lead-Financial-Analyst_R171870",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Lead-Financial-Analyst_R171870"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Principal---Business-Process-Optimization_R172036-1",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Principal---Business-Process-Optimization_R172036-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Machine-Learning-Engineer_R171670",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Machine-Learning-Engineer_R171670"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Software-Development-Engineer_R171796",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Software-Development-Engineer_R171796"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Machine-Learning-Engineer_R172085",
+      "attempt": 3,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Machine-Learning-Engineer_R172085"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Lead-Financial-Analyst_R171870",
+      "attempt": 3,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Lead-Financial-Analyst_R171870"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083",
+      "attempt": 3,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Principal---Business-Process-Optimization_R172036-1",
+      "attempt": 3,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Principal---Business-Process-Optimization_R172036-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Machine-Learning-Engineer_R171670",
+      "attempt": 3,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Machine-Learning-Engineer_R171670"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/AI-Engineer-4_R170716-1",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/AI-Engineer-4_R170716-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Executive-Assistant--Adobe-Creative_R172099",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Executive-Assistant--Adobe-Creative_R172099"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Data-Product-Engineer_R171620-1",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Data-Product-Engineer_R171620-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Policy-and-Incident-Specialist_R172096-1",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Policy-and-Incident-Specialist_R172096-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Technology-Services-Sourcing-Category-Manager_R170006-1",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Technology-Services-Sourcing-Category-Manager_R170006-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Software-Development-Engineer_R171796",
+      "attempt": 3,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Software-Development-Engineer_R171796"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/New-York/Staff-Product-Security-Engineer_R171624",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/New-York/Staff-Product-Security-Engineer_R171624"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/AI-Engineer-4_R170716-1",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/AI-Engineer-4_R170716-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Executive-Assistant--Adobe-Creative_R172099",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Executive-Assistant--Adobe-Creative_R172099"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Data-Product-Engineer_R171620-1",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Data-Product-Engineer_R171620-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Policy-and-Incident-Specialist_R172096-1",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Policy-and-Incident-Specialist_R172096-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Technology-Services-Sourcing-Category-Manager_R170006-1",
+      "attempt": 2,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Technology-Services-Sourcing-Category-Manager_R170006-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/New-York/XMLNAME-2027-Intern---Sales-Velocity-Analyst_R171869",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/New-York/XMLNAME-2027-Intern---Sales-Velocity-Analyst_R171869"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/XMLNAME-2027-MBA-University-Graduate---Manager--Corporate-Strategy_R171682",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/XMLNAME-2027-MBA-University-Graduate---Manager--Corporate-Strategy_R171682"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Adversarial-Fraud-Engineer---Global-Consumer-Trust_R171776",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Adversarial-Fraud-Engineer---Global-Consumer-Trust_R171776"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Channel-Planner_R171614",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Channel-Planner_R171614"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Product-Security-Engineer_R171629",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Product-Security-Engineer_R171629"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Senior-Software-Quality-Engineer--Agentic-Harness_R171762",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Senior-Software-Quality-Engineer--Agentic-Harness_R171762"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Senior-Technical-Consultant_R171578",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Senior-Technical-Consultant_R171578"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Remote-New-York/Senior-Solutions-Consultant_R171562",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Remote-New-York/Senior-Solutions-Consultant_R171562"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Remote-Washington/Senior-Enterprise-Architect_R170830",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Remote-Washington/Senior-Enterprise-Architect_R170830"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Remote-Washington/Senior-Enterprise-Architect_R170831",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Remote-Washington/Senior-Enterprise-Architect_R170831"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Delivery-Manager_R171012",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Delivery-Manager_R171012"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Remote-Washington/Senior-Enterprise-Architect_R170833-1",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Remote-Washington/Senior-Enterprise-Architect_R170833-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Director--Digital-Strategy---Technology_R171010",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Director--Digital-Strategy---Technology_R171010"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/New-York/Director--Partner-Sales---Accenture_R171278",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/New-York/Director--Partner-Sales---Accenture_R171278"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Principal-Product-Marketing-Manager_R170775",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Francisco/Principal-Product-Marketing-Manager_R170775"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Pro-Design-Principal-Product-Manager--Growth_R171088",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Pro-Design-Principal-Product-Manager--Growth_R171088"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Procurement-Manager---Marketing-Services_R171057",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Procurement-Manager---Marketing-Services_R171057"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Scaled-Program-Lead_R166058",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Scaled-Program-Lead_R166058"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Quality-Engineer--Nextcam_R167732",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Quality-Engineer--Nextcam_R167732"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/AEP-Lead-Data-Solutions-Engineer_R166535",
+      "attempt": 1,
+      "error": "429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/AEP-Lead-Data-Solutions-Engineer_R166535"
+    }
+  ],
+  "source_failures": [],
+  "detail_failures": [
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Lead-Financial-Analyst_R171870",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Lead-Financial-Analyst_R171870"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Machine-Learning-Engineer_R172085",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Machine-Learning-Engineer_R172085"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Software-Engineer_R172083"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Principal---Business-Process-Optimization_R172036-1",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Bangalore/Principal---Business-Process-Optimization_R172036-1"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Machine-Learning-Engineer_R171670",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/San-Jose/Senior-Machine-Learning-Engineer_R171670"
+    },
+    {
+      "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Software-Development-Engineer_R171796",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/job/Lehi/Software-Development-Engineer_R171796"
+    }
+  ],
+  "passes": [
+    {
+      "pages": 24,
+      "rows": 463,
+      "unique": 463,
+      "duplicate_paths": 0,
+      "stop_reason": "count_and_repeated_probe",
+      "source_count": 463,
+      "terminal_probe_rows": 20
+    },
+    {
+      "pages": 24,
+      "rows": 463,
+      "unique": 463,
+      "duplicate_paths": 0,
+      "stop_reason": "count_and_repeated_probe",
+      "source_count": 463,
+      "terminal_probe_rows": 20
+    }
+  ],
+  "source_count": 463,
+  "duplicate_listing_paths": 0,
+  "duplicate_job_ids": 0,
+  "pagination_complete": true,
+  "query": {
+    "searchText": "",
+    "appliedFacets": {
+      "locationCountry": [
+        "bc33aa3152ec42d4995f4791a106ed09",
+        "c4f78be1a8f14da0ab49ce1162348a5e"
+      ]
+    }
+  },
+  "repeated_pass_consistent": true
+}

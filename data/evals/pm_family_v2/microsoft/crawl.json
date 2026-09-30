@@ -1,0 +1,4173 @@
+{
+  "source_key": "microsoft",
+  "company": "Microsoft",
+  "source_type": "microsoft",
+  "adapter": "microsoft",
+  "source_url": "https://apply.careers.microsoft.com/careers",
+  "started_at": "2026-09-30T15:55:56.114783+00:00",
+  "completed_at": "2026-09-30T16:03:43.099250+00:00",
+  "request_count": 83,
+  "http_status": 200,
+  "jobs_seen": 82,
+  "jobs_extracted": 82,
+  "pm_candidates": 70,
+  "errors": [
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 0,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:55:56.114783+00:00",
+      "http_status": 429,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=&location=&start=0&filter_profession=product+management"
+    }
+  ],
+  "status": "success",
+  "requests": [
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 0,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:55:56.114783+00:00",
+      "http_status": 429,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=&location=&start=0&filter_profession=product+management",
+      "retry_delay_seconds": 60
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 0,
+        "filter_profession": "product management"
+      },
+      "attempt": 2,
+      "at": "2026-09-30T15:56:57.250981+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 10,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:02.262941+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 20,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:07.264457+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 30,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:12.274971+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 40,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:17.285088+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 50,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:22.286287+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 60,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:27.284896+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 70,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:32.294654+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 80,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:37.308657+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "enumeration",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 82,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:42.312214+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "boundary_check",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 0,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:47.325142+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "boundary_check",
+      "parameters": {
+        "domain": "microsoft.com",
+        "query": "",
+        "location": "",
+        "start": 80,
+        "filter_profession": "product management"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:52.325090+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556995454",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:57:57.311451+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556992086",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:02.325358+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556992070",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:07.314131+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556999840",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:12.324325+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557002302",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:17.322281+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557014478",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:22.317214+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557007853",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:27.314958+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557008067",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:32.311779+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557001321",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:37.312253+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557008723",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:42.317433+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556980936",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:47.319227+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557006543",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:52.312167+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556948020",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:58:57.322630+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557006552",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:02.313219+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557001429",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:07.325094+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556962217",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:12.318920+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982046",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:17.315193+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556916180",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:22.315606+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557004779",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:27.317799+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556980893",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:32.316095+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556911401",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:37.330039+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556999250",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:42.341528+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982604",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:47.345468+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557004133",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:52.361862+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556998398",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T15:59:57.373807+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982045",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:02.376874+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393557001300",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:07.381574+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556984163",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:12.386255+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556995338",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:17.384919+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556988146",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:22.379031+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556984762",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:27.384390+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556988884",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:32.385355+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556997831",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:37.396691+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556998530",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:42.391401+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556998872",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:47.399318+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556938152",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:52.393106+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982032",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:00:57.400324+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982522",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:02.396933+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556988910",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:07.409856+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982081",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:12.414416+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556983152",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:17.410636+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556992018",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:22.433512+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556991993",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:27.439425+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556987069",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:32.448612+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556988957",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:37.447887+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556991466",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:42.448731+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556985636",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:47.454684+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556955409",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:52.461729+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556985606",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:01:57.461257+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982816",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:02.467504+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556983966",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:07.477112+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982730",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:12.473961+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556962542",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:17.479239+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556982515",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:22.477430+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556983195",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:27.482710+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556944984",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:32.497806+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556960250",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:37.506247+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556961262",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:42.505958+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556971850",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:47.501858+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556962532",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:52.501576+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556957770",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:02:57.499897+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556958196",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:02.502743+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556956249",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:07.510985+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556955501",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:12.512409+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556860577",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:17.510250+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556944352",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:22.511111+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556942026",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:27.503212+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556859131",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:32.513667+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556885224",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:37.521602+00:00",
+      "http_status": 200
+    },
+    {
+      "phase": "availability",
+      "parameters": {
+        "domain": "microsoft.com",
+        "position_id": "1970393556859132",
+        "hl": "en"
+      },
+      "attempt": 1,
+      "at": "2026-09-30T16:03:42.520428+00:00",
+      "http_status": 200
+    }
+  ],
+  "passes": [
+    {
+      "pass_number": 1,
+      "pages": [
+        {
+          "start": 0,
+          "count": 82,
+          "returned": 10,
+          "ids": [
+            "1970393557006546",
+            "1970393556995454",
+            "1970393556992086",
+            "1970393556992070",
+            "1970393556999840",
+            "1970393557002302",
+            "1970393557014478",
+            "1970393557007853",
+            "1970393557007645",
+            "1970393557008067"
+          ],
+          "captured_at": "2026-09-30T15:56:57.730104+00:00"
+        },
+        {
+          "start": 10,
+          "count": 82,
+          "returned": 10,
+          "ids": [
+            "1970393557001321",
+            "1970393557004836",
+            "1970393557008723",
+            "1970393556980936",
+            "1970393557006543",
+            "1970393556948020",
+            "1970393557006552",
+            "1970393557001429",
+            "1970393557004793",
+            "1970393556962217"
+          ],
+          "captured_at": "2026-09-30T15:57:02.731251+00:00"
+        },
+        {
+          "start": 20,
+          "count": 82,
+          "returned": 10,
+          "ids": [
+            "1970393556999775",
+            "1970393556982046",
+            "1970393556916180",
+            "1970393557004779",
+            "1970393556980893",
+            "1970393556911401",
+            "1970393556999250",
+            "1970393556982604",
+            "1970393557004133",
+            "1970393556998398"
+          ],
+          "captured_at": "2026-09-30T15:57:07.742444+00:00"
+        },
+        {
+          "start": 30,
+          "count": 82,
+          "returned": 10,
+          "ids": [
+            "1970393556982045",
+            "1970393557001300",
+            "1970393556984163",
+            "1970393557001291",
+            "1970393556995338",
+            "1970393556988146",
+            "1970393556984762",
+            "1970393556988884",
+            "1970393556997831",
+            "1970393556998530"
+          ],
+          "captured_at": "2026-09-30T15:57:12.747402+00:00"
+        },
+        {
+          "start": 40,
+          "count": 82,
+          "returned": 10,
+          "ids": [
+            "1970393556998872",
+            "1970393556938152",
+            "1970393556982032",
+            "1970393556982522",
+            "1970393556988910",
+            "1970393556982081",
+            "1970393556983152",
+            "1970393556992018",
+            "1970393556983226",
+            "1970393556991993"
+          ],
+          "captured_at": "2026-09-30T15:57:17.691399+00:00"
+        },
+        {
+          "start": 50,
+          "count": 82,
+          "returned": 10,
+          "ids": [
+            "1970393556994921",
+            "1970393556987069",
+            "1970393556988957",
+            "1970393556991466",
+            "1970393556985636",
+            "1970393556955409",
+            "1970393556985606",
+            "1970393556982816",
+            "1970393556983966",
+            "1970393556984595"
+          ],
+          "captured_at": "2026-09-30T15:57:22.706262+00:00"
+        },
+        {
+          "start": 60,
+          "count": 82,
+          "returned": 10,
+          "ids": [
+            "1970393556985266",
+            "1970393556982730",
+            "1970393556962542",
+            "1970393556982515",
+            "1970393556983195",
+            "1970393556981270",
+            "1970393556978896",
+            "1970393556944984",
+            "1970393556960250",
+            "1970393556961262"
+          ],
+          "captured_at": "2026-09-30T15:57:27.715514+00:00"
+        },
+        {
+          "start": 70,
+          "count": 82,
+          "returned": 10,
+          "ids": [
+            "1970393556971850",
+            "1970393556962532",
+            "1970393556957770",
+            "1970393556958196",
+            "1970393556956249",
+            "1970393556955501",
+            "1970393556860577",
+            "1970393556944352",
+            "1970393556942026",
+            "1970393556859131"
+          ],
+          "captured_at": "2026-09-30T15:57:32.727236+00:00"
+        },
+        {
+          "start": 80,
+          "count": 82,
+          "returned": 2,
+          "ids": [
+            "1970393556885224",
+            "1970393556859132"
+          ],
+          "captured_at": "2026-09-30T15:57:37.716405+00:00"
+        },
+        {
+          "start": 82,
+          "count": 82,
+          "returned": 0,
+          "ids": [],
+          "captured_at": "2026-09-30T15:57:42.712304+00:00"
+        }
+      ],
+      "checks": [
+        {
+          "start": 0,
+          "count": 82,
+          "ids": [
+            "1970393557006546",
+            "1970393556995454",
+            "1970393556992086",
+            "1970393556992070",
+            "1970393556999840",
+            "1970393557002302",
+            "1970393557014478",
+            "1970393557007853",
+            "1970393557007645",
+            "1970393557008067"
+          ],
+          "captured_at": "2026-09-30T15:57:47.761374+00:00"
+        },
+        {
+          "start": 80,
+          "count": 82,
+          "ids": [
+            "1970393556885224",
+            "1970393556859132"
+          ],
+          "captured_at": "2026-09-30T15:57:52.715705+00:00"
+        }
+      ],
+      "duplicates": [],
+      "complete": true,
+      "reported_counts": [
+        82
+      ],
+      "unique_count": 82,
+      "count_drift": false,
+      "added_since_previous_pass": [],
+      "removed_since_previous_pass": []
+    }
+  ],
+  "facet": {
+    "filter_profession": "product management"
+  },
+  "source_reported_total": 82,
+  "source_records": [
+    {
+      "id": 1970393557006546,
+      "displayJobId": "200057509",
+      "name": "Senior Product Manager - Maternity Cover",
+      "locations": [
+        "Serbia, Belgrade, Belgrade"
+      ],
+      "standardizedLocations": [
+        "BG, RS"
+      ],
+      "postedTs": 1790770625,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790095827,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057509",
+      "positionUrl": "/careers/job/1970393557006546"
+    },
+    {
+      "id": 1970393556995454,
+      "displayJobId": "200055464",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Multiple Locations, Multiple Locations"
+      ],
+      "standardizedLocations": [
+        "US"
+      ],
+      "postedTs": 1790717563,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789154767,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200055464",
+      "positionUrl": "/careers/job/1970393556995454"
+    },
+    {
+      "id": 1970393556992086,
+      "displayJobId": "200054609",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790709763,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788987872,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200054609",
+      "positionUrl": "/careers/job/1970393556992086"
+    },
+    {
+      "id": 1970393556992070,
+      "displayJobId": "200054592",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790709711,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788987368,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200054592",
+      "positionUrl": "/careers/job/1970393556992070"
+    },
+    {
+      "id": 1970393556999840,
+      "displayJobId": "200056128",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View",
+        "United States, New York, New York"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US",
+        "New York, NY, US"
+      ],
+      "postedTs": 1790691068,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789569519,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200056128",
+      "positionUrl": "/careers/job/1970393556999840"
+    },
+    {
+      "id": 1970393557002302,
+      "displayJobId": "200056978",
+      "name": "Senior Product Manager - Windows Personal Experiences",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790640921,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789744735,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200056978",
+      "positionUrl": "/careers/job/1970393557002302"
+    },
+    {
+      "id": 1970393557014478,
+      "displayJobId": "200058424",
+      "name": "Senior Technical Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790636334,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790562931,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200058424",
+      "positionUrl": "/careers/job/1970393557014478"
+    },
+    {
+      "id": 1970393557007853,
+      "displayJobId": "200057949",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790630420,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790267515,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057949",
+      "positionUrl": "/careers/job/1970393557007853"
+    },
+    {
+      "id": 1970393557007645,
+      "displayJobId": "200057873",
+      "name": "Principal Product Management - Microsoft Defender",
+      "locations": [
+        "Israel, Multiple Locations, Multiple Locations",
+        "Israel, Tel Aviv, Herzliya"
+      ],
+      "standardizedLocations": [
+        "IL",
+        "Herzliya, Tel Aviv District, IL"
+      ],
+      "postedTs": 1790629200,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790234684,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057873",
+      "positionUrl": "/careers/job/1970393557007645"
+    },
+    {
+      "id": 1970393557008067,
+      "displayJobId": "200058038",
+      "name": "Principal Product Manager, Microsoft Clarity",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US"
+      ],
+      "postedTs": 1790621171,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790282682,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200058038",
+      "positionUrl": "/careers/job/1970393557008067"
+    },
+    {
+      "id": 1970393557001321,
+      "displayJobId": "200056608",
+      "name": "Principal Product Manager - Dynamics 365 Contact Center",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790377760,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789656098,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200056608",
+      "positionUrl": "/careers/job/1970393557001321"
+    },
+    {
+      "id": 1970393557004836,
+      "displayJobId": "200057344",
+      "name": "Product Manager: Internship Opportunities",
+      "locations": [
+        "United States, California, Mountain View"
+      ],
+      "standardizedLocations": [
+        "Mountain View, CA, US"
+      ],
+      "postedTs": 1790373148,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790024598,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057344",
+      "positionUrl": "/careers/job/1970393557004836"
+    },
+    {
+      "id": 1970393557008723,
+      "displayJobId": "200058347",
+      "name": "Senior Product Manager and Principal Product Manager (Multiple Positions) - D365 Contact Center",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790371618,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790368701,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200058347",
+      "positionUrl": "/careers/job/1970393557008723"
+    },
+    {
+      "id": 1970393556980936,
+      "displayJobId": "200051300",
+      "name": "Senior Product Manager, Agent 365 Tools",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790306786,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787666007,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200051300",
+      "positionUrl": "/careers/job/1970393556980936"
+    },
+    {
+      "id": 1970393557006543,
+      "displayJobId": "200057506",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790303872,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790095379,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057506",
+      "positionUrl": "/careers/job/1970393557006543"
+    },
+    {
+      "id": 1970393556948020,
+      "displayJobId": "200045861",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790275386,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1785260934,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200045861",
+      "positionUrl": "/careers/job/1970393556948020"
+    },
+    {
+      "id": 1970393557006552,
+      "displayJobId": "200057516",
+      "name": "Senior Technical Product Manager - CISO Security Engineering",
+      "locations": [
+        "United States, Multiple Locations, Multiple Locations"
+      ],
+      "standardizedLocations": [
+        "US"
+      ],
+      "postedTs": 1790268929,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790096544,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057516",
+      "positionUrl": "/careers/job/1970393557006552"
+    },
+    {
+      "id": 1970393557001429,
+      "displayJobId": "200056672",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Multiple Locations, Multiple Locations"
+      ],
+      "standardizedLocations": [
+        "US"
+      ],
+      "postedTs": 1790257490,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789665954,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200056672",
+      "positionUrl": "/careers/job/1970393557001429"
+    },
+    {
+      "id": 1970393557004793,
+      "displayJobId": "200057313",
+      "name": "Principal Product Manager - Agent 365",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "standardizedLocations": [
+        "Dublin, D, IE"
+      ],
+      "postedTs": 1790252207,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790017953,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057313",
+      "positionUrl": "/careers/job/1970393557004793"
+    },
+    {
+      "id": 1970393556962217,
+      "displayJobId": "200048797",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790200646,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1786567255,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200048797",
+      "positionUrl": "/careers/job/1970393556962217"
+    },
+    {
+      "id": 1970393556999775,
+      "displayJobId": "200056098",
+      "name": "Product Manager II - Microsoft Education",
+      "locations": [
+        "Israel, Multiple Locations, Multiple Locations",
+        "Israel, Tel Aviv, Herzliya"
+      ],
+      "standardizedLocations": [
+        "IL",
+        "Herzliya, Tel Aviv District, IL"
+      ],
+      "postedTs": 1790186670,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789560395,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200056098",
+      "positionUrl": "/careers/job/1970393556999775"
+    },
+    {
+      "id": 1970393556982046,
+      "displayJobId": "200051927",
+      "name": "Principal Product Manager, AI Monetization, Ads & Creatives, Copilot",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View",
+        "United States, New York, New York"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US",
+        "New York, NY, US"
+      ],
+      "postedTs": 1790185964,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787777192,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200051927",
+      "positionUrl": "/careers/job/1970393556982046"
+    },
+    {
+      "id": 1970393556916180,
+      "displayJobId": "200041693",
+      "name": "Principal Product Manager, Agent 365 Security & Governance",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790183839,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1782505989,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200041693",
+      "positionUrl": "/careers/job/1970393556916180"
+    },
+    {
+      "id": 1970393557004779,
+      "displayJobId": "200057309",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790180691,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1790016718,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057309",
+      "positionUrl": "/careers/job/1970393557004779"
+    },
+    {
+      "id": 1970393556980893,
+      "displayJobId": "200051298",
+      "name": "Principal Product Manager, Dataverse",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790179238,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787665384,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200051298",
+      "positionUrl": "/careers/job/1970393556980893"
+    },
+    {
+      "id": 1970393556911401,
+      "displayJobId": "200041062",
+      "name": "Principal Product Manager",
+      "locations": [
+        "India, Karnataka, Bangalore"
+      ],
+      "standardizedLocations": [
+        "Bengaluru, KA, IN"
+      ],
+      "postedTs": 1790149247,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1782079258,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200041062",
+      "positionUrl": "/careers/job/1970393556911401"
+    },
+    {
+      "id": 1970393556999250,
+      "displayJobId": "200055927",
+      "name": "Principal Product Manager",
+      "locations": [
+        "India, Telangana, Hyderabad"
+      ],
+      "standardizedLocations": [
+        "Hyderabad, TS, IN"
+      ],
+      "postedTs": 1790142274,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789496202,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200055927",
+      "positionUrl": "/careers/job/1970393556999250"
+    },
+    {
+      "id": 1970393556982604,
+      "displayJobId": "200052288",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, California, Mountain View",
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Mountain View, CA, US",
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790138612,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787857291,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052288",
+      "positionUrl": "/careers/job/1970393556982604"
+    },
+    {
+      "id": 1970393557004133,
+      "displayJobId": "200057176",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790118753,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789926261,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200057176",
+      "positionUrl": "/careers/job/1970393557004133"
+    },
+    {
+      "id": 1970393556998398,
+      "displayJobId": "200055645",
+      "name": "Principal Product Manager- Copilot",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US"
+      ],
+      "postedTs": 1790104179,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789392956,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200055645",
+      "positionUrl": "/careers/job/1970393556998398"
+    },
+    {
+      "id": 1970393556982045,
+      "displayJobId": "200051931",
+      "name": "Senior Product Manager - Reporting & Data Platform",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US"
+      ],
+      "postedTs": 1790022635,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787777532,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200051931",
+      "positionUrl": "/careers/job/1970393556982045"
+    },
+    {
+      "id": 1970393557001300,
+      "displayJobId": "200056603",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790019948,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789651679,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200056603",
+      "positionUrl": "/careers/job/1970393557001300"
+    },
+    {
+      "id": 1970393556984163,
+      "displayJobId": "200052860",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1790018588,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788205815,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052860",
+      "positionUrl": "/careers/job/1970393556984163"
+    },
+    {
+      "id": 1970393557001291,
+      "displayJobId": "200056600",
+      "name": "Senior Product Manager(Substrate Transport and IC3 Message)",
+      "locations": [
+        "China, Jiangsu, Suzhou",
+        "China, Beijing, Beijing",
+        "China, Shanghai, Shanghai"
+      ],
+      "standardizedLocations": [
+        "Suzhou, Jiangsu, CN",
+        "Beijing, Beijing, CN",
+        "Shanghai, Shanghai, CN"
+      ],
+      "postedTs": 1790006400,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789650833,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200056600",
+      "positionUrl": "/careers/job/1970393557001291"
+    },
+    {
+      "id": 1970393556995338,
+      "displayJobId": "200055413",
+      "name": "Product Manager II",
+      "locations": [
+        "India, Telangana, Hyderabad",
+        "India, Karnataka, Bangalore"
+      ],
+      "standardizedLocations": [
+        "Hyderabad, TS, IN",
+        "Bengaluru, KA, IN"
+      ],
+      "postedTs": 1789973124,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789147029,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200055413",
+      "positionUrl": "/careers/job/1970393556995338"
+    },
+    {
+      "id": 1970393556988146,
+      "displayJobId": "200053615",
+      "name": "Senior Product Manager - VS Code",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789679547,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788463166,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053615",
+      "positionUrl": "/careers/job/1970393556988146"
+    },
+    {
+      "id": 1970393556984762,
+      "displayJobId": "200053113",
+      "name": "Product Manager 2 - VS Code",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789678672,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788283140,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053113",
+      "positionUrl": "/careers/job/1970393556984762"
+    },
+    {
+      "id": 1970393556988884,
+      "displayJobId": "200053810",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789677995,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788527779,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053810",
+      "positionUrl": "/careers/job/1970393556988884"
+    },
+    {
+      "id": 1970393556997831,
+      "displayJobId": "200055624",
+      "name": "Principal Product Manager",
+      "locations": [
+        "India, Telangana, Hyderabad",
+        "India, Karnataka, Bangalore"
+      ],
+      "standardizedLocations": [
+        "Hyderabad, TS, IN",
+        "Bengaluru, KA, IN"
+      ],
+      "postedTs": 1789641552,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789381790,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200055624",
+      "positionUrl": "/careers/job/1970393556997831"
+    },
+    {
+      "id": 1970393556998530,
+      "displayJobId": "200055722",
+      "name": "Principal Technical Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789601981,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789410442,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200055722",
+      "positionUrl": "/careers/job/1970393556998530"
+    },
+    {
+      "id": 1970393556998872,
+      "displayJobId": "200055864",
+      "name": "Principal Product Manager",
+      "locations": [
+        "India, Telangana, Hyderabad",
+        "India, Karnataka, Bangalore"
+      ],
+      "standardizedLocations": [
+        "Hyderabad, TS, IN",
+        "Bengaluru, KA, IN"
+      ],
+      "postedTs": 1789550126,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789477674,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200055864",
+      "positionUrl": "/careers/job/1970393556998872"
+    },
+    {
+      "id": 1970393556938152,
+      "displayJobId": "200043757",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789514174,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1784058615,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200043757",
+      "positionUrl": "/careers/job/1970393556938152"
+    },
+    {
+      "id": 1970393556982032,
+      "displayJobId": "200051919",
+      "name": "Principal Product Manager, Gaming Monetization",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US"
+      ],
+      "postedTs": 1789499421,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787774849,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200051919",
+      "positionUrl": "/careers/job/1970393556982032"
+    },
+    {
+      "id": 1970393556982522,
+      "displayJobId": "200052223",
+      "name": "Senior Product Management, CoreAI Foundry",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789482333,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787848539,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052223",
+      "positionUrl": "/careers/job/1970393556982522"
+    },
+    {
+      "id": 1970393556988910,
+      "displayJobId": "200053817",
+      "name": "Senior Product Manager",
+      "locations": [
+        "India, Telangana, Hyderabad"
+      ],
+      "standardizedLocations": [
+        "Hyderabad, TS, IN"
+      ],
+      "postedTs": 1789464758,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788530655,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053817",
+      "positionUrl": "/careers/job/1970393556988910"
+    },
+    {
+      "id": 1970393556982081,
+      "displayJobId": "200051961",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, California, Mountain View",
+        "United States, Washington, Redmond",
+        "United States, New York, New York"
+      ],
+      "standardizedLocations": [
+        "Mountain View, CA, US",
+        "Redmond, WA, US",
+        "New York, NY, US"
+      ],
+      "postedTs": 1789421331,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787780864,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200051961",
+      "positionUrl": "/careers/job/1970393556982081"
+    },
+    {
+      "id": 1970393556983152,
+      "displayJobId": "200052575",
+      "name": "Principal Product Manager, Search Ads- Retail Lead",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US"
+      ],
+      "postedTs": 1789408774,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787935338,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052575",
+      "positionUrl": "/careers/job/1970393556983152"
+    },
+    {
+      "id": 1970393556992018,
+      "displayJobId": "200054576",
+      "name": "Senior Technical Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789404828,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788983663,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200054576",
+      "positionUrl": "/careers/job/1970393556992018"
+    },
+    {
+      "id": 1970393556983226,
+      "displayJobId": "200052636",
+      "name": "Product Management Intern - CTJ - TS",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789152002,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787943399,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052636",
+      "positionUrl": "/careers/job/1970393556983226"
+    },
+    {
+      "id": 1970393556991993,
+      "displayJobId": "200054551",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789149804,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788980203,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200054551",
+      "positionUrl": "/careers/job/1970393556991993"
+    },
+    {
+      "id": 1970393556994921,
+      "displayJobId": "200055327",
+      "name": "Product Manager",
+      "locations": [
+        "China, Beijing, Beijing",
+        "China, Jiangsu, Suzhou"
+      ],
+      "standardizedLocations": [
+        "Beijing, Beijing, CN",
+        "Suzhou, Jiangsu, CN"
+      ],
+      "postedTs": 1789117150,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1789104084,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200055327",
+      "positionUrl": "/careers/job/1970393556994921"
+    },
+    {
+      "id": 1970393556987069,
+      "displayJobId": "200053530",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789098876,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788439516,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053530",
+      "positionUrl": "/careers/job/1970393556987069"
+    },
+    {
+      "id": 1970393556988957,
+      "displayJobId": "200053839",
+      "name": "Sr. Product Manager- Windows Engineering Systems",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1789080038,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788539275,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053839",
+      "positionUrl": "/careers/job/1970393556988957"
+    },
+    {
+      "id": 1970393556991466,
+      "displayJobId": "200054313",
+      "name": "Senior Product Manager - AI Infrastructure Competitive Strategy",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View",
+        "United States, Texas, Austin"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US",
+        "Austin, TX, US"
+      ],
+      "postedTs": 1789063374,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788924509,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200054313",
+      "positionUrl": "/careers/job/1970393556991466"
+    },
+    {
+      "id": 1970393556985636,
+      "displayJobId": "200053295",
+      "name": "Senior Product Manager- IDNA",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1788988869,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788363819,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053295",
+      "positionUrl": "/careers/job/1970393556985636"
+    },
+    {
+      "id": 1970393556955409,
+      "displayJobId": "200046611",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1788978979,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1785768509,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200046611",
+      "positionUrl": "/careers/job/1970393556955409"
+    },
+    {
+      "id": 1970393556985606,
+      "displayJobId": "200053275",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1788972073,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788360387,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053275",
+      "positionUrl": "/careers/job/1970393556985606"
+    },
+    {
+      "id": 1970393556982816,
+      "displayJobId": "200052415",
+      "name": "Principal Product Manager- Agentic Security",
+      "locations": [
+        "United States, Multiple Locations, Multiple Locations"
+      ],
+      "standardizedLocations": [
+        "US"
+      ],
+      "postedTs": 1788561567,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787889899,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052415",
+      "positionUrl": "/careers/job/1970393556982816"
+    },
+    {
+      "id": 1970393556983966,
+      "displayJobId": "200052782",
+      "name": "Principal Product Manager",
+      "locations": [
+        "India, Karnataka, Bangalore"
+      ],
+      "standardizedLocations": [
+        "Bengaluru, KA, IN"
+      ],
+      "postedTs": 1788518569,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788187200,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052782",
+      "positionUrl": "/careers/job/1970393556983966"
+    },
+    {
+      "id": 1970393556984595,
+      "displayJobId": "200053031",
+      "name": "Principal Product Manager(Work IQ)",
+      "locations": [
+        "China, Jiangsu, Suzhou",
+        "China, Shanghai, Shanghai",
+        "China, Beijing, Beijing"
+      ],
+      "standardizedLocations": [
+        "Suzhou, Jiangsu, CN",
+        "Shanghai, Shanghai, CN",
+        "Beijing, Beijing, CN"
+      ],
+      "postedTs": 1788419528,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788268837,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053031",
+      "positionUrl": "/careers/job/1970393556984595"
+    },
+    {
+      "id": 1970393556985266,
+      "displayJobId": "200053208",
+      "name": "Principal Product Manager/JV General Manager",
+      "locations": [
+        "China, Beijing, Beijing"
+      ],
+      "standardizedLocations": [
+        "Beijing, Beijing, CN"
+      ],
+      "postedTs": 1788415328,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1788317461,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200053208",
+      "positionUrl": "/careers/job/1970393556985266"
+    },
+    {
+      "id": 1970393556982730,
+      "displayJobId": "200052338",
+      "name": "Senior Product Manager- Agentic Security",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1788378674,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787869062,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052338",
+      "positionUrl": "/careers/job/1970393556982730"
+    },
+    {
+      "id": 1970393556962542,
+      "displayJobId": "200048891",
+      "name": "Principal Product Management",
+      "locations": [
+        "India, Karnataka, Bangalore"
+      ],
+      "standardizedLocations": [
+        "Bengaluru, KA, IN"
+      ],
+      "postedTs": 1788358189,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1786628623,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200048891",
+      "positionUrl": "/careers/job/1970393556962542"
+    },
+    {
+      "id": 1970393556982515,
+      "displayJobId": "200052219",
+      "name": "Senior Product Manager - Microsoft 365 Network Platform",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1788202258,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787847915,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052219",
+      "positionUrl": "/careers/job/1970393556982515"
+    },
+    {
+      "id": 1970393556983195,
+      "displayJobId": "200052614",
+      "name": "Senior Product Manager - AI Infrastructure",
+      "locations": [
+        "United States, Multiple Locations, Multiple Locations"
+      ],
+      "standardizedLocations": [
+        "US"
+      ],
+      "postedTs": 1787951523,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787937101,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200052614",
+      "positionUrl": "/careers/job/1970393556983195"
+    },
+    {
+      "id": 1970393556981270,
+      "displayJobId": "200051525",
+      "name": "Product Manager - Microsoft Entra: Global Secure Access",
+      "locations": [
+        "Israel, Tel Aviv, Herzliya"
+      ],
+      "standardizedLocations": [
+        "Herzliya, Tel Aviv District, IL"
+      ],
+      "postedTs": 1787765558,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787689476,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200051525",
+      "positionUrl": "/careers/job/1970393556981270"
+    },
+    {
+      "id": 1970393556978896,
+      "displayJobId": "200050323",
+      "name": "Product Management INTERN",
+      "locations": [
+        "India, Multiple Locations, Multiple Locations"
+      ],
+      "standardizedLocations": [
+        "IN"
+      ],
+      "postedTs": 1787651792,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1787306634,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200050323",
+      "positionUrl": "/careers/job/1970393556978896"
+    },
+    {
+      "id": 1970393556944984,
+      "displayJobId": "200045492",
+      "name": "Principal Product Manager",
+      "locations": [
+        "India, Telangana, Hyderabad"
+      ],
+      "standardizedLocations": [
+        "Hyderabad, TS, IN"
+      ],
+      "postedTs": 1787649453,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1785118894,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200045492",
+      "positionUrl": "/careers/job/1970393556944984"
+    },
+    {
+      "id": 1970393556960250,
+      "displayJobId": "200047891",
+      "name": "Senior Product Manager, Python and Java Developer Experiences",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US"
+      ],
+      "postedTs": 1787512660,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1786391387,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200047891",
+      "positionUrl": "/careers/job/1970393556960250"
+    },
+    {
+      "id": 1970393556961262,
+      "displayJobId": "200048308",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1787250935,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1786459190,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200048308",
+      "positionUrl": "/careers/job/1970393556961262"
+    },
+    {
+      "id": 1970393556971850,
+      "displayJobId": "200049391",
+      "name": "Senior Product Manager",
+      "locations": [
+        "India, Telangana, Hyderabad"
+      ],
+      "standardizedLocations": [
+        "Hyderabad, TS, IN"
+      ],
+      "postedTs": 1787053108,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1786963581,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200049391",
+      "positionUrl": "/careers/job/1970393556971850"
+    },
+    {
+      "id": 1970393556962532,
+      "displayJobId": "200048889",
+      "name": "Senior Product Manager",
+      "locations": [
+        "India, Karnataka, Bangalore"
+      ],
+      "standardizedLocations": [
+        "Bengaluru, KA, IN"
+      ],
+      "postedTs": 1786943961,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1786627805,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200048889",
+      "positionUrl": "/careers/job/1970393556962532"
+    },
+    {
+      "id": 1970393556957770,
+      "displayJobId": "200047301",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, Oregon, Hillsboro",
+        "United States, California, Mountain View",
+        "United States, Texas, Austin"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Hillsboro, OR, US",
+        "Mountain View, CA, US",
+        "Austin, TX, US"
+      ],
+      "postedTs": 1786660483,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1785963971,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200047301",
+      "positionUrl": "/careers/job/1970393556957770"
+    },
+    {
+      "id": 1970393556958196,
+      "displayJobId": "200047423",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Multiple Locations, Multiple Locations"
+      ],
+      "standardizedLocations": [
+        "US"
+      ],
+      "postedTs": 1786484612,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1786037712,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200047423",
+      "positionUrl": "/careers/job/1970393556958196"
+    },
+    {
+      "id": 1970393556956249,
+      "displayJobId": "200046924",
+      "name": "Senior Product Manager, AI Experiences",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, New York, New York"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "New York, NY, US"
+      ],
+      "postedTs": 1785977860,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1785865714,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200046924",
+      "positionUrl": "/careers/job/1970393556956249"
+    },
+    {
+      "id": 1970393556955501,
+      "displayJobId": "200046624",
+      "name": "Principal Product Manager, Content Product",
+      "locations": [
+        "United States, California, Mountain View",
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Mountain View, CA, US",
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1785976986,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1785771976,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200046624",
+      "positionUrl": "/careers/job/1970393556955501"
+    },
+    {
+      "id": 1970393556860577,
+      "displayJobId": "200035488",
+      "name": "Principal Product Manager, Data Science & Market Research",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1785874292,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1776692872,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200035488",
+      "positionUrl": "/careers/job/1970393556860577"
+    },
+    {
+      "id": 1970393556944352,
+      "displayJobId": "200045382",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1785272816,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1784905853,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200045382",
+      "positionUrl": "/careers/job/1970393556944352"
+    },
+    {
+      "id": 1970393556942026,
+      "displayJobId": "200044819",
+      "name": "Senior and Principal Product Manager- Windows Client Core Team (Multiple Positions)",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1784856142,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1784664347,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200044819",
+      "positionUrl": "/careers/job/1970393556942026"
+    },
+    {
+      "id": 1970393556859131,
+      "displayJobId": "200035011",
+      "name": "Product Manager- Agentic Platform",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1783556967,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1776200852,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200035011",
+      "positionUrl": "/careers/job/1970393556859131"
+    },
+    {
+      "id": 1970393556885224,
+      "displayJobId": "200040792",
+      "name": "Senior Product Manager",
+      "locations": [
+        "United States, Washington, Redmond",
+        "United States, California, Mountain View"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US",
+        "Mountain View, CA, US"
+      ],
+      "postedTs": 1782506428,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1781729355,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200040792",
+      "positionUrl": "/careers/job/1970393556885224"
+    },
+    {
+      "id": 1970393556859132,
+      "displayJobId": "200035012",
+      "name": "Principal Product Manager",
+      "locations": [
+        "United States, Washington, Redmond"
+      ],
+      "standardizedLocations": [
+        "Redmond, WA, US"
+      ],
+      "postedTs": 1779379142,
+      "solrScore": null,
+      "stars": 0,
+      "department": "Product Management",
+      "creationTs": 1776201296,
+      "isHot": 0,
+      "workLocationOption": "onsite",
+      "locationFlexibility": null,
+      "atsJobId": "200035012",
+      "positionUrl": "/careers/job/1970393556859132"
+    }
+  ],
+  "availability_checks": [
+    {
+      "external_job_id": "1970393556995454",
+      "requisition_id": "200055464",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:57:57.886644+00:00",
+      "metadata": null,
+      "returned_id": 1970393556995454,
+      "returned_requisition": "200055464",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556992086",
+      "requisition_id": "200054609",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:02.782492+00:00",
+      "metadata": null,
+      "returned_id": 1970393556992086,
+      "returned_requisition": "200054609",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556992070",
+      "requisition_id": "200054592",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:07.807673+00:00",
+      "metadata": null,
+      "returned_id": 1970393556992070,
+      "returned_requisition": "200054592",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556999840",
+      "requisition_id": "200056128",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:12.836232+00:00",
+      "metadata": null,
+      "returned_id": 1970393556999840,
+      "returned_requisition": "200056128",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557002302",
+      "requisition_id": "200056978",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:17.815184+00:00",
+      "metadata": null,
+      "returned_id": 1970393557002302,
+      "returned_requisition": "200056978",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557014478",
+      "requisition_id": "200058424",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:22.720764+00:00",
+      "metadata": null,
+      "returned_id": 1970393557014478,
+      "returned_requisition": "200058424",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557007853",
+      "requisition_id": "200057949",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:30.201653+00:00",
+      "metadata": null,
+      "returned_id": 1970393557007853,
+      "returned_requisition": "200057949",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557008067",
+      "requisition_id": "200058038",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:32.826373+00:00",
+      "metadata": null,
+      "returned_id": 1970393557008067,
+      "returned_requisition": "200058038",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557001321",
+      "requisition_id": "200056608",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:37.847439+00:00",
+      "metadata": null,
+      "returned_id": 1970393557001321,
+      "returned_requisition": "200056608",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557008723",
+      "requisition_id": "200058347",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:42.786860+00:00",
+      "metadata": null,
+      "returned_id": 1970393557008723,
+      "returned_requisition": "200058347",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556980936",
+      "requisition_id": "200051300",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:47.872459+00:00",
+      "metadata": null,
+      "returned_id": 1970393556980936,
+      "returned_requisition": "200051300",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557006543",
+      "requisition_id": "200057506",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:52.807206+00:00",
+      "metadata": null,
+      "returned_id": 1970393557006543,
+      "returned_requisition": "200057506",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556948020",
+      "requisition_id": "200045861",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:58:57.828600+00:00",
+      "metadata": null,
+      "returned_id": 1970393556948020,
+      "returned_requisition": "200045861",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557006552",
+      "requisition_id": "200057516",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:02.871085+00:00",
+      "metadata": null,
+      "returned_id": 1970393557006552,
+      "returned_requisition": "200057516",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557001429",
+      "requisition_id": "200056672",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:07.834201+00:00",
+      "metadata": null,
+      "returned_id": 1970393557001429,
+      "returned_requisition": "200056672",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556962217",
+      "requisition_id": "200048797",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:12.861407+00:00",
+      "metadata": null,
+      "returned_id": 1970393556962217,
+      "returned_requisition": "200048797",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982046",
+      "requisition_id": "200051927",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:17.783928+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982046,
+      "returned_requisition": "200051927",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556916180",
+      "requisition_id": "200041693",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:22.832820+00:00",
+      "metadata": null,
+      "returned_id": 1970393556916180,
+      "returned_requisition": "200041693",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557004779",
+      "requisition_id": "200057309",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:28.315078+00:00",
+      "metadata": null,
+      "returned_id": 1970393557004779,
+      "returned_requisition": "200057309",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556980893",
+      "requisition_id": "200051298",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:32.887886+00:00",
+      "metadata": null,
+      "returned_id": 1970393556980893,
+      "returned_requisition": "200051298",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556911401",
+      "requisition_id": "200041062",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:37.819611+00:00",
+      "metadata": null,
+      "returned_id": 1970393556911401,
+      "returned_requisition": "200041062",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556999250",
+      "requisition_id": "200055927",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:42.795656+00:00",
+      "metadata": null,
+      "returned_id": 1970393556999250,
+      "returned_requisition": "200055927",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982604",
+      "requisition_id": "200052288",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:47.917021+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982604,
+      "returned_requisition": "200052288",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557004133",
+      "requisition_id": "200057176",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:52.838420+00:00",
+      "metadata": null,
+      "returned_id": 1970393557004133,
+      "returned_requisition": "200057176",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556998398",
+      "requisition_id": "200055645",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T15:59:57.874718+00:00",
+      "metadata": null,
+      "returned_id": 1970393556998398,
+      "returned_requisition": "200055645",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982045",
+      "requisition_id": "200051931",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:03.285374+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982045,
+      "returned_requisition": "200051931",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393557001300",
+      "requisition_id": "200056603",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:07.852675+00:00",
+      "metadata": null,
+      "returned_id": 1970393557001300,
+      "returned_requisition": "200056603",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556984163",
+      "requisition_id": "200052860",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:13.023982+00:00",
+      "metadata": null,
+      "returned_id": 1970393556984163,
+      "returned_requisition": "200052860",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556995338",
+      "requisition_id": "200055413",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:17.877568+00:00",
+      "metadata": null,
+      "returned_id": 1970393556995338,
+      "returned_requisition": "200055413",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556988146",
+      "requisition_id": "200053615",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:22.851824+00:00",
+      "metadata": null,
+      "returned_id": 1970393556988146,
+      "returned_requisition": "200053615",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556984762",
+      "requisition_id": "200053113",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:27.931298+00:00",
+      "metadata": null,
+      "returned_id": 1970393556984762,
+      "returned_requisition": "200053113",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556988884",
+      "requisition_id": "200053810",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:32.976735+00:00",
+      "metadata": null,
+      "returned_id": 1970393556988884,
+      "returned_requisition": "200053810",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556997831",
+      "requisition_id": "200055624",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:37.905975+00:00",
+      "metadata": null,
+      "returned_id": 1970393556997831,
+      "returned_requisition": "200055624",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556998530",
+      "requisition_id": "200055722",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:42.880965+00:00",
+      "metadata": null,
+      "returned_id": 1970393556998530,
+      "returned_requisition": "200055722",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556998872",
+      "requisition_id": "200055864",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:47.877334+00:00",
+      "metadata": null,
+      "returned_id": 1970393556998872,
+      "returned_requisition": "200055864",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556938152",
+      "requisition_id": "200043757",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:52.849045+00:00",
+      "metadata": null,
+      "returned_id": 1970393556938152,
+      "returned_requisition": "200043757",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982032",
+      "requisition_id": "200051919",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:00:57.925945+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982032,
+      "returned_requisition": "200051919",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982522",
+      "requisition_id": "200052223",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:05.832018+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982522,
+      "returned_requisition": "200052223",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556988910",
+      "requisition_id": "200053817",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:07.907577+00:00",
+      "metadata": null,
+      "returned_id": 1970393556988910,
+      "returned_requisition": "200053817",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982081",
+      "requisition_id": "200051961",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:12.932429+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982081,
+      "returned_requisition": "200051961",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556983152",
+      "requisition_id": "200052575",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:17.887572+00:00",
+      "metadata": null,
+      "returned_id": 1970393556983152,
+      "returned_requisition": "200052575",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556992018",
+      "requisition_id": "200054576",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:22.917599+00:00",
+      "metadata": null,
+      "returned_id": 1970393556992018,
+      "returned_requisition": "200054576",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556991993",
+      "requisition_id": "200054551",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:28.005289+00:00",
+      "metadata": null,
+      "returned_id": 1970393556991993,
+      "returned_requisition": "200054551",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556987069",
+      "requisition_id": "200053530",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:32.867895+00:00",
+      "metadata": null,
+      "returned_id": 1970393556987069,
+      "returned_requisition": "200053530",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556988957",
+      "requisition_id": "200053839",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:40.463928+00:00",
+      "metadata": null,
+      "returned_id": 1970393556988957,
+      "returned_requisition": "200053839",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556991466",
+      "requisition_id": "200054313",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:42.948638+00:00",
+      "metadata": null,
+      "returned_id": 1970393556991466,
+      "returned_requisition": "200054313",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556985636",
+      "requisition_id": "200053295",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:47.944541+00:00",
+      "metadata": null,
+      "returned_id": 1970393556985636,
+      "returned_requisition": "200053295",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556955409",
+      "requisition_id": "200046611",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:52.941045+00:00",
+      "metadata": null,
+      "returned_id": 1970393556955409,
+      "returned_requisition": "200046611",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556985606",
+      "requisition_id": "200053275",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:01:57.965626+00:00",
+      "metadata": null,
+      "returned_id": 1970393556985606,
+      "returned_requisition": "200053275",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982816",
+      "requisition_id": "200052415",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:02.959908+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982816,
+      "returned_requisition": "200052415",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556983966",
+      "requisition_id": "200052782",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:08.035575+00:00",
+      "metadata": null,
+      "returned_id": 1970393556983966,
+      "returned_requisition": "200052782",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982730",
+      "requisition_id": "200052338",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:12.977253+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982730,
+      "returned_requisition": "200052338",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556962542",
+      "requisition_id": "200048891",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:17.992153+00:00",
+      "metadata": null,
+      "returned_id": 1970393556962542,
+      "returned_requisition": "200048891",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556982515",
+      "requisition_id": "200052219",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:22.980851+00:00",
+      "metadata": null,
+      "returned_id": 1970393556982515,
+      "returned_requisition": "200052219",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556983195",
+      "requisition_id": "200052614",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:27.981116+00:00",
+      "metadata": null,
+      "returned_id": 1970393556983195,
+      "returned_requisition": "200052614",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556944984",
+      "requisition_id": "200045492",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:32.909921+00:00",
+      "metadata": null,
+      "returned_id": 1970393556944984,
+      "returned_requisition": "200045492",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556960250",
+      "requisition_id": "200047891",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:37.988443+00:00",
+      "metadata": null,
+      "returned_id": 1970393556960250,
+      "returned_requisition": "200047891",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556961262",
+      "requisition_id": "200048308",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:43.000669+00:00",
+      "metadata": null,
+      "returned_id": 1970393556961262,
+      "returned_requisition": "200048308",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556971850",
+      "requisition_id": "200049391",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:48.061345+00:00",
+      "metadata": null,
+      "returned_id": 1970393556971850,
+      "returned_requisition": "200049391",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556962532",
+      "requisition_id": "200048889",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:52.999036+00:00",
+      "metadata": null,
+      "returned_id": 1970393556962532,
+      "returned_requisition": "200048889",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556957770",
+      "requisition_id": "200047301",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:02:58.048437+00:00",
+      "metadata": null,
+      "returned_id": 1970393556957770,
+      "returned_requisition": "200047301",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556958196",
+      "requisition_id": "200047423",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:02.896153+00:00",
+      "metadata": null,
+      "returned_id": 1970393556958196,
+      "returned_requisition": "200047423",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556956249",
+      "requisition_id": "200046924",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:07.975385+00:00",
+      "metadata": null,
+      "returned_id": 1970393556956249,
+      "returned_requisition": "200046924",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556955501",
+      "requisition_id": "200046624",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:13.016529+00:00",
+      "metadata": null,
+      "returned_id": 1970393556955501,
+      "returned_requisition": "200046624",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556860577",
+      "requisition_id": "200035488",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:18.072177+00:00",
+      "metadata": null,
+      "returned_id": 1970393556860577,
+      "returned_requisition": "200035488",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556944352",
+      "requisition_id": "200045382",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:23.000260+00:00",
+      "metadata": null,
+      "returned_id": 1970393556944352,
+      "returned_requisition": "200045382",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556942026",
+      "requisition_id": "200044819",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:27.980061+00:00",
+      "metadata": null,
+      "returned_id": 1970393556942026,
+      "returned_requisition": "200044819",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556859131",
+      "requisition_id": "200035011",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:33.048425+00:00",
+      "metadata": null,
+      "returned_id": 1970393556859131,
+      "returned_requisition": "200035011",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556885224",
+      "requisition_id": "200040792",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:38.011668+00:00",
+      "metadata": null,
+      "returned_id": 1970393556885224,
+      "returned_requisition": "200040792",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    },
+    {
+      "external_job_id": "1970393556859132",
+      "requisition_id": "200035012",
+      "status": "available",
+      "reason": "Matching detail identity, job description and application action: log_in",
+      "http_status": 200,
+      "checked_at": "2026-09-30T16:03:43.090606+00:00",
+      "metadata": null,
+      "returned_id": 1970393556859132,
+      "returned_requisition": "200035012",
+      "application_action": {
+        "isSaved": false,
+        "applyAction": {
+          "status": "log_in"
+        }
+      }
+    }
+  ],
+  "geography_retained": 73,
+  "geography_excluded_ids": [
+    "1970393557006546",
+    "1970393557007645",
+    "1970393557004793",
+    "1970393556999775",
+    "1970393557001291",
+    "1970393556994921",
+    "1970393556984595",
+    "1970393556985266",
+    "1970393556981270"
+  ]
+}
