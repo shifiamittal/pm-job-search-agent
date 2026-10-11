@@ -1,0 +1,44 @@
+Overview
+Microsoft AI is pushing the boundaries of technology and reimagining how people engage with information, moving beyond traditional search toward intelligent systems that help users make decisions. This is a rare opportunity to help define how Search evolves in the AI era.
+
+In Search Places, we sit at the center of this transformation. We power how users discover, evaluate, and act on information about the physical world—from finding a restaurant to making high-confidence decisions that impact their daily lives. Our work spans classic search and emerging AI-native experiences, with a clear ambition: to build systems that don’t just retrieve information but enable decisions and complete journeys.
+
+We are looking for a Senior Product Manager to join the Search Places team to help define the future of how people discover and engage with places across traditional Search and AI experiences. Working closely with teams across MAI, you will shape how we deliver relevant, high-quality places results across these surfaces, with the opportunity to make a significant impact on how users navigate and interact with the world around them.
+
+Microsoft’s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.??
+
+Starting January 26, 2026, Microsoft AI (MAI) employees who live within a 50- mile commute of a designated Microsoft office in the U.S. or 25-mile commute of a non-U.S., country-specific location are expected to work from the office at least four days per week. This expectation is subject to local law and may vary by jurisdiction.
+
+
+
+Responsibilities
+You will define and own the roadmap for AI experiences in Search and collaborate with cross-functional stakeholders to define the next generation experiences.
+You will influence others to drive business impact across the organization and track success criteria for multiple feature areas across divisions. You’ll also be an expert in identifying long-term investment opportunities and engaging partners to garner support for those feature areas.
+You will partner with others to collect performance metrics and form hypotheses for complex technical needs in order to improve product development in multiple areas.
+You will drive cross-org alignment in a highly matrixed environment.
+
+
+Qualifications
+Required Qualifications:
+
+Bachelor's Degree AND 5+ years experience in product/service/program management or software development
+OR equivalent experience.
+
+Preferred Qualifications:
+
+Bachelor's Degree AND 8+ years experience in product/service/program management or software development
+OR equivalent experience.
+Experience with Search and Relevance systems.
+Experience defining product strategy, making complex product decisions, and applying product judgment and systems thinking.
+
+#MicrosoftAI
+
+
+
+Product Management IC4 - The typical base pay range for this role across the U.S. is USD $119,800 - $234,700 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $160,200 - $261,000 per year.
+
+Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here:
+https://careers.microsoft.com/us/en/us-corporate-pay
+
+
+This position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.

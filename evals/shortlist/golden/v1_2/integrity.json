@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "sources": {
+    "count_head_of_product.txt": {
+      "sha256": "e39e6d98cbd388c5000c3acd5ab2b6a33278fba89d61cca596f177683a2bb1bd",
+      "bytes": 12950,
+      "status": "exact_frozen_historical",
+      "origin": "Prior local shortlist-validation input preserved in pm-job-search-agent.zip"
+    },
+    "microsoft_200054592.txt": {
+      "sha256": "893adf07c0876a01696b35f75121cba0102d2d74484236dd37d7523a181a2cc3",
+      "bytes": 3747,
+      "status": "exact_frozen_historical",
+      "origin": "Prior local shortlist-validation input preserved in pm-job-search-agent.zip"
+    },
+    "microsoft_200015839.txt": {
+      "sha256": "ffc0bcfb3571835a75bc15bc81427a1149b02f0a7ba5603175c82165987ee3c5",
+      "bytes": 5852,
+      "status": "exact_frozen_historical",
+      "origin": "Prior local shortlist-validation input preserved in pm-job-search-agent.zip"
+    },
+    "r37_principal_product_manager.txt": {
+      "sha256": "fce3e33170f56a42d260c3ebbd267d3f446ae357a632d1a09811878614054999",
+      "bytes": 3460,
+      "status": "exact_frozen_historical",
+      "origin": "User-supplied R37 Principal Product Manager JD PDF"
+    },
+    "microsoft_200055557.txt": {
+      "sha256": "d79e51001edb98735620f176d8cd0d2b8b7e9a68df0559c62efc398a5b6bcdff",
+      "bytes": 4587,
+      "status": "exact_frozen_historical",
+      "origin": "Recovered from prior Microsoft Careers source captured in conversation/library"
+    },
+    "microsoft_200051931.txt": {
+      "sha256": "3a5466239ce4b0b55ce498e91ddef3498009cf802943457730734807834de617",
+      "bytes": 5417,
+      "status": "exact_frozen_user_supplied",
+      "origin": "Exact JD pasted by user in current chat on 2026-10-12"
+    },
+    "flexport_8158027.txt": {
+      "sha256": "92a8f6178c775cb14c247b7ccf29312bac75c973b5e5858faf932ebab8e3df35",
+      "bytes": 3409,
+      "status": "official_same_job_id_recovered",
+      "origin": "Official Flexport Greenhouse job 8158027, recovered 2026-10-12; same job ID as evaluated case"
+    },
+    "flexport_8110066.txt": {
+      "sha256": "8599d3fdfa1888be5b8452a65e968810d91410f7c7c036b7c623065a58b58589",
+      "bytes": 3843,
+      "status": "official_same_job_id_recovered",
+      "origin": "Official Flexport Greenhouse job 8110066, recovered 2026-10-12; same job ID as evaluated case"
+    },
+    "amazon_10499366.txt": {
+      "sha256": "244ab7d01dd2dd0db8a8eef3ae69480f8ad7d15bb08e06eb8717abb114d5d54c",
+      "bytes": 2872,
+      "status": "official_same_job_id_recovered",
+      "origin": "Official Amazon Jobs job 10499366 recovered under another locale with English JD body, 2026-10-12"
+    },
+    "cisco_2024101_evaluated_source.txt": {
+      "sha256": "4a2fb66482ec291cf23a3b211b1d5207e611394a1dc9c2edf780e92ba5bb37e6",
+      "bytes": 10759,
+      "status": "exact_frozen_historical",
+      "origin": "User-supplied Cisco frozen shortlist packet"
+    },
+    "cisco_2023232_evaluated_source.txt": {
+      "sha256": "32e5ee9bcbb731c61eeb1929da9b6dcc226e0c29ae6e28d28798139c5127d648",
+      "bytes": 4510,
+      "status": "partial_frozen_historical",
+      "origin": "User-supplied Cisco frozen shortlist packet"
+    },
+    "cisco_2024434_evaluated_source.txt": {
+      "sha256": "04a642a27de9abc847da4053c8ed2e7ec6c2385ad547aecb7c3a025865adcacb",
+      "bytes": 28330,
+      "status": "exact_frozen_historical",
+      "origin": "User-supplied Cisco frozen shortlist packet"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+R37 AI LAB - Principal Product Manager
+    Location                                                         US | Remote
+
+    Employment                                                       Full time | Remote
+
+
+
+About R1 RCM
+Phare Health is now part of R1 and its AI innovation engine, R37 AI Lab, bringing Phare’s frontier clinical reasoning technology together
+with one of the largest healthcare platforms in the U.S.
+
+At R37 and Phare, we are building the first AI-native Healthcare Revenue Operating System: a connected platform that reasons over
+full medical records, payer logic, and financial workflows to automate medical coding, billing, and follow-up.
+
+Backed by real customers, real data, and real distribution, we operate on a national scale. Our agentic AI systems already power
+production workflows across 95 of the top 100 U.S. health systems, processing hundreds of millions of patient encounters each year,
+including:
+      •   180M+ Claims
+      •   550M+ Patient encounters
+      •   1.2B+ Workflow actions and outcomes each year
+
+This is startup-level ownership with enterprise-level impact. If you want to build AI that ships, scales, and measurably improves how
+healthcare works, this is the place to do it.
+
+The Role
+•     Senior individual contributor owning and evolving product strategy, roadmap, and operating model for complex AI-enabled healthcare
+      RCM solutions.
+•     Translate emerging AI capabilities and complex healthcare workflows into high-impact product outcomes at the intersection of
+      business strategy, stakeholder needs, AI research, engineering, and technical feasibility.
+•     Define enterprise AI product strategy for intelligent automation, predictive analytics, and decision support across coding, billing,
+      denials, collections, and revenue optimization.
+
+
+What You'll Do
+•     Own product vision, strategy, roadmap, and operating model for enterprise healthcare RCM platforms, including AI-first and data-
+      platform strategies.
+•     Lead discovery and prioritize opportunities using customer insights, data analysis, and AI-driven signals.
+•     Translate LLMs, multimodal models, RAG, agentic workflows, predictive models, NLP, and intelligent automation into scalable
+      products.
+•     Partner with Engineering, Data Science, and Data Platform teams through experimentation, evaluation, workflow integration,
+      production readiness, rollout, monitoring, adoption, and improvement.
+•     Ensure responsible AI practices including data governance, HIPAA compliance, explainability, and bias mitigation.
+•     Define business, model, and adoption metrics; build ROI cases; lead executive and client-facing product strategy discussions; mentor
+      product managers.
+
+
+Qualifications
+•     10+ years of product management experience with complex SaaS or enterprise platforms.
+•     Deep healthcare experience, preferably revenue cycle management or revenue integrity.
+•     Proven experience productizing AI/ML, generative AI, agentic, or AI-platform capabilities through scaled adoption.
+•     Working fluency in modern AI product development, evaluation, human-in-the-loop systems, and production monitoring.
+•     Ability to define AI-first strategies tied to measurable outcomes and influence senior leaders without formal authority.
+•     Strong client communication, analytical thinking, Agile experience, and effectiveness in ambiguity.

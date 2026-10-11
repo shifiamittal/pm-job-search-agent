@@ -1,0 +1,52 @@
+ciscologo_new
+-
+Engineering Product Manager | 15+ Years
+Category:Product and Engineering
+Job ID:2023232
+undefined:Hybrid
+
+Job Description
+Meet the Team 
+
+We are a small, agile, and highly collaborative unit within the provider mobility business unit, passionate about delivering strategic cloud native packet core, IoT, and SaaS solutions for some of the service providers and enterprises. We move with precision and vitality, relying on strong cross-functional partnerships across product, engineering, sales, customer experience, legal, finance, and operations to achieve business outcomes.
+
+We operate with a strong ownership attitude — “you build it, you run it” — where product leaders are empowered to actively participate in crafting strategy, supporting sophisticated RFP processes, and driving continuous improvement across the product lifecycle.
+
+Your Impact 
+
+Serve as a lead Engineering Product Manager for our Provider mobility business portfolio, you will be driving the strategic roadmap through 5G-to-6G transitions. You will oversee product lifecycles, scale IoT and Edge AI initiatives, and engage executive collaborators to align Cisco’s cross-functional capabilities with the customer’s long-term business goals
+
+Strategic Product Leadership
+
+Lead end-to-end product lifecycle for packet core, IoT, and emerging technology architectures, including new product creation, roadmap, capacity, and software release planning.
+Drive technology evolution from current 5G deployments toward future 5G-Advanced and 6G-ready architectures.
+Identify and synthesize customer requirements, market opportunities, competitive landscape analysis and set priorities with outstanding transparency, to ensure efficient roadmap execution.
+Business Growth and Portfolio Integration
+
+Identify and assemble growth opportunities beyond the core contract by developing value propositions in Edge AI, AI inferencing, and mobility infrastructure.
+Align cross-functional service provider business teams, and broader Cisco product organizations to deliver a unified service provider value proposition.
+Build data-backed business cases that connect Cisco technology to measurable customer outcomes.
+Executive Communication and Stakeholder Management
+
+Engage with senior customer executives and internal leadership to build strategic positioning and communicate roadmap release plans.
+Navigate large, matrixed organizations to influence cross-functional teams and align collaborators toward shared achievements.
+Operate with high autonomy to handle risks and navigate ambiguous, fast-paced environments.
+Minimum Qualifications:
+
+12+ years of experience in product management, solution architecture, pre-sales, or engineering within the Service Provider Mobile core networks, IOT, or telecommunications domain.
+Bachelor’s degree in Engineering, Computer Science, Business, or a related discipline.
+Experience with mobility technologies, network functions and standards, such as; 3GPP, LTE/4G, 5G, 5G-Advanced, and evolving 6G concepts.
+Proven track record in managing product lifecycle, including new product creation, commercial licensing, and feature roadmap execution.
+Experience supporting strategic customers and translating customer needs into product requirements and business outcomes.
+Strong experience navigating complex, matrixed organizations to influence cross-functional teams without direct authority.
+Demonstrated ability to support strategic RFPs and present complex technical roadmaps to senior internal and external stakeholders.
+Preferred Qualifications:  
+
+Knowledge of Cisco Packet Core network functions, IOT, SaaS offers and larg-scale service provider software.
+Experience working with Tier-1Service Providers and Enterprises.
+Understanding of emerging technology areas such as AIOps, AI RAN, Edge AI, AI infrastructure
+
+Why Cisco? 
+At Cisco, we’re revolutionizing how data and infrastructure connect and protect organizations in the AI era – and beyond. We’ve been innovating fearlessly for 40 years to create solutions that power how humans and technology work together across the physical and digital worlds. These solutions provide customers with unparalleled security, visibility, and insights across the entire digital footprint.
+
+Fueled by the depth and breadth of our technology, we experiment and create meaningful solutions. Add to that our worldwide network of doers and experts. With purpose at its core, Cisco is committed to a more connected and inclusive future.

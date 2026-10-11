@@ -1,0 +1,20 @@
+{
+  "files": {
+    "README.md": "b13f49a1b09b46ea3b8b47ca102cea03f0f85d18c5da89a5dfb8ce150e8d9c2a",
+    "index.csv": "51c5971cb9cdbedf2dc993e0ec1baf3165761c66698330daee1204785e8a5d05",
+    "integrity.json": "4d6ce0d2bce1e0abbde2e0931ec1c56bb9fc72919079c87cb7a90d675f8ae74e",
+    "shortlist_golden_v1_2.json": "11b6f84625b18ea7d7dc72041de1287f57b48e851e680782a4cfa87af2e6eb2f",
+    "sources/amazon_10499366.txt": "244ab7d01dd2dd0db8a8eef3ae69480f8ad7d15bb08e06eb8717abb114d5d54c",
+    "sources/cisco_2023232_evaluated_source.txt": "32e5ee9bcbb731c61eeb1929da9b6dcc226e0c29ae6e28d28798139c5127d648",
+    "sources/cisco_2024101_evaluated_source.txt": "4a2fb66482ec291cf23a3b211b1d5207e611394a1dc9c2edf780e92ba5bb37e6",
+    "sources/cisco_2024434_evaluated_source.txt": "04a642a27de9abc847da4053c8ed2e7ec6c2385ad547aecb7c3a025865adcacb",
+    "sources/count_head_of_product.txt": "e39e6d98cbd388c5000c3acd5ab2b6a33278fba89d61cca596f177683a2bb1bd",
+    "sources/flexport_8110066.txt": "8599d3fdfa1888be5b8452a65e968810d91410f7c7c036b7c623065a58b58589",
+    "sources/flexport_8158027.txt": "92a8f6178c775cb14c247b7ccf29312bac75c973b5e5858faf932ebab8e3df35",
+    "sources/microsoft_200015839.txt": "ffc0bcfb3571835a75bc15bc81427a1149b02f0a7ba5603175c82165987ee3c5",
+    "sources/microsoft_200051931.txt": "3a5466239ce4b0b55ce498e91ddef3498009cf802943457730734807834de617",
+    "sources/microsoft_200054592.txt": "893adf07c0876a01696b35f75121cba0102d2d74484236dd37d7523a181a2cc3",
+    "sources/microsoft_200055557.txt": "d79e51001edb98735620f176d8cd0d2b8b7e9a68df0559c62efc398a5b6bcdff",
+    "sources/r37_principal_product_manager.txt": "fce3e33170f56a42d260c3ebbd267d3f446ae357a632d1a09811878614054999"
+  }
+}

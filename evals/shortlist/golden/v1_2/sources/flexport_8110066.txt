@@ -1,0 +1,36 @@
+Flexport — Staff Product Manager, Trucking Tech
+Location: Bellevue, Washington, United States
+Job ID: 8110066
+
+The opportunity
+We're looking for a Staff Product Manager to lead the strategy for Trucking Technology—the systems that plan, procure, dispatch, and settle every truck move in North America—and drive the unification of our fragmented ground transportation business into a single Flexport-owned platform by 2027. You will define the vision for how planning, procurement, and carrier experience integrate into one operating system and execute with high autonomy.
+
+This unification is critical for Flexport's long-term vision of an automated supply chain. By owning the full stack, we will consolidate demand, capture leaking margin, and deliver a high-quality experience across modes. You will also drive the next generation of trucking automation—including AI-driven appointment scheduling and automated dispatch—to continue the strategic initiatives in our annual operating plan.
+
+Sitting at the intersection of product, operations, and business, you will be measured by operational and financial impact rather than just features shipped. This role involves redesigning the operating processes themselves and persuading leadership to adopt new models. You will also raise the bar for the PM team through mentorship and sharper frameworks on our most complex product problems.
+
+This is a role for someone with deep product experience, strong analytical instincts, ideally real trucking or ground transportation domain expertise, and the ability to operate at both the strategic and execution level in a complex, data-rich environment.
+
+What You'll Do
+- Own the vision and strategy for Flexport's unified Trucking Technology stack across planning, procurement, pricing, and carrier experience.
+- Lead the end-to-end trucking unification program, managing cross-domain change management and platform migration risks.
+- Drive automation and AI initiatives, such as automated dispatch and appointment scheduling, to remove manual work from the cargo lifecycle.
+- Deliver measurable business impact by optimizing cost-to-serve, procurement savings, and carrier performance metrics.
+- Reengineer and digitize underlying trucking workflows to establish a leaner operating model.
+- Modernize the carrier experience to reduce friction across load acceptance, scheduling, and payment touchpoints.
+- Collaborate with global Engineering, Design, and Operations teams to translate complex logistics workflows into intuitive systems.
+- Use data-driven frameworks to guide investment and represent your domain in strategic leadership forums.
+- Mentor PMs to raise the bar for product specs, prioritization, and communication across the team.
+
+What You Should Have
+- 8+ years of PM experience with a track record of owning complex product domains and delivering quantifiable business impact.
+- Deep expertise in trucking or ground transportation (FTL/LTL, procurement, dispatch, or TMS platforms) is highly desirable.
+- Experience leading large-scale platform consolidations or system unification programs without disrupting live operations.
+- Proven ability in operational process engineering—diagnosing, redesigning, and automating complex human workflows.
+- Strong analytical skills with SQL proficiency and experience building metrics frameworks to drive strategic decisions.
+- Skilled at shipping intuitive UX in data-dense domains and aligning cross-functional teams around a shared roadmap.
+- Ability to operate simultaneously at the high-level strategy and granular execution levels.
+- Excellent communication skills for framing trade-offs and presenting recommendations to senior leadership.
+- Technical degree (CS, Industrial Engineering) or equivalent technical depth is a plus.
+
+US base salary range: $188,160 - $235,200 USD

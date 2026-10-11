@@ -1,0 +1,36 @@
+Amazon — Principal Product Manager - Tech, Fulfilled by Amazon
+Job ID: 10499366 | Amazon.com Services LLC
+Location: USA, WA, Bellevue
+
+Description
+What if you could reshape how trillions of dollar worth of physical goods flow through the world's most sophisticated supply chain?
+Inventory Optimization Services (IOS) sits at the nerve center of Amazon's fulfillment machine. We own the intelligence layer that decides where inventory lives, how it moves, and when it transforms from a cost liability into a delivered promise. Our decisions ripple across hundreds of Amazon fulfillment centers WW, impact hundreds of billion dollars in annual sales for our sellers, and directly shape customer experience in the most fiercely contested categories in e-commerce.
+This isn't “PM as ticket-writer.” This is a PM as an architect of step-function change in Fulfilled by Amazon (FBA). We're looking for a force multiplier — a 10x PM who uses AI as a superpower to bend the cost curve, collapse delivery times, and architect inventory systems that serve hundreds of millions of customers. Someone who writes with surgical precision, thinks in systems, and ships products that move atoms at the speed of bits.
+
+Key job responsibilities
+Drive Step-Function Business Segment Growth
+- Architect innovative SX (Seller Experience) products that expand FBA's addressable market segment
+- Design and ship AI-native placement optimization systems that reduce cost-to-serve
+- Build innovative customer reverse logistics (customer return) solutions to preserve CX, while safeguarding interests of sellers to end to end supply chain cost
+- Build the network intelligence layer that increases the selection, improves delivery speed to customers, increases sellers’ profit, and reduces Amazon’s cost-to-serve
+
+AI-First Product Development
+- Deploy generative AI and agentic systems as your primary product development methodology — not a feature, but a philosophy
+- Use AI to 10x your own productivity: automated analysis, AI-generated experiments, LLM-powered customer insights synthesis
+
+Cross-Geography, Cross-Organization Impact
+- Own the WW charter spanning US, EU, CA, IN, JP — each with unique constraints and opportunities
+- Partner directly with senior leaders across multiple SVP organizations
+- Drive under-penetrated growth categories to unlock category-specialized fulfillment
+
+Basic Qualifications
+- Bachelor's degree
+- Experience owning/driving roadmap strategy and definition
+- Experience with feature delivery and tradeoffs of a product
+- 10+ years of technical product or program management experience
+
+Preferred Qualifications
+- Experience working directly with Engineers on product enhancements
+- Experience in project management methodologies, business analysis, or process improvement
+
+Base salary: USA, WA, Bellevue - 179,900.00 - 243,400.00 USD annually

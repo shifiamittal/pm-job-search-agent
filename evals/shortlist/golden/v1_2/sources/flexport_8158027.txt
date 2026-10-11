@@ -1,0 +1,32 @@
+Flexport — Senior Product Manager, Visibility
+Locations: Bellevue, Washington, United States; San Francisco, California, United States
+Job ID: 8158027
+
+The opportunity:
+We're looking for a Senior Product Manager to join Flexport's product team and own a critical part of how we serve clients and operators across global logistics. You'll define the vision and roadmap for your product area, ship features that drive measurable business outcomes, and collaborate with engineering, design, commercial, and operations teams to solve hard problems at scale.
+
+Flexport's platform powers every stage of global freight, from booking and pricing to visibility, customs, and delivery. The products you build will be used daily by logistics managers, supply chain leaders, freight operators, and internal teams who keep goods moving around the world. This is a high-impact role for someone who combines strong product instincts with deep analytical skills and comfort navigating complex domains.
+
+The team:
+The Visibility team owns the end-to-end mapping and tracking of physical goods across global logistics. We solve complex supply chain workflows at the system root-cause level using data, product intuition, and highly structured logic. Our team is responsible for defining the client-facing tracking experience based on real physical execution capabilities, driving operational and system changes across execution, planning, and technology teams.
+
+You will:
+- Define and deliver product features for end-to-end mapping, tracking, and visibility of physical goods across the shipment lifecycle
+- Own your product area end-to-end, building and executing product roadmaps spanning 12 to 18 months
+- Drive data intelligence at an end-to-end level to solve complex operational problems and define client-facing tracking experiences
+- Partner across execution, planning, and technology teams to align priorities and translate complex logistics workflows into intuitive systems
+- Collaborate closely across a global footprint (Hong Kong, Europe, US) with China engineering teams, participating in regular cross-border syncs
+- Use data to guide prioritization, measure impact, build metrics frameworks, and track product health and business outcomes
+
+You should have:
+- 6+ years of product management experience (or equivalent domain background in engineering, operations excellence, or analytics transitioning into product)
+- Background solving complex logistics, physical operational, or system root-cause problems using algorithmic planning, data analysis, and structured logic
+- Demonstrated ability to lead product roadmaps spanning 12 to 18 months working closely with an engineering team and cross-functional partners
+- Strong analytical and quantitative skills. You are comfortable working with complex datasets, building metrics frameworks, and using data to make decisions. SQL proficiency required
+- A track record of shipping intuitive UX in data-dense, complex domains
+- Experience building user-facing or operator-facing features that simplify multi-step workflows
+- Ability to collaborate deeply with designers, engineers, and commercial or operations teams
+- Excellent written and verbal communication skills, especially around tradeoffs and prioritization
+- Experience with B2B workflow software, supply chain platforms, or logistics technology is a plus
+
+US base salary range: $174,000 - $230,000 USD

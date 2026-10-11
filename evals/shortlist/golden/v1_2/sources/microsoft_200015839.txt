@@ -1,0 +1,62 @@
+Overview
+We’re building next generation AI-powered skilling experiences that help people and organizations learn faster, prove what they know, and keep pace with Ai driven work. As a Principal Product Manager, you’ll set the vision, shape the roadmap, and lead cross functional teams to deliver delightful, measurable learning outcomes on a global scale. '
+
+You’ll thrive here if you love turning deep customer insight into bold product bets, partnering closely with Design and Engineering, and shipping high quality experiences that people can’t wait to use. We value clarity, curiosity, and craft—and we’ll give you the autonomy and support to do your effective work. 
+
+Microsoft’s mission is to empower every person and every organization on the planet to achieve more, and we’re dedicated to this mission across every aspect of our company. Our culture is centered on embracing a growth mindset and encouraging teams and leaders to bring their highly qualified contributions each day. Join us and help shape the future of the world.
+
+
+
+Responsibilities
+The Principal Product Manager is responsible for the following:
+
+Set the North Star – Define the vision and strategy for AI skilling across learner, manager, and enterprise scenarios; translate it into clear success metrics. 
+Turn Insight into Product – Use qualitative and quantitative research to uncover unmet needs and convert them into crisp scenarios, roadmaps, and MVPs. 
+Lead the Portfolio – Prioritize data informed investments; make tradeoffs across content, platform, telemetry, cost/latency, privacy, and compliance. 
+Build AI First Experiences – Partner with Design and Engineering to ship LLM powered features (recommendations, coach, pathways, assessment) that are usable, accessible, and trustworthy. 
+Raise the Bar on Quality – Establish measurement for engagement, learning outcomes, credential attainment, reliability, and performance; iterate based on evidence. 
+Launch and Grow – Collaborate with Product Marketing and field teams to craft narratives, land launches (e.g., major events), and drive adoption and retention. 
+Win with Partners – Work with internal/external partners (e.g., content providers, platform teams) to expand catalog depth, credentials, and enterprise integrations. 
+Model Reliable Product Leadership – Create clarity, build energy, and deliver results across multiple squads/epics through inclusive, transparent execution. 
+Other
+
+Embody our culture and values
+
+
+Qualifications
+Bachelor's Degree AND 8+ years experience in product/service/program management or software development
+OR equivalent experience.
+Other Requirements
+
+Ability to meet Microsoft, customer and/or government security screening requirements are required for this role. These requirements include but are not limited to the following specialized security screenings:
+
+Microsoft Cloud Background Check: This position will be required to pass the Microsoft Cloud background check upon hire/transfer and every two years thereafter.
+Preferred Qualifications
+
+Bachelor's Degree in in Computer Science, Engineering, Human Computer Interaction, Data/AI, or related technical field or equivalent practical experience AND 12+ years of product leadership with enterprise SaaS/platform experience
+OR equivalent experience.
+Advance Degree in (e.g. MS in  Computer Science, Engineering, Human Computer Interaction, Data/AI, or MBA ) is a plus.
+6+ years experience improving product metrics for a product, feature, or experience in a market (e.g., growing customer base, expanding customer usage, avoiding customer churn).
+6+ years experience disrupting a market for a product, feature, or experience (e.g., competitive disruption, taking the place of an established competing product).
+6+ years of experience end to end product management experience shipping largescale, cross functional products or platforms.
+6+ years of experience leading product teams building consumer products.
+6+ years of experience in machine learning and/or AI.
+4+ years experience taking a product, feature, or experience to market (e.g., design, addressing product market fit, and launch, internal tool/framework).
+Domain expertise in learning/skilling, credentials/assessment, or workforce development; familiarity with content pipelines and role based learning paths. 
+Handson experience bringing generative AI to production (prompting, evaluation, safety & governance, cost/perf optimization). 
+Depth in experimentation and measurement (A/B testing, causal inference, learning outcomes, cohort analysis). 
+Demonstrated executive storytelling and external thought leadership (talks, blogs, community). 
+
+
+Product Management IC5 - The typical base pay range for this role across the U.S. is USD $142,800 - $274,800 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $188,000 - $304,200 per year.
+
+Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here:
+https://careers.microsoft.com/us/en/us-corporate-pay
+
+Product Management IC6 - The typical base pay range for this role across the U.S. is USD $165,600 - $296,400 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $220,800 - $331,200 per year.
+
+Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here:
+https://careers.microsoft.com/us/en/us-corporate-pay
+
+
+This position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.

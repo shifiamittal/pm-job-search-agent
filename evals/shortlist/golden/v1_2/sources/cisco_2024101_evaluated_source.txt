@@ -1,0 +1,165 @@
+
+ciscologo_new
+-
+Staff Product Manager - Enterprise AI (Collaboration) - Hybrid
+Category:Product and Engineering
+Job ID:2024101
+undefined:Hybrid
+
+Job Description
+The application window is expected to close on: 10/13/2026
+This position is based in San Jose, North Carolina or Seattle and operates under a hybrid work model.
+
+
+
+
+Meet the Team
+
+The Enterprise AI Platform team is the central engine for Cisco’s enterprise AI strategy. Comprising experts across engineering, UX, and product, we own the platform that enables the development of AI solutions for enterprise problems at scale.
+
+
+
+
+Your Impact
+
+As a Staff AI Product Manager, you will play a critical role in driving the roadmap for Cisco's agentic platform and experiences. You will own the product lifecycle end-to-end, translating complex technical capabilities into actionable roadmaps. You will collaborate cross-functionally to deliver secure, high-impact AI solutions that empower our global workforce.
+
+
+Key Responsibilities
+
+Product Strategy & Roadmap: Develop and refine the vision, strategy, and roadmap for enterprise AI solutions, aligning with stakeholder needs and Cisco’s business goals.
+Champion platform-level thinking: evaluate feature requests and product decisions for their impact on the broader Enterprise platform ecosystem, not just a single surface, and push back on point solutions that create long-term fragmentation.
+Requirements Gathering & PRD Ownership: Lead the requirements gathering process; synthesize user problems and solution ideas from focus groups and other sources into clear, actionable Product Requirement Documents (PRDs).
+Cross-Functional Leadership: Work closely with engineering, design, security, legal, and business teams to ensure successful product delivery and compliance with privacy/security standards.
+Influence roadmap and architecture decisions: build alignment with engineering leads, adjacent product teams, and platform stakeholders through data, narrative, and relationship-building rather than authority.
+User-Centric Design: Advocate for automation features that address high-impact workflows and integrate with complex enterprise tools (e.g., Webex, Outlook, SharePoint, Jira).
+Stakeholder Engagement: Facilitate user focus groups, synthesize feedback, and iterate on prototypes to ensure solutions meet real-world needs.
+Metrics & Success Evaluation: Define indicators for pilots and user testing; analyze data to advise product improvements and drive adoption
+
+
+
+Minimum Qualifications
+
+8+ years in product management, with specific domain experience in AI (e.g., Machine Learning, Natural Language Processing, or LLM-based systems).
+Proven track record of launching successful products from concept to pilot to deployment in enterprise environments.
+Experience working with technical teams and understanding APIs, integrations, and enterprise data architectures.
+Strong analytical skills; comfortable synthesizing complex feedback and translating it into clear product requirements.
+
+
+
+Preferred Qualifications
+
+Deep expertise in generative AI or large-scale automation platforms.
+Experience facilitating workshops, focus groups, and user testing.
+Ability to work independently and lead cross-functional teams in a hybrid office environment (San Jose, RTP, or Seattle).
+Experience in building privacy-forward and trustworthy experiences
+Strategic vision with a hands-on approach to execution and metric-driven product management.
+
+
+
+
+Why Cisco? 
+At Cisco, we’re revolutionizing how data and infrastructure connect and protect organizations in the AI era – and beyond. We’ve been innovating fearlessly for 40 years to create solutions that power how humans and technology work together across the physical and digital worlds. These solutions provide customers with unparalleled security, visibility, and insights across the entire digital footprint.
+
+Fueled by the depth and breadth of our technology, we experiment and create meaningful solutions. Add to that our worldwide network of doers and experts, and you’ll see that the opportunities to grow and build are limitless. We work as a team, collaborating with empathy to make really big things happen on a global scale. Because our solutions are everywhere, our impact is everywhere. 
+
+We are Cisco, and our power starts with you. 
+
+Message to applicants applying to work in the U.S. and/or Canada:
+The starting salary range posted for this position is $171,600.00 to $245,000.00 and reflects the projected salary range for new hires in this position in U.S. and/or Canada locations, not including incentive compensation*, equity, or benefits.
+Individual pay is determined by the candidate's hiring location, market conditions, job-related skillset, experience, qualifications, education, certifications, and/or training. The full salary range for certain locations is listed below. For locations not listed below, the recruiter can share more details about compensation for the role in your location during the hiring process.
+
+U.S. employees are offered benefits, subject to Cisco’s plan eligibility rules, which include medical, dental and vision insurance, a 401(k) plan with a Cisco matching contribution, paid parental leave, short and long-term disability coverage, and basic life insurance. Please see the Cisco careers site to discover more benefits and perks.  Employees may be eligible to receive grants of Cisco restricted stock units, which vest following continued employment with Cisco for defined periods of time.
+
+U.S. employees are eligible for paid time away as described below, subject to Cisco’s policies:
+
+10 paid holidays per full calendar year, plus 1 floating holiday for non-exempt employees
+
+1 paid day off for employee’s birthday, paid year-end holiday shutdown, and 4 paid days off for personal wellness determined by Cisco
+
+Non-exempt employees** receive 16 days of paid vacation time per full calendar year, accrued at rate of 4.92 hours per pay period for full-time employees
+
+Exempt employees participate in Cisco’s flexible vacation time off program, which has no defined limit on how much vacation time eligible employees may use (subject to availability and some business limitations)
+
+80 hours of sick time off provided on hire date and each January 1st thereafter, and up to 80 hours of unused sick time carried forward from one calendar year to the next
+
+Additional paid time away may be requested to deal with critical or emergency issues for family members
+
+Optional 10 paid days per full calendar year to volunteer
+
+For non-sales roles, employees are also eligible to earn annual bonuses subject to Cisco’s policies.
+
+Employees on sales plans earn performance-based incentive pay on top of their base salary, which is split between quota and non-quota components, subject to the applicable Cisco plan. For quota-based incentive pay, Cisco typically pays as follows:
+
+.75% of incentive target for each 1% of revenue attainment up to 50% of quota;
+
+1.5% of incentive target for each 1% of attainment between 50% and 75%;
+
+1% of incentive target for each 1% of attainment between 75% and 100%; and
+
+Once performance exceeds 100% attainment, incentive rates are at or above 1% for each 1% of attainment with no cap on incentive compensation.
+
+For non-quota-based sales performance elements such as strategic sales objectives, Cisco may pay 0% up to 125% of target. Cisco sales plans do not have a minimum threshold of performance for sales incentive compensation to be paid.
+
+The applicable full salary ranges for this position, by specific state, are listed below:
+
+New York City Metro Area:
+
+$171,600.00 - $281,800.00
+Non-Metro New York state & Washington state:
+
+$151,300.00 - $250,900.00
+* For quota-based sales roles on Cisco’s sales plan, the ranges provided in this posting include base pay and sales target incentive compensation combined.
+
+** Employees in Illinois, whether exempt or non-exempt, will participate in a unique time off program to meet local requirements.
+
+Get notified for similar jobs
+Sign up to receive job alerts
+Email address
+shifia.mittal09@gmail.com
+SM
+Hi Shifia,
+Currently we dont have enough information to provide personalized job recommendations. Sign Up to save your personalized experience
+Similar jobs
+Principal Product Manager, AI - Hybrid
+Category:Product and Engineering
+Job ID:2024434
+We are looking for a Principal Product Manager, AI to drive the roadmap for Cisco's agentic platform, translating complex technical capabilities into actionable strategies. Lead cross-functional teams to deliver secure, high-impact AI solutions. Ideal for experienced product managers with a strong background in AI and enterprise environments.
+Director, Business Product Management
+Location:San Jose, California, United States of America
+Category:Product and Engineering
+Job ID:2020811
+Become part of our team as Director, Business Product Management, leading the end-to-end lifecycle management of Cisco's buying programs. Drive market adoption, strategic scaling, and the retirement of legacy offerings. Ideal for a strategic leader with extensive experience in commercial strategy and design within technology or B2B environments.
+Director, Product Management
+Category:Product and Engineering
+Job ID:2015048
+We are expanding our team: As Director, Product Management, you will lead the strategy for emerging technologies such as quantum networking and cryptography, guiding the incubation portfolio and collaborating with research and engineering. Ideal candidates bring extensive experience in technical product development and leadership within high-growth, innovative environments.
+We are Cisco
+At Cisco, bold ideas, revolutionary innovations, and courageous thinking thrive. 
+7X6A9262
+Work with impact
+Be at the forefront of what's next, powering the future for our customers and the world.
+Group96860
+Limitless opportunities
+Learn and growth with our depth and breadth of technology, resources, and industry experts.
+Rectangle3123
+Benefits & perks
+Our benefits are designed to support every aspect of your life: from your well-being to your time away to your family.
+Cisco is an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, color, religion, gender, sexual orientation, national origin, genetic information, age, disability, veteran status, or any other legally protected basis.
+Cookies Preferences
+Manage cookie settings
+Accessibility
+Cisco Accessibility Details
+Accommodations for Applicants with Disabilities
+E-Verify Participation Poster
+Right to Work Poster
+Copyright © 2026 Cisco Systems, Inc.
+Help
+Terms & Conditions
+Candidate Privacy Statement
+Privacy Statement
+Cookie Policy
+Trademarks
+Sitemap
+
+

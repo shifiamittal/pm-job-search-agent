@@ -1,0 +1,98 @@
+COUNT is rebuilding the operating system for one of the world's largest industries: accounting.
+Accounting touches every business, but much of the software supporting the profession was built for another era. COUNT is creating a modern platform that brings together the general ledger, practice management, payroll, automation, and AI, giving accounting firms a dramatically better way to operate and scale.
+
+We're early, funded, and growing quickly. We're already working with global partners and ambitious accounting firms that believe the industry is ready for something different.
+Joining COUNT now means helping shape the product and company while the opportunity is still wide open, with meaningful ownership, growth, and upside.
+
+The Opportunity
+COUNT is hiring a highly technical Head of Product to lead product strategy, discovery, and execution across a complex and rapidly evolving SaaS platform.
+Our engineering organization includes approximately 20 developers working across numerous products, features, integrations, client requests, and technical initiatives. We have strong technical leads driving architecture and development, including leads supporting our offshore engineering teams. What we need now is a senior product leader who can create clarity across all of that work, connect Product, Engineering, QA, Support, Accounting Operations, and company leadership, and take ownership of what we build and why.
+You'll work directly with accounting firms to deeply understand how they operate, where their workflows break down, and what opportunities exist to fundamentally improve the way they work. This isn't just about gathering feature requests or responding to customer feedback. We need someone who can recognize problems customers may not know how to articulate, identify opportunities they haven't thought to ask for, and help shape a product vision that moves the industry forward.
+
+You'll take a constant stream of customer feedback, feature requests, bugs, operational needs, technical considerations, and company priorities and turn them into clearly scoped and sequenced engineering work. You'll collaborate closely with engineers to understand complexity and tradeoffs, establish priorities, drive roadmapping and planning, run standups and processes, surface blockers, and keep teams communicating and moving toward release.
+Importantly, your ownership doesn't end when a feature ships. You'll be responsible for understanding whether what we built actually solved the intended problem, how customers are using it, and what we should learn or change as a result.
+
+COUNT has strong engineering leads responsible for technical architecture and engineering leadership. This role requires enough technical depth to collaborate credibly with those engineers, understand architecture and dependencies, ask the right questions, challenge assumptions, and translate complex business needs into actionable technical requirements.
+COUNT is an early-stage company transforming an industry that remains highly manual. Problems won't always arrive neatly defined. Priorities will change, information will be incomplete, and there won't always be an established process to follow. We need someone energized by that environment who can bring structure to ambiguity, think strategically about where the product should go, and take ownership without waiting for someone else to define the path.
+
+What You'll Own
+Product Strategy & Customer Discovery
+Own and help shape COUNT's product vision and strategy in close partnership with the CEO and company leadership.
+Engage directly with accounting firms, customers, and industry stakeholders to understand their workflows, operational challenges, pain points, and unmet needs.
+Go beyond responding to customer requests to proactively identify product opportunities, including solutions customers may not yet know they need.
+Develop a deep understanding of the accounting industry and translate those insights into differentiated product capabilities.
+Determine what COUNT should build, why it matters, and how it supports the company's long-term vision and business objectives.
+Balance customer feedback, market opportunities, business priorities, and technical considerations when making product decisions.
+Identify opportunities to use automation, AI, and modern software to fundamentally improve how accounting firms operate.
+Technical Product Leadership
+Own product direction and execution across a broad SaaS platform spanning accounting workflows, practice management, payroll, integrations, automation, AI, and new product capabilities.
+Translate company priorities, customer needs, operational feedback, feature requests, and technical constraints into clear product requirements and executable engineering work.
+Partner closely with engineering leads to understand technical approaches, architecture implications, dependencies, risks, and tradeoffs.
+Bring enough technical depth to facilitate productive conversations and challenge assumptions without attempting to replace engineering ownership.
+Serve as a key connection point between the CEO, Product, Engineering, QA, Support, Accounting Operations, customers, and other stakeholders.
+Make informed product decisions that balance customer value, technical feasibility, business impact, and engineering capacity.
+Prioritization & Roadmapping
+Establish clear priorities across competing roadmap initiatives, bugs, client commitments, platform investments, and operational needs.
+Own and continuously refine the product roadmap based on business priorities, customer insights, engineering capacity, and technical considerations.
+Proactively identify and prioritize new product opportunities rather than relying solely on incoming customer requests or leadership direction.
+Scope complex projects, define requirements and acceptance criteria, and break ambiguous initiatives into manageable phases.
+Work with engineering leads to understand level of effort, dependencies, and tradeoffs before committing resources.
+Ensure engineering capacity remains aligned with the company's most important business and customer priorities.
+Balance immediate customer needs with longer-term product and platform investments.
+Product Outcomes & Continuous Improvement
+Own product outcomes beyond delivery, ensuring shipped features solve meaningful customer problems and contribute to business objectives.
+Establish clear success criteria for major product initiatives and evaluate whether those objectives are achieved after release.
+Work directly with customers to understand how new capabilities are being adopted, where friction remains, and whether the intended value is being realized.
+Use customer feedback, product usage, and business outcomes to inform future iterations and roadmap decisions.
+Recognize when a feature or product initiative isn't delivering the expected results and take ownership of determining what needs to change.
+Build a product culture focused not just on shipping features, but on delivering meaningful improvements to the customer experience and business.
+Product Execution & Process
+Establish and drive effective operating rhythms across Product and Engineering, including planning, standups, prioritization, handoffs, and release coordination.
+Drive clear communication across engineering teams, including distributed and offshore teams, so priorities, ownership, dependencies, and expectations are understood.
+Stay close to active work, identifying blockers, dependencies, or changing requirements early and helping teams resolve them.
+Create visibility into what is being worked on, why it matters, where it stands, and what could prevent successful delivery.
+Improve product and engineering processes where needed without introducing unnecessary process or bureaucracy.
+Help bring structure and predictability to an environment where priorities and requirements will continue to evolve.
+Ensure teams understand not only what they're building, but the customer problem and business objective behind the work.
+Cross-Functional Leadership
+Work directly with the CEO and leadership team to translate company strategy into product and engineering priorities.
+Partner closely with Engineering and QA to ensure requirements are technically informed, clearly defined, appropriately scoped, and thoroughly tested.
+Work with Support and Accounting Operations to understand customer workflows, pain points, bugs, and opportunities for product improvement.
+Build strong relationships with accounting firms and customers to ensure product decisions reflect a deep understanding of their businesses.
+Facilitate decisions when competing business, customer, and technical priorities require tradeoffs.
+Ensure information flows effectively between technical and non-technical teams.
+Help establish a shared understanding of product priorities, customer value, and success across the organization.
+What We're Looking For
+Significant experience in technical product management, product leadership, or a closely related role within a SaaS environment.
+Demonstrated experience owning product strategy, discovery, roadmapping, and execution, not just managing delivery against an established roadmap.
+Strong technical fluency and the ability to collaborate credibly with senior software engineers and engineering leads.
+Experience engaging directly with customers to understand complex workflows, identify unmet needs, and translate insights into product opportunities.
+Ability to think beyond explicit customer requests and identify innovative solutions to underlying business problems.
+Experience translating complex business and customer needs into technical requirements, scoped projects, and prioritized engineering work.
+Strong experience with product roadmapping, prioritization, requirements definition, planning, and software delivery.
+Demonstrated ability to evaluate product success through customer adoption, feedback, usage, and business outcomes.
+Strong experience driving communication and execution across multiple engineering teams, stakeholders, and competing priorities.
+Experience operating in environments where requirements are ambiguous and priorities evolve quickly.
+Strong ownership mentality with the ability to identify what needs to happen and drive it forward without extensive direction.
+Excellent communication skills and the ability to create clarity between technical and non-technical stakeholders.
+Genuine energy and enthusiasm for building products, solving difficult problems, and operating in an early-stage environment.
+Preferred Qualifications
+Experience working at an early-stage or high-growth technology company.
+Experience owning product strategy or leading a product function within a growing SaaS business.
+Experience with complex B2B SaaS platforms involving multiple products, integrations, workflows, or customer types.
+Experience working with distributed or offshore engineering teams.
+Background in accounting, fintech, financial software, or another complex and data-sensitive SaaS environment.
+Experience with AI-enabled products, automation, integrations, or workflow platforms.
+Experience developing new product capabilities through direct customer discovery and market insights.
+Startup experience is valuable but not required. More important is evidence that you've operated with ownership, moved effectively through ambiguity, developed a strong understanding of your customers, and taken responsibility for both what gets built and the outcomes it delivers.
+
+Why Join COUNT
+Build something that can be massive. We're attacking a huge global market that is overdue for a technology reset.
+Help modernize a deeply manual industry. You'll have the opportunity to rethink how accounting firms operate rather than simply making incremental improvements to existing software.
+Shape the product vision. You'll have meaningful influence over what COUNT builds next, including opportunities customers haven't yet imagined.
+Get in early. COUNT is still small enough that one exceptional person can materially shape the product, processes, and company.
+Have real ownership. This isn't a role where the roadmap and processes have already been handed to you. You'll help determine what COUNT builds, how we prioritize, and whether our products deliver meaningful value.
+Work directly with leadership, customers, and engineering. You'll operate at the center of company priorities, customer needs, product strategy, and technical execution.
+Move fast with ambitious people. We value energy, curiosity, ownership, and high standards over layers of process or corporate politics.
+Grow as fast as the company. Strong performers get responsibility quickly, and we invest in expanding people's skills, scope, and opportunities.
+Own part of the upside. Competitive salary, equity in COUNT, flexible vacation, a healthcare stipend, and the opportunity to build alongside a global team.

@@ -1,0 +1,47 @@
+Microsoft — Senior Product Manager - Reporting & Data Platform
+Job number: 200051931
+Date posted: Oct 08, 2026
+Work site: 4 days / week in-office
+Travel: Less than 25%
+Profession: Product Management
+Discipline: Product Management
+Role type: Individual Contributor
+Employment type: Full-Time
+
+Overview
+The AI Monetization Product Team within the AI Experiences organizattion at Microsoft is responsible for building and scaling advertising, commerce, and revenue-generating experiences across Microsoft's AI and consumer ecosystem. Monetization decisions are only as good as the data behind them. Sales, Finance, Product, and leadership teams rely on trusted reporting to understand revenue performance, product adoption, customer value, forecasting, and the health of the business. Today, too much of that work depends on fragmented datasets, inconsistent definitions, and one-off reporting solutions that are difficult to scale or trust.
+
+At Microsoft AI Monetization, we're looking for a Senior Product Manager – Reporting & Data Platform to own the product direction for the data and reporting capabilities that help the business run. You will partner with Engineering, Sales, Finance, CRM, Analytics, and Product teams to turn their most important questions into durable platform capabilities: canonical data models, governed metrics, semantic layers, reusable datasets, and self-service reporting experiences.
+
+This is not a dashboard-production role. You will build the foundation that allows other teams to create consistent reporting and insights on top of a shared source of truth. The role requires solid product judgment, comfort with data infrastructure, and a platform mindset: deciding what should be common, reusable, reliable, and easy for others to build on.
+
+Microsoft’s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.
+
+AI Experiences employees who live within a 50-mile commute of a designated Microsoft Hub in the U.S. are expected to work from the office at least four days per week. This expectation is subject to local law and may vary by jurisdiction.
+
+Responsibilities
+- Own the roadmap and delivery of reporting and data-platform capabilities that give Monetization teams a consistent, trusted understanding of the business.
+- Define and execute the product roadmap for shared reporting and data-platform capabilities, balancing immediate business needs with investments that make future reporting faster, more reliable, and more self-service.
+- Partner with Sales, Finance, CRM, Analytics, Product, and Engineering teams to understand the decisions they need to make and translate those needs into prioritized data products and reporting capabilities.
+- Drive the definition of canonical business metrics, semantic models, and reusable data assets for key domains such as revenue, performance, customer value, product adoption, seller insights, forecasting, and planning.
+- Enable teams to build on the platform through governed datasets, clear definitions, reusable dimensions, APIs, documentation, and access patterns--reducing duplicate pipelines and inconsistent reporting.
+- Work with engineering and data teams to shape requirements for data ingestion, integration, modeling, quality, reliability, observability, governance, security, and cost efficiency.
+- Lead cross-functional tradeoffs across data sources, reporting experiences, and platform investments; communicate priorities, risks, and outcomes clearly to senior stakeholders.
+- Establish success measures for data quality, reporting reliability, platform adoption, time-to-insight, and reduction of manual reconciliation work.
+
+Qualifications
+Required Qualifications:
+- Bachelor's Degree AND 5+ years experience in product/service/program management or software development OR equivalent experience.
+
+Preferred Qualifications:
+- Bachelor's Degree AND 8+ years experience in product/service/program management or software development OR equivalent experience.
+- 5+ years of product management experience, with a track record of delivering complex, cross-functional products or platforms.
+- Experience with reporting, analytics, business intelligence, data products, or data platforms.
+- Technical fluency in modern data infrastructure, including data pipelines, data modeling, warehouses or lakehouses, semantic models, APIs, and reporting tools.
+- Demonstrated ability to turn ambiguous customer or business needs into clear product requirements, roadmaps, and execution plans.
+- Solid data sense and comfort with metric definitions, data quality, reconciliation, and the operational realities of maintaining trusted business data.
+- Experience influencing partners across engineering and business functions without direct authority.
+
+#MicrosoftAI
+
+Product Management IC4 - The typical base pay range for this role across the U.S. is USD $119,800 - $234,700 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $160,200 - $261,000 per year.

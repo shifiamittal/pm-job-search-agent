@@ -1,0 +1,13 @@
+case_id,company,job_id,title,decision,golden_status,source_file,source_status,strict_jd_fidelity
+microsoft_200015839,Microsoft,200015839,Principal Product Manager — AI Skilling,APPLY,frozen,sources/microsoft_200015839.txt,exact_frozen_historical,True
+microsoft_200054592,Microsoft,200054592,Senior Product Manager — Search Places,APPLY,frozen,sources/microsoft_200054592.txt,exact_frozen_historical,True
+microsoft_200051931,Microsoft,200051931,Senior Product Manager — Reporting & Data Platform,APPLY — PRIORITY,frozen,sources/microsoft_200051931.txt,exact_frozen_user_supplied,True
+microsoft_200055557,Microsoft,200055557,Senior Product Manager — Cloud Supply Chain / AI Data Platform,APPLY,frozen,sources/microsoft_200055557.txt,exact_frozen_historical,True
+r37_principal_product_manager,R37 AI Lab / R1 RCM,,Principal Product Manager,APPLY,frozen,sources/r37_principal_product_manager.txt,exact_frozen_historical,True
+count_head_of_product,COUNT,,Head of Product,APPLY,frozen,sources/count_head_of_product.txt,exact_frozen_historical,True
+flexport_8158027,Flexport,8158027,"Senior Product Manager, Visibility",DO NOT APPLY,frozen,sources/flexport_8158027.txt,official_same_job_id_recovered,True
+flexport_8110066,Flexport,8110066,"Staff Product Manager, Trucking Tech",DO NOT APPLY,frozen,sources/flexport_8110066.txt,official_same_job_id_recovered,True
+amazon_10499366,Amazon,10499366,Principal Product Manager-Tech — FBA Inventory Optimization Services,APPLY — PRIORITY,frozen,sources/amazon_10499366.txt,official_same_job_id_recovered,True
+cisco_2024434_2026-10-11,Cisco,2024434,"Principal Product Manager, AI - Hybrid",APPLY — PRIORITY,frozen,sources/cisco_2024434_evaluated_source.txt,exact_frozen_historical,True
+cisco_2024101_2026-10-11,Cisco,2024101,Staff Product Manager - Enterprise AI (Collaboration) - Hybrid,APPLY,frozen,sources/cisco_2024101_evaluated_source.txt,exact_frozen_historical,True
+cisco_2023232_2026-10-11,Cisco,2023232,Engineering Product Manager | 15+ Years,DO NOT APPLY,frozen,sources/cisco_2023232_evaluated_source.txt,partial_frozen_historical,False
