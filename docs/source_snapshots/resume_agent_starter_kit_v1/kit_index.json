@@ -1,0 +1,17 @@
+{
+  "kit_name": "Resume Agent Starter Kit",
+  "version": "1.0",
+  "recommended_entrypoint": "00_START_HERE.md",
+  "bootstrap_prompt": "06_BOOTSTRAP_PROMPT.txt",
+  "files": [
+    "00_START_HERE.md",
+    "01_RESUME_AGENT_WORKFLOW.md",
+    "02_JOB_SEARCH_SHORTLIST_MODE.md",
+    "03_CANDIDATE_EVIDENCE_BASE_TEMPLATE.md",
+    "04_EVIDENCE_AND_TRUTHFULNESS_RULES.md",
+    "05_RESUME_OUTPUT_CONFIG_TEMPLATE.md",
+    "06_BOOTSTRAP_PROMPT.txt",
+    "07_CONTROLLER_AND_QA_CHECKLIST.md",
+    "08_TEMPLATE_USAGE_GUIDE.md"
+  ]
+}

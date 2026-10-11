@@ -1,0 +1,70 @@
+I am using the attached Resume Agent Starter Kit to create tailored resumes in this ChatGPT conversation.
+
+Treat `01_RESUME_AGENT_WORKFLOW.md` as the governing downstream resume workflow.
+Use `../shortlist/` v1.2 exclusively for Role Understanding, Career / Requirements
+Mapping, Shortlist Decision, and Controller Validation. Follow the handoff in
+`02_JOB_SEARCH_SHORTLIST_MODE.md`; do not independently reassess an approved role.
+
+`APPLY — PRIORITY` and `APPLY` make a controller-accepted role eligible for resume
+work. `HOLD / INVESTIGATE` stops downstream work until resolved; `DO NOT APPLY`
+stops downstream work. Acceptance alone does not start automated resume generation.
+Downstream execution occurs only when explicitly invoked/enabled within repository
+runtime policy. Apply this gate before role-specific evidence retrieval or drafting.
+
+Preserve `capability_fit`, `domain_context_fit`, `overall_fit_assessment`, and
+`limitation_or_difference` from validated shortlist mapping, including nulls and
+criterion IDs. Do not replace them with a single evidence classification.
+
+Treat my uploaded career documents as the only source of truth for my experience. Examples inside the starter-kit files are process examples only and are never evidence about me.
+
+First, ingest my master resume and supporting career files and build my candidate evidence base using `03_CANDIDATE_EVIDENCE_BASE_TEMPLATE.md`.
+
+Important rules:
+- Do not tailor a resume yet.
+- Do not invent responsibilities, metrics, technologies, architecture ownership, team size, direct reports, business impact, or domain experience.
+- Distinguish direct experience from transferable / adjacent experience.
+- Preserve genuine gaps.
+- Preserve conflicting metrics or ambiguous claims instead of reconciling them yourself.
+- Prefer underlying project artifacts over compressed resume bullets when detail is needed.
+- Track source and confidence for important claims.
+- Do not infer formal people management from cross-functional leadership.
+- Do not turn product revenue impact into sales ownership.
+- Do not turn executive interaction into strategic account ownership.
+- Do not turn technical product leadership into implementation ownership.
+
+For each explicitly invoked resume task, follow the stages in order:
+1. Reuse validated shortlist Role Understanding (complete shortlist v1.2 first if absent)
+2. Check validated shortlist mapping, decision, controller acceptance, and explicit execution gate
+3. Evidence Retrieval
+4. Hiring Criteria Evidence Mapping
+5. Resume Strategy / Architecture
+6. Resume Writing
+7. Content Freeze / Resume Manifest
+8. Document Generation
+9. Exact Content Validation
+10. Render
+11. Visual / Page-Space Audit
+12. Compression only if actual overflow exists
+13. Writer revision if needed
+14. New manifest version
+15. Regenerate
+16. Revalidate
+17. Re-render / layout check
+18. Final QA
+
+Do not jump directly from the JD to resume writing.
+
+Do not allow downstream stages to redefine the role or silently erase gaps identified upstream.
+
+The approved Resume Manifest is the single source of truth for content.
+The resume template is the single source of truth for formatting.
+Document generation has zero editorial authority.
+
+If I provide an existing resume as a visual template, old template wording that is not present in the manifest must not survive into the new document.
+
+Start by:
+1. listing the files you can use,
+2. building the candidate evidence base,
+3. identifying factual conflicts / unresolved claims,
+4. identifying gaps in the evidence base,
+5. asking only the minimum necessary questions before we begin targeting roles.

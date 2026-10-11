@@ -1,30 +1,103 @@
 # Product Management Job-Search Agent
 
 ## Status
-The first 30-role calibration is stored locally with narrative classification and a persistent Google Sheets dashboard. No recurring discovery, applications, outreach, or automatic candidate-evidence editing is enabled. Google Docs and the Patent AI Sheet remain the authoring sources for career evidence and use a separate read-only source-sync token.
+
+`shortlist/` **v1.2.0 is the sole authoritative role-evaluation and shortlist contract for new runs**.
+Workflow: Role Understanding → Career / Requirements Mapping → Shortlist Decision
+→ Validation. [Migration status and dependency map](docs/shortlist_v1_migration.md).
+Raw discovery applies the deterministic US/India Phase-1 geography gate before producing
+PM candidates; candidate-source sync remains independent. The historical
+30-role calibration is preserved; it has not been reclassified under v1.
 
 ## Repository layout
-- `AGENTS.md`: job-search operating contract.
-- `config/`: search scope, calibrated taxonomy/rubric, and persistent dashboard ID.
-- `profile/`: approved candidate evidence and preferences.
-- `prompts/`: future workflow prompts; applications and outreach are disabled.
-- `data/`: canonical calibration jobs, review queue, skills synthesis, annotations, discovery log, and source sync state.
-- `sources/source_registry.yaml`: Google Doc identities and downstream dependencies.
-- `sources/current/`: tracked latest project snapshots in readable `.md` files.
-- `resumes/`: reserved for resume assets.
-- `portfolio/`: reserved for portfolio assets.
-- `scripts/sync_google_docs.py`: explicitly selected, read-only Google Doc/Sheet sync.
-- `scripts/sync_google_sheets.py`: workbook-to-Markdown conversion for Sheets.
-- `scripts/reprocess_calibration_jobs.py`: reprocesses only the registered calibration job IDs.
-- `scripts/finalize_discovery.py`: future successful discovery finalization and automatic dashboard sync.
-- `scripts/sync_job_dashboard.py`: create once/update the persistent human-review spreadsheet.
 
-Empty asset directories contain `.gitkeep` files so Git preserves them.
+- `AGENTS.md`: repository instructions and shortlist authority.
+- `shortlist/`: versioned stage contracts and structured state schema.
+- `resume_agent/`: canonical downstream resume-generation workflow, evidence rules, manifest/template discipline, and QA gates.
+- `prompts/classification.md`: thin entrypoint to the versioned stages.
+- `config/`: search metadata and retained dashboard identity; no legacy decision rubric.
+- `profile/`, `sources/`, `resumes/`, `portfolio/`: existing candidate sources/assets.
+- `data/`: historical calibration and independent raw discovery/evaluation artifacts.
+- `scripts/shortlist_contract.py`: read-only schema/structural consistency validation.
+- `scripts/run_shortlist_job.py`: four-stage, single-job execution with full candidate context.
+- `scripts/run_shortlist_batch.py`: sequential, resumable orchestration over CSV/JSONL inputs.
+- `scripts/shortlist_model.py`: stateless OpenAI Responses transport.
+- `scripts/discovery/geography.py`: deterministic US/India discovery gate.
+- `scripts/filter_discovery_geography.py`: offline CSV/JSONL geography-filter command.
+- `scripts/job_framework.py`: historical-data reads and explicit retired-API guards.
+- `scripts/reprocess_calibration_jobs.py`, `scripts/finalize_discovery.py`,
+  `scripts/sync_job_dashboard.py`: blocked legacy entrypoints pending v1 integration.
+- `scripts/sync_google_docs.py`, `scripts/sync_google_sheets.py`: unchanged, independent
+  read-only candidate-source export tools.
 
-## Classification and local data
-The current rules are [classification rubric](config/classification_rubric.md), [taxonomy](config/role_taxonomy.yaml), [search scope](config/search_config.yaml), and confirmed [job preferences](profile/job_preferences.md). Exact JD facts, business domain, technology orientation, role cluster, candidate evidence, gap gating, bridge timing, strategic learning, posture, and action are separate fields. No numeric fit or priority score drives a lane. `Apply Now + Bridge` means apply immediately and prepare while awaiting an interview; the repository does not submit applications.
+## Shortlisting and historical data
 
-`data/jobs_raw.jsonl` is the canonical structured record. `data/jobs_master.csv` is a flat export; `data/review_queue.csv` excludes Skip/closed roles; `data/skills_synthesis.csv` counts normalized capabilities in live non-Skip roles. The Git files remain authoritative for the agent. `data/calibration_annotations.yaml` records the first 30 JD interpretations and candidate evidence mapping. Reprocessing preserves job IDs and original discovery timestamps. `data/calibration_lane_changes.csv` records the one-time change from the original calibration.
+Use [Role Understanding](shortlist/role_understanding.md),
+[Career / Requirements Mapping](shortlist/career_requirements_mapping.md),
+[Shortlist Decision](shortlist/shortlist_decision.md), and
+[Controller / Validation](shortlist/controller_validation.md), with
+[schema.yaml](shortlist/schema.yaml). There is no alternate classification rubric.
+
+`data/jobs_raw.jsonl`, `jobs_master.csv`, `review_queue.csv`, `skills_synthesis.csv`,
+`calibration_annotations.yaml`, `calibration_lane_changes.csv`, and historical log
+entries are retained read-only. Old classifications are historical, not current
+recommendations, and are never automatically mapped to v1 outcomes. The existing
+review queue is not a v1 queue. `load_legacy_jobs()` reads original records unchanged.
+
+The protected `profile/job_preferences.md` retains historical policy wording. Its
+location scoring, old lanes, title/economics gates and automatic AI preference are
+superseded by v1; confirmed facts/preferences and unresolved questions are preserved.
+
+Install local validation dependencies and validate an already completed record:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r scripts/requirements-shortlist.txt
+.\.venv\Scripts\python.exe scripts/shortlist_contract.py --input path\to\completed_shortlist.json
+```
+
+This checks schema and cross-stage structure only. It does not verify source facts,
+produce decisions, set validation flags, persist jobs, enqueue resumes, or replace
+semantic controller review. No selective evidence retrieval is implemented.
+
+## Single-job shortlist baseline
+
+The [single-job runner](docs/single_job_shortlist.md) executes the four authoritative
+stages using the full JD and all five candidate files, without selective retrieval.
+Set `OPENAI_API_KEY` and explicitly select an API model via `SHORTLIST_MODEL` or
+`--model`, then run one normalized job JSON object:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r scripts/requirements-shortlist.txt
+.\.venv\Scripts\python.exe scripts/run_shortlist_job.py --input path\to\job.json --model $env:SHORTLIST_MODEL
+```
+
+Each invocation creates a new ignored `local_private/shortlist/<run_id>/` directory
+with `job_state.json`, `shortlist_state.json` (on completed controller review), and
+`review.md`. The envelope retains original metadata; `shortlist_state.json` conforms
+to the unchanged v1 schema. Model review is not independent human verification.
+The [batch runner](docs/batch_shortlist.md) calls this same execution path sequentially
+with isolated per-job state, incremental summaries, failure isolation, and safe resume.
+No cross-job conversation, selective evidence retrieval, legacy writes, dashboard sync,
+programmatic resume generation, applications or outreach is enabled. Accepted roles may
+continue through the documented `resume_agent/` workflow manually/agentically, but a full
+resume runtime is not yet implemented in this repository.
+
+## Resume-generation workflow
+
+For roles accepted by shortlist v1.2, use [resume_agent/README.md](resume_agent/README.md).
+The resume workflow is recovered from the Resume Agent Starter Kit and integrated so that
+`shortlist/` v1.2 remains authoritative upstream. The original starter-kit snapshot is preserved
+under `docs/source_snapshots/resume_agent_starter_kit_v1/` for provenance.
+
+Important: the starter kit's original `02_JOB_SEARCH_SHORTLIST_MODE.md` predates the v1.2
+capability/domain split. New shortlist runs must use `shortlist/`; `resume_agent/02_...` is only
+an integration bridge.
+
+The downstream sequence is Evidence Retrieval → Hiring Criteria Evidence Mapping → Resume
+Strategy / Architecture → Resume Writing → Content Freeze / Manifest → Document Generation →
+Exact Content Validation → Render / Page-Space Audit → compression only if needed → revalidate → Final QA.
+
+The workflow specification exists; a complete programmatic resume runner does not yet.
 
 ## Candidate information
 Use the verified candidate profile, career evidence, conflicts, job preferences, and approved master resume. Do not infer missing facts or change those files during discovery.
@@ -152,26 +225,22 @@ exporting a blank. Cell notes are retained when present in the Drive workbook ex
 Normalized Markdown content feeds the existing SHA-256/state/change-detection logic.
 The script does not commit or push; those remain explicit repository actions.
 
-## Persistent job dashboard
+## Persistent job dashboard — integration blocked
 
-The spreadsheet named **Shifia PM Job Search Dashboard** is created once. Its ID and URL are stored in `config/google_sheets.yaml`. Each later sync updates that same spreadsheet and its Dashboard, Jobs Master, Apply Now, Apply Now + Bridge, Build Toward, Skills Synthesis, and Calibration Feedback tabs. The Sheet is a review projection, not the machine-readable source of truth. User Review/Override/Notes on the feedback tab are retained by job ID on subsequent sheet syncs; overrides do not automatically retrain classification or modify the local canonical record.
+The existing **Shifia PM Job Search Dashboard** identity remains in
+`config/google_sheets.yaml`. Synchronization is disabled in configuration and code.
+Existing remote tabs and user feedback are untouched historical views, not v1
+recommendations. This migration does not authenticate, write to, or replace the Sheet.
 
-The dashboard writer requests only `spreadsheets` edit and `drive.file` OAuth scopes. It reuses the Desktop OAuth **client credentials**, but stores its own `%LOCALAPPDATA%\pm-job-search-agent\dashboard_token.json`, outside Git. It never changes or broadens the existing `%LOCALAPPDATA%\pm-job-search-agent\token.json` with `drive.readonly` scope. Enable Google Sheets API and Google Drive API for the existing OAuth client project, authorize the separate dashboard token in the local browser, and use an account that can create the spreadsheet. Never commit either token, credentials, cookies, browser state or secrets.
+The old dashboard writer, calibration reprocessor and finalizer exit with an explicit
+integration error before any file writes or network/authentication. Even changing
+`sync_enabled` cannot reactivate the legacy writer. Future integration needs v1
+records, durable identity, feedback preservation, accepted-record routing, and a
+reviewed projection to the same Sheet. It must not convert old labels to new outcomes.
+The original OAuth credentials and tokens remain outside Git; candidate-source sync
+is unaffected. See the migration note for the complete pending work.
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r scripts/requirements-sync.txt
-.\.venv\Scripts\python.exe scripts/sync_job_dashboard.py
-```
-
-The manual command above is safe to rerun: a populated spreadsheet ID is updated, never recreated. A future successful discovery/classification job should pass canonical JSONL through the single finalizer:
-
-```powershell
-.\.venv\Scripts\python.exe scripts/finalize_discovery.py --input path\to\classified_jobs.jsonl
-```
-
-This entrypoint merges by stable job ID, validates the narrative schema, writes local jobs/review/skills files, then calls the Sheet sync. If the Sheet request fails, local data remains saved and the failure is reported; rerun `scripts/sync_job_dashboard.py`. The finalizer performs no web search itself. No recurring discovery is scheduled.
-
-Offline verification:
+Run the full offline suite:
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s scripts -p 'test_*.py' -v
