@@ -329,3 +329,24 @@ invocation, and stateless HTTP parameters. All pre-existing tests remain unchang
 files unchanged**, including all shortlist contracts/schema, five candidate files,
 historical records, discovery/benchmarks, and pre-existing tests. No live LLM call,
 commit, push, job-dashboard write, or downstream action was performed for this build.
+
+## Canonical identity and atomic hiring criteria
+
+The six normalized intake fields `company`, `job_id`, `title`, `location`, `work_model`,
+and `travel` are runtime-owned facts. Every stage receives the same `canonical_identity`.
+The runner injects `role_identity` and decision `location_work_model` directly from intake
+before validating or passing outputs downstream; null remains null even if JD prose names
+a city, work model or travel requirement. Intake enrichment must occur explicitly before a
+run. No model-produced identity value is authoritative. Raw responses remain separately in
+`raw_stage_outputs`, with raw and bound hashes recorded for audit. Semantic outputs and
+controller acceptance are never repaired by this binding. Resume validates canonical copies
+and prompt/context fingerprints; old runs with changed prompts require a fresh run.
+
+Role Understanding must separate materially different hiring capabilities into unique atomic
+criteria, reusing existing criteria instead of creating duplicates. Growth, market disruption,
+consumer-product team leadership and product launch must not share one fit label when they
+require different evidence. This uses the existing schema and per-criterion mapping/controller
+checks. Baseline degree/years/OR-equivalent qualification logic stays intact. The mapping
+stage cannot label a whole compound capability direct on evidence for only one component.
+Atomic decomposition remains a semantic model task audited by the unchanged controller;
+offline tests do not establish that a future live model response will pass.

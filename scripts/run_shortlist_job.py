@@ -29,6 +29,7 @@ CANDIDATE_FILES = (
 )
 CONFIRMED_FACTS_FILE = "profile/candidate_confirmed_facts.md"
 STAGES = ("role_understanding", "career_requirements_mapping", "shortlist_decision", "controller_validation")
+IDENTITY_FIELDS = ("company", "job_id", "title", "location", "work_model", "travel")
 STAGE_LABELS = ("Role Understanding", "Career / Requirements Mapping", "Shortlist Decision", "Controller Validation")
 STAGE_MODEL_OPTIONS = {
     "role_understanding": "role_model",
@@ -114,6 +115,23 @@ def normalize_input(job, *, row_identity=None):
     slug = lambda value: re.sub(r"[^\w]+", "-", value).strip("-")[:60] or "record"
     normalized["internal_record_key"] = f"shortlist:{slug(company)}:{slug(title)}:{digest}"
     return normalized
+
+
+def canonical_identity(job):
+    """Copy normalized intake facts exactly, including unknown/null values."""
+    return {key: deepcopy(job[key]) for key in IDENTITY_FIELDS}
+
+
+def _bind_identity(output, stage, job):
+    """Identity is runtime-owned; never propagate generated copies downstream."""
+    bound = deepcopy(output)
+    if isinstance(bound, dict):
+        if stage == "role_understanding":
+            bound["role_identity"] = canonical_identity(job)
+        elif stage == "shortlist_decision":
+            bound["location_work_model"] = {key: deepcopy(job[key])
+                                            for key in ("location", "work_model", "travel")}
+    return bound
 
 
 def jd_source(job):
@@ -340,6 +358,10 @@ Respect profile/evidence_conflicts.md, validated facts and personal ownership li
 Examples in the contracts are not evidence about this job or this candidate.
 Never manufacture metrics, ownership, sources or direct experience from adjacency.
 No scores, extra decision outcomes, arbitrary criterion counts or deterministic gates.
+canonical_identity is runtime-owned normalized intake, including nulls. Never infer,
+enrich, normalize or rewrite company, job_id, title, location, work_model or travel
+from JD prose. Copy canonical values if the output schema asks for them; runtime
+injects those copies. Unknown intake remains unknown even when the JD mentions a city.
 """
 
 STAGE_INSTRUCTIONS = {
@@ -352,9 +374,16 @@ put ordinary job capabilities in baseline_qualifications or classify screening a
 Preserve compound alternatives intact, including the complete degree AND minimum-years
 clause plus OR equivalent experience. Do not duplicate a mandatory qualification already
 represented, and never promote a preferred qualification to required.
-Preserve supplied company/title/job_id/location exactly in role_identity. For work_model
-and travel preserve non-null supplied facts; otherwise extract only explicit JD facts
-or null. Do not personalize role requirements using candidate history.""",
+Split materially compound hiring criteria into atomic, independently assessable capabilities
+when their evidence could differ. For example, improving product metrics, disrupting a
+market, leading consumer-product teams, and taking products to market require separate
+criteria, not one growth/market-impact criterion with one fit label. Give each a unique
+criterion_id and preserve every source requirement and its importance. Reuse an existing
+criterion if it already covers that capability; do not add duplicate or trivial fragments.
+Do not split a coherent capability just because it uses 'and'. This atomicity rule applies
+to hiring_criteria, NOT the intact AND/OR baseline qualifications and duration clauses.
+Copy canonical_identity exactly into role_identity. Do not personalize role requirements
+using candidate history.""",
     "career_requirements_mapping": """Use all five complete candidate-context files:
 - profile/candidate_profile.md: high-level orientation.
 - profile/career_evidence.md: primary synthesized evidence base.
@@ -377,6 +406,12 @@ Classify capability_fit and domain_context_fit independently per v1.2. Do not lo
 capability fit merely because industry/context differs. Preserve domain distance and
 all limitations in limitation_or_difference; overall_fit_assessment synthesizes but
 does not replace either fit dimension.
+Map each atomic upstream criterion separately. Evidence for one material capability
+cannot establish direct fit for another. If an upstream criterion still contains multiple
+material capabilities, direct requires support for the whole capability claim; disclose
+unsupported components without upgrading the entire criterion or silently dropping them.
+Do not split or rename upstream IDs during mapping; the controller still rejects
+unsupported classifications, even when a limitation acknowledges missing evidence.
 Return evidence_provenance alongside career_requirements_mapping: exactly one entry
 per criterion, with source_path and short verbatim supporting quote(s) from the supplied
 file content. A quote's presence is not proof of direct fit: assess its actual meaning.
@@ -580,7 +615,7 @@ def _execution_error_message(exc, label):
 def _proposed_state(original, outputs, schema):
     role = outputs["role_understanding"]
     return {"schema_version": "1.2.0",
-            "job": {**deepcopy(role["role_identity"]), "jd_source": jd_source(original)},
+            "job": {**canonical_identity(original), "jd_source": jd_source(original)},
             "role_understanding": deepcopy(role),
             "career_requirements_mapping": deepcopy(outputs["career_requirements_mapping"]["career_requirements_mapping"]),
             "shortlist_decision": deepcopy(outputs["shortlist_decision"]),
@@ -633,19 +668,19 @@ def validate_resume(artifact, job, model, stage_models, candidate, contracts, sc
         matches = [c for c in artifact["model_calls"] if c["stage"] == stage]
         require(bool(matches), "completed stage lacks request fingerprints", stage)
         call = matches[-1]
-        context = {"input_job": deepcopy(original), "upstream": deepcopy(upstream)}
+        context = {"input_job": deepcopy(original), "canonical_identity": canonical_identity(original),
+                   "upstream": deepcopy(upstream)}
         if stage != "role_understanding":
             context["candidate_context"] = deepcopy(candidate)
         require(call["instructions_sha256"] == _hash(_instructions(stage, contracts)), "prompt hash changed", stage)
         require(call["context_sha256"] == _hash(_json(context)), "job/context hash changed", stage)
         output = artifact["stage_outputs"][stage]
+        require(output == _bind_identity(output, stage, original), "saved canonical identity changed", stage)
         if "output_sha256" in call:
             require(call["output_sha256"] == _hash(_json(output)), "saved output hash changed", stage)
         _check_shape(output, stage_schema(schema, stage))
         if stage == "role_understanding":
-            require(all(output["role_identity"][k] == original[k] for k in
-                        ("company", "job_id", "title", "location", "work_model", "travel")
-                        if k not in ("work_model", "travel") or original.get(k) is not None), "saved job identity changed", stage)
+            require(output["role_identity"] == canonical_identity(original), "saved job identity changed", stage)
             _check_role_completeness(output, original)
         elif stage == "career_requirements_mapping":
             _check_provenance(output[stage], output["evidence_provenance"], candidate,
@@ -667,12 +702,14 @@ def _recover_persisted_decision(artifact, original, model, stage_models, candida
         return None
     call = calls[-1]
     upstream = {name: deepcopy(artifact["stage_outputs"][name]) for name in artifact["completed_stages"]}
-    context = {"input_job": deepcopy(original), "upstream": deepcopy(upstream),
+    context = {"input_job": deepcopy(original), "canonical_identity": canonical_identity(original), "upstream": deepcopy(upstream),
                "candidate_context": deepcopy(candidate)}
     output = artifact["stage_outputs"][stage]
     saved_settings = artifact.get("stage_model_settings", {}).get(stage)
     current_settings = _settings(model, stage_models[stage])
     try:
+        if output != _bind_identity(output, stage, original):
+            return None
         if ((call.get("requested_model") or call.get("response", {}).get("model")) != stage_models[stage] or
                 call.get("instructions_sha256") != _hash(_instructions(stage, contracts)) or
                 call.get("context_sha256") != _hash(_json(context)) or
@@ -826,7 +863,8 @@ def run_job(job, model, *, output_root=None, candidate_root=ROOT, resume_dir=Non
             if current_stage in artifact["completed_stages"]:
                 progress(f"{label} — reusing verified completed stage")
                 continue
-            context = {"input_job": deepcopy(original), "upstream": deepcopy(artifact["stage_outputs"])}
+            context = {"input_job": deepcopy(original), "canonical_identity": canonical_identity(original),
+                       "upstream": deepcopy(artifact["stage_outputs"])}
             if current_stage != "role_understanding":
                 context["candidate_context"] = deepcopy(candidate)
             if current_stage == "controller_validation":
@@ -862,23 +900,23 @@ def run_job(job, model, *, output_root=None, candidate_root=ROOT, resume_dir=Non
                         raise
                     progress(f"{label} — retry {attempt + 1}/3 in {delay:.1f}s ({exc.error_type})")
                     time.sleep(delay)
+            raw_output = deepcopy(output)
+            artifact.setdefault("raw_stage_outputs", {})[current_stage] = raw_output
+            output = _bind_identity(raw_output, current_stage, original)
             artifact["stage_outputs"][current_stage] = deepcopy(output)
             elapsed = time.perf_counter() - stage_started
             telemetry = _telemetry(metadata, elapsed, selected_model)
             artifact["model_calls"].append({"stage": current_stage, "instructions_sha256": _hash(instructions),
                                             "context_sha256": _hash(_json(context)), "output_sha256": _hash(_json(output)),
+                                            "raw_output_sha256": _hash(_json(raw_output)),
                                             "requested_model": selected_model, "response": metadata,
                                             "telemetry": telemetry})
             _refresh_usage_summary(artifact)
             save()  # Preserve invalid model output for inspection, but never accept it.
             _check_shape(output, output_schema)
             if current_stage == "role_understanding":
-                identity = output["role_identity"]
-                for key in ("company", "job_id", "title", "location", "work_model", "travel"):
-                    if key in ("work_model", "travel") and original.get(key) is None:
-                        continue
-                    if identity[key] != original[key]:
-                        raise ValueError("Role Understanding changed supplied job identity")
+                if output["role_identity"] != canonical_identity(original):
+                    raise ValueError("Role Understanding changed canonical job identity")
                 _check_role_completeness(output, original)
             elif current_stage == "career_requirements_mapping":
                 _check_provenance(output["career_requirements_mapping"], output["evidence_provenance"], candidate,
