@@ -187,6 +187,13 @@ class DiscoveryRobustnessTests(unittest.TestCase):
             self.assertEqual(result["pm_candidates"], 1)
             output = root / "data/discovery"
             self.assertEqual(len(load_jsonl(output / "raw_all_jobs.jsonl")), 2)
+            candidate = load_jsonl(output / "raw_pm_candidates.jsonl")[0]
+            self.assertTrue(candidate["geography_in_scope"])
+            self.assertEqual(candidate["normalized_countries"], ["US"])
+            telemetry_row = load_jsonl(output / "crawl_runs.jsonl")[-1]
+            self.assertEqual(telemetry_row["total_jobs_before_geography_gate"], 2)
+            self.assertEqual(telemetry_row["jobs_kept"], 2)
+            self.assertEqual(telemetry_row["jobs_excluded"], 0)
             before = (output / "raw_all_jobs.jsonl").read_bytes()
             failed = dict(telemetry, status="failed", errors=["HTTP 503"], http_status=503)
             with patch("discover_jobs.fetch_greenhouse_jobs", side_effect=CrawlError(failed)):

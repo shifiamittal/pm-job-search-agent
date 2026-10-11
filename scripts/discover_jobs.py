@@ -18,21 +18,25 @@ if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
 
 from discovery.filters import pm_candidate_decision
+from discovery.geography import classify_geography, enrich_geography, geography_summary
 from discovery.greenhouse import fetch_greenhouse_jobs
 from discovery.ashby import fetch_ashby_jobs
 from discovery.workday import fetch_workday_jobs
-from discovery.microsoft import fetch_microsoft_jobs, in_target_geography, is_internship
+from discovery.microsoft import fetch_microsoft_jobs, is_internship
 from discovery.errors import CrawlError
 from discovery.models import utc_now_iso, validate_raw_jobs
 from discovery.io import append_jsonl, atomic_jsonl, load_job_sources, write_csv
 
 
 def retain_candidate(job: dict) -> bool:
-    """Apply Microsoft's explicit country scope after raw facet retrieval."""
-    return (pm_candidate_decision(job["title"])[0]
-            and (job["source_type"] != "microsoft" or (in_target_geography(job)
-                 and job.get("availability_status") == "available"
-                 and not is_internship(job["title"], job.get("employment_type", "")))))
+    """Apply the deterministic geography gate before the PM-family filter."""
+    if not classify_geography(job)["geography_in_scope"]:
+        return False
+    if not pm_candidate_decision(job["title"])[0]:
+        return False
+    return (job["source_type"] != "microsoft" or
+            (job.get("availability_status") == "available"
+             and not is_internship(job["title"], job.get("employment_type", ""))))
 
 
 def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
@@ -49,6 +53,8 @@ def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
     run_id = uuid.uuid4().hex
     output = root / "data/discovery"
     telemetry = None
+    geography = {"total_jobs_before_geography_gate": 0, "jobs_kept": 0,
+                 "jobs_excluded": 0, "jobs_geography_unknown": 0, "counts_by_country": {}}
     jobs, candidates, failures = [], [], []
     try:
         adapters = {"greenhouse": fetch_greenhouse_jobs, "ashby": fetch_ashby_jobs,
@@ -56,7 +62,9 @@ def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
         if source.get("adapter") not in adapters:
             raise ValueError(f"Unsupported adapter: {source.get('adapter')}")
         jobs, telemetry = adapters[source["adapter"]](key, source)
-        candidates = [job for job in jobs if retain_candidate(job)]
+        geography = geography_summary(jobs)
+        telemetry.update(geography)
+        candidates = [enrich_geography(job) for job in jobs if retain_candidate(job)]
         telemetry["pm_candidates"] = len(candidates)
         # Preserve successful snapshots even when the next board removes a job.
         # A failed retrieval never replaces the previous successful snapshot.
@@ -67,14 +75,29 @@ def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
             previous = [json.loads(line) for line in previous_path.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
         combined = [job for job in previous if job["source_key"] != key] + jobs
         validate_raw_jobs(combined)
-        combined_candidates = [job for job in combined if retain_candidate(job)]
+        combined_candidates = [enrich_geography(job) for job in combined if retain_candidate(job)]
         for destination, raw_rows, pm_rows in (
             (output / "runs" / run_id, jobs, candidates),
             (output, combined, combined_candidates),
         ):
             atomic_jsonl(destination / "raw_all_jobs.jsonl", raw_rows)
             atomic_jsonl(destination / "raw_pm_candidates.jsonl", pm_rows)
-            write_csv(destination / "raw_pm_candidates.csv", pm_rows, fields)
+            csv_fields = fields + ["all_locations_raw", "normalized_countries", "geography_in_scope",
+                                   "geography_status", "geography_reason"]
+            csv_rows = []
+            for row in pm_rows:
+                item = dict(row)
+                item["all_locations_raw"] = json.dumps(item["all_locations_raw"], ensure_ascii=False)
+                item["normalized_countries"] = json.dumps(item["normalized_countries"], ensure_ascii=False)
+                csv_rows.append(item)
+            write_csv(destination / "raw_pm_candidates.csv", csv_rows, csv_fields)
+            categorized = [enrich_geography(job) for job in raw_rows]
+            atomic_jsonl(destination / "geography_excluded.jsonl",
+                         [row for row in categorized if row["geography_status"] == "out_of_scope"])
+            atomic_jsonl(destination / "geography_unknown.jsonl",
+                         [row for row in categorized if row["geography_status"] == "geography_unknown"])
+            (destination / "geography_summary.json").write_text(
+                json.dumps(geography_summary(raw_rows), indent=2), encoding="utf-8")
         telemetry["outputs_written"] = True
     except Exception as exc:
         if isinstance(exc, CrawlError):
@@ -94,7 +117,8 @@ def run(source_keys: list[str] | None = None, root: Path = ROOT) -> dict:
         telemetry["run_id"] = run_id
         telemetry["completed_at"] = utc_now_iso()
         append_jsonl(output / "crawl_runs.jsonl", telemetry)
-    return {"raw_jobs": len(jobs), "pm_candidates": len(candidates), "failures": failures}
+    return {"raw_jobs": len(jobs), "pm_candidates": len(candidates),
+            "geography": geography, "failures": failures}
 
 
 def main() -> int:
@@ -104,6 +128,11 @@ def main() -> int:
     result = run(args.sources)
     print(f"Raw jobs: {result['raw_jobs']}")
     print(f"PM candidates: {result['pm_candidates']}")
+    geo = result["geography"]
+    print("Geography gate: "
+          f"total={geo['total_jobs_before_geography_gate']} kept={geo['jobs_kept']} "
+          f"excluded={geo['jobs_excluded']} unknown={geo['jobs_geography_unknown']}")
+    print("Countries: " + json.dumps(geo["counts_by_country"], sort_keys=True))
     if result["failures"]:
         for failure in result["failures"]:
             print(f"FAILED {failure['source_key']}: {failure['error']}")

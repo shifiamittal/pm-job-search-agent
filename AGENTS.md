@@ -102,7 +102,7 @@ The authorized single-job runner saves isolated artifacts under ignored
 dashboard synchronization or downstream actions.
 
 Legacy classification finalization, calibration reprocessing, queue/skill generation,
-and dashboard writes are blocked pending shortlist-runner integration. Do not bypass
+and dashboard writes are blocked pending v1 persistence/dashboard integration. Do not bypass
 these guards or use legacy functions to satisfy a discovery run. Report the blocked
 integration separately from successful raw intake.
 
@@ -119,7 +119,9 @@ manual shortlist v1 analysis, the single-job full-context runner
 A schema check cannot certify factual grounding or semantic correctness; controller
 review remains mandatory. Report uncertainty instead of forcing confidence. Model-based controller review in
 the single-job runner is not independent human verification. For this baseline, pass
-the complete four profile files into Career Mapping without retrieval or pruning.
+all five complete candidate-context files into Career Mapping without retrieval or
+pruning: `candidate_profile.md`, `career_evidence.md`, `evidence_conflicts.md`,
+`job_preferences.md`, and `candidate_confirmed_facts.md` under `profile/`.
 See [single-job runner](docs/single_job_shortlist.md) for invocation and output details.
 
 Implemented for shortlist execution: single-job and sequential resumable batch runners.

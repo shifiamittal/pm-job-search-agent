@@ -1,3 +1,5 @@
+# Descriptive discovery metadata and existing asset names only; no shortlist decision rules.
+# Role evaluation and decisions: shortlist/ v1.2.0 for new runs (schema.yaml).
 sectors:
   - Big Tech
   - AI-native
@@ -36,15 +38,6 @@ technology_orientation:
   - Data / Infrastructure
   - Non-AI
   - Mixed
-domain_fit: [Direct, Adjacent, Bridgeable, Niche / Far]
-domain_requirement_strength: [Required, Strongly Preferred, Preferred, Not Material]
-primary_gap: [No Material Gap, Knowledge Gap, Vocabulary Gap, Evidence Gap, Experience Gap]
-gap_gating: [Non-gating, Soft, Hard]
-bridge_timing: [Before Application, Before Recruiter Screen, Before Interview, Interview Triggered, Ongoing Strategic Build, Not Required]
-strategic_skill_overlap: [High, Medium, Low]
-skill_build_priority: [Build Now, Interview Triggered, Do Not Build, No Build Needed]
-application_posture: [Strong Match, Credible Match, Stretch, Skip]
-application_lanes: [Apply Now, Apply Now + Bridge, Build Toward, Skip]
 resume_variants:
   - Data / ML Platform
   - AI Evals / Quality

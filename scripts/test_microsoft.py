@@ -206,7 +206,7 @@ class MicrosoftTests(unittest.TestCase):
         self.assertFalse(retain_candidate(jobs[0]))
         self.assertTrue(retain_candidate(dict(jobs[0], availability_status="available")))
         self.assertFalse(retain_candidate(jobs[1]))
-        self.assertTrue(retain_candidate(dict(jobs[1], source_type="ashby")))
+        self.assertFalse(retain_candidate(dict(jobs[1], source_type="ashby")))
 
     def test_invalid_url_and_location_shape_fail(self):
         for key, value in [("positionUrl", "https://example.com/careers/job/1"),

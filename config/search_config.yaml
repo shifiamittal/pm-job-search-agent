@@ -1,31 +1,60 @@
+# Scope metadata; geography is enforced deterministically before shortlist input.
 calibration:
   source: existing_jobs_only
   recurring_monitoring_enabled: false
   full_market_scan_enabled: false
 geography:
-  united_states:
-    primary: [Seattle, Bellevue, Redmond]
-    exploration: [San Francisco Bay Area, New York, Remote US, Other US when strong]
-    permanent_relocation_willingness: TBD
-  india:
-    preferred: [Bengaluru, Hyderabad]
-    exploration: [Other India only when unusually strong]
-    work_authorization: TBD
-  us_work_authorization: permanent_resident_no_sponsorship_required
+  scope:
+  - United States
+  - India
+  gate: scripts/discovery/geography.py
+  unknown_policy: exclude_from_phase_1_and_preserve_diagnostics
+  evaluation_policy: shortlist/shortlist_decision.md
+  candidate_facts: profile/candidate_profile.md; profile/job_preferences.md (facts
+    only; old selection rules superseded)
 titles:
-  primary: [Principal Product Manager, Principal Product Manager-Technical, Principal PM-T, Staff Product Manager, Lead Product Manager, Product Lead, Group Product Manager]
-  conditional: [Senior Product Manager, Director Product Management, Product Manager]
-  conditional_rule: Retain only where scope, company ladder, responsibility or published economics substantiate Principal/Staff-equivalent opportunity.
+  primary:
+  - Principal Product Manager
+  - Principal Product Manager-Technical
+  - Principal PM-T
+  - Staff Product Manager
+  - Lead Product Manager
+  - Product Lead
+  - Group Product Manager
+  conditional:
+  - Senior Product Manager
+  - Director Product Management
+  - Product Manager
+  conditional_rule: Assess actual work, scope and career value under shortlist v1.2.0;
+    do not gate on title or compensation.
 sector_scope: all_sectors_in_role_taxonomy
 technology_scope: all_orientations_in_role_taxonomy
-search_lanes: [Big Tech, Mature Technology, Financial Services, Enterprise Software, Late-stage Startup, AI-native]
+search_lanes:
+- Big Tech
+- Mature Technology
+- Financial Services
+- Enterprise Software
+- Late-stage Startup
+- AI-native
 discovery_sources_by_priority:
-  - Official company careers pages
-  - Official ATS (Greenhouse, Ashby, Lever, Workday, SmartRecruiters)
-  - Search engine discovery
-  - Public LinkedIn job pages where accessible
-verification: Recheck official employer or ATS posting; preserve closed historical records rather than silently replacing them.
-deduplication: Company plus requisition ID; otherwise normalized company plus role plus location.
-post_success_workflow: [write_canonical_jobs, generate_review_queue, generate_skills_synthesis, sync_persistent_google_sheet]
-sheet_sync_failure: Preserve successful local data; report dashboard failure separately; allow manual rerun.
-output_files: [data/jobs_raw.jsonl, data/jobs_master.csv, data/review_queue.csv, data/skills_synthesis.csv, data/discovery_log.csv]
+- Official company careers pages
+- Official ATS (Greenhouse, Ashby, Lever, Workday, SmartRecruiters)
+- Search engine discovery
+- Public LinkedIn job pages where accessible
+verification: Recheck official employer or ATS posting; preserve closed historical
+  records rather than silently replacing them.
+deduplication: Company plus requisition ID; otherwise normalized company plus role
+  plus location.
+post_success_workflow:
+- raw_discovery_outputs_only
+- shortlist_integration_pending
+sheet_sync_failure: V1 synchronization is blocked pending runner/persistence integration;
+  future failures must preserve local data.
+shortlist_contract: shortlist/schema.yaml
+shortlist_version: 1.2.0
+legacy_read_only_output_files:
+- data/jobs_raw.jsonl
+- data/jobs_master.csv
+- data/review_queue.csv
+- data/skills_synthesis.csv
+- data/discovery_log.csv

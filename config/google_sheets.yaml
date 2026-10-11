@@ -1,4 +1,8 @@
 spreadsheet_id: 1Qv1nBI8SfP-CIERmKUOH-cHKhEo-DYkp8jVvZqgq0AE
 spreadsheet_url: https://docs.google.com/spreadsheets/d/1Qv1nBI8SfP-CIERmKUOH-cHKhEo-DYkp8jVvZqgq0AE/edit
 spreadsheet_title: Shifia PM Job Search Dashboard
-sync_enabled: true
+sync_enabled: false
+migration_status: blocked_pending_shortlist_v1_integration
+migration_reason: Historical lane tabs are not v1 decisions. Preserve spreadsheet
+  identity and feedback; do not overwrite before explicit v1 persistence/dashboard
+  integration.

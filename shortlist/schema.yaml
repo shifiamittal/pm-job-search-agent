@@ -1,0 +1,1104 @@
+# Contract version 1.2.0; JSON Schema Draft 2020-12 serialized as YAML.
+# This file is not connected to existing classification runtime.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Role Shortlist Workflow — version 1.2.0
+description: Declarative completed-state contract. Semantic acceptance and exact handoff projections require
+  controller review; see controller_validation.md. No runtime, retrieval, or queue implementation.
+type: object
+properties:
+  schema_version:
+    const: 1.2.0
+  job:
+    type: object
+    properties:
+      company:
+        type: string
+        minLength: 1
+        pattern: \S
+      title:
+        type: string
+        minLength: 1
+        pattern: \S
+      job_id:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      location:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      work_model:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      travel:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      jd_source:
+        type: string
+        minLength: 1
+        pattern: \S
+    required:
+    - company
+    - title
+    - job_id
+    - location
+    - work_model
+    - travel
+    - jd_source
+    additionalProperties: false
+  role_understanding:
+    $ref: '#/$defs/role_understanding'
+  career_requirements_mapping:
+    $ref: '#/$defs/career_requirements_mapping'
+  shortlist_decision:
+    $ref: '#/$defs/shortlist_decision'
+  validation:
+    $ref: '#/$defs/validation'
+  handoff:
+    $ref: '#/$defs/handoff'
+required:
+- schema_version
+- job
+- role_understanding
+- career_requirements_mapping
+- shortlist_decision
+- validation
+additionalProperties: false
+$defs:
+  role_identity:
+    type: object
+    properties:
+      company:
+        type: string
+        minLength: 1
+        pattern: \S
+      title:
+        type: string
+        minLength: 1
+        pattern: \S
+      job_id:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      location:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      work_model:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      travel:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+    required:
+    - company
+    - title
+    - job_id
+    - location
+    - work_model
+    - travel
+    additionalProperties: false
+  criterion:
+    type: object
+    properties:
+      criterion_id:
+        type: string
+        minLength: 1
+        pattern: \S
+      criterion:
+        type: string
+        minLength: 1
+        pattern: \S
+      description:
+        type: string
+        minLength: 1
+        pattern: \S
+      importance:
+        type: string
+        enum:
+        - Critical
+        - Very high
+        - High
+        - Helpful
+    required:
+    - criterion_id
+    - criterion
+    - description
+    - importance
+    additionalProperties: false
+  specialist_requirement:
+    type: object
+    properties:
+      requirement:
+        type: string
+        minLength: 1
+        pattern: \S
+      importance:
+        type: string
+        enum:
+        - Critical
+        - Very high
+        - High
+        - Helpful
+      notes:
+        type: string
+        minLength: 1
+        pattern: \S
+    required:
+    - requirement
+    - importance
+    - notes
+    additionalProperties: false
+  baseline_qualification:
+    type: object
+    properties:
+      qualification_id:
+        type: string
+        minLength: 1
+        pattern: \S
+      requirement:
+        type: string
+        minLength: 1
+        pattern: \S
+      requirement_type:
+        type: string
+        enum:
+        - education
+        - experience_duration
+        - certification
+        - screening
+        - work_authorization
+        - other
+      required_or_preferred:
+        type: string
+        enum:
+        - required
+        - preferred
+      notes:
+        type: string
+        minLength: 1
+        pattern: \S
+    required:
+    - qualification_id
+    - requirement
+    - requirement_type
+    - required_or_preferred
+    - notes
+    additionalProperties: false
+  baseline_qualification_mapping:
+    type: object
+    properties:
+      qualification_id:
+        type: string
+        minLength: 1
+        pattern: \S
+      requirement:
+        type: string
+        minLength: 1
+        pattern: \S
+      requirement_type:
+        type: string
+        enum:
+        - education
+        - experience_duration
+        - certification
+        - screening
+        - work_authorization
+        - other
+      required_or_preferred:
+        type: string
+        enum:
+        - required
+        - preferred
+      evidence:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      assessment:
+        type: string
+        enum:
+        - met
+        - likely_met
+        - unknown
+        - not_established
+        - does_not_apply
+      limitation_or_unknown:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+    required:
+    - qualification_id
+    - requirement
+    - requirement_type
+    - required_or_preferred
+    - evidence
+    - assessment
+    - limitation_or_unknown
+    additionalProperties: false
+  actual_scope:
+    type: object
+    properties:
+      scope_signals:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          pattern: \S
+        minItems: 0
+      scope_summary:
+        type: string
+        minLength: 1
+        pattern: \S
+    required:
+    - scope_signals
+    - scope_summary
+    additionalProperties: false
+  role_understanding:
+    type: object
+    properties:
+      role_identity:
+        $ref: '#/$defs/role_identity'
+      actual_job_to_be_done:
+        type: object
+        properties:
+          summary:
+            type: string
+            minLength: 1
+            pattern: \S
+        required:
+        - summary
+        additionalProperties: false
+      major_responsibility_clusters:
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+              minLength: 1
+              pattern: \S
+            description:
+              type: string
+              minLength: 1
+              pattern: \S
+          required:
+          - name
+          - description
+          additionalProperties: false
+        minItems: 1
+      hiring_criteria:
+        type: array
+        items:
+          $ref: '#/$defs/criterion'
+        minItems: 1
+      specialist_requirements:
+        type: array
+        items:
+          $ref: '#/$defs/specialist_requirement'
+        minItems: 0
+      baseline_qualifications:
+        type: array
+        items:
+          $ref: '#/$defs/baseline_qualification'
+        minItems: 0
+      actual_scope:
+        $ref: '#/$defs/actual_scope'
+      likely_hiring_manager_questions:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          pattern: \S
+        minItems: 1
+    required:
+    - role_identity
+    - actual_job_to_be_done
+    - major_responsibility_clusters
+    - hiring_criteria
+    - specialist_requirements
+    - baseline_qualifications
+    - actual_scope
+    - likely_hiring_manager_questions
+    additionalProperties: false
+  criterion_mapping:
+    type: object
+    properties:
+      criterion_id:
+        type: string
+        minLength: 1
+        pattern: \S
+      criterion:
+        type: string
+        minLength: 1
+        pattern: \S
+      role_requirement:
+        type: string
+        minLength: 1
+        pattern: \S
+      strongest_evidence:
+        type: object
+        properties:
+          project_or_role:
+            anyOf:
+            - type: string
+              minLength: 1
+              pattern: \S
+            - type: 'null'
+          evidence_summary:
+            anyOf:
+            - type: string
+              minLength: 1
+              pattern: \S
+            - type: 'null'
+          measurable_outcomes:
+            type: array
+            items:
+              type: string
+              minLength: 1
+              pattern: \S
+            minItems: 0
+        required:
+        - project_or_role
+        - evidence_summary
+        - measurable_outcomes
+        additionalProperties: false
+      capability_fit:
+        type: string
+        enum:
+        - direct
+        - transferable
+        - adjacent
+        - gap
+      domain_context_fit:
+        type: string
+        enum:
+        - direct
+        - transferable
+        - adjacent
+        - gap
+        - not_applicable
+      overall_fit_assessment:
+        type: string
+        enum:
+        - Very strong direct fit
+        - Strong fit
+        - Strong transferable fit
+        - Strong adjacent fit
+        - Moderate / gap
+        - Material gap
+        - Major gap
+      limitation_or_difference:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+    required:
+    - criterion_id
+    - criterion
+    - role_requirement
+    - strongest_evidence
+    - capability_fit
+    - domain_context_fit
+    - overall_fit_assessment
+    - limitation_or_difference
+    additionalProperties: false
+    allOf:
+    - if:
+        properties:
+          capability_fit:
+            enum:
+            - direct
+            - transferable
+            - adjacent
+      then:
+        properties:
+          strongest_evidence:
+            properties:
+              project_or_role:
+                type: string
+                minLength: 1
+                pattern: \S
+              evidence_summary:
+                type: string
+                minLength: 1
+                pattern: \S
+    - if:
+        properties:
+          capability_fit:
+            enum:
+            - transferable
+            - adjacent
+            - gap
+      then:
+        properties:
+          limitation_or_difference:
+            type: string
+            minLength: 1
+            pattern: \S
+    - if:
+        properties:
+          domain_context_fit:
+            enum:
+            - transferable
+            - adjacent
+            - gap
+      then:
+        properties:
+          limitation_or_difference:
+            type: string
+            minLength: 1
+            pattern: \S
+  meaningful_gap:
+    type: object
+    properties:
+      requirement:
+        type: string
+        minLength: 1
+        pattern: \S
+      severity:
+        type: string
+        enum:
+        - Moderate / gap
+        - Material gap
+        - Major gap
+      description:
+        type: string
+        minLength: 1
+        pattern: \S
+      closest_transferable_evidence:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      fundamental_to_role:
+        type: boolean
+    required:
+    - requirement
+    - severity
+    - description
+    - closest_transferable_evidence
+    - fundamental_to_role
+    additionalProperties: false
+  career_requirements_mapping:
+    type: object
+    properties:
+      criteria:
+        type: array
+        items:
+          $ref: '#/$defs/criterion_mapping'
+        minItems: 1
+      specialist_requirement_mapping:
+        type: array
+        items:
+          type: object
+          properties:
+            requirement:
+              type: string
+              minLength: 1
+              pattern: \S
+            evidence:
+              anyOf:
+              - type: string
+                minLength: 1
+                pattern: \S
+              - type: 'null'
+            assessment:
+              type: string
+              minLength: 1
+              pattern: \S
+            gap_if_any:
+              anyOf:
+              - type: string
+                minLength: 1
+                pattern: \S
+              - type: 'null'
+          required:
+          - requirement
+          - evidence
+          - assessment
+          - gap_if_any
+          additionalProperties: false
+        minItems: 0
+      baseline_qualification_mapping:
+        type: array
+        items:
+          $ref: '#/$defs/baseline_qualification_mapping'
+        minItems: 0
+      strongest_role_stories:
+        type: array
+        items:
+          type: object
+          properties:
+            story:
+              type: string
+              minLength: 1
+              pattern: \S
+            criteria_supported:
+              type: array
+              items:
+                type: string
+                minLength: 1
+                pattern: \S
+              minItems: 1
+            why_relevant:
+              type: string
+              minLength: 1
+              pattern: \S
+          required:
+          - story
+          - criteria_supported
+          - why_relevant
+          additionalProperties: false
+        minItems: 0
+      meaningful_gaps:
+        type: array
+        items:
+          $ref: '#/$defs/meaningful_gap'
+        minItems: 0
+      overall_evidence_summary:
+        type: string
+        minLength: 1
+        pattern: \S
+    required:
+    - criteria
+    - specialist_requirement_mapping
+    - baseline_qualification_mapping
+    - strongest_role_stories
+    - meaningful_gaps
+    - overall_evidence_summary
+    additionalProperties: false
+  shortlist_decision:
+    type: object
+    properties:
+      decision:
+        type: string
+        enum:
+        - APPLY — PRIORITY
+        - APPLY
+        - HOLD / INVESTIGATE
+        - DO NOT APPLY
+      actual_work_alignment:
+        type: object
+        properties:
+          classification:
+            type: string
+            enum:
+            - Directly aligned
+            - Strongly adjacent
+            - Meaningful functional transition
+            - Misaligned
+          rationale:
+            type: string
+            minLength: 1
+            pattern: \S
+        required:
+        - classification
+        - rationale
+        additionalProperties: false
+      scope_assessment:
+        type: object
+        properties:
+          classification:
+            type: string
+            enum:
+            - Principal-equivalent
+            - High-value Senior
+            - Standard Senior
+            - Below target
+          rationale:
+            type: string
+            minLength: 1
+            pattern: \S
+        required:
+        - classification
+        - rationale
+        additionalProperties: false
+      evidence_strength:
+        type: object
+        properties:
+          classification:
+            type: string
+            enum:
+            - Strong direct evidence
+            - Strong with transferable evidence
+            - Material evidence gaps
+            - Fundamental mismatch
+          rationale:
+            type: string
+            minLength: 1
+            pattern: \S
+        required:
+        - classification
+        - rationale
+        additionalProperties: false
+      career_value:
+        type: object
+        properties:
+          classification:
+            type: string
+            enum:
+            - High
+            - Meaningful
+            - Limited
+          rationale:
+            type: string
+            minLength: 1
+            pattern: \S
+        required:
+        - classification
+        - rationale
+        additionalProperties: false
+      primary_reasons_to_pursue:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          pattern: \S
+        minItems: 0
+      key_gap_or_risk:
+        type: object
+        properties:
+          description:
+            anyOf:
+            - type: string
+              minLength: 1
+              pattern: \S
+            - type: 'null'
+          severity:
+            anyOf:
+            - type: string
+              minLength: 1
+              pattern: \S
+            - type: 'null'
+        required:
+        - description
+        - severity
+        additionalProperties: false
+      location_work_model:
+        type: object
+        properties:
+          location:
+            anyOf:
+            - type: string
+              minLength: 1
+              pattern: \S
+            - type: 'null'
+          work_model:
+            anyOf:
+            - type: string
+              minLength: 1
+              pattern: \S
+            - type: 'null'
+          travel:
+            anyOf:
+            - type: string
+              minLength: 1
+              pattern: \S
+            - type: 'null'
+        required:
+        - location
+        - work_model
+        - travel
+        additionalProperties: false
+      eligibility_relocation_flag:
+        type: object
+        properties:
+          status:
+            type: string
+            minLength: 1
+            pattern: \S
+          details:
+            type: string
+            minLength: 1
+            pattern: \S
+        required:
+        - status
+        - details
+        additionalProperties: false
+      decision_rationale:
+        type: string
+        minLength: 1
+        pattern: \S
+      next_action:
+        type: string
+        minLength: 1
+        pattern: \S
+    required:
+    - decision
+    - actual_work_alignment
+    - scope_assessment
+    - evidence_strength
+    - career_value
+    - primary_reasons_to_pursue
+    - key_gap_or_risk
+    - location_work_model
+    - eligibility_relocation_flag
+    - decision_rationale
+    - next_action
+    additionalProperties: false
+  validation:
+    type: object
+    properties:
+      role_understanding_complete:
+        type: boolean
+      career_mapping_complete:
+        type: boolean
+      shortlist_decision_complete:
+        type: boolean
+      factual_grounding_passed:
+        type: boolean
+      capability_domain_fit_check_passed:
+        type: boolean
+      gaps_preserved:
+        type: boolean
+      semantic_validation_passed:
+        type: boolean
+      selection_policy_check_passed:
+        type: boolean
+      shortlist_decision_accepted:
+        type: boolean
+    required:
+    - role_understanding_complete
+    - career_mapping_complete
+    - shortlist_decision_complete
+    - factual_grounding_passed
+    - capability_domain_fit_check_passed
+    - gaps_preserved
+    - semantic_validation_passed
+    - selection_policy_check_passed
+    - shortlist_decision_accepted
+    additionalProperties: false
+    allOf:
+    - if:
+        properties:
+          shortlist_decision_accepted:
+            const: true
+      then:
+        properties:
+          role_understanding_complete:
+            const: true
+          career_mapping_complete:
+            const: true
+          shortlist_decision_complete:
+            const: true
+          factual_grounding_passed:
+            const: true
+          capability_domain_fit_check_passed:
+            const: true
+          gaps_preserved:
+            const: true
+          semantic_validation_passed:
+            const: true
+          selection_policy_check_passed:
+            const: true
+  evidence_check:
+    type: object
+    properties:
+      role_requirement_identified:
+        type: boolean
+      career_evidence_identified:
+        type: boolean
+      evidence_source_exists:
+        type: boolean
+      capability_fit_classified:
+        type: boolean
+      domain_context_fit_classified:
+        type: boolean
+      limitations_preserved:
+        type: boolean
+    required:
+    - role_requirement_identified
+    - career_evidence_identified
+    - evidence_source_exists
+    - capability_fit_classified
+    - domain_context_fit_classified
+    - limitations_preserved
+    additionalProperties: false
+    description: Per-significant-claim controller check shape from the export; not a replacement for inspecting
+      evidence. Diagnostic storage is not specified.
+  role_state:
+    type: object
+    properties:
+      actual_job_to_be_done:
+        type: object
+        properties:
+          summary:
+            type: string
+            minLength: 1
+            pattern: \S
+        required:
+        - summary
+        additionalProperties: false
+      major_responsibility_clusters:
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+              minLength: 1
+              pattern: \S
+            description:
+              type: string
+              minLength: 1
+              pattern: \S
+          required:
+          - name
+          - description
+          additionalProperties: false
+        minItems: 1
+      hiring_criteria:
+        type: array
+        items:
+          $ref: '#/$defs/criterion'
+        minItems: 1
+      specialist_requirements:
+        type: array
+        items:
+          $ref: '#/$defs/specialist_requirement'
+        minItems: 0
+      baseline_qualifications:
+        type: array
+        items:
+          $ref: '#/$defs/baseline_qualification'
+        minItems: 0
+      actual_scope:
+        $ref: '#/$defs/actual_scope'
+      likely_hiring_manager_questions:
+        type: array
+        items:
+          type: string
+          minLength: 1
+          pattern: \S
+        minItems: 1
+      location:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+      work_model:
+        anyOf:
+        - type: string
+          minLength: 1
+          pattern: \S
+        - type: 'null'
+    required:
+    - actual_job_to_be_done
+    - major_responsibility_clusters
+    - hiring_criteria
+    - specialist_requirements
+    - baseline_qualifications
+    - actual_scope
+    - likely_hiring_manager_questions
+    - location
+    - work_model
+    additionalProperties: false
+  career_mapping_state:
+    type: object
+    properties:
+      criteria_mapping:
+        type: array
+        items:
+          $ref: '#/$defs/criterion_mapping'
+        minItems: 1
+      specialist_requirement_mapping:
+        type: array
+        items:
+          type: object
+          properties:
+            requirement:
+              type: string
+              minLength: 1
+              pattern: \S
+            evidence:
+              anyOf:
+              - type: string
+                minLength: 1
+                pattern: \S
+              - type: 'null'
+            assessment:
+              type: string
+              minLength: 1
+              pattern: \S
+            gap_if_any:
+              anyOf:
+              - type: string
+                minLength: 1
+                pattern: \S
+              - type: 'null'
+          required:
+          - requirement
+          - evidence
+          - assessment
+          - gap_if_any
+          additionalProperties: false
+        minItems: 0
+      baseline_qualification_mapping:
+        type: array
+        items:
+          $ref: '#/$defs/baseline_qualification_mapping'
+        minItems: 0
+      strongest_role_stories:
+        type: array
+        items:
+          type: object
+          properties:
+            story:
+              type: string
+              minLength: 1
+              pattern: \S
+            criteria_supported:
+              type: array
+              items:
+                type: string
+                minLength: 1
+                pattern: \S
+              minItems: 1
+            why_relevant:
+              type: string
+              minLength: 1
+              pattern: \S
+          required:
+          - story
+          - criteria_supported
+          - why_relevant
+          additionalProperties: false
+        minItems: 0
+      meaningful_gaps:
+        type: array
+        items:
+          $ref: '#/$defs/meaningful_gap'
+        minItems: 0
+      overall_evidence_summary:
+        type: string
+        minLength: 1
+        pattern: \S
+      capability_domain_classification:
+        type: array
+        items:
+          type: object
+          properties:
+            criterion_id:
+              type: string
+              minLength: 1
+              pattern: \S
+            capability_fit:
+              type: string
+              enum:
+              - direct
+              - transferable
+              - adjacent
+              - gap
+            domain_context_fit:
+              type: string
+              enum:
+              - direct
+              - transferable
+              - adjacent
+              - gap
+              - not_applicable
+            overall_fit_assessment:
+              type: string
+              enum:
+              - Very strong direct fit
+              - Strong fit
+              - Strong transferable fit
+              - Strong adjacent fit
+              - Moderate / gap
+              - Material gap
+              - Major gap
+            limitation_or_difference:
+              anyOf:
+              - type: string
+                minLength: 1
+                pattern: \S
+              - type: 'null'
+          required:
+          - criterion_id
+          - capability_fit
+          - domain_context_fit
+          - overall_fit_assessment
+          - limitation_or_difference
+          additionalProperties: false
+        minItems: 1
+    required:
+    - criteria_mapping
+    - specialist_requirement_mapping
+    - baseline_qualification_mapping
+    - strongest_role_stories
+    - meaningful_gaps
+    - overall_evidence_summary
+    - capability_domain_classification
+    additionalProperties: false
+  handoff:
+    type: object
+    properties:
+      role_state:
+        $ref: '#/$defs/role_state'
+      career_mapping_state:
+        $ref: '#/$defs/career_mapping_state'
+      shortlist_decision:
+        $ref: '#/$defs/shortlist_decision'
+      validation:
+        $ref: '#/$defs/validation'
+    required:
+    - role_state
+    - career_mapping_state
+    - shortlist_decision
+    - validation
+    additionalProperties: false
+allOf:
+- if:
+    required:
+    - handoff
+  then:
+    properties:
+      validation:
+        properties:
+          shortlist_decision_accepted:
+            const: true
+      shortlist_decision:
+        properties:
+          decision:
+            enum:
+            - APPLY — PRIORITY
+            - APPLY
+      handoff:
+        properties:
+          validation:
+            properties:
+              shortlist_decision_accepted:
+                const: true
+          shortlist_decision:
+            properties:
+              decision:
+                enum:
+                - APPLY — PRIORITY
+                - APPLY
