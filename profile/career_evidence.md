@@ -60,6 +60,8 @@ Source reports deployment reduced from three months to three weeks; Hershey gene
 
 CEO/investor alignment, enterprise executive influence, procurement/security negotiation, engineering/science coordination, and communicating product investment as a business decision. Demonstrates influence across organizational boundaries without relying on formal reporting authority.
 
+Candidate-confirmed evidence: Keystone-wide context, not verified specifically for Deep Enterprise. Shifia led product development / product leadership across 20+ engineers and scientists and worked directly with the CTO on product strategy and execution. These Keystone-wide facts are confirmed by Shifia, not independently source-validated by the current snapshots; see [candidate-confirmed facts](candidate_confirmed_facts.md). The confirmation does not establish that the 20+ span or CTO partnership belonged specifically to the Deep Enterprise project. The 20+ span is cross-functional product leadership, not direct reports, formal people management, or PM team management. CEO partnership is separately source-validated; do not substitute CTO for the source-validated Engineering VP or infer that these titles identify the same person.
+
 ## Relevant PM Competencies
 
 0→1 strategy; enterprise productization; platform investment; prioritization; business cases; executive communication; customer leadership; adoption; commercial judgment.
@@ -117,6 +119,8 @@ Data-platform source reports saving two weeks of onboarding and two weeks of mod
 ## Leadership Evidence
 
 Set explicit decision rights; brokered CEO/engineering expectations; aligned science and data teams on contracts; created shared SME mechanisms; managed external enterprise integration dependencies.
+
+Worked directly with the CEO and Engineering VP to scope the three-week event-stream MVP, clarified requirements, secured the needed engineering/science resources, enabled regular testing, and established inter-team and leadership collaboration mechanisms. Source: [Interview Questions — event-stream MVP account](../sources/current/interview_questions.md), lines 810–816. Engineering VP is the source title, not CTO.
 
 ## Relevant PM Competencies
 
@@ -243,6 +247,8 @@ Values and rounded improvements are retained as reported; improvements are not p
 
 Executive sponsorship, enterprise change management, recurring customer operating cadence, cross-functional scientific/business translation, and negotiating practical success criteria.
 
+Established bi-weekly performance reviews with Hershey stakeholders and Keystone ML/Engineering, plus bi-weekly C-suite reviews covering findings, project status, challenges, and required support. Source: [Deep Enterprise — Hershey operating mechanisms](../sources/current/deep_enterprise.md), lines 175–176.
+
 ## Relevant PM Competencies
 
 Enterprise customer leadership; discovery; adoption; implementation; experimentation; technical judgment; change management; commercial delivery.
@@ -254,6 +260,10 @@ Marketplace / Supply Chain / Operations; Enterprise / Developer Platform; Data /
 ## Source References
 
 keystone_hershey — problem, data availability, model/reconciliation choices, WAPE comparison, data issues, deployment/adoption. deep_enterprise — Hershey change management and commercial outcomes. resume — customer discovery/deployment bullet.
+
+# Amazon — cross-role candidate-confirmed context
+
+Candidate-confirmed evidence: Shifia worked with distributed engineering and cross-functional teams across India and Europe; see [candidate-confirmed facts](candidate_confirmed_facts.md). This is not independently source-validated by the current snapshots. It establishes collaboration, not direct management, reporting lines, team size, or formal offshore management authority. The confirmation is Amazon-wide and does not specify the individual product engagements to which these locations apply.
 
 # Amazon Financial Services
 
@@ -279,7 +289,7 @@ Diagnose segment-specific barriers before selecting growth levers: internal sign
 
 ## What Was Built / Designed / Led
 
-ML-powered financing; credit-bureau integrations; personalized engagement; simplified applications; self-serve strategy configuration. Detailed PBI work includes real-time credit-decision APIs, cached/internal behavioral features, version-compatible integration, checkout credit access, and a one-page prefilled enterprise application replacing a seven-page flow. Annual OKRs, quarterly milestones, and biweekly sprints operationalized the multi-year vision.
+ML-powered financing; credit-bureau integrations; personalized engagement; simplified applications; self-serve strategy configuration. Detailed PBI work includes real-time credit-decision APIs, cached/internal behavioral features, version-compatible integration, checkout credit access, and a one-page prefilled enterprise application replacing a seven-page flow. Translated the multi-year vision into annual OKRs, defined quarterly milestones, used bi-weekly sprints, and established status-update mechanisms for the team and senior leadership. Source: [Interview Questions — PBI 2.0 implementation](../sources/current/interview_questions.md), line 969. This does not establish ownership of an unspecified quarterly planning forum or leadership-review body.
 
 ## Technical / Domain Capabilities Demonstrated
 
@@ -338,6 +348,8 @@ Enable scientists to deploy, evaluate, and monitor independently through standar
 ## What Was Built / Designed / Led
 
 Self-service data/training/backtesting/inference workflows; orchestration; monitoring and thresholds; versioning, lineage, and governance. Interview Questions describes certified EDX-to-S3 events, GitHub/ECR build/deployment integration, SageMaker pipelines with Lambda/Glue steps, instance/resource configuration, endpoint setup, and model/data alerts. Privacy work included requirement clarification, DSAR return/deletion workflows, scripts/UI, and retention SOPs with legal and technical partners.
+
+Mainline code commits automatically produced versioned containers exposed through the platform UI. Source: [Interview Questions — MDLC containerization](../sources/current/interview_questions.md), line 999. This is platform capability evidence, not proof that Shifia personally owned all engineering release operations.
 
 ## Technical / Domain Capabilities Demonstrated
 
