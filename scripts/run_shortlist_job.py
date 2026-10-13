@@ -382,6 +382,15 @@ criterion_id and preserve every source requirement and its importance. Reuse an 
 criterion if it already covers that capability; do not add duplicate or trivial fragments.
 Do not split a coherent capability just because it uses 'and'. This atomicity rule applies
 to hiring_criteria, NOT the intact AND/OR baseline qualifications and duration clauses.
+Before returning, reconcile the full JD against the analysis: every material work
+requirement must have an assessable hiring criterion, not only a responsibility cluster
+or screening question. In particular, preserve material partner/ecosystem integrations
+and launch/GTM work; reuse a covering criterion, or add an atomic one when evidence
+could differ. Do not turn incidental keywords into new criteria.
+Canonical unknowns are not permission to discard posting facts. Preserve JD office
+attendance conditions, travel expectations and other operating constraints separately
+in actual_scope.scope_signals, labeled 'Posting constraint:' with their exact conditions
+and qualifiers. These are feasibility facts, not seniority signals or inferred identity.
 Copy canonical_identity exactly into role_identity. Do not personalize role requirements
 using candidate history.""",
     "career_requirements_mapping": """Use all five complete candidate-context files:
@@ -405,7 +414,22 @@ project_or_role is provenance, NOT a sufficient evidence statement by itself.
 Classify capability_fit and domain_context_fit independently per v1.2. Do not lower
 capability fit merely because industry/context differs. Preserve domain distance and
 all limitations in limitation_or_difference; overall_fit_assessment synthesizes but
-does not replace either fit dimension.
+does not replace either fit dimension. Ask first what capability the evidence actually
+demonstrates, then separately where it was demonstrated. Direct product strategy can
+coexist with transferable domain context. A non-direct capability rating needs a
+capability-level difference, not merely the target industry's name. This does not
+upgrade neighboring capabilities or remove genuine scale, ownership or maturity limits.
+For significant claims, explicitly retain source provenance and deployment maturity in
+evidence_summary, limitation_or_difference and specialist assessments. Candidate-confirmed
+facts are usable as such, not automatically unreliable or source-validated. Prototype,
+pilot, launch and verified production operation are distinct; 'launched' alone does not
+resolve a documented production-maturity uncertainty. Preserve relevant conflicts in
+overall_evidence_summary even if no baseline criterion covers them. In particular,
+authorization/sponsorship assertions in preferences cannot settle an unresolved conflict
+in evidence_conflicts.md; cite both sides and state what remains unresolved.
+For meaningful_gaps.fundamental_to_role, distinguish a central requirement from a
+fundamental evidence shortfall: explain whether specific demonstrated work credibly
+bridges the difference, or required specialist operating knowledge remains absent.
 Map each atomic upstream criterion separately. Evidence for one material capability
 cannot establish direct fit for another. If an upstream criterion still contains multiple
 material capabilities, direct requires support for the whole capability claim; disclose
@@ -432,7 +456,25 @@ fit, scope, gaps, career value, and blockers without deterministic thresholds. C
 baseline_qualification_mapping separately: a clearly unmet required qualification may
 matter materially, while unknown does not automatically force rejection. A
 domain ramp is not a capability gap. Keep geography/eligibility separate. A proposed decision is not
-controller acceptance. HOLD must say what precise question needs answering.""",
+controller acceptance. HOLD must say what precise question needs answering.
+Apply the decision contract's qualitative priority and specialist-domain principles:
+APPLY — PRIORITY means an unusually strong use of application effort based on actual
+work, evidence strength, appropriate scope and career value without fundamental gaps.
+High-value Senior scope and a manageable domain ramp do not alone cap a role at APPLY.
+Explain why the alignment is unusually strong or merely worth pursuing; title, prestige,
+AI branding and a fit label alone cannot establish priority.
+A fundamental specialist-domain evidence gap central to the actual job can justify
+DO NOT APPLY despite strong general PM/platform capabilities and high career value.
+Explain the missing operating knowledge and why the specific transferable evidence
+does not bridge it; a product-function mismatch is not required. Conversely, preferred
+or noncentral domain differences with strong transfer can still support APPLY. Neither
+a domain label, severity label nor fundamental_to_role flag is an automatic veto.
+Reconcile each material gap with the rationale, without changing capability ratings.
+Preserve production-maturity limitations and unresolved authorization/sponsorship
+conflicts in the decision. In eligibility_relocation_flag.details, distinguish canonical
+unknowns from JD posting constraints and candidate feasibility unknowns. Do not settle
+conflicts by choosing a favorable source. Unknown is not a confirmed blocker; use HOLD
+only when the unanswered question changes the decision, and state that question.""",
     "controller_validation": """Independently audit the full JD, ALL candidate files,
 conflicts, upstream outputs and exact provenance excerpts under controller checks A–G.
 Do not rubber-stamp the earlier model. Check capability-level evidence and what the

@@ -432,3 +432,25 @@ Historical `1.0.0` artifacts retain `evidence_type` and `fit_assessment`; histor
 `1.1.0` artifacts retain the capability/domain split without baseline fields. Neither
 version is rewritten. New `1.2.0` runs use the split fields and baseline mapping above.
 Proceed to [Shortlist Decision](shortlist_decision.md).
+
+### Approved quality clarifications (2026-10-13)
+
+First assess the demonstrated capability, then its domain/context. Direct product
+strategy can coexist with transferable domain context. A non-direct capability rating
+requires a capability-level difference, not merely a different industry. Genuine
+ownership, scale and deployment-maturity differences still matter.
+
+Preserve source provenance and maturity in evidence summaries, limitations and
+specialist assessments. Candidate-confirmed evidence remains usable with that label;
+it is neither automatically unreliable nor independently source-validated. Prototype,
+pilot, launch and verified production operation are distinct. A launch statement
+does not settle a documented production-maturity uncertainty.
+
+Preserve material unresolved conflicts in `overall_evidence_summary` even when no
+baseline criterion covers them. Authorization/sponsorship assertions in preferences
+cannot settle a conflicting or incomplete evidence inventory: cite both sides and
+state the remaining uncertainty without inventing a resolution.
+
+For `meaningful_gaps[].fundamental_to_role`, distinguish a central requirement from
+a fundamental evidence shortfall. Explain whether demonstrated work credibly bridges
+the difference or whether required specialist operating knowledge remains absent.

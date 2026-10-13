@@ -5,7 +5,7 @@
 > dashboard integration remain pending. See [migration status](../docs/shortlist_v1_migration.md).
 > Workflow: **Role Discovery / Intake → Role Understanding → Career / Requirements Mapping → Shortlist Decision → Validation**.
 > The agreed source text below is preserved verbatim. Versioned serialization and
-> integration notes follow it; they introduce no additional selection policy.
+> integration notes follow it, including approved quality clarifications below.
 > Normative structure: [schema.yaml](schema.yaml). Controller: [controller_validation.md](controller_validation.md).
 
 # 3. Shortlist Decision
@@ -416,3 +416,30 @@ Future routing after successful validation: `APPLY — PRIORITY` and `APPLY` are
 for the resume queue, with priority roles first; `HOLD / INVESTIGATE` goes to unresolved
 review; `DO NOT APPLY` stops. No within-outcome ranking has been agreed. This change
 creates no queues, runner, resume execution, application activity, or outreach.
+
+### Approved qualitative decision principles (2026-10-13)
+
+`APPLY` means worth pursuing. `APPLY — PRIORITY` means an unusually strong use of
+application effort because actual work, evidence strength, appropriate scope and
+career value align especially well without fundamental gaps. Explain that distinction
+in the rationale. High-value Senior scope and a manageable domain ramp do not alone
+cap a role at APPLY. Priority does not require identical industry experience or a
+Principal title; title, prestige, AI branding and fit labels alone cannot establish it.
+
+A fundamental specialist-domain evidence gap central to the actual job can justify
+`DO NOT APPLY` despite strong general PM/platform capabilities and high career value.
+A product-function mismatch is not required. Explain the absent operating knowledge,
+its centrality to the work and why the specific transferable evidence does not bridge
+it. Career value cannot compensate for that demonstrated fundamental shortfall.
+
+This is not an automatic domain gate. Preferred or noncentral domain differences with
+strong transfer can still support APPLY. Neither a domain name, gap severity nor a
+`fundamental_to_role` flag mechanically decides the outcome. Reconcile every material
+gap with the actual work and evidence; preserve direct capability independently from
+domain distance. Centrality of a requirement alone does not prove an unbridgeable gap.
+
+Carry production-maturity limits and unresolved authorization/sponsorship conflicts
+forward. In `eligibility_relocation_flag.details`, distinguish canonical unknowns,
+JD posting constraints and candidate feasibility unknowns. Never settle a conflict by
+selecting a favorable source. Unknown is not a confirmed blocker; use HOLD when an
+unanswered question changes the decision and identify the precise question.

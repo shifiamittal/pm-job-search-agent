@@ -353,3 +353,18 @@ minimum duration, and equivalent-experience alternative together. Role Understan
 incomplete if any explicit mandatory qualification is absent from its appropriate field.
 Do not create a duplicate when the same mandatory qualification is already represented.
 Proceed to [Career / Requirements Mapping](career_requirements_mapping.md).
+
+### Approved quality clarifications (2026-10-13)
+
+Canonical company, job ID, title, location, work model and travel are copied from
+normalized intake, including nulls. Preserve material JD posting facts separately:
+record office attendance conditions, travel expectations and operating constraints in
+`actual_scope.scope_signals`, prefixed `Posting constraint:`. Keep exact conditions
+and qualifiers; these describe feasibility, not seniority or inferred identity.
+
+Reconcile the full JD against the output before completing this stage. Every material
+work requirement must reach an assessable hiring criterion, including partner/ecosystem
+integration or launch/GTM work when material. A cluster or screening question alone is
+not sufficient coverage for downstream mapping. Reuse existing covering criteria;
+split materially different capabilities whose evidence could differ into atomic
+criteria, without trivial duplicates. Preserve intact AND/OR baseline qualifications.
