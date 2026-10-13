@@ -374,6 +374,12 @@ put ordinary job capabilities in baseline_qualifications or classify screening a
 Preserve compound alternatives intact, including the complete degree AND minimum-years
 clause plus OR equivalent experience. Do not duplicate a mandatory qualification already
 represented, and never promote a preferred qualification to required.
+Assign baseline requirement_type from the source wording. Use experience_duration
+only for an explicit measurable tenure threshold, such as 5+ years, minimum three
+years, or 18 months. Qualitative 'experience with' a domain/tool without a duration
+is other, not experience_duration; never infer years from seniority or an example.
+For a mixed degree AND years OR equivalent qualification, preserve its complete
+logic and use experience_duration when an explicit tenure threshold is included.
 Split materially compound hiring criteria into atomic, independently assessable capabilities
 when their evidence could differ. For example, improving product metrics, disrupting a
 market, leading consumer-product teams, and taking products to market require separate
@@ -382,6 +388,10 @@ criterion_id and preserve every source requirement and its importance. Reuse an 
 criterion if it already covers that capability; do not add duplicate or trivial fragments.
 Do not split a coherent capability just because it uses 'and'. This atomicity rule applies
 to hiring_criteria, NOT the intact AND/OR baseline qualifications and duration clauses.
+Partner work is not one universal capability: content/catalog ecosystem development,
+credential partnerships, and enterprise integrations need separate criteria when
+independent evidence could support one but not the others. Preserve each material
+responsibility without splitting a coherent task into wording fragments or duplicates.
 Before returning, reconcile the full JD against the analysis: every material work
 requirement must have an assessable hiring criterion, not only a responsibility cluster
 or screening question. In particular, preserve material partner/ecosystem integrations
@@ -419,6 +429,18 @@ demonstrates, then separately where it was demonstrated. Direct product strategy
 coexist with transferable domain context. A non-direct capability rating needs a
 capability-level difference, not merely the target industry's name. This does not
 upgrade neighboring capabilities or remove genuine scale, ownership or maturity limits.
+Apply this distinction explicitly to portfolio prioritization/trade-offs and product
+quality/outcome measurement: demonstrated prioritization or measurement can be direct
+capability with transferable or adjacent domain context. Different learning/skilling
+content, outcomes or credentials alone do not make the underlying capability indirect.
+Separate any genuinely different method, scale or ownership requirement from domain.
+PM mentorship requires PM-specific mentoring, coaching or product-practice improvement
+evidence. Engineering leadership, stakeholder influence, cross-functional operating
+mechanisms and team coordination alone do not establish even adjacent PM mentorship.
+When no PM-specific evidence exists, classify the mentorship capability as gap, retain
+neighboring leadership evidence as context and preserve the missing capability. Actual
+supported PM coaching can establish the criterion to the extent demonstrated; it does
+not imply formal management, direct reports or broader scope than the source supports.
 For significant claims, explicitly retain source provenance and deployment maturity in
 evidence_summary, limitation_or_difference and specialist assessments. Candidate-confirmed
 facts are usable as such, not automatically unreliable or source-validated. Prototype,

@@ -47,9 +47,12 @@ user-supplied frozen dataset for approval provenance rather than separate review
 3. Deterministic checks use `shortlist_contract.validate_shortlist_record`, the existing controller
    schema/consistency checks, all-four-stage completion, acceptance flags, exact input identity, and
    exact decision comparison. `APPLY` is not `APPLY â€” PRIORITY`; `HOLD / INVESTIGATE` is not `DO NOT APPLY`.
-4. A valid completed case gets one semantic call through `ResponsesModel.complete`. Its packet holds
+4. Offline judging requires completed, structurally valid Role Understanding, Career Mapping and
+   Decision outputs matching the assembled state and exact normalized input. Controller rejection,
+   a controller technical failure, or a golden decision mismatch does not block diagnostic judging.
+   Incomplete or malformed first-three-stage outputs do block it. Its packet holds
    the frozen reference/JD, fresh role/mapping/decision, controller result, and relevant evidence quotes
-   already checked by the runner. It excludes full candidate files, repository content and unrelated runs.
+   already checked by the runner, deterministic checks and any execution error. It excludes full candidate files, repository content and unrelated runs.
 5. The judge returns exactly five dimensions with PASS/WARN/FAIL, reason, discrepancy, materiality and
    failure kind. Local JSON Schema and materiality checks are mandatory. The judge uses the same
    strict `json_schema` conversion and wire validation as the four shortlist stages through the
@@ -58,7 +61,10 @@ user-supplied frozen dataset for approval provenance rather than separate review
    remain normal. Missing source fidelity alone cannot fail its case or the release gate.
 7. Exact decision mismatch always fails. Material semantic errors can fail despite a matching label;
    minor semantic differences warn. Cosmetic wording/order/example differences must not fail.
-   The release gate uses only the five requested hard gates: exact decisions; no material unsupported
+   Controller verdict/issues and `production_usable` are retained separately from semantic dimensions.
+   Rejected or failed production runs remain unusable, regardless of judge scores. Golden mismatch
+   never changes production acceptance, but always fails the benchmark. Any deterministic case
+   failure keeps the release gate at FAIL. The semantic hard gates remain: exact decisions; no material unsupported
    career claims; no material capability/domain regressions; no decision-changing missed requirements;
    no decision-changing lost gaps. `INCOMPLETE` is evaluation readiness, not a new shortlist outcome or
    additional quality gate. Unevaluated cases can never produce a release PASS.
@@ -100,7 +106,8 @@ Inspect uncertain outcomes manually. No auto-reset exists.
 - The existing runner allows up to four attempts per stage for transient failures; structural
   generation failures allow one retry within that ceiling. **192 shortlist attempts + 24 judge
   attempts = 216 maximum** for one complete execution; manual runner resumption may add attempts.
-- Controller/deterministic failures skip semantic judging. The judge allows one technical retry
+- Structurally complete first-three-stage outputs may be judged despite controller/deterministic
+  failures; this never promotes production acceptance. The judge allows one technical retry
   for incomplete/malformed/wire-schema output or retryable transport/API failures, with the same
   request and a maximum server-requested wait of 300 seconds. HTTP 400 and semantic results are
   not retried. Semantic materiality validation remains outside the retry loop.

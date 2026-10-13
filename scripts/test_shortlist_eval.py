@@ -159,10 +159,55 @@ class EvalTests(unittest.TestCase):
         self.run_eval(model=agent, judge=judge, resume=run)
         self.assertEqual(len(agent.calls), 4); self.assertEqual(len(judge.calls), 1)
 
-    def test_exact_mismatch_fails_without_judge(self):
+    def test_exact_mismatch_still_judged_but_cannot_be_overridden(self):
         self.case["reference"]["shortlist_decision"] = "DO NOT APPLY"; self.write([self.case]); judge = Judge()
         run = self.run_eval(judge=judge); summary = golden.read_json(run / "summary.json")
-        self.assertEqual(summary["counts"]["FAIL"], 1); self.assertEqual(summary["release_gate"], "FAIL"); self.assertEqual(judge.calls, [])
+        self.assertEqual(summary["counts"]["FAIL"], 1); self.assertEqual(summary["release_gate"], "FAIL")
+        self.assertEqual(len(judge.calls), 1)
+        result = golden.read_json(run / "per_case" / (self.case["case_id"] + ".json"))
+        self.assertTrue(result["production_usable"])  # Golden mismatch does not change production acceptance.
+        self.assertFalse(result["deterministic"]["exact_decision_alignment"])
+        self.assertTrue(all(d["status"] == "PASS" for d in result["dimensions"].values()))
+
+    def test_controller_rejected_result_judged_without_production_promotion(self):
+        def reject(stage, output):
+            if stage == "controller_validation":
+                output["validation"] = {k: False for k in output["validation"]}
+                output["issues"] = [{"stage": "career_requirements_mapping", "description": "Unsupported mentorship", "required_action": "Review evidence"}]
+        judge = Judge(); run = self.run_eval(model=FakeModel(reject), judge=judge)
+        result = golden.read_json(run / "per_case" / (self.case["case_id"] + ".json"))
+        self.assertEqual(len(judge.calls), 1)
+        self.assertFalse(result["controller"]["accepted"])
+        self.assertTrue(result["controller"]["issues"])
+        self.assertFalse(result["production_usable"])
+        self.assertEqual(result["overall"], "FAIL")
+        self.assertTrue(all(d["status"] == "PASS" for d in result["dimensions"].values()))
+        self.assertEqual(golden.read_json(run / "summary.json")["release_gate"], "FAIL")
+        manifest = golden.read_json(run / "manifest.json")
+        artifact = golden.read_json(run / "shortlist_runs" / manifest["cases"][self.case["case_id"]]["run_id"] / "job_state.json")
+        self.assertEqual(artifact["status"], "rejected")
+        self.assertFalse(artifact["shortlist_state"]["validation"]["shortlist_decision_accepted"])
+        self.assertNotIn("handoff", artifact["shortlist_state"])
+
+    def test_controller_transport_failure_still_allows_completed_analysis_judging(self):
+        def fail(stage, output):
+            if stage == "controller_validation": raise ModelError("Synthetic controller outage")
+        judge = Judge(); run = self.run_eval(model=FakeModel(fail), judge=judge)
+        result = golden.read_json(run / "per_case" / (self.case["case_id"] + ".json"))
+        self.assertEqual(len(judge.calls), 1)
+        self.assertFalse(result["controller"]["available"])
+        self.assertFalse(result["production_usable"])
+        self.assertEqual(result["controller"]["execution_error"]["stage"], "controller_validation")
+
+    def test_incomplete_mapping_does_not_invoke_judge(self):
+        def fail(stage, output):
+            if stage == "career_requirements_mapping": raise ModelError("Synthetic missing mapping")
+        judge = Judge(); run = self.run_eval(model=FakeModel(fail), judge=judge)
+        result = golden.read_json(run / "per_case" / (self.case["case_id"] + ".json"))
+        self.assertEqual(judge.calls, [])
+        self.assertFalse(result["judge_readiness"]["ready"])
+        self.assertEqual(result["status"], "incomplete")
+        self.assertFalse(result["production_usable"])
 
     def test_controller_and_mapping_structural_checks(self):
         run = self.run_eval(); manifest = golden.read_json(run / "manifest.json")
@@ -171,6 +216,10 @@ class EvalTests(unittest.TestCase):
         self.assertFalse(ev.deterministic(self.case, artifact, golden.input_job(self.data, self.case))["passed"])
         artifact = golden.read_json(path); artifact["shortlist_state"]["career_requirements_mapping"]["criteria"][0]["domain_context_fit"] = "invalid"
         self.assertFalse(ev.deterministic(self.case, artifact, golden.input_job(self.data, self.case))["passed"])
+        self.assertFalse(ev.judge_readiness(artifact, golden.input_job(self.data, self.case))["ready"])
+        artifact = golden.read_json(path)
+        artifact["stage_outputs"]["shortlist_decision"]["decision_rationale"] = "Inconsistent saved stage"
+        self.assertFalse(ev.judge_readiness(artifact, golden.input_job(self.data, self.case))["ready"])
 
     def test_runner_failure_resumes_remaining_stages(self):
         def fail(stage, output):

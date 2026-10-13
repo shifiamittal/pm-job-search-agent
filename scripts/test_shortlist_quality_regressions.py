@@ -24,6 +24,86 @@ class QualityRegressionTests(unittest.TestCase):
         case = next(c for c in dataset["cases"] if c["job_id"] == job_id)
         return golden.input_job(golden.DEFAULT_DATA, case)
 
+    def test_baseline_duration_taxonomy_and_source_wording(self):
+        # Scripted outputs verify guidance delivery and preservation, not LLM semantics.
+        cases = [("5+ years of product experience", "experience_duration"),
+                 ("Experience with reporting, analytics, business intelligence, data products, or data platforms.", "other"),
+                 ("Bachelor's degree AND 8 years of product experience OR equivalent experience", "experience_duration")]
+        for requirement, kind in cases:
+            with self.subTest(requirement=requirement):
+                def response(stage, out):
+                    if stage == "role_understanding":
+                        out["baseline_qualifications"][0].update(requirement=requirement, requirement_type=kind)
+                    elif stage == "career_requirements_mapping":
+                        out[stage]["baseline_qualification_mapping"][0].update(requirement=requirement, requirement_type=kind)
+                _, artifact, model = self.run_offline(response)
+                row = artifact["shortlist_state"]["role_understanding"]["baseline_qualifications"][0]
+                self.assertEqual((row["requirement"], row["requirement_type"]), (requirement, kind))
+                prompt = model.calls[0]["instructions"]
+                for text in ("only for an explicit measurable tenure threshold", "is other, not experience_duration", "never infer years", "preserve its complete"):
+                    self.assertIn(text, prompt)
+
+    def test_atomic_partner_components_have_independent_mappings(self):
+        job = self.golden_job("200015839")
+        for word in ("catalog", "credentials", "integrations"):
+            self.assertIn(word, job["full_job_description_raw"].lower())
+        criteria = [("catalog", "Content/catalog ecosystem", "transferable"),
+                    ("credentials", "Credential partnerships", "gap"),
+                    ("integrations", "Enterprise integrations", "adjacent")]
+        def response(stage, out):
+            for cid, label, fit in criteria:
+                if stage == "role_understanding":
+                    out["hiring_criteria"].append(dict(criterion_id=cid, criterion=label, description=label, importance="High"))
+                elif stage == "career_requirements_mapping":
+                    row = deepcopy(out[stage]["criteria"][0])
+                    row.update(criterion_id=cid, criterion=label, role_requirement=label, capability_fit=fit,
+                               domain_context_fit="gap", limitation_or_difference="Separate synthetic evidence boundary for " + label)
+                    out[stage]["criteria"].append(row)
+                    provenance = deepcopy(out["evidence_provenance"][0]); provenance["criterion_id"] = cid
+                    out["evidence_provenance"].append(provenance)
+                elif stage == "controller_validation":
+                    row = deepcopy(out["evidence_checks"][0]); row["criterion_id"] = cid
+                    out["evidence_checks"].append(row)
+        _, artifact, model = self.run_offline(response, job)
+        rows = artifact["shortlist_state"]["career_requirements_mapping"]["criteria"][-3:]
+        self.assertEqual([(r["criterion_id"], r["capability_fit"]) for r in rows], [(c, f) for c, _, f in criteria])
+        self.assertIn("independent evidence could support one but not the others", model.calls[0]["instructions"])
+
+    def test_prioritization_and_measurement_keep_direct_capability(self):
+        for capability in ("Portfolio prioritization and trade-offs", "Product quality and outcome measurement"):
+            for domain in ("transferable", "adjacent"):
+                with self.subTest(capability=capability, domain=domain):
+                    def response(stage, out):
+                        if stage == "role_understanding":
+                            out["hiring_criteria"][0].update(criterion=capability, description=capability)
+                        elif stage == "career_requirements_mapping":
+                            out[stage]["criteria"][0].update(criterion=capability, role_requirement=capability,
+                                capability_fit="direct", domain_context_fit=domain,
+                                limitation_or_difference="Learning/skilling context differs; underlying capability demonstrated.")
+                    _, artifact, model = self.run_offline(response)
+                    row = artifact["shortlist_state"]["career_requirements_mapping"]["criteria"][0]
+                    self.assertEqual((row["capability_fit"], row["domain_context_fit"]), ("direct", domain))
+                    self.assertIn("Different learning/skilling", model.calls[1]["instructions"])
+                    self.assertIn("quality/outcome measurement", model.calls[1]["instructions"])
+
+    def test_pm_mentorship_requires_specific_evidence(self):
+        for evidence, fit in [(fixtures.CAPABILITY, "gap"), ("Coached product managers in discovery and improved PM decision reviews.", "direct")]:
+            with self.subTest(fit=fit):
+                (self.root / "profile/career_evidence.md").write_text(evidence, encoding="utf-8")
+                def response(stage, out):
+                    if stage == "role_understanding":
+                        out["hiring_criteria"][0].update(criterion="PM mentorship", description="Coach PMs and improve PM craft")
+                    elif stage == "career_requirements_mapping":
+                        row = out[stage]["criteria"][0]
+                        row.update(criterion="PM mentorship", role_requirement="Coach PMs and improve PM craft", capability_fit=fit,
+                            limitation_or_difference="No PM-specific mentoring evidence; general leadership is context only." if fit == "gap" else "PM coaching demonstrated; no formal management or direct reports implied.")
+                        row["strongest_evidence"]["evidence_summary"] = evidence
+                        out["evidence_provenance"][0]["sources"][0]["quote"] = evidence
+                _, artifact, model = self.run_offline(response)
+                self.assertEqual(artifact["shortlist_state"]["career_requirements_mapping"]["criteria"][0]["capability_fit"], fit)
+                for text in ("do not establish even adjacent PM mentorship", "classify the mentorship capability as gap", "supported PM coaching", "not imply formal management"):
+                    self.assertIn(text, model.calls[1]["instructions"])
+
     def test_posting_constraints_survive_null_identity_through_controller(self):
         job = self.golden_job("200051931")
         self.assertIn("50-mile commute", job["full_job_description_raw"])

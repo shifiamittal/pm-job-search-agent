@@ -41,6 +41,10 @@ For the explicit Cisco 2023232 partial-source exception, strict Role Understandi
 provisional; do not penalize omitted source content. The evaluator marks that dimension PROVISIONAL.
 Score all other dimensions normally. Relevant source-verified evidence excerpts and controller
 findings are supplied, not the whole candidate corpus. Do not invent evidence absent from the packet.
+This diagnostic benchmark can include production-controller rejection or a golden decision
+mismatch. Independently assess all five dimensions; controller rejection alone does not force
+every semantic dimension to FAIL. Explain the actual discrepancy. Semantic scores never
+override the recorded controller verdict or deterministic exact-decision mismatch.
 """
 
 
@@ -78,7 +82,31 @@ def deterministic(case, artifact, job):
         # Schema/library errors are deterministic failures, never repaired into a pass.
         errors.append(str(exc).splitlines()[0])
     return {"passed": not errors, "exact_decision_alignment": aligned,
-            "fresh_decision": fresh, "errors": errors}
+            "fresh_decision": fresh, "errors": errors,
+            "production_usable": not any(e != "Exact decision differs from frozen decision" for e in errors)}
+
+
+def judge_readiness(artifact, job):
+    """Benchmark-only structural gate; never grants production acceptance."""
+    try:
+        if artifact.get("input_job") != job:
+            raise ValueError("Fresh run does not match the frozen input")
+        if artifact.get("completed_stages", [])[:3] != list(STAGES[:3]):
+            raise ValueError("Role Understanding, Career Mapping and Decision must complete")
+        state = artifact.get("shortlist_state")
+        if not state or state.get("schema_version") != "1.2.0":
+            raise ValueError("A complete shortlist v1.2.0 state is required")
+        validate_shortlist_record(state)
+        outputs = artifact.get("stage_outputs", {})
+        schema = load_schema()
+        for stage in STAGES[:3]:
+            Draft202012Validator(stage_schema(schema, stage)).validate(outputs.get(stage))
+            projected = outputs[stage][stage] if stage == "career_requirements_mapping" else outputs[stage]
+            if projected != state[stage]:
+                raise ValueError("Saved stage and shortlist state disagree: " + stage)
+    except Exception as exc:
+        return {"ready": False, "reason": str(exc).splitlines()[0]}
+    return {"ready": True, "reason": "First three stages completed with structurally valid matching outputs"}
 
 
 def judge_packet(case, artifact, job):
@@ -88,7 +116,9 @@ def judge_packet(case, artifact, job):
         "frozen_reference": deepcopy(case["reference"]), "exact_evaluated_source": job["full_job_description_raw"],
         "fresh_role_understanding": state["role_understanding"],
         "fresh_career_mapping": state["career_requirements_mapping"],
-        "fresh_decision": state["shortlist_decision"], "controller": artifact["controller_review"],
+        "fresh_decision": state["shortlist_decision"], "controller": deepcopy(artifact.get("controller_review")),
+        "deterministic_checks": deterministic(case, artifact, job),
+        "execution_error": deepcopy(artifact.get("error")),
         "relevant_evidence_excerpts": mapping_envelope.get("evidence_provenance", []),
         "baseline_evidence_excerpts": mapping_envelope.get("baseline_qualification_provenance", [])}
 
@@ -126,7 +156,7 @@ def summary(results):
     for kind in KINDS[:-1]:
         gates[kind] = not any(d["could_change_decision"] and d["failure_kind"] == kind
                              for r in results for d in r["dimensions"].values())
-    gate = "FAIL" if not all(gates.values()) else "PASS" if complete else "INCOMPLETE"
+    gate = "FAIL" if not all(gates.values()) or any(r["overall"] == "FAIL" for r in results) else "PASS" if complete else "INCOMPLETE"
     return {"total_cases": n, "counts": {s: sum(r["overall"] == s for r in results) for s in ("PASS", "WARN", "FAIL")},
         "exact_decision_matches": exact, "decision_evaluated_cases": len(evaluated),
         "exact_decision_accuracy": exact / n if n and len(evaluated) == n else None,
@@ -134,6 +164,8 @@ def summary(results):
         "incomplete_or_failed_runs": [r["case_id"] for r in results if r["status"] != "completed"],
         "per_dimension": {d: {s: sum(r["dimensions"][d]["status"] == s for r in results)
             for s in ("PASS", "WARN", "FAIL", "PROVISIONAL", "NOT_EVALUATED")} for d in DIMENSIONS},
+        "production_usable_cases": sum(r.get("production_usable", False) for r in results),
+        "controller_accepted_cases": sum(r.get("controller", {}).get("accepted", False) for r in results),
         "release_gate": gate, "hard_gates": {k: v if complete or not v else None for k, v in gates.items()}}
 
 
@@ -242,7 +274,9 @@ def pending_result(case):
     return {"case_id": case["case_id"], "job": {k: case.get(k) for k in ("company", "job_id", "title")},
         "golden_decision": case["reference"]["shortlist_decision"], "fresh_decision": None,
         "status": "pending", "overall": None, "dimensions": blank_dimensions(case),
-        "deterministic": {}, "errors": [], "usage": {"shortlist_agent": [], "judge": None}}
+        "deterministic": {}, "controller": {"accepted": False, "issues": [], "available": False},
+        "production_usable": False, "judge_readiness": {"ready": False, "reason": "Not run"},
+        "errors": [], "usage": {"shortlist_agent": [], "judge": None}}
 
 
 def select_cases(data, case_ids=None):
@@ -307,20 +341,32 @@ def evaluate(root=DEFAULT_DATA, *, output_root=None, model=None, judge=None,
             job = input_job(root, case)
             agent_dir = run_dir / "shortlist_runs" / checkpoint["run_id"]
             try:
-                if (agent_dir / "job_state.json").exists():
-                    artifact = read_json(agent_dir / "job_state.json")
-                    if artifact["status"] not in ("accepted", "rejected"):
-                        resume_job(agent_dir, model, candidate_root=candidate_root, stage_models=models)
-                elif agent_dir.exists():
-                    raise ValueError("Agent directory exists without a checkpoint; inspect before retry")
-                else:
-                    run_job(job, model, output_root=run_dir / "shortlist_runs", candidate_root=candidate_root, run_id=checkpoint["run_id"], stage_models=models)
+                try:
+                    if (agent_dir / "job_state.json").exists():
+                        artifact = read_json(agent_dir / "job_state.json")
+                        if artifact["status"] not in ("accepted", "rejected"):
+                            resume_job(agent_dir, model, candidate_root=candidate_root, stage_models=models)
+                    elif agent_dir.exists():
+                        raise ValueError("Agent directory exists without a checkpoint; inspect before retry")
+                    else:
+                        run_job(job, model, output_root=run_dir / "shortlist_runs", candidate_root=candidate_root, run_id=checkpoint["run_id"], stage_models=models)
+                except RunError:
+                    # A controller execution failure may still leave three valid completed stages.
+                    # Diagnose those offline without changing or accepting the runner artifact.
+                    pass
                 artifact = read_json(agent_dir / "job_state.json")
                 result["usage"]["shortlist_agent"] = agent_telemetry(artifact)
                 result["deterministic"] = deterministic(case, artifact, job)
                 result["fresh_decision"] = result["deterministic"]["fresh_decision"]
-                result["errors"] = result["deterministic"]["errors"]
-                if result["deterministic"]["passed"]:
+                result["errors"] = list(result["deterministic"]["errors"])
+                review = artifact.get("controller_review") or {}
+                result["controller"] = {"available": bool(review),
+                    "accepted": review.get("validation", {}).get("shortlist_decision_accepted", False),
+                    "issues": deepcopy(review.get("issues", [])),
+                    "execution_error": deepcopy(artifact.get("error"))}
+                result["production_usable"] = result["deterministic"]["production_usable"]
+                result["judge_readiness"] = judge_readiness(artifact, job)
+                if result["judge_readiness"]["ready"]:
                     packet = judge_packet(case, artifact, job)
                     _write(run_dir / "judge_packets" / (cid + ".json"), _json(packet))
                     if checkpoint.get("judge_started"):
@@ -333,8 +379,10 @@ def evaluate(root=DEFAULT_DATA, *, output_root=None, model=None, judge=None,
                     result["dimensions"] = validate_judge(response, case)
                     result["status"] = "completed"
                 else:
-                    result["status"] = "deterministic_failed"
-                result["overall"] = aggregate(result["deterministic"], result["dimensions"])
+                    result["status"] = "incomplete"
+                    result["errors"].append(result["judge_readiness"]["reason"])
+                if result["judge_readiness"]["ready"]:
+                    result["overall"] = aggregate(result["deterministic"], result["dimensions"])
             except (Exception,) as exc:
                 result["status"] = "incomplete"
                 result["errors"].append(type(exc).__name__ + ": " + str(exc).splitlines()[0])
