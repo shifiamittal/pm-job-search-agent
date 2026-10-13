@@ -439,6 +439,15 @@ unsupported classifications, even when a limitation acknowledges missing evidenc
 Return evidence_provenance alongside career_requirements_mapping: exactly one entry
 per criterion, with source_path and short verbatim supporting quote(s) from the supplied
 file content. A quote's presence is not proof of direct fit: assess its actual meaning.
+The sources[].quote field contains only an exact source span (whitespace differences
+alone are tolerated by the validator), never a paraphrase, stitched sentences or a
+generated conflict summary. Keep source_path and provenance_type on each span. Put
+derived interpretations and paraphrased limitations in evidence_summary,
+limitation_or_difference, limitation_or_unknown or overall_evidence_summary, explicitly
+labeled as interpretation/paraphrase where needed, and cite the supporting file/section.
+If several passages support a finding, supply separate exact quotes; never invent a
+combined quote. This separation does not make a derived finding source-validated or
+exempt it from controller grounding review.
 Quote conflicts when relevant, keep conflicting facts unresolved, and never invent a
 resolution. Gap-only claims may have empty sources and null strongest-evidence fields.
 Map all specialist requirements, explaining capability-level evidence and source
@@ -639,7 +648,9 @@ def _refresh_usage_summary(artifact):
             "output_tokens", "reasoning_tokens", "elapsed_seconds")
     totals = {}
     for key in keys:
-        values = [item.get(key) for item in by_stage.values() if item.get(key) is not None]
+        entries = list(by_stage.values()) + [item["telemetry"] for item in artifact.get("history", [])
+                                             if item.get("event") == "request_failed" and item.get("telemetry")]
+        values = [item.get(key) for item in entries if item.get(key) is not None]
         totals[key] = round(sum(values), 3) if values else None
     artifact["usage_summary"] = {"stages": by_stage, "totals": totals}
 
@@ -917,6 +928,7 @@ def run_job(job, model, *, output_root=None, candidate_root=ROOT, resume_dir=Non
             stage_started = time.perf_counter()
             progress(f"{label} — sending request... (model={selected_model})")
             for attempt in range(4):  # Initial request plus at most three retries.
+                attempt_started = time.perf_counter()
                 try:
                     output, metadata = model.complete(stage=current_stage, instructions=instructions,
                                                       context=context, output_schema=deepcopy(output_schema),
@@ -924,14 +936,18 @@ def run_job(job, model, *, output_root=None, candidate_root=ROOT, resume_dir=Non
                     break
                 except ModelError as exc:
                     delay = _retry_delay(exc, attempt)
-                    retry = exc.transient and attempt < 3 and delay <= 300
+                    retry_limit = 1 if exc.structural else 3
+                    retry = (exc.transient or exc.structural) and attempt < retry_limit and delay <= 300
                     artifact["history"].append({"event": "request_failed", "stage": current_stage,
                         "at": datetime.now(timezone.utc).isoformat(), "attempt": attempt + 1,
                         "requested_model": selected_model,
                         "error_type": exc.error_type, "retry": retry,
+                        "failure_reason": str(exc),
+                        "telemetry": _telemetry(exc.response_metadata, time.perf_counter() - attempt_started, selected_model),
                         "delay_seconds": delay if retry else None,
                         "retry_after_seconds": exc.retry_after,
                         "api_diagnostics": deepcopy(exc.diagnostics)})
+                    _refresh_usage_summary(artifact)
                     save()
                     if exc.diagnostics is not None:
                         progress(f"{label} — API diagnostics: " + json.dumps(exc.diagnostics, ensure_ascii=True))
@@ -940,14 +956,14 @@ def run_job(job, model, *, output_root=None, candidate_root=ROOT, resume_dir=Non
                             progress(f"{label} — retries stopped: " +
                                      ("Retry-After exceeds 300s wait budget" if delay > 300 else "three retries exhausted"))
                         raise
-                    progress(f"{label} — retry {attempt + 1}/3 in {delay:.1f}s ({exc.error_type})")
+                    progress(f"{label} — retry {attempt + 1}/{retry_limit} in {delay:.1f}s ({exc.error_type})")
                     time.sleep(delay)
             raw_output = deepcopy(output)
             artifact.setdefault("raw_stage_outputs", {})[current_stage] = raw_output
             output = _bind_identity(raw_output, current_stage, original)
             artifact["stage_outputs"][current_stage] = deepcopy(output)
             elapsed = time.perf_counter() - stage_started
-            telemetry = _telemetry(metadata, elapsed, selected_model)
+            telemetry = _telemetry(metadata, time.perf_counter() - attempt_started, selected_model)
             artifact["model_calls"].append({"stage": current_stage, "instructions_sha256": _hash(instructions),
                                             "context_sha256": _hash(_json(context)), "output_sha256": _hash(_json(output)),
                                             "raw_output_sha256": _hash(_json(raw_output)),

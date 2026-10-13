@@ -285,8 +285,20 @@ additive jitter (15–18, 30–36, and 60–72 seconds). Other transient errors 
 2, 4, and 8 seconds, or the longer server `Retry-After`.
 A requested delay over 300 seconds stops the run for later manual resume rather
 than retrying before the server permits. Delays and attempt counts are logged.
-Schema, provenance, semantic validation, refusals, and malformed/incomplete model
-outputs are not automatically retried. Controller rejection remains a final outcome.
+Malformed JSON, incomplete generation (except content filtering), and wire-schema
+failures receive at most one automatic retry within the existing four-attempt ceiling.
+The input, model, evidence, output limit and policy do not change for a retry. Completed
+JSON is checked against the API wire schema; full contract and semantic checks remain
+downstream. Provenance failures, semantic validation failures, refusals and controller
+rejection are not retried. Each failed request retains its classification, safe API
+diagnostics, available token/cache usage and latency in history. Missing usage remains
+unknown. Completed stage state is written only once after validation.
+
+Provenance `sources[].quote` contains source text only (the existing validator tolerates
+whitespace differences, not wording changes). Put paraphrased or derived findings in
+the existing evidence/limitation prose, retain file/section citations, and provide
+separate exact spans for every source used. Grounding remains subject to controller
+review; calling an unsupported claim a paraphrase does not make it valid.
 
 ### Live evaluation
 

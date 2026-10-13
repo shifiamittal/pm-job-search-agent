@@ -51,9 +51,9 @@ user-supplied frozen dataset for approval provenance rather than separate review
    the frozen reference/JD, fresh role/mapping/decision, controller result, and relevant evidence quotes
    already checked by the runner. It excludes full candidate files, repository content and unrelated runs.
 5. The judge returns exactly five dimensions with PASS/WARN/FAIL, reason, discrepancy, materiality and
-   failure kind. Local JSON Schema and materiality checks are mandatory: the existing wrapper's new
-   judge stage receives JSON output, unlike its four shortlist stages' strict structured-output format.
-   No direct SDK transport or repair call was added.
+   failure kind. Local JSON Schema and materiality checks are mandatory. The judge uses the same
+   strict `json_schema` conversion and wire validation as the four shortlist stages through the
+   existing transport. No direct SDK transport or semantic repair call is used.
 6. Cisco 2023232 gets `PROVISIONAL` for Role Understanding completeness only. Its other four dimensions
    remain normal. Missing source fidelity alone cannot fail its case or the release gate.
 7. Exact decision mismatch always fails. Material semantic errors can fail despite a matching label;
@@ -89,17 +89,24 @@ The manifest pins data, all candidate files, contracts, relevant implementation 
 and judge prompt/schema. Completed result files are checksummed and reused. Incomplete shortlist
 stages use the runner's existing validated resume mechanism, not a fresh replacement run. The judge
 attempt is checkpointed **before** the call: interruption or invalid output cannot silently cause a
-second paid judge request. Inspect uncertain/invalid judge outcomes manually. No auto-reset exists.
+second paid judge request on resume. Within a running invocation, a classified technical failure
+may receive one bounded retry. Each attempt is checkpointed with outcome, safe API diagnostics,
+available usage and latency. A valid semantic result, including WARN/FAIL, is never retried.
+Inspect uncertain outcomes manually. No auto-reset exists.
 
 ## Call count, caching and cost
 
 - Full 12-case baseline: **48 shortlist calls + at most 12 judge calls = 60** without retries.
-- The existing runner allows up to four attempts per stage: **192 shortlist attempts + 12 judge
-  attempts = 204 maximum** for one complete execution; resumption of repeatedly failed runner stages
-  may add attempts. The evaluator adds no automatic judge retries or repairs.
-- Controller/deterministic failures skip semantic judging. One judge call per valid completed case.
+- The existing runner allows up to four attempts per stage for transient failures; structural
+  generation failures allow one retry within that ceiling. **192 shortlist attempts + 24 judge
+  attempts = 216 maximum** for one complete execution; manual runner resumption may add attempts.
+- Controller/deterministic failures skip semantic judging. The judge allows one technical retry
+  for incomplete/malformed/wire-schema output or retryable transport/API failures, with the same
+  request and a maximum server-requested wait of 300 seconds. HTTP 400 and semantic results are
+  not retried. Semantic materiality validation remains outside the retry loop.
 - Existing shortlist mapping-prefix caching is reused unchanged. Cached input/total input is reported
-  from returned telemetry; missing telemetry is not represented as a cache hit or a known zero cost.
+  from returned telemetry, including failed attempts; missing telemetry is counted and is not
+  represented as a cache hit or a known zero cost.
 - Two existing accepted four-stage runs yield an illustrative 12-case shortlist-only average of
   **1,699,152 input tokens and 197,532 output tokens**. This is not a quote: historical runs covered only a small sample,
   model/context mixes can differ, and judge packet sizes depend on future fresh outputs.

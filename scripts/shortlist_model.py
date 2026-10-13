@@ -4,6 +4,7 @@ import os
 import math
 import re
 import hashlib
+from jsonschema import Draft202012Validator
 from copy import deepcopy
 from collections.abc import Mapping
 from datetime import datetime, timezone
@@ -18,12 +19,15 @@ SHORTLIST_STAGES = {"role_understanding", "career_requirements_mapping",
 class ModelError(RuntimeError):
     """Sanitized transport failure with allowlisted API diagnostics, never a raw body."""
 
-    def __init__(self, message, *, error_type=None, transient=False, retry_after=None, diagnostics=None):
+    def __init__(self, message, *, error_type=None, transient=False, retry_after=None, diagnostics=None,
+                 structural=False, response_metadata=None):
         super().__init__(message)
         self.error_type = error_type or type(self).__name__
         self.transient = transient
         self.retry_after = retry_after
         self.diagnostics = diagnostics
+        self.structural = structural
+        self.response_metadata = response_metadata or {}
 
 
 def api_error_diagnostics(response, api_key):
@@ -169,7 +173,7 @@ class ResponsesModel:
 
     def build_payload(self, *, stage, instructions, context, output_schema, model=None):
         selected_model = model or self.model
-        structured = stage in SHORTLIST_STAGES
+        structured = stage in SHORTLIST_STAGES or stage == "shortlist_golden_judge"
         payload = {
             "model": selected_model,
             "store": False,
@@ -229,23 +233,46 @@ class ResponsesModel:
                              transient=response.status_code in (408, 429, 500, 502, 503, 504),
                              retry_after=retry_after_seconds(response.headers.get("Retry-After")),
                              diagnostics=api_error_diagnostics(response, self._api_key))
+        body = None
+        metadata = {}
         try:
             body = response.json()
+            if not isinstance(body, dict):
+                raise ValueError("Expected response envelope")
+            metadata = {"response_id": body.get("id"), "model": body.get("model"),
+                        "usage": body.get("usage"), "max_output_tokens": self.max_output_tokens,
+                        "prompt_cache": cache_metadata}
             if body.get("status") != "completed":
-                raise ModelError("Model response was incomplete or failed; no partial JSON accepted")
+                diagnostics = api_error_diagnostics(response, self._api_key)
+                status = body.get("status")
+                reason = (body.get("incomplete_details") or {}).get("reason")
+                diagnostics["response_status"] = status if status in ("incomplete", "failed", "cancelled", "queued", "in_progress") else "unknown"
+                diagnostics["incomplete_reason"] = reason if reason in ("max_output_tokens", "content_filter") else "unknown"
+                retryable = (status == "incomplete" and reason != "content_filter") or (
+                    status == "failed" and diagnostics["error"].get("code") in ("server_error", "rate_limit_exceeded"))
+                raise ModelError("Model response was incomplete or failed; no partial JSON accepted",
+                                 error_type="IncompleteResponse", structural=retryable,
+                                 diagnostics=diagnostics, response_metadata=metadata)
             texts = []
             for item in body.get("output", []):
                 if item.get("type") == "message":
                     for block in item.get("content", []):
                         if block.get("type") == "refusal":
-                            raise ModelError("Model refused the stage; no decision fabricated")
+                            raise ModelError("Model refused the stage; no decision fabricated",
+                                             error_type="Refusal", response_metadata=metadata)
                         if block.get("type") == "output_text":
                             texts.append(block["text"])
             result = json.loads("".join(texts))
             if not isinstance(result, dict):
                 raise ValueError("Expected one object")
-            return result, {"response_id": body.get("id"), "model": body.get("model"),
-                            "usage": body.get("usage"), "max_output_tokens": self.max_output_tokens,
-                            "prompt_cache": cache_metadata}
+            # Wire-shape validation only. Grounding and semantic acceptance remain downstream.
+            wire_schema = payload["text"]["format"].get("schema")
+            if wire_schema and not Draft202012Validator(wire_schema).is_valid(result):
+                raise ModelError("Model output does not match the structured response schema",
+                                 error_type="StructuredOutputSchema", structural=True,
+                                 response_metadata=metadata)
+            return result, metadata
         except (ValueError, TypeError, KeyError, AttributeError):
-            raise ModelError("Model returned malformed JSON; no decision fabricated") from None
+            raise ModelError("Model returned malformed JSON; no decision fabricated",
+                             error_type="MalformedJSON", structural=True,
+                             response_metadata=metadata) from None

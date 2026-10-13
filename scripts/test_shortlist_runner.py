@@ -610,7 +610,8 @@ class TransportTests(unittest.TestCase):
         with patch("shortlist_model.requests.post", return_value=response) as post:
             result = ResponsesModel("selected-model", api_key="TEST-SECRET").complete(
                 stage="role_understanding", instructions="Return JSON", context={"job": "one"},
-                output_schema=stage_schema(load_schema(), "role_understanding"))
+                output_schema={"type": "object", "properties": {"ok": {"type": "boolean"}},
+                               "required": ["ok"], "additionalProperties": False})
         return result, post.call_args
 
     def test_stateless_request_has_no_tools_history_or_auto_truncation(self):

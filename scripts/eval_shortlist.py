@@ -11,9 +11,9 @@ from uuid import uuid4
 
 from jsonschema import Draft202012Validator
 from shortlist_contract import ROOT, load_schema, validate_shortlist_record
-from shortlist_model import ResponsesModel
+from shortlist_model import ResponsesModel, ModelError
 from run_shortlist_job import (CANDIDATE_FILES, CONTRACT_FILES, STAGES, RunError,
-    resolve_stage_models, run_job, resume_job, _write, _json, _settings, _telemetry, stage_schema, _controller_consistency)
+    resolve_stage_models, run_job, resume_job, _write, _json, _settings, _telemetry, stage_schema, _controller_consistency, _retry_delay)
 from shortlist_golden import (DEFAULT_DATA, DIMENSIONS, EXCEPTION, digest, fingerprint,
                              input_job, read_json, validate_dataset)
 
@@ -141,12 +141,14 @@ def usage(results):
     groups = {"shortlist_agent": [], "judge": []}
     for r in results:
         groups["shortlist_agent"].extend(r.get("usage", {}).get("shortlist_agent", []))
-        if r.get("usage", {}).get("judge"):
+        if r.get("judge_attempts"):
+            groups["judge"].extend(a["telemetry"] for a in r["judge_attempts"] if a.get("telemetry"))
+        elif r.get("usage", {}).get("judge"):
             groups["judge"].append(r["usage"]["judge"])
     out = {}
     for name, entries in groups.items():
         totals = {k: sum(e[k] for e in entries if isinstance(e.get(k), (int, float)))
-                  for k in ("input_tokens", "output_tokens", "cached_input_tokens", "elapsed_seconds")}
+                  for k in ("input_tokens", "output_tokens", "cached_input_tokens", "cache_write_input_tokens", "elapsed_seconds")}
         totals["calls_with_missing_token_telemetry"] = sum(e.get("input_tokens") is None or e.get("output_tokens") is None for e in entries)
         totals["cache_hit_rate"] = totals["cached_input_tokens"] / totals["input_tokens"] if totals["input_tokens"] else None
         out[name] = totals
@@ -155,11 +157,44 @@ def usage(results):
     return out
 
 
+def agent_telemetry(artifact):
+    return ([c["telemetry"] for c in artifact.get("model_calls", []) if c.get("telemetry")] +
+            [c["telemetry"] for c in artifact.get("history", [])
+             if c.get("event") == "request_failed" and c.get("telemetry")])
+
+
+def call_judge(judge, packet, result, checkpoint):
+    """One technical retry in this invocation; never retry a semantic result."""
+    attempts = result.setdefault("judge_attempts", [])
+    for attempt in range(2):
+        started = time.perf_counter()
+        try:
+            response, metadata = judge.complete(stage="shortlist_golden_judge", instructions=JUDGE_INSTRUCTIONS,
+                context=packet, output_schema=deepcopy(JUDGE_SCHEMA), model=judge.model)
+        except ModelError as exc:
+            delay = _retry_delay(exc, attempt)
+            retry = (exc.transient or exc.structural) and attempt == 0 and delay <= 300
+            attempts.append({"attempt": attempt + 1, "outcome": "failed", "error_type": exc.error_type,
+                "failure_reason": str(exc), "api_diagnostics": deepcopy(exc.diagnostics),
+                "telemetry": _telemetry(exc.response_metadata, time.perf_counter() - started, judge.model),
+                "retry": retry, "delay_seconds": delay if retry else None})
+            checkpoint()
+            if not retry:
+                raise
+            time.sleep(delay)
+        else:
+            telemetry = _telemetry(metadata, time.perf_counter() - started, judge.model)
+            attempts.append({"attempt": attempt + 1, "outcome": "returned", "retry": False, "telemetry": telemetry})
+            result["usage"]["judge"] = telemetry
+            checkpoint()
+            return response
+
+
 def call_plan(report, telemetry_root=None):
     plan = {"current_runnable_cases": report["runnable_count"], "full_dataset_cases": report["case_count"],
-        "shortlist_calls_no_retries": 4 * report["case_count"], "judge_calls_max": report["case_count"],
+        "shortlist_calls_no_retries": 4 * report["case_count"], "judge_calls_max": 2 * report["case_count"],
         "judge_calls_per_completed_valid_case": 1, "shortlist_max_attempts_including_retries": 16 * report["case_count"],
-        "judge_auto_retries": 0, "model_calls_in_dry_run": 0, "estimated_dollar_cost": None,
+        "judge_auto_retries": 1, "model_calls_in_dry_run": 0, "estimated_dollar_cost": None,
         "cost_formula": "sum per model: (uncached_input*input_rate + cached_input*cached_rate + output*output_rate)/1e6",
         "cost_note": "Models and current rates must be selected before spending; no price assumptions. All-five-file shortlist context and existing caching remain unchanged."}
     samples = []
@@ -281,7 +316,7 @@ def evaluate(root=DEFAULT_DATA, *, output_root=None, model=None, judge=None,
                 else:
                     run_job(job, model, output_root=run_dir / "shortlist_runs", candidate_root=candidate_root, run_id=checkpoint["run_id"], stage_models=models)
                 artifact = read_json(agent_dir / "job_state.json")
-                result["usage"]["shortlist_agent"] = [c["telemetry"] for c in artifact.get("model_calls", []) if c.get("telemetry")]
+                result["usage"]["shortlist_agent"] = agent_telemetry(artifact)
                 result["deterministic"] = deterministic(case, artifact, job)
                 result["fresh_decision"] = result["deterministic"]["fresh_decision"]
                 result["errors"] = result["deterministic"]["errors"]
@@ -292,10 +327,8 @@ def evaluate(root=DEFAULT_DATA, *, output_root=None, model=None, judge=None,
                         raise ValueError("Judge outcome uncertain/already attempted; no automatic paid retry")
                     checkpoint["judge_started"] = True
                     _write(run_dir / "manifest.json", _json(manifest))
-                    start = time.perf_counter()
-                    response, metadata = judge.complete(stage="shortlist_golden_judge", instructions=JUDGE_INSTRUCTIONS,
-                        context=packet, output_schema=deepcopy(JUDGE_SCHEMA), model=judge.model)
-                    result["usage"]["judge"] = _telemetry(metadata, time.perf_counter() - start, judge.model)
+                    response = call_judge(judge, packet, result,
+                        lambda: _write(result_path, _json(result)))
                     result["raw_judge_response"] = response
                     result["dimensions"] = validate_judge(response, case)
                     result["status"] = "completed"
@@ -307,8 +340,8 @@ def evaluate(root=DEFAULT_DATA, *, output_root=None, model=None, judge=None,
                 result["errors"].append(type(exc).__name__ + ": " + str(exc).splitlines()[0])
                 if isinstance(exc, RunError):
                     failed = read_json(agent_dir / "job_state.json")
-                    result["usage"]["shortlist_agent"] = [c["telemetry"] for c in failed.get("model_calls", []) if c.get("telemetry")]
-                # Incomplete runner stages can resume via the existing runner. A judge is never auto-retried.
+                    result["usage"]["shortlist_agent"] = agent_telemetry(failed)
+                # An uncertain judge checkpoint is never replayed on evaluator resume.
             result["latency_seconds"] = round(time.perf_counter() - started, 3)
             result["could_change_decision"] = (result.get("deterministic", {}).get("exact_decision_alignment") is False
                 or any(d["could_change_decision"] for d in result["dimensions"].values()))
